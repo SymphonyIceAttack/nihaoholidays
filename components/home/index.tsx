@@ -1,0 +1,45 @@
+import { FeaturedTools } from "./featured-tools";
+import { FestivalFilters } from "./festival-filters";
+import { FestivalGrid } from "./festival-grid";
+import { FoodPreview } from "./food-preview";
+import { HeroSection } from "./hero-section";
+import { QuickStart } from "./quick-start";
+import { StatsBanner } from "./stats-banner";
+import { Testimonials } from "./testimonials";
+import { UpcomingFestivals } from "./upcoming-festivals";
+import { UserTypeSelector } from "./user-type-selector";
+import { ValueProposition } from "./value-proposition";
+
+export {
+  FeaturedTools,
+  FestivalFilters,
+  FestivalGrid,
+  FoodPreview,
+  HeroSection,
+  QuickStart,
+  StatsBanner,
+  Testimonials,
+  UpcomingFestivals,
+  UserTypeSelector,
+  ValueProposition,
+};
+
+export function HomePageContent() {
+  return (
+    <>
+      <HeroSection />
+      <UpcomingFestivals />
+      <div className="container mx-auto px-4 py-12">
+        <UserTypeSelector />
+        <FestivalFilters />
+        <FestivalGrid />
+      </div>
+      <FeaturedTools />
+      <FoodPreview />
+      <QuickStart />
+      <StatsBanner />
+      <Testimonials />
+      <ValueProposition />
+    </>
+  );
+}
