@@ -9,9 +9,10 @@ const featuredDishes = [
     name: "饺子",
     pinyin: "jiǎo zi",
     english: "Dumplings",
-    description: "Symbolizes wealth and reunion, a must-eat traditional food for Spring Festival",
+    description:
+      "Symbolizes wealth and reunion, a must-eat traditional food for Spring Festival",
     festival: "Spring Festival",
-    image: "/chinese-dumplings.jpg",
+    image: "/image/food/dumplings.jpg",
     tags: ["Must-try", "Meaningful"],
   },
   {
@@ -19,9 +20,10 @@ const featuredDishes = [
     name: "汤圆",
     pinyin: "tāng yuán",
     english: "Sweet Rice Balls",
-    description: "Round shape symbolizes reunion, the signature food of Lantern Festival",
+    description:
+      "Round shape symbolizes reunion, the signature food of Lantern Festival",
     festival: "Lantern Festival",
-    image: "/tangyuan-sweet-rice-balls.jpg",
+    image: "/image/food/tangyuan.jpg",
     tags: ["Dessert"],
   },
   {
@@ -29,9 +31,10 @@ const featuredDishes = [
     name: "粽子",
     pinyin: "zòng zi",
     english: "Rice Dumplings",
-    description: "Glutinous rice wrapped in bamboo leaves, available in sweet and savory varieties",
+    description:
+      "Glutinous rice wrapped in bamboo leaves, available in sweet and savory varieties",
     festival: "Dragon Boat Festival",
-    image: "/zongzi-rice-dumplings.jpg",
+    image: "/image/food/zongzi.jpg",
     tags: ["Sweet & salty"],
   },
   {
@@ -39,9 +42,10 @@ const featuredDishes = [
     name: "月饼",
     pinyin: "yuè bǐng",
     english: "Mooncake",
-    description: "Symbolizes reunion, an essential treat during Mid-Autumn Festival moon viewing",
+    description:
+      "Symbolizes reunion, an essential treat during Mid-Autumn Festival moon viewing",
     festival: "Mid-Autumn Festival",
-    image: "/chinese-mooncake.jpg",
+    image: "/image/food/mooncake.jpg",
     tags: ["Great gift"],
   },
 ];
@@ -63,7 +67,8 @@ export function FoodPreview() {
               Experience Chinese culture through taste
             </h2>
             <p className="text-muted-foreground max-w-lg">
-              Every holiday dish has a story. Learn the names, understand the meanings, and know how to order.
+              Every holiday dish has a story. Learn the names, understand the
+              meanings, and know how to order.
             </p>
           </div>
           <Button

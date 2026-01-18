@@ -6,6 +6,7 @@ import {
   MessageCircle,
   Star,
 } from "lucide-react";
+import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -32,7 +33,36 @@ const toolIcons = {
   other: BookOpen,
 };
 
-export function FestivalCard({ festival }: { festival: Festival }) {
+const toolHref: Record<string, string> = {
+  "Design a New Year's Eve Feast": "/en/tool/menu",
+  "New Year Greeting Generator": "/en/tool/greetings",
+  "Red Envelope Guide": "/en/tool/red-envelope",
+  "Lantern Riddles Game": "/en/tool/riddles",
+  "Tangyuan Filling Guide": "/en/tool/tangyuan",
+  "Qingming Traditions Guide": "/en/tool/qingming",
+  "Ceremonial Expressions & Taboos": "/en/tool/qingming-etiquette",
+  "Zongzi Flavor Guide": "/en/tool/zongzi",
+  "Dragon Boat Festival Blessings": "/en/tool/dragon-boat-blessings",
+  "Dragon Boat Culture Introduction": "/en/tool/dragon-boat-culture",
+  "Qixi Blessings": "/en/tool/qixi-blessings",
+  "Date Spot Recommendations": "/en/tool/qixi-dates",
+  "Gift Guide": "/en/tool/qixi-gifts",
+  "Choose a Mooncake Gift Box": "/en/tool/mooncake",
+  "Mooncake Flavor Guide": "/en/tool/mooncake-flavor",
+  "Mid-Autumn Blessing Templates": "/en/tool/mid-autumn-blessings",
+  "Double Ninth Blessings": "/en/tool/chongyang-blessings",
+  "Elder Respect Etiquette": "/en/tool/chongyang-etiquette",
+  "North-South Food Differences": "/en/tool/winter-solstice-food",
+  "Winter Solstice Blessings": "/en/tool/winter-solstice-blessings",
+};
+
+interface FestivalCardProps {
+  festival: Festival;
+  userType: string;
+  lang?: string;
+}
+
+export function FestivalCard({ festival, userType, lang = "en" }: FestivalCardProps) {
   return (
     <Card className="group relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-rose-200/50">
       {/* Gradient overlay on hover */}
@@ -81,27 +111,31 @@ export function FestivalCard({ festival }: { festival: Festival }) {
         </div>
 
         <div className="pt-2 space-y-3">
-          <Button
-            variant="outline"
-            size="sm"
-            className="w-full justify-start gap-2 text-foreground bg-transparent hover:bg-rose-50 hover:border-rose-200 transition-all duration-200"
-          >
-            <div className="p-1 rounded-md bg-rose-50">
-              <BookOpen className="h-4 w-4 text-rose-500" />
-            </div>
-            了解文化概览
-          </Button>
+          <Link href={`/${lang}/culture/${festival.id}/${userType}`}>
+            <Button
+              variant="outline"
+              size="sm"
+              className="w-full justify-start gap-2 text-foreground bg-transparent hover:bg-rose-50 hover:border-rose-200 transition-all duration-200"
+            >
+              <div className="p-1 rounded-md bg-rose-50">
+                <BookOpen className="h-4 w-4 text-rose-500" />
+              </div>
+              了解文化概览
+            </Button>
+          </Link>
 
-          <Button
-            variant="outline"
-            size="sm"
-            className="w-full justify-start gap-2 text-foreground bg-transparent hover:bg-emerald-50 hover:border-emerald-200 transition-all duration-200"
-          >
-            <div className="p-1 rounded-md bg-emerald-50">
-              <Gamepad2 className="h-4 w-4 text-emerald-500" />
-            </div>
-            玩互动测验
-          </Button>
+          <Link href={`/${lang}/quiz/${festival.id}/${userType}`}>
+            <Button
+              variant="outline"
+              size="sm"
+              className="w-full justify-start gap-2 text-foreground bg-transparent hover:bg-emerald-50 hover:border-emerald-200 transition-all duration-200"
+            >
+              <div className="p-1 rounded-md bg-emerald-50">
+                <Gamepad2 className="h-4 w-4 text-emerald-500" />
+              </div>
+              玩互动测验
+            </Button>
+          </Link>
 
           <div className="pt-2 border-t border-border/50">
             <p className="text-xs text-muted-foreground mb-2 flex items-center gap-1">
@@ -111,24 +145,26 @@ export function FestivalCard({ festival }: { festival: Festival }) {
             <div className="flex flex-wrap gap-2">
               {festival.tools.map((tool) => {
                 const Icon = toolIcons[tool.type];
+                const href = toolHref[tool.name] || "/en/tool";
                 return (
-                  <Button
-                    key={tool.name}
-                    variant="secondary"
-                    size="sm"
-                    className={cn(
-                      "gap-1.5 text-xs transition-all duration-200 hover:scale-105",
-                      tool.type === "food" &&
-                        "bg-orange-50 text-orange-700 border border-orange-100 hover:bg-orange-100",
-                      tool.type === "expression" &&
-                        "bg-blue-50 text-blue-700 border border-blue-100 hover:bg-blue-100",
-                      tool.type === "gift" &&
-                        "bg-purple-50 text-purple-700 border border-purple-100 hover:bg-purple-100",
-                    )}
-                  >
-                    <Icon className="h-3 w-3" />
-                    {tool.name}
-                  </Button>
+                  <Link key={tool.name} href={href}>
+                    <Button
+                      variant="secondary"
+                      size="sm"
+                      className={cn(
+                        "gap-1.5 text-xs transition-all duration-200 hover:scale-105",
+                        tool.type === "food" &&
+                          "bg-orange-50 text-orange-700 border border-orange-100 hover:bg-orange-100",
+                        tool.type === "expression" &&
+                          "bg-blue-50 text-blue-700 border border-blue-100 hover:bg-blue-100",
+                        tool.type === "gift" &&
+                          "bg-purple-50 text-purple-700 border border-purple-100 hover:bg-purple-100",
+                      )}
+                    >
+                      <Icon className="h-3 w-3" />
+                      {tool.name}
+                    </Button>
+                  </Link>
                 );
               })}
             </div>

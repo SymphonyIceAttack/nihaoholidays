@@ -31,10 +31,19 @@ export const translations = {
 
 export type Translations = typeof translations;
 
-export function translate(key: string, lang: LanguageType): string {
+export function translate(key: string, lang: LanguageType, params?: Record<string, string>): string {
   const trans = translations[lang] as Record<string, string>;
-  if (key in trans) return trans[key];
-  const fallback = translations.en as Record<string, string>;
-  if (key in fallback) return fallback[key];
-  return key;
+  let text = key;
+  if (key in trans) {
+    text = trans[key];
+  } else {
+    const fallback = translations.en as Record<string, string>;
+    if (key in fallback) text = fallback[key];
+  }
+  if (params) {
+    for (const [key, value] of Object.entries(params)) {
+      text = text.replaceAll(`{${key}}`, value);
+    }
+  }
+  return text;
 }

@@ -17,7 +17,8 @@ const userTypes = [
     label: "I'm studying",
     icon: GraduationCap,
     description: "Deeply understand cultural meaning",
-    scenario: "Social scripts and expressions for celebrating with roommates/classmates",
+    scenario:
+      "Social scripts and expressions for celebrating with roommates/classmates",
   },
   {
     id: "worker",
@@ -63,7 +64,9 @@ export function UserTypeSelector() {
       {selectedType && (
         <div className="bg-gradient-to-r from-rose-50/80 dark:from-rose-900/20 to-orange-50/30 dark:to-orange-900/10 border border-rose-100 dark:border-rose-800/50 rounded-xl p-4 flex items-center justify-between hover:shadow-md transition-all duration-300 cursor-pointer group">
           <div>
-            <p className="text-xs text-muted-foreground mb-1">Your personalized scenario</p>
+            <p className="text-xs text-muted-foreground mb-1">
+              Your personalized scenario
+            </p>
             <p className="text-sm font-medium text-foreground group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors">
               {selectedType.scenario}
             </p>

@@ -8,6 +8,7 @@ import "../globals.css";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { LanguageProvider } from "@/context/language-context";
+import { UserTypeProvider } from "@/context/user-type-context";
 import { siteConfig } from "@/lib/config";
 import { type LanguageType, supportedLocales } from "@/lib/translations/config";
 
@@ -76,11 +77,13 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <LanguageProvider lang={lang as LanguageType}>
-            <div className="min-h-screen flex flex-col cyber-grid">
-              <Header lang={lang as LanguageType} />
-              <main className="flex-1 relative">{children}</main>
-              <Footer lang={lang as LanguageType} />
-            </div>
+            <UserTypeProvider>
+              <div className="min-h-screen flex flex-col cyber-grid">
+                <Header lang={lang as LanguageType} />
+                <main className="flex-1 relative">{children}</main>
+                <Footer lang={lang as LanguageType} />
+              </div>
+            </UserTypeProvider>
           </LanguageProvider>
         </ThemeProvider>
       </body>

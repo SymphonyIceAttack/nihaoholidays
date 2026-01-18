@@ -10,17 +10,20 @@ const features = [
   {
     icon: Layers,
     title: "Comprehensive depth",
-    description: "Festival + food + etiquette + language expressions—dig deep into every cultural aspect.",
+    description:
+      "Festival + food + etiquette + language expressions—dig deep into every cultural aspect.",
   },
   {
     icon: Users,
     title: "Personalized by identity",
-    description: "Tourists, international students, expats—three user types with typical scenarios and exclusive content.",
+    description:
+      "Tourists, international students, expats—three user types with typical scenarios and exclusive content.",
   },
   {
     icon: BarChart3,
     title: "Data-driven optimization",
-    description: "Through your interactions and feedback, continuously optimize the cultural points that confuse foreigners most.",
+    description:
+      "Through your interactions and feedback, continuously optimize the cultural points that confuse foreigners most.",
   },
 ];
 
@@ -37,7 +40,8 @@ export function ValueProposition() {
             Why choose us?
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            From "observing culture" to "using culture"—we're your practical toolkit for Chinese holiday scenarios.
+            From "observing culture" to "using culture"—we're your practical
+            toolkit for Chinese holiday scenarios.
           </p>
         </div>
 

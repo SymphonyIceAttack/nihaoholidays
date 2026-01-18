@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { HomePageContent } from "@/components/home";
+import { MenuAssistantPage } from "@/components/tool";
 import { siteConfig } from "@/lib/config";
 import type { LanguageType } from "@/lib/translations/config";
 import { supportedLocales } from "@/lib/translations/config";
-import { generateHreflangLinks } from "@/lib/translations/hreflang";
 
 export function generateStaticParams() {
   return supportedLocales.map((lang) => ({
@@ -16,12 +15,12 @@ const metadataConfig: Record<
   { title: string; description: string; ogTitle: string; ogDescription: string }
 > = {
   en: {
-    title: "NihaoHolidays - Learn Chinese Holiday Traditions",
+    title: "Menu Assistant - NihaoHolidays",
     description:
-      "Master Chinese holiday customs, greetings, and etiquette. Learn what to say, do, and how to behave during Chinese festivals.",
-    ogTitle: "NihaoHolidays - Learn Chinese Holiday Traditions",
+      "Design your Spring Festival reunion dinner with authentic Chinese dishes and ordering phrases.",
+    ogTitle: "Menu Assistant - NihaoHolidays",
     ogDescription:
-      "Master Chinese holiday customs, greetings, and etiquette. Learn what to say, do, and how to behave during Chinese festivals.",
+      "Design your Spring Festival reunion dinner with authentic Chinese dishes and ordering phrases.",
   },
 };
 
@@ -42,7 +41,7 @@ export async function generateMetadata({
       title: langData.ogTitle,
       description: langData.ogDescription,
       siteName: siteConfig.siteName,
-      url: `${siteConfig.siteUrl}/${lang}`,
+      url: `${siteConfig.siteUrl}/${lang}/tool/menu`,
       images: [
         {
           url: `${siteConfig.siteUrl}/base-logo.webp`,
@@ -59,8 +58,7 @@ export async function generateMetadata({
       images: [`${siteConfig.siteUrl}/base-logo.webp`],
     },
     alternates: {
-      canonical: `${siteConfig.siteUrl}/${lang}`,
-      languages: generateHreflangLinks(""),
+      canonical: `${siteConfig.siteUrl}/${lang}/tool/menu`,
     },
     robots: {
       index: true,
@@ -69,11 +67,11 @@ export async function generateMetadata({
   };
 }
 
-export default async function HomePage({
+export default async function MenuPage({
   params,
 }: {
   params: Promise<{ lang: LanguageType }>;
 }) {
   const { lang } = await params;
-  return <HomePageContent lang={lang} />;
+  return <MenuAssistantPage lang={lang} />;
 }

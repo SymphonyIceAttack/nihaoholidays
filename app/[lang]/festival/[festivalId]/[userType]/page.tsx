@@ -1,14 +1,18 @@
 import type { Metadata } from "next";
-import { HomePageContent } from "@/components/home";
+import { FestivalDetailPage } from "@/components/festival";
 import { siteConfig } from "@/lib/config";
 import type { LanguageType } from "@/lib/translations/config";
 import { supportedLocales } from "@/lib/translations/config";
-import { generateHreflangLinks } from "@/lib/translations/hreflang";
+
+const festivalIds = ["spring", "lantern", "mid_autumn", "dragon_boat", "qingming", "qixi"];
+const userTypes = ["tourist", "student", "worker"];
 
 export function generateStaticParams() {
-  return supportedLocales.map((lang) => ({
-    lang,
-  }));
+  return supportedLocales.flatMap((lang) =>
+    festivalIds.flatMap((festivalId) =>
+      userTypes.map((userType) => ({ lang, festivalId, userType }))
+    )
+  );
 }
 
 const metadataConfig: Record<
@@ -16,21 +20,21 @@ const metadataConfig: Record<
   { title: string; description: string; ogTitle: string; ogDescription: string }
 > = {
   en: {
-    title: "NihaoHolidays - Learn Chinese Holiday Traditions",
+    title: "Festival Details - NihaoHolidays",
     description:
-      "Master Chinese holiday customs, greetings, and etiquette. Learn what to say, do, and how to behave during Chinese festivals.",
-    ogTitle: "NihaoHolidays - Learn Chinese Holiday Traditions",
+      "Learn about Chinese festival traditions, customs, and expressions.",
+    ogTitle: "Festival Details - NihaoHolidays",
     ogDescription:
-      "Master Chinese holiday customs, greetings, and etiquette. Learn what to say, do, and how to behave during Chinese festivals.",
+      "Learn about Chinese festival traditions, customs, and expressions.",
   },
 };
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ lang: LanguageType }>;
+  params: Promise<{ lang: LanguageType; festivalId: string; userType: string }>;
 }): Promise<Metadata> {
-  const { lang } = await params;
+  const { lang, festivalId, userType } = await params;
   const langData = metadataConfig[lang] || metadataConfig.en;
 
   return {
@@ -42,7 +46,7 @@ export async function generateMetadata({
       title: langData.ogTitle,
       description: langData.ogDescription,
       siteName: siteConfig.siteName,
-      url: `${siteConfig.siteUrl}/${lang}`,
+      url: `${siteConfig.siteUrl}/${lang}/festival/${festivalId}/${userType}`,
       images: [
         {
           url: `${siteConfig.siteUrl}/base-logo.webp`,
@@ -59,8 +63,7 @@ export async function generateMetadata({
       images: [`${siteConfig.siteUrl}/base-logo.webp`],
     },
     alternates: {
-      canonical: `${siteConfig.siteUrl}/${lang}`,
-      languages: generateHreflangLinks(""),
+      canonical: `${siteConfig.siteUrl}/${lang}/festival/${festivalId}/${userType}`,
     },
     robots: {
       index: true,
@@ -69,11 +72,17 @@ export async function generateMetadata({
   };
 }
 
-export default async function HomePage({
+export default async function FestivalPage({
   params,
 }: {
-  params: Promise<{ lang: LanguageType }>;
+  params: Promise<{ lang: LanguageType; festivalId: string; userType: string }>;
 }) {
-  const { lang } = await params;
-  return <HomePageContent lang={lang} />;
+  const { lang, festivalId, userType } = await params;
+  return (
+    <FestivalDetailPage
+      lang={lang}
+      festivalId={festivalId}
+      userType={userType}
+    />
+  );
 }

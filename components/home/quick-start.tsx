@@ -1,11 +1,13 @@
 import { ArrowRight, Clock } from "lucide-react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 const quickStartItems = [
   {
     step: 1,
     title: "Choose your identity",
-    description: "Tourist, international student, or expat—get customized content",
+    description:
+      "Tourist, international student, or expat—get customized content",
     time: "10 sec",
   },
   {
@@ -17,7 +19,8 @@ const quickStartItems = [
   {
     step: 3,
     title: "Try interactive tools",
-    description: "Order food, send greetings, give gifts—practice in real scenarios",
+    description:
+      "Order food, send greetings, give gifts—practice in real scenarios",
     time: "5 min",
   },
 ];
@@ -72,10 +75,13 @@ export function QuickStart() {
         <div className="text-center animate-in fade-in slide-in-from-bottom-4 duration-500">
           <Button
             size="lg"
+            asChild
             className="bg-rose-600 hover:bg-rose-700 text-white shadow-lg shadow-rose-600/20 gap-2 px-8 hover:shadow-xl hover:shadow-rose-600/30 transition-all duration-300 active:scale-[0.98]"
           >
-            Start now
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            <Link href="/en/learn">
+              Start now
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
           </Button>
         </div>
       </div>

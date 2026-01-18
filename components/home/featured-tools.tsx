@@ -36,7 +36,8 @@ const featuredTools = [
     id: "gift-guide",
     icon: Gift,
     title: "Gift-giving Guide",
-    description: "Understand Chinese gift-giving taboos and customs to avoid awkward situations and choose the most appropriate gifts.",
+    description:
+      "Understand Chinese gift-giving taboos and customs to avoid awkward situations and choose the most appropriate gifts.",
     color: "purple",
     festival: "All",
   },
@@ -89,7 +90,8 @@ export function FeaturedTools() {
               Scenario-based toolbox
             </h2>
             <p className="text-muted-foreground max-w-lg">
-              We don't just tell you "what"—we help you solve "how". Every tool is designed for real scenarios.
+              We don't just tell you "what"—we help you solve "how". Every tool
+              is designed for real scenarios.
             </p>
           </div>
           <Button

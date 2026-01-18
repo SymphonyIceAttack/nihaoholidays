@@ -1,6 +1,7 @@
 "use client";
 
 import { ChevronDown, Globe, Menu, X } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -51,9 +52,10 @@ export function Header() {
             </button>
             <Button
               size="sm"
+              asChild
               className="bg-rose-600 hover:bg-rose-700 text-white"
             >
-              开始学习
+              <Link href="/en/learn">开始学习</Link>
             </Button>
             <button
               className="md:hidden p-2 -mr-2"

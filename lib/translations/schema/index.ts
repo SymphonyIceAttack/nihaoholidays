@@ -1,14 +1,26 @@
 import type { z } from "zod";
 import { commonSchema } from "./common";
+import { festivalSchema } from "./festival";
+import { homeSchema } from "./home";
+import { quizSchema } from "./quiz";
 
 // Re-export all schema modules
 export { commonSchema, navSchema } from "./common";
+export { homeSchema } from "./home";
+export { festivalSchema } from "./festival";
+export { quizSchema } from "./quiz";
 
 // Type exports
 export type CommonSchema = z.infer<typeof commonSchema>;
+export type HomeSchema = z.infer<typeof homeSchema>;
+export type FestivalSchema = z.infer<typeof festivalSchema>;
+export type QuizSchema = z.infer<typeof quizSchema>;
 
 export type TranslationSchema = {
   common: z.infer<typeof commonSchema>;
+  home: z.infer<typeof homeSchema>;
+  festival: z.infer<typeof festivalSchema>;
+  quiz: z.infer<typeof quizSchema>;
 };
 
 // Get all required keys
@@ -16,6 +28,18 @@ export function getRequiredKeys(): string[] {
   const keys = new Set<string>();
 
   for (const key of Object.keys(commonSchema.shape)) {
+    keys.add(key);
+  }
+
+  for (const key of Object.keys(homeSchema.shape)) {
+    keys.add(key);
+  }
+
+  for (const key of Object.keys(festivalSchema.shape)) {
+    keys.add(key);
+  }
+
+  for (const key of Object.keys(quizSchema.shape)) {
     keys.add(key);
   }
 

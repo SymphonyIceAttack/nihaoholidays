@@ -1,4 +1,5 @@
 import { ArrowRight, Gift, MessageSquare, Utensils } from "lucide-react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
@@ -49,13 +50,17 @@ export function HeroSection() {
             <div className="p-1.5 rounded-full bg-rose-50 dark:bg-rose-900/20 group-hover:bg-rose-100 dark:group-hover:bg-rose-900/30 transition-colors">
               <MessageSquare className="h-4 w-4 text-rose-500 dark:text-rose-400" />
             </div>
-            <span className="text-sm font-medium">Practical expression templates</span>
+            <span className="text-sm font-medium">
+              Practical expression templates
+            </span>
           </div>
           <div className="group flex items-center gap-2 bg-white/80 dark:bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full border border-rose-100 dark:border-rose-900/30 shadow-sm hover:shadow-md hover:border-rose-200 dark:hover:border-rose-700 transition-all duration-300 cursor-pointer">
             <div className="p-1.5 rounded-full bg-rose-50 dark:bg-rose-900/20 group-hover:bg-rose-100 dark:group-hover:bg-rose-900/30 transition-colors">
               <Gift className="h-4 w-4 text-rose-500 dark:text-rose-400" />
             </div>
-            <span className="text-sm font-medium">Etiquette &amp; taboo guides</span>
+            <span className="text-sm font-medium">
+              Etiquette &amp; taboo guides
+            </span>
           </div>
         </div>
 
@@ -63,10 +68,13 @@ export function HeroSection() {
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 delay-500">
           <Button
             size="lg"
+            asChild
             className="bg-rose-600 hover:bg-rose-700 text-white shadow-lg shadow-rose-600/20 gap-2 px-8"
           >
-            Start with Spring Festival
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            <Link href="/en/learn">
+              Start with Spring Festival
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
           </Button>
         </div>
       </div>
