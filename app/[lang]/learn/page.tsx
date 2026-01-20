@@ -3,6 +3,7 @@ import { LearnPageContent } from "@/components/learn/learn-page";
 import { siteConfig } from "@/lib/config";
 import type { LanguageType } from "@/lib/translations/config";
 import { supportedLocales } from "@/lib/translations/config";
+import { generateHreflangLinks } from "@/lib/translations/hreflang";
 
 export function generateStaticParams() {
   return supportedLocales.map((lang) => ({
@@ -59,6 +60,7 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: `${siteConfig.siteUrl}/${lang}/learn`,
+      languages: generateHreflangLinks("/learn"),
     },
     robots: {
       index: true,

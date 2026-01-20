@@ -1,17 +1,22 @@
 import type { Metadata } from "next";
-import { QuizContent } from "@/components/quiz/quiz-content";
+import { FestivalDetailPage } from "@/components/festival";
 import { siteConfig } from "@/lib/config";
 import type { LanguageType } from "@/lib/translations/config";
 import { supportedLocales } from "@/lib/translations/config";
+import { generateHreflangLinks } from "@/lib/translations/hreflang";
 
-const festivalIds = ["spring", "lantern", "mid_autumn", "dragon_boat", "qingming", "qixi"];
-const userTypes = ["tourist", "student", "worker"];
+const festivalIds = [
+  "spring",
+  "lantern",
+  "mid_autumn",
+  "dragon_boat",
+  "qingming",
+  "qixi",
+];
 
 export function generateStaticParams() {
   return supportedLocales.flatMap((lang) =>
-    festivalIds.flatMap((festivalId) =>
-      userTypes.map((userType) => ({ lang, festivalId, userType }))
-    )
+    festivalIds.map((festivalId) => ({ lang, festivalId })),
   );
 }
 
@@ -20,21 +25,21 @@ const metadataConfig: Record<
   { title: string; description: string; ogTitle: string; ogDescription: string }
 > = {
   en: {
-    title: "Interactive Quiz - NihaoHolidays",
+    title: "Festival Guide - NihaoHolidays",
     description:
-      "Test your knowledge about Chinese festivals with interactive quizzes.",
-    ogTitle: "Interactive Quiz - NihaoHolidays",
+      "Practical guide for Chinese festivals: essential phrases, holiday foods, etiquette, and gift suggestions.",
+    ogTitle: "Festival Guide - NihaoHolidays",
     ogDescription:
-      "Test your knowledge about Chinese festivals with interactive quizzes.",
+      "Practical guide for Chinese festivals: essential phrases, holiday foods, etiquette, and gift suggestions.",
   },
 };
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ lang: LanguageType; festivalId: string; userType: string }>;
+  params: Promise<{ lang: LanguageType; festivalId: string }>;
 }): Promise<Metadata> {
-  const { lang, festivalId, userType } = await params;
+  const { lang, festivalId } = await params;
   const langData = metadataConfig[lang] || metadataConfig.en;
 
   return {
@@ -46,7 +51,7 @@ export async function generateMetadata({
       title: langData.ogTitle,
       description: langData.ogDescription,
       siteName: siteConfig.siteName,
-      url: `${siteConfig.siteUrl}/${lang}/quiz/${festivalId}/${userType}`,
+      url: `${siteConfig.siteUrl}/${lang}/festival/${festivalId}`,
       images: [
         {
           url: `${siteConfig.siteUrl}/base-logo.webp`,
@@ -63,7 +68,8 @@ export async function generateMetadata({
       images: [`${siteConfig.siteUrl}/base-logo.webp`],
     },
     alternates: {
-      canonical: `${siteConfig.siteUrl}/${lang}/quiz/${festivalId}/${userType}`,
+      canonical: `${siteConfig.siteUrl}/${lang}/festival/${festivalId}`,
+      languages: generateHreflangLinks(`/festival/${festivalId}`),
     },
     robots: {
       index: true,
@@ -72,11 +78,11 @@ export async function generateMetadata({
   };
 }
 
-export default async function QuizPage({
+export default async function FestivalPage({
   params,
 }: {
-  params: Promise<{ lang: LanguageType; festivalId: string; userType: string }>;
+  params: Promise<{ lang: LanguageType; festivalId: string }>;
 }) {
-  const { lang, festivalId, userType } = await params;
-  return <QuizContent lang={lang} festivalId={festivalId} userType={userType} />;
+  const { lang, festivalId } = await params;
+  return <FestivalDetailPage lang={lang} festivalId={festivalId} />;
 }

@@ -31,7 +31,11 @@ export const translations = {
 
 export type Translations = typeof translations;
 
-export function translate(key: string, lang: LanguageType, params?: Record<string, string>): string {
+export function translate(
+  key: string,
+  lang: LanguageType,
+  params?: Record<string, string>,
+): string {
   const trans = translations[lang] as Record<string, string>;
   let text = key;
   if (key in trans) {

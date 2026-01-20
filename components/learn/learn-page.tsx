@@ -132,7 +132,7 @@ function LearnPageInner() {
 
   const handleStart = () => {
     if (selectedFestival) {
-      window.location.href = `/en/festival/${selectedFestival}/${selectedType}`;
+      window.location.href = `/en/festival/${selectedFestival}`;
     }
   };
 
@@ -150,8 +150,8 @@ function LearnPageInner() {
           </Link>
           <div className="text-sm text-muted-foreground">
             <span className="inline-flex items-center gap-1.5">
-              <Sparkles className="h-4 w-4 text-rose-500" />
-              5 minutes to start learning
+              <Sparkles className="h-4 w-4 text-rose-500" />5 minutes to start
+              learning
             </span>
           </div>
         </div>
@@ -401,9 +401,7 @@ function LearnPageInner() {
                     asChild
                     className="flex-1"
                   >
-                    <Link
-                      href={`/en/festival/${selectedFestival}/${selectedType}`}
-                    >
+                    <Link href={`/en/festival/${selectedFestival}`}>
                       View Festival Details
                     </Link>
                   </Button>

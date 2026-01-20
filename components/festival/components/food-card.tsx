@@ -19,7 +19,9 @@ export function FoodCard({ food }: FoodCardProps) {
         <span className="text-3xl">{food.emoji}</span>
         <div className="flex-1">
           <h4 className="font-semibold text-foreground">{food.name}</h4>
-          <p className="text-sm text-muted-foreground mb-2">{food.description}</p>
+          <p className="text-sm text-muted-foreground mb-2">
+            {food.description}
+          </p>
           <div className="flex items-center gap-2 mb-2">
             <Star className="h-3 w-3 text-amber-500" />
             <span className="text-xs text-amber-700 dark:text-amber-300 font-medium">

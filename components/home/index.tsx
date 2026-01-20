@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { FeaturedTools } from "./featured-tools";
 import { FestivalFilters } from "./festival-filters";
 import { FestivalGrid } from "./festival-grid";
@@ -23,13 +26,20 @@ interface HomePageContentProps {
 }
 
 export function HomePageContent({ lang }: HomePageContentProps) {
+  const [themeFilter, setThemeFilter] = useState<string>("all");
+
   return (
     <>
       <HeroSection />
       <UpcomingFestivals />
       <div className="container mx-auto px-4 py-12">
-        <FestivalFilters />
-        <FestivalGrid lang={lang} />
+        <FestivalFilters
+          lang={lang}
+          onFilterChange={(theme) => {
+            setThemeFilter(theme);
+          }}
+        />
+        <FestivalGrid lang={lang} theme={themeFilter} />
       </div>
       <FeaturedTools />
       <FoodPreview />

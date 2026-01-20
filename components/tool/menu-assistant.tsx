@@ -13,8 +13,8 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const dishes = [
   {
@@ -152,14 +152,46 @@ const dishes = [
 ];
 
 const orderingPhrases = [
-  { chinese: "服务员，请给我们来一条红烧鱼。", pinyin: "Fú wù yuán, qǐng gěi wǒ men lái yì tiáo hóng shāo yú.", english: "Waiter, please bring us a braised fish." },
-  { chinese: "饺子要多少个？", pinyin: "Jiǎo zi yào duō shǎo gè?", english: "How many dumplings would you like?" },
-  { chinese: "有没有素馅的饺子？", pinyin: "Yǒu méi yǒu sù xiàn de jiǎo zi?", english: "Do you have vegetarian dumplings?" },
-  { chinese: "这菜有什么配料？", pinyin: "Zhè cài yǒu shén me pèi liào?", english: "What are the ingredients in this dish?" },
-  { chinese: "请给我们一个包间。", pinyin: "Qǐng gěi wǒ men yí gè bāo jiān.", english: "We'd like a private room, please." },
-  { chinese: "这道菜是辣的吗？", pinyin: "Zhè dào cài shì là de ma?", english: "Is this dish spicy?" },
-  { chinese: "请问有没有什么推荐？", pinyin: "Qǐng wèn yǒu méi yǒu shén me tuī jiàn?", english: "Do you have any recommendations?" },
-  { chinese: "我们想先来几个凉菜。", pinyin: "Wǒ men xiǎng xiān lái jǐ gè liáng cài.", english: "We'd like to start with some cold dishes." },
+  {
+    chinese: "服务员，请给我们来一条红烧鱼。",
+    pinyin: "Fú wù yuán, qǐng gěi wǒ men lái yì tiáo hóng shāo yú.",
+    english: "Waiter, please bring us a braised fish.",
+  },
+  {
+    chinese: "饺子要多少个？",
+    pinyin: "Jiǎo zi yào duō shǎo gè?",
+    english: "How many dumplings would you like?",
+  },
+  {
+    chinese: "有没有素馅的饺子？",
+    pinyin: "Yǒu méi yǒu sù xiàn de jiǎo zi?",
+    english: "Do you have vegetarian dumplings?",
+  },
+  {
+    chinese: "这菜有什么配料？",
+    pinyin: "Zhè cài yǒu shén me pèi liào?",
+    english: "What are the ingredients in this dish?",
+  },
+  {
+    chinese: "请给我们一个包间。",
+    pinyin: "Qǐng gěi wǒ men yí gè bāo jiān.",
+    english: "We'd like a private room, please.",
+  },
+  {
+    chinese: "这道菜是辣的吗？",
+    pinyin: "Zhè dào cài shì là de ma?",
+    english: "Is this dish spicy?",
+  },
+  {
+    chinese: "请问有没有什么推荐？",
+    pinyin: "Qǐng wèn yǒu méi yǒu shén me tuī jiàn?",
+    english: "Do you have any recommendations?",
+  },
+  {
+    chinese: "我们想先来几个凉菜。",
+    pinyin: "Wǒ men xiǎng xiān lái jǐ gè liáng cài.",
+    english: "We'd like to start with some cold dishes.",
+  },
 ];
 
 export function MenuAssistantPage({ lang = "en" }: { lang?: string } = {}) {
@@ -179,15 +211,19 @@ export function MenuAssistantPage({ lang = "en" }: { lang?: string } = {}) {
   ];
 
   const filteredDishes = dishes.filter((dish) => {
-    const matchesSearch = dish.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    const matchesSearch =
+      dish.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       dish.nameEn.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesCategory = activeCategory === "all" || dish.category === activeCategory;
+    const matchesCategory =
+      activeCategory === "all" || dish.category === activeCategory;
     return matchesSearch && matchesCategory;
   });
 
   const toggleDish = (dishId: string) => {
     setSelectedDishes((prev) =>
-      prev.includes(dishId) ? prev.filter((id) => id !== dishId) : [...prev, dishId]
+      prev.includes(dishId)
+        ? prev.filter((id) => id !== dishId)
+        : [...prev, dishId],
     );
   };
 
@@ -219,8 +255,8 @@ export function MenuAssistantPage({ lang = "en" }: { lang?: string } = {}) {
               Spring Festival Menu Assistant
             </h1>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Design your perfect reunion dinner with traditional Chinese dishes.
-              Each dish carries lucky meanings for the new year.
+              Design your perfect reunion dinner with traditional Chinese
+              dishes. Each dish carries lucky meanings for the new year.
             </p>
           </div>
 
@@ -233,8 +269,12 @@ export function MenuAssistantPage({ lang = "en" }: { lang?: string } = {}) {
                     <Users className="h-6 w-6 text-rose-600 dark:text-rose-400" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground">Number of Guests</h3>
-                    <p className="text-sm text-muted-foreground">How many people?</p>
+                    <h3 className="font-semibold text-foreground">
+                      Number of Guests
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      How many people?
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
@@ -245,7 +285,9 @@ export function MenuAssistantPage({ lang = "en" }: { lang?: string } = {}) {
                   >
                     <X className="h-4 w-4" />
                   </button>
-                  <span className="text-2xl font-bold text-foreground w-12 text-center">{guests}</span>
+                  <span className="text-2xl font-bold text-foreground w-12 text-center">
+                    {guests}
+                  </span>
                   <button
                     type="button"
                     onClick={() => setGuests(guests + 1)}
@@ -318,9 +360,15 @@ export function MenuAssistantPage({ lang = "en" }: { lang?: string } = {}) {
                           </span>
                         )}
                       </div>
-                      <h3 className="font-semibold text-foreground">{dish.name}</h3>
-                      <p className="text-sm text-muted-foreground mb-2">{dish.nameEn}</p>
-                      <p className="text-xs text-amber-600 dark:text-amber-400 mb-2">{dish.meaning}</p>
+                      <h3 className="font-semibold text-foreground">
+                        {dish.name}
+                      </h3>
+                      <p className="text-sm text-muted-foreground mb-2">
+                        {dish.nameEn}
+                      </p>
+                      <p className="text-xs text-amber-600 dark:text-amber-400 mb-2">
+                        {dish.meaning}
+                      </p>
                       <div className="flex items-center justify-between">
                         <span className="text-xs px-2 py-1 rounded-full bg-muted text-muted-foreground">
                           {dish.difficulty}
@@ -346,7 +394,9 @@ export function MenuAssistantPage({ lang = "en" }: { lang?: string } = {}) {
                       <ShoppingCart className="h-5 w-5 text-rose-600 dark:text-rose-400" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground">Your Menu</h3>
+                      <h3 className="font-semibold text-foreground">
+                        Your Menu
+                      </h3>
                       <p className="text-sm text-muted-foreground">
                         {selectedDishes.length} dishes selected
                       </p>
@@ -363,8 +413,13 @@ export function MenuAssistantPage({ lang = "en" }: { lang?: string } = {}) {
                         {selectedDishes.map((id) => {
                           const dish = dishes.find((d) => d.id === id)!;
                           return (
-                            <li key={id} className="flex items-center justify-between p-2 rounded-lg bg-muted/50">
-                              <span className="text-sm">{dish.emoji} {dish.nameEn}</span>
+                            <li
+                              key={id}
+                              className="flex items-center justify-between p-2 rounded-lg bg-muted/50"
+                            >
+                              <span className="text-sm">
+                                {dish.emoji} {dish.nameEn}
+                              </span>
                               <button
                                 type="button"
                                 onClick={() => toggleDish(id)}
@@ -411,15 +466,26 @@ export function MenuAssistantPage({ lang = "en" }: { lang?: string } = {}) {
                       <span className="text-xl">💬</span>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground">Useful Phrases</h3>
-                      <p className="text-sm text-muted-foreground">Order with confidence</p>
+                      <h3 className="font-semibold text-foreground">
+                        Useful Phrases
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        Order with confidence
+                      </p>
                     </div>
                   </div>
                   <div className="space-y-3">
                     {orderingPhrases.slice(0, 4).map((phrase, index) => (
-                      <div key={index} className="p-3 rounded-lg bg-white/60 dark:bg-zinc-800/60">
-                        <p className="text-sm font-medium text-foreground mb-1">{phrase.chinese}</p>
-                        <p className="text-xs text-muted-foreground">{phrase.pinyin}</p>
+                      <div
+                        key={index}
+                        className="p-3 rounded-lg bg-white/60 dark:bg-zinc-800/60"
+                      >
+                        <p className="text-sm font-medium text-foreground mb-1">
+                          {phrase.chinese}
+                        </p>
+                        <p className="text-xs text-muted-foreground">
+                          {phrase.pinyin}
+                        </p>
                       </div>
                     ))}
                   </div>
@@ -433,7 +499,9 @@ export function MenuAssistantPage({ lang = "en" }: { lang?: string } = {}) {
       {/* Footer */}
       <footer className="border-t mt-16 py-8 bg-muted/30">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>No account needed • No registration • Start learning immediately</p>
+          <p>
+            No account needed • No registration • Start learning immediately
+          </p>
         </div>
       </footer>
     </div>

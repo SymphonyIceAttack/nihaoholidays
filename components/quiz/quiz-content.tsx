@@ -8,12 +8,15 @@ import {
   XCircle,
 } from "lucide-react";
 import Link from "next/link";
-
 import { Suspense, useState } from "react";
+
+import {
+  festivalData,
+  userTypeData,
+} from "@/components/festival/data/festival-data";
 import { Button } from "@/components/ui/button";
-import { festivalData, userTypeData } from "@/components/festival/data/festival-data";
-import { cn } from "@/lib/utils";
 import { translate } from "@/lib/translations";
+import { cn } from "@/lib/utils";
 
 interface QuizQuestion {
   id: number;
@@ -28,20 +31,28 @@ interface QuizQuestion {
 interface QuizContentProps {
   lang: "en";
   festivalId: string;
-  userType: string;
 }
+
+const userTypes = [
+  { id: "tourist", label: "Tourist", icon: "✈️" },
+  { id: "student", label: "Student", icon: "🎓" },
+  { id: "worker", label: "Worker", icon: "💼" },
+] as const;
+
+type UserType = (typeof userTypes)[number]["id"];
 
 interface QuizContentInnerProps {
   lang: "en";
   festivalId: string;
-  userType: string;
 }
 
-function QuizContentInner({ lang, festivalId, userType }: QuizContentInnerProps) {
-  const t = (key: string, params?: Record<string, string>) => translate(key, lang, params);
+function QuizContentInner({ lang, festivalId }: QuizContentInnerProps) {
+  const [userType, setUserType] = useState<UserType>("tourist");
+  const t = (key: string, params?: Record<string, string>) =>
+    translate(key, lang, params);
 
   const festival = festivalData[festivalId] || festivalData.spring;
-  const userData = userTypeData[userType] || userTypeData.tourist;
+  const userData = userTypeData[userType];
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
@@ -62,7 +73,12 @@ function QuizContentInner({ lang, festivalId, userType }: QuizContentInnerProps)
     {
       id: 2,
       question: `What is the lunar date of ${festival.name}?`,
-      options: [festival.lunarDate, "15th day of 8th lunar month", "1st day of 1st lunar month", "5th day of 5th lunar month"],
+      options: [
+        festival.lunarDate,
+        "15th day of 8th lunar month",
+        "1st day of 1st lunar month",
+        "5th day of 5th lunar month",
+      ],
       correctIndex: 0,
       explanation: `${festival.name} falls on ${festival.lunarDate}.`,
       category: "history",
@@ -119,7 +135,8 @@ function QuizContentInner({ lang, festivalId, userType }: QuizContentInnerProps)
         "Duō shǎo qián?",
       ],
       correctIndex: 0,
-      explanation: "This is how you order fish in Chinese. The phrase means 'Please give me one braised fish.'",
+      explanation:
+        "This is how you order fish in Chinese. The phrase means 'Please give me one braised fish.'",
       category: "etiquette",
       userType: "tourist",
     },
@@ -133,7 +150,8 @@ function QuizContentInner({ lang, festivalId, userType }: QuizContentInnerProps)
         "Empty gift box",
       ],
       correctIndex: 0,
-      explanation: "Red envelopes (hongbao) with money are the traditional gift during Spring Festival.",
+      explanation:
+        "Red envelopes (hongbao) with money are the traditional gift during Spring Festival.",
       category: "customs",
       userType: "tourist",
     },
@@ -150,7 +168,8 @@ function QuizContentInner({ lang, festivalId, userType }: QuizContentInnerProps)
         "Wǒ yào huí jiā le",
       ],
       correctIndex: 0,
-      explanation: "This is a friendly phrase to suggest making dumplings together.",
+      explanation:
+        "This is a friendly phrase to suggest making dumplings together.",
       category: "customs",
       userType: "student",
     },
@@ -164,7 +183,8 @@ function QuizContentInner({ lang, festivalId, userType }: QuizContentInnerProps)
         "A sports champion",
       ],
       correctIndex: 0,
-      explanation: "Qu Yuan was a famous ancient poet. Dragon Boat Festival commemorates him.",
+      explanation:
+        "Qu Yuan was a famous ancient poet. Dragon Boat Festival commemorates him.",
       category: "history",
       userType: "student",
     },
@@ -181,7 +201,8 @@ function QuizContentInner({ lang, festivalId, userType }: QuizContentInnerProps)
         "Nǐ zhǎng de hěn chǒu",
       ],
       correctIndex: 0,
-      explanation: "This means 'Boss, Happy New Year. May everything go your way.' - a respectful professional greeting.",
+      explanation:
+        "This means 'Boss, Happy New Year. May everything go your way.' - a respectful professional greeting.",
       category: "etiquette",
       userType: "worker",
     },
@@ -195,7 +216,8 @@ function QuizContentInner({ lang, festivalId, userType }: QuizContentInnerProps)
         "Politics and religion",
       ],
       correctIndex: 0,
-      explanation: "Discussing positive topics like company achievements is appropriate at work gatherings.",
+      explanation:
+        "Discussing positive topics like company achievements is appropriate at work gatherings.",
       category: "etiquette",
       userType: "worker",
     },
@@ -207,7 +229,10 @@ function QuizContentInner({ lang, festivalId, userType }: QuizContentInnerProps)
     worker: workerQuestions,
   };
 
-  const quizQuestions = [...baseQuestions, ...(userTypeQuestions[userType as keyof typeof userTypeQuestions] || [])];
+  const quizQuestions = [
+    ...baseQuestions,
+    ...(userTypeQuestions[userType] || []),
+  ];
 
   const handleAnswerSelect = (index: number) => {
     if (showExplanation) return;
@@ -240,10 +265,29 @@ function QuizContentInner({ lang, festivalId, userType }: QuizContentInnerProps)
 
   const getScoreMessage = () => {
     const percentage = (score / quizQuestions.length) * 100;
-    if (percentage === 100) return { message: t("quiz.perfectScore"), emoji: "🏆", color: "text-amber-500" };
-    if (percentage >= 80) return { message: t("quiz.excellent"), emoji: "🌟", color: "text-emerald-500" };
-    if (percentage >= 60) return { message: t("quiz.goodJob"), emoji: "👍", color: "text-blue-500" };
-    return { message: t("quiz.keepLearning"), emoji: "📚", color: "text-rose-500" };
+    if (percentage === 100)
+      return {
+        message: t("quiz.perfectScore"),
+        emoji: "🏆",
+        color: "text-amber-500",
+      };
+    if (percentage >= 80)
+      return {
+        message: t("quiz.excellent"),
+        emoji: "🌟",
+        color: "text-emerald-500",
+      };
+    if (percentage >= 60)
+      return {
+        message: t("quiz.goodJob"),
+        emoji: "👍",
+        color: "text-blue-500",
+      };
+    return {
+      message: t("quiz.keepLearning"),
+      emoji: "📚",
+      color: "text-rose-500",
+    };
   };
 
   if (quizCompleted) {
@@ -267,13 +311,17 @@ function QuizContentInner({ lang, festivalId, userType }: QuizContentInnerProps)
                 {result.message}
               </h2>
               <div className="text-6xl font-bold text-foreground mb-4">
-                {score} <span className="text-2xl text-muted-foreground">/ {quizQuestions.length}</span>
+                {score}{" "}
+                <span className="text-2xl text-muted-foreground">
+                  / {quizQuestions.length}
+                </span>
               </div>
               <p className="text-muted-foreground mb-6">
-                {t("quiz.scoreDetail", { score: String(score), total: String(quizQuestions.length) })}
-                {score >= 4
-                  ? t("quiz.greatJob")
-                  : t("quiz.reviewMore")}
+                {t("quiz.scoreDetail", {
+                  score: String(score),
+                  total: String(quizQuestions.length),
+                })}
+                {score >= 4 ? t("quiz.greatJob") : t("quiz.reviewMore")}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3">
@@ -291,7 +339,7 @@ function QuizContentInner({ lang, festivalId, userType }: QuizContentInnerProps)
                   asChild
                   className="flex-1 bg-rose-600 hover:bg-rose-700 text-white shadow-lg shadow-rose-600/20"
                 >
-                  <Link href={`/${lang}/culture/${festivalId}/${userType}`}>
+                  <Link href={`/${lang}/culture/${festivalId}`}>
                     <Lightbulb className="h-4 w-4 mr-2" />
                     {t("quiz.studyMore")}
                   </Link>
@@ -321,10 +369,27 @@ function QuizContentInner({ lang, festivalId, userType }: QuizContentInnerProps)
             {t("quiz.testKnowledge")}
           </p>
 
-          {/* User Context */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted text-sm text-muted-foreground animate-in fade-in slide-in-from-bottom-4 duration-500 delay-200">
-            <span>{userData.icon}</span>
-            <span>{t("quiz.learningAs", { role: userData.label })}</span>
+          {/* User Type Tabs */}
+          <div className="inline-flex justify-center gap-2 mb-4">
+            {userTypes.map((type) => {
+              const typeData = userTypeData[type.id];
+              return (
+                <button
+                  key={type.id}
+                  type="button"
+                  onClick={() => setUserType(type.id)}
+                  className={cn(
+                    "flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer",
+                    userType === type.id
+                      ? "bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300 shadow-sm"
+                      : "bg-muted text-muted-foreground hover:text-foreground",
+                  )}
+                >
+                  <span>{typeData.icon}</span>
+                  <span>{typeData.label}</span>
+                </button>
+              );
+            })}
           </div>
         </div>
 
@@ -332,12 +397,16 @@ function QuizContentInner({ lang, festivalId, userType }: QuizContentInnerProps)
         <div className="max-w-2xl mx-auto mb-8">
           <div className="flex justify-between text-sm text-muted-foreground mb-2">
             <span>{t("quiz.progress")}</span>
-            <span>{Math.round(((currentQuestion) / quizQuestions.length) * 100)}%</span>
+            <span>
+              {Math.round((currentQuestion / quizQuestions.length) * 100)}%
+            </span>
           </div>
           <div className="h-2 bg-muted rounded-full overflow-hidden">
             <div
               className="h-full bg-gradient-to-r from-rose-500 to-purple-500 transition-all duration-500"
-              style={{ width: `${((currentQuestion) / quizQuestions.length) * 100}%` }}
+              style={{
+                width: `${(currentQuestion / quizQuestions.length) * 100}%`,
+              }}
             />
           </div>
         </div>
@@ -347,7 +416,8 @@ function QuizContentInner({ lang, festivalId, userType }: QuizContentInnerProps)
           <div className="bg-card rounded-2xl p-8 border shadow-sm">
             <div className="flex items-center gap-2 mb-4">
               <span className="px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-medium">
-                {question.category.charAt(0).toUpperCase() + question.category.slice(1)}
+                {question.category.charAt(0).toUpperCase() +
+                  question.category.slice(1)}
               </span>
             </div>
 
@@ -370,11 +440,21 @@ function QuizContentInner({ lang, festivalId, userType }: QuizContentInnerProps)
                     className={cn(
                       "w-full p-4 rounded-xl border-2 text-left transition-all duration-300",
                       "hover:shadow-md hover:-translate-y-0.5",
-                      !showResult && "hover:border-rose-300 dark:hover:border-rose-700",
-                      showResult && isCorrect && "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20",
-                      showResult && isSelected && !isCorrect && "border-red-500 bg-red-50 dark:bg-red-900/20",
-                      !showResult && isSelected && "border-rose-500 bg-rose-50 dark:bg-rose-900/20",
-                      !showResult && !isSelected && "border-border bg-background",
+                      !showResult &&
+                        "hover:border-rose-300 dark:hover:border-rose-700",
+                      showResult &&
+                        isCorrect &&
+                        "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20",
+                      showResult &&
+                        isSelected &&
+                        !isCorrect &&
+                        "border-red-500 bg-red-50 dark:bg-red-900/20",
+                      !showResult &&
+                        isSelected &&
+                        "border-rose-500 bg-rose-50 dark:bg-rose-900/20",
+                      !showResult &&
+                        !isSelected &&
+                        "border-border bg-background",
                     )}
                   >
                     <div className="flex items-center justify-between">
@@ -454,7 +534,10 @@ function QuizContentSkeleton() {
             <div className="h-8 w-full bg-muted rounded animate-pulse mb-6" />
             <div className="space-y-3">
               {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="h-16 bg-muted rounded-xl animate-pulse" />
+                <div
+                  key={i}
+                  className="h-16 bg-muted rounded-xl animate-pulse"
+                />
               ))}
             </div>
           </div>
@@ -464,10 +547,10 @@ function QuizContentSkeleton() {
   );
 }
 
-export function QuizContent({ lang, festivalId, userType }: QuizContentProps) {
+export function QuizContent({ lang, festivalId }: QuizContentProps) {
   return (
     <Suspense fallback={<QuizContentSkeleton />}>
-      <QuizContentInner lang={lang} festivalId={festivalId} userType={userType} />
+      <QuizContentInner lang={lang} festivalId={festivalId} />
     </Suspense>
   );
 }

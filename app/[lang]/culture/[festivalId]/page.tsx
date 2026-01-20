@@ -1,17 +1,22 @@
 import type { Metadata } from "next";
-import { FestivalDetailPage } from "@/components/festival";
+import { CultureDetailContent } from "@/components/culture/culture-detail-content";
 import { siteConfig } from "@/lib/config";
 import type { LanguageType } from "@/lib/translations/config";
 import { supportedLocales } from "@/lib/translations/config";
+import { generateHreflangLinks } from "@/lib/translations/hreflang";
 
-const festivalIds = ["spring", "lantern", "mid_autumn", "dragon_boat", "qingming", "qixi"];
-const userTypes = ["tourist", "student", "worker"];
+const festivalIds = [
+  "spring",
+  "lantern",
+  "mid_autumn",
+  "dragon_boat",
+  "qingming",
+  "qixi",
+];
 
 export function generateStaticParams() {
   return supportedLocales.flatMap((lang) =>
-    festivalIds.flatMap((festivalId) =>
-      userTypes.map((userType) => ({ lang, festivalId, userType }))
-    )
+    festivalIds.map((festivalId) => ({ lang, festivalId })),
   );
 }
 
@@ -20,21 +25,21 @@ const metadataConfig: Record<
   { title: string; description: string; ogTitle: string; ogDescription: string }
 > = {
   en: {
-    title: "Festival Details - NihaoHolidays",
+    title: "Cultural Overview - NihaoHolidays",
     description:
-      "Learn about Chinese festival traditions, customs, and expressions.",
-    ogTitle: "Festival Details - NihaoHolidays",
+      "Deep dive into Chinese festival history, cultural significance, origins, and traditions.",
+    ogTitle: "Cultural Overview - NihaoHolidays",
     ogDescription:
-      "Learn about Chinese festival traditions, customs, and expressions.",
+      "Deep dive into Chinese festival history, cultural significance, origins, and traditions.",
   },
 };
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ lang: LanguageType; festivalId: string; userType: string }>;
+  params: Promise<{ lang: LanguageType; festivalId: string }>;
 }): Promise<Metadata> {
-  const { lang, festivalId, userType } = await params;
+  const { lang, festivalId } = await params;
   const langData = metadataConfig[lang] || metadataConfig.en;
 
   return {
@@ -46,7 +51,7 @@ export async function generateMetadata({
       title: langData.ogTitle,
       description: langData.ogDescription,
       siteName: siteConfig.siteName,
-      url: `${siteConfig.siteUrl}/${lang}/festival/${festivalId}/${userType}`,
+      url: `${siteConfig.siteUrl}/${lang}/culture/${festivalId}`,
       images: [
         {
           url: `${siteConfig.siteUrl}/base-logo.webp`,
@@ -63,7 +68,8 @@ export async function generateMetadata({
       images: [`${siteConfig.siteUrl}/base-logo.webp`],
     },
     alternates: {
-      canonical: `${siteConfig.siteUrl}/${lang}/festival/${festivalId}/${userType}`,
+      canonical: `${siteConfig.siteUrl}/${lang}/culture/${festivalId}`,
+      languages: generateHreflangLinks(`/culture/${festivalId}`),
     },
     robots: {
       index: true,
@@ -72,17 +78,11 @@ export async function generateMetadata({
   };
 }
 
-export default async function FestivalPage({
+export default async function CulturePage({
   params,
 }: {
-  params: Promise<{ lang: LanguageType; festivalId: string; userType: string }>;
+  params: Promise<{ lang: LanguageType; festivalId: string }>;
 }) {
-  const { lang, festivalId, userType } = await params;
-  return (
-    <FestivalDetailPage
-      lang={lang}
-      festivalId={festivalId}
-      userType={userType}
-    />
-  );
+  const { lang, festivalId } = await params;
+  return <CultureDetailContent lang={lang} festivalId={festivalId} />;
 }

@@ -6,7 +6,11 @@ interface EtiquetteSectionProps {
   gifts: Array<{ name: string; emoji: string; note: string }>;
 }
 
-export function EtiquetteSection({ customs, taboo, gifts }: EtiquetteSectionProps) {
+export function EtiquetteSection({
+  customs,
+  taboo,
+  gifts,
+}: EtiquetteSectionProps) {
   return (
     <section>
       <div className="flex items-center gap-3 mb-6">
@@ -14,8 +18,12 @@ export function EtiquetteSection({ customs, taboo, gifts }: EtiquetteSectionProp
           <span className="text-xl">✨</span>
         </div>
         <div>
-          <h2 className="text-xl font-semibold text-foreground">Etiquette & Customs</h2>
-          <p className="text-sm text-muted-foreground">What to do and what to avoid</p>
+          <h2 className="text-xl font-semibold text-foreground">
+            Etiquette & Customs
+          </h2>
+          <p className="text-sm text-muted-foreground">
+            What to do and what to avoid
+          </p>
         </div>
       </div>
 
@@ -28,7 +36,9 @@ export function EtiquetteSection({ customs, taboo, gifts }: EtiquetteSectionProp
             </div>
             <div>
               <h3 className="font-semibold text-foreground">What to Do</h3>
-              <p className="text-sm text-muted-foreground">Traditional customs and practices</p>
+              <p className="text-sm text-muted-foreground">
+                Traditional customs and practices
+              </p>
             </div>
           </div>
           <ul className="space-y-3">
@@ -49,8 +59,12 @@ export function EtiquetteSection({ customs, taboo, gifts }: EtiquetteSectionProp
                 <span className="text-xl">⚠️</span>
               </div>
               <div>
-                <h3 className="font-semibold text-amber-800 dark:text-amber-200">What to Avoid</h3>
-                <p className="text-sm text-amber-600 dark:text-amber-400">Traditional taboos and customs</p>
+                <h3 className="font-semibold text-amber-800 dark:text-amber-200">
+                  What to Avoid
+                </h3>
+                <p className="text-sm text-amber-600 dark:text-amber-400">
+                  Traditional taboos and customs
+                </p>
               </div>
             </div>
             <ul className="space-y-3">
@@ -59,7 +73,9 @@ export function EtiquetteSection({ customs, taboo, gifts }: EtiquetteSectionProp
                   <span className="w-5 h-5 rounded-full bg-amber-200 dark:bg-amber-700 text-amber-800 dark:text-amber-200 flex items-center justify-center text-xs font-bold mt-0.5 flex-shrink-0">
                     ✕
                   </span>
-                  <span className="text-sm text-amber-800 dark:text-amber-200">{tabooItem}</span>
+                  <span className="text-sm text-amber-800 dark:text-amber-200">
+                    {tabooItem}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -75,7 +91,9 @@ export function EtiquetteSection({ customs, taboo, gifts }: EtiquetteSectionProp
               </div>
               <div>
                 <h3 className="font-semibold text-foreground">Gift Ideas</h3>
-                <p className="text-sm text-muted-foreground">Appropriate gifts for the occasion</p>
+                <p className="text-sm text-muted-foreground">
+                  Appropriate gifts for the occasion
+                </p>
               </div>
             </div>
             <div className="grid gap-3 md:grid-cols-2">
@@ -86,7 +104,9 @@ export function EtiquetteSection({ customs, taboo, gifts }: EtiquetteSectionProp
                 >
                   <span className="text-2xl">{gift.emoji}</span>
                   <div className="flex-1 min-w-0">
-                    <p className="font-medium text-sm text-foreground truncate">{gift.name}</p>
+                    <p className="font-medium text-sm text-foreground truncate">
+                      {gift.name}
+                    </p>
                     <p className="text-xs text-muted-foreground">{gift.note}</p>
                   </div>
                 </div>

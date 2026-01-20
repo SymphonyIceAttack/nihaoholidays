@@ -3,24 +3,40 @@ import { commonSchema } from "./common";
 import { festivalSchema } from "./festival";
 import { homeSchema } from "./home";
 import { quizSchema } from "./quiz";
+import { aboutSchema } from "./about";
+import { contactSchema } from "./contact";
+import { privacySchema } from "./privacy";
+import { termsSchema } from "./terms";
 
 // Re-export all schema modules
 export { commonSchema, navSchema } from "./common";
-export { homeSchema } from "./home";
 export { festivalSchema } from "./festival";
+export { homeSchema } from "./home";
 export { quizSchema } from "./quiz";
+export { aboutSchema } from "./about";
+export { contactSchema } from "./contact";
+export { privacySchema } from "./privacy";
+export { termsSchema } from "./terms";
 
 // Type exports
 export type CommonSchema = z.infer<typeof commonSchema>;
 export type HomeSchema = z.infer<typeof homeSchema>;
 export type FestivalSchema = z.infer<typeof festivalSchema>;
 export type QuizSchema = z.infer<typeof quizSchema>;
+export type AboutSchema = z.infer<typeof aboutSchema>;
+export type ContactSchema = z.infer<typeof contactSchema>;
+export type PrivacySchema = z.infer<typeof privacySchema>;
+export type TermsSchema = z.infer<typeof termsSchema>;
 
 export type TranslationSchema = {
   common: z.infer<typeof commonSchema>;
   home: z.infer<typeof homeSchema>;
   festival: z.infer<typeof festivalSchema>;
   quiz: z.infer<typeof quizSchema>;
+  about: z.infer<typeof aboutSchema>;
+  contact: z.infer<typeof contactSchema>;
+  privacy: z.infer<typeof privacySchema>;
+  terms: z.infer<typeof termsSchema>;
 };
 
 // Get all required keys
@@ -40,6 +56,22 @@ export function getRequiredKeys(): string[] {
   }
 
   for (const key of Object.keys(quizSchema.shape)) {
+    keys.add(key);
+  }
+
+  for (const key of Object.keys(aboutSchema.shape)) {
+    keys.add(key);
+  }
+
+  for (const key of Object.keys(contactSchema.shape)) {
+    keys.add(key);
+  }
+
+  for (const key of Object.keys(privacySchema.shape)) {
+    keys.add(key);
+  }
+
+  for (const key of Object.keys(termsSchema.shape)) {
     keys.add(key);
   }
 

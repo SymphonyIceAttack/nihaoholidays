@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { LanguageType } from "@/lib/translations";
 
 const footerTranslations: Record<LanguageType, string> = {
@@ -6,10 +7,11 @@ const footerTranslations: Record<LanguageType, string> = {
 
 const footerLinks = {
   en: [
-    { label: "About", href: "#about" },
-    { label: "Contact", href: "#contact" },
-    { label: "Privacy", href: "#privacy" },
-    { label: "Terms", href: "#terms" },
+    { label: "About", href: "/en/about" },
+    { label: "Contact", href: "/en/contact" },
+    { label: "Privacy", href: "/en/privacy" },
+    { label: "Terms", href: "/en/terms" },
+    { label: "Disclaimer", href: "/en/disclaimer" },
   ],
 };
 
@@ -32,15 +34,15 @@ export function Footer({ lang }: { lang: LanguageType }) {
           </div>
 
           {/* Navigation links */}
-          <nav className="flex items-center gap-6">
+          <nav className="flex items-center gap-6 flex-wrap justify-center">
             {links.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
 

@@ -1,16 +1,10 @@
 "use client";
 
-import {
-  ArrowLeft,
-  ChevronRight,
-  Copy,
-  Heart,
-  Volume2,
-} from "lucide-react";
+import { ArrowLeft, ChevronRight, Copy, Heart, Volume2 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const greetingCategories = [
   { id: "general", label: "General", icon: "🎊" },
@@ -206,7 +200,8 @@ export function GreetingTemplatesPage({ lang = "en" }: { lang?: string } = {}) {
     }
   };
 
-  const currentGreetings = greetings[activeCategory as keyof typeof greetings] || greetings.general;
+  const currentGreetings =
+    greetings[activeCategory as keyof typeof greetings] || greetings.general;
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-rose-50/50 via-background to-background">
@@ -219,7 +214,8 @@ export function GreetingTemplatesPage({ lang = "en" }: { lang?: string } = {}) {
               Chinese New Year Greetings
             </h1>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Classic blessings for every occasion and recipient. Click to hear pronunciation.
+              Classic blessings for every occasion and recipient. Click to hear
+              pronunciation.
             </p>
           </div>
 
@@ -290,7 +286,9 @@ export function GreetingTemplatesPage({ lang = "en" }: { lang?: string } = {}) {
               </div>
               <div>
                 <h3 className="font-semibold text-foreground">Quick Copy</h3>
-                <p className="text-sm text-muted-foreground">Copy greetings to share</p>
+                <p className="text-sm text-muted-foreground">
+                  Copy greetings to share
+                </p>
               </div>
             </div>
             <div className="grid gap-3 md:grid-cols-3">
@@ -301,8 +299,12 @@ export function GreetingTemplatesPage({ lang = "en" }: { lang?: string } = {}) {
                   onClick={() => navigator.clipboard.writeText(g.chinese)}
                   className="p-3 rounded-lg bg-white/60 dark:bg-zinc-800/60 text-left hover:bg-white dark:hover:bg-zinc-800 transition-colors"
                 >
-                  <p className="font-medium text-sm text-foreground">{g.chinese}</p>
-                  <p className="text-xs text-muted-foreground truncate">{g.pinyin}</p>
+                  <p className="font-medium text-sm text-foreground">
+                    {g.chinese}
+                  </p>
+                  <p className="text-xs text-muted-foreground truncate">
+                    {g.pinyin}
+                  </p>
                 </button>
               ))}
             </div>
@@ -323,7 +325,9 @@ export function GreetingTemplatesPage({ lang = "en" }: { lang?: string } = {}) {
       {/* Footer */}
       <footer className="border-t mt-16 py-8 bg-muted/30">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>No account needed • No registration • Start learning immediately</p>
+          <p>
+            No account needed • No registration • Start learning immediately
+          </p>
         </div>
       </footer>
     </div>

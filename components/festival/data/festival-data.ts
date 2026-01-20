@@ -199,70 +199,142 @@ export const festivalData: Record<
       tourist: [
         {
           title: "Ordering Food at a Restaurant",
-          content: "Learn essential phrases for ordering festive dishes and communicating with restaurant staff during the Spring Festival.",
+          content:
+            "Learn essential phrases for ordering festive dishes and communicating with restaurant staff during the Spring Festival.",
           phrases: [
-            { chinese: "请问有什么推荐的吗？", pinyin: "Qǐng wèn yǒu shénme tuījiàn de ma?", english: "What do you recommend?" },
-            { chinese: "我要点这个", pinyin: "Wǒ yào diàn zhège", english: "I'd like to order this" },
-            { chinese: "麻烦结账", pinyin: "Mafán jiézhàng", english: "Could I have the bill, please?" },
+            {
+              chinese: "请问有什么推荐的吗？",
+              pinyin: "Qǐng wèn yǒu shénme tuījiàn de ma?",
+              english: "What do you recommend?",
+            },
+            {
+              chinese: "我要点这个",
+              pinyin: "Wǒ yào diàn zhège",
+              english: "I'd like to order this",
+            },
+            {
+              chinese: "麻烦结账",
+              pinyin: "Mafán jiézhàng",
+              english: "Could I have the bill, please?",
+            },
           ],
         },
         {
           title: "Asking for Directions",
-          content: "Navigate the festive city and find temple fairs, lantern displays, and local markets.",
+          content:
+            "Navigate the festive city and find temple fairs, lantern displays, and local markets.",
           phrases: [
-            { chinese: "请问庙会怎么走？", pinyin: "Qǐng wèn miàohuì zěnme zǒu?", english: "How do I get to the temple fair?" },
-            { chinese: "附近有卖红包的吗？", pinyin: "Fùjìn yǒu mài hóngbāo de ma?", english: "Is there a place nearby that sells red envelopes?" },
+            {
+              chinese: "请问庙会怎么走？",
+              pinyin: "Qǐng wèn miàohuì zěnme zǒu?",
+              english: "How do I get to the temple fair?",
+            },
+            {
+              chinese: "附近有卖红包的吗？",
+              pinyin: "Fùjìn yǒu mài hóngbāo de ma?",
+              english: "Is there a place nearby that sells red envelopes?",
+            },
           ],
         },
         {
           title: "Taking Photos with Locals",
-          content: "Cultural etiquette for photos and interacting with families during celebrations.",
+          content:
+            "Cultural etiquette for photos and interacting with families during celebrations.",
           phrases: [
-            { chinese: "我可以和你们合影吗？", pinyin: "Wǒ kěyǐ hé nǐmen héyǐng ma?", english: "May I take a photo with you?" },
-            { chinese: "新年快乐！", pinyin: "Xīn nián kuài lè!", english: "Happy New Year!" },
+            {
+              chinese: "我可以和你们合影吗？",
+              pinyin: "Wǒ kěyǐ hé nǐmen héyǐng ma?",
+              english: "May I take a photo with you?",
+            },
+            {
+              chinese: "新年快乐！",
+              pinyin: "Xīn nián kuài lè!",
+              english: "Happy New Year!",
+            },
           ],
         },
       ],
       student: [
         {
           title: "Celebrating with Roommates",
-          content: "How to celebrate Spring Festival with international or Chinese classmates in dormitory settings.",
+          content:
+            "How to celebrate Spring Festival with international or Chinese classmates in dormitory settings.",
           phrases: [
-            { chinese: "我们一起包饺子吧", pinyin: "Wǒmen yìqǐ bā jiǎozi ba", english: "Let's make dumplings together" },
-            { chinese: "你们家乡怎么过年？", pinyin: "Nǐmen jiāxiāng zěnme guònián?", english: "How do you celebrate New Year in your hometown?" },
+            {
+              chinese: "我们一起包饺子吧",
+              pinyin: "Wǒmen yìqǐ bā jiǎozi ba",
+              english: "Let's make dumplings together",
+            },
+            {
+              chinese: "你们家乡怎么过年？",
+              pinyin: "Nǐmen jiāxiāng zěnme guònián?",
+              english: "How do you celebrate New Year in your hometown?",
+            },
           ],
         },
         {
           title: "Campus Activities",
-          content: "Participating in university Spring Festival galas and cultural exchange events.",
+          content:
+            "Participating in university Spring Festival galas and cultural exchange events.",
           phrases: [
-            { chinese: "今晚有春节晚会吗？", pinyin: "Jīn wǎn yǒu chūnjié wǎnhuì ma?", english: "Is there a Spring Festival gala tonight?" },
-            { chinese: "我想表演一个节目", pinyin: "Wǒ xiǎng biǎoyán yí gè jiémù", english: "I'd like to perform an act" },
+            {
+              chinese: "今晚有春节晚会吗？",
+              pinyin: "Jīn wǎn yǒu chūnjié wǎnhuì ma?",
+              english: "Is there a Spring Festival gala tonight?",
+            },
+            {
+              chinese: "我想表演一个节目",
+              pinyin: "Wǒ xiǎng biǎoyán yí gè jiémù",
+              english: "I'd like to perform an act",
+            },
           ],
         },
       ],
       worker: [
         {
           title: "Greeting Your Boss",
-          content: "Professional and respectful ways to greet supervisors and senior colleagues during the festival.",
+          content:
+            "Professional and respectful ways to greet supervisors and senior colleagues during the festival.",
           phrases: [
-            { chinese: "领导，新年好，祝您万事如意", pinyin: "Lǐngdǎo, xīn nián hǎo, zhù nín wàn shì rú yì", english: "Boss, Happy New Year. May everything go your way." },
-            { chinese: "感谢您这一年的指导", pinyin: "Gǎnxiè nín zhè yì nián de zhǐdǎo", english: "Thank you for your guidance this year." },
+            {
+              chinese: "领导，新年好，祝您万事如意",
+              pinyin: "Lǐngdǎo, xīn nián hǎo, zhù nín wàn shì rú yì",
+              english: "Boss, Happy New Year. May everything go your way.",
+            },
+            {
+              chinese: "感谢您这一年的指导",
+              pinyin: "Gǎnxiè nín zhè yì nián de zhǐdǎo",
+              english: "Thank you for your guidance this year.",
+            },
           ],
         },
         {
           title: "Company New Year's Party",
-          content: "Small talk and conversation topics appropriate for company dinners and celebrations.",
+          content:
+            "Small talk and conversation topics appropriate for company dinners and celebrations.",
           phrases: [
-            { chinese: "今年公司业绩怎么样？", pinyin: "Jīn nián gōngsī yèjì zěnme yàng?", english: "How was the company's performance this year?" },
-            { chinese: "祝我们公司明年更上一层楼", pinyin: "Zhù wǒmen gōngsī míngnián gèng shàng yì céng lóu", english: "May our company reach new heights next year." },
+            {
+              chinese: "今年公司业绩怎么样？",
+              pinyin: "Jīn nián gōngsī yèjì zěnme yàng?",
+              english: "How was the company's performance this year?",
+            },
+            {
+              chinese: "祝我们公司明年更上一层楼",
+              pinyin: "Zhù wǒmen gōngsī míngnián gèng shàng yì céng lóu",
+              english: "May our company reach new heights next year.",
+            },
           ],
         },
         {
           title: "Team Building Activities",
-          content: "Leading or participating in team Spring Festival activities and gift exchanges.",
+          content:
+            "Leading or participating in team Spring Festival activities and gift exchanges.",
           phrases: [
-            { chinese: "我们组织一个包饺子活动吧", pinyin: "Wǒmen zǔzhī yí gè bā jiǎozi huódòng ba", english: "Let's organize a dumpling-making activity." },
+            {
+              chinese: "我们组织一个包饺子活动吧",
+              pinyin: "Wǒmen zǔzhī yí gè bā jiǎozi huódòng ba",
+              english: "Let's organize a dumpling-making activity.",
+            },
           ],
         },
       ],
@@ -638,7 +710,12 @@ export const userTypeData: Record<
     color: "rose",
     backgroundColor: "bg-rose-100 dark:bg-rose-900/30",
     description: "Experience authentic holiday atmosphere",
-    focusContent: ["Survival phrases", "Local customs", "Food ordering", "Photo opportunities"],
+    focusContent: [
+      "Survival phrases",
+      "Local customs",
+      "Food ordering",
+      "Photo opportunities",
+    ],
   },
   student: {
     label: "Student",
@@ -646,7 +723,12 @@ export const userTypeData: Record<
     color: "blue",
     backgroundColor: "bg-blue-100 dark:bg-blue-900/30",
     description: "Deeply understand cultural meaning",
-    focusContent: ["Festival history", "Cultural context", "Social scripts", "Celebrating with friends"],
+    focusContent: [
+      "Festival history",
+      "Cultural context",
+      "Social scripts",
+      "Celebrating with friends",
+    ],
   },
   worker: {
     label: "Worker",
@@ -654,6 +736,11 @@ export const userTypeData: Record<
     color: "emerald",
     backgroundColor: "bg-emerald-100 dark:bg-emerald-900/30",
     description: "Appropriate workplace expressions",
-    focusContent: ["Boss greetings", "Party conversations", "Gift etiquette", "Team activities"],
+    focusContent: [
+      "Boss greetings",
+      "Party conversations",
+      "Gift etiquette",
+      "Team activities",
+    ],
   },
 };

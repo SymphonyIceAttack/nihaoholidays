@@ -8,12 +8,23 @@ interface UserProfileProps {
   focusContent: string[];
 }
 
-export function UserProfile({ label, icon, backgroundColor, description, focusContent }: UserProfileProps) {
+export function UserProfile({
+  label,
+  icon,
+  backgroundColor,
+  description,
+  focusContent,
+}: UserProfileProps) {
   return (
     <div className="max-w-2xl mx-auto mb-12 animate-in fade-in slide-in-from-bottom-4 duration-500 delay-300">
       <div className="bg-gradient-to-r from-rose-100/80 to-blue-100/80 dark:from-rose-900/30 dark:to-blue-900/20 border border-rose-200 dark:border-rose-800 rounded-2xl p-6">
         <div className="flex items-center gap-4 mb-4">
-          <div className={cn("w-14 h-14 rounded-2xl flex items-center justify-center text-2xl", backgroundColor)}>
+          <div
+            className={cn(
+              "w-14 h-14 rounded-2xl flex items-center justify-center text-2xl",
+              backgroundColor,
+            )}
+          >
             {icon}
           </div>
           <div>

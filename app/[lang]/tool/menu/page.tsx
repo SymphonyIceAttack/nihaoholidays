@@ -3,6 +3,7 @@ import { MenuAssistantPage } from "@/components/tool";
 import { siteConfig } from "@/lib/config";
 import type { LanguageType } from "@/lib/translations/config";
 import { supportedLocales } from "@/lib/translations/config";
+import { generateHreflangLinks } from "@/lib/translations/hreflang";
 
 export function generateStaticParams() {
   return supportedLocales.map((lang) => ({
@@ -59,6 +60,7 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: `${siteConfig.siteUrl}/${lang}/tool/menu`,
+      languages: generateHreflangLinks("/tool/menu"),
     },
     robots: {
       index: true,

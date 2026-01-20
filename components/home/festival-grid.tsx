@@ -1,7 +1,6 @@
 "use client";
 
 import { FestivalCard } from "@/components/home/festival-card";
-import { useUserType } from "@/context/user-type-context";
 
 const festivals = [
   {
@@ -116,8 +115,25 @@ const festivals = [
   },
 ];
 
-export function FestivalGrid({ lang }: { lang: string }) {
-  const { userType } = useUserType();
+interface FestivalGridProps {
+  lang: string;
+  theme?: string;
+}
+
+export function FestivalGrid({ lang, theme = "all" }: FestivalGridProps) {
+  const filteredFestivals = festivals.filter((festival) => {
+    const themeMatch =
+      theme === "all" ||
+      festival.tags.some(
+        (tag) =>
+          tag.toLowerCase() === theme ||
+          (theme === "family" && tag === "Family Reunion") ||
+          (theme === "food" && tag === "Food") ||
+          (theme === "romance" && tag === "Romantic"),
+      );
+
+    return themeMatch;
+  });
 
   return (
     <div className="space-y-6" id="festivals">
@@ -136,11 +152,19 @@ export function FestivalGrid({ lang }: { lang: string }) {
         </span>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {festivals.map((festival) => (
-          <FestivalCard key={festival.id} festival={festival} userType={userType} lang={lang} />
-        ))}
-      </div>
+      {filteredFestivals.length === 0 ? (
+        <div className="text-center py-12">
+          <p className="text-muted-foreground">
+            No festivals match your filters.
+          </p>
+        </div>
+      ) : (
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {filteredFestivals.map((festival) => (
+            <FestivalCard key={festival.id} festival={festival} lang={lang} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

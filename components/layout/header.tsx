@@ -8,10 +8,16 @@ import type { LanguageType } from "@/lib/translations";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { key: "common.nav.festivals", href: "#festivals" },
-  { key: "common.nav.food", href: "#food" },
-  { key: "common.nav.tools", href: "#tools" },
-  { key: "common.nav.about", href: "#about" },
+  { key: "common.nav.festivals", href: "/{lang}/#festivals" },
+  { key: "common.nav.food", href: "/{lang}/#food" },
+  { key: "common.nav.tools", href: "/{lang}/#tools" },
+  { key: "common.nav.about", href: "/{lang}/about" },
+];
+
+const pageNavItems = [
+  { key: "common.nav.contact", href: "/{lang}/contact" },
+  { key: "common.nav.privacy", href: "/{lang}/privacy" },
+  { key: "common.nav.terms", href: "/{lang}/terms" },
 ];
 
 const translations: Record<LanguageType, Record<string, string>> = {
@@ -20,6 +26,9 @@ const translations: Record<LanguageType, Record<string, string>> = {
     "common.nav.food": "Food",
     "common.nav.tools": "Tools",
     "common.nav.about": "About",
+    "common.nav.contact": "Contact",
+    "common.nav.privacy": "Privacy",
+    "common.nav.terms": "Terms",
     "header.start": "Start Learning",
   },
 };
@@ -27,6 +36,8 @@ const translations: Record<LanguageType, Record<string, string>> = {
 export function Header({ lang }: { lang: LanguageType }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const t = translations[lang];
+
+  const getHref = (href: string) => href.replace("{lang}", lang);
 
   return (
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50 supports-[backdrop-filter]:bg-background/60">
@@ -52,13 +63,20 @@ export function Header({ lang }: { lang: LanguageType }) {
             {navItems.map((item, index) => (
               <a
                 key={item.href}
-                href={item.href}
+                href={getHref(item.href)}
                 className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-lg transition-all duration-200 animate-in fade-in slide-in-from-top-2"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
                 {t[item.key]}
               </a>
             ))}
+            <span className="text-muted-foreground/30">|</span>
+            <a
+              href={`/${lang}/contact`}
+              className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-lg transition-all duration-200"
+            >
+              {t["common.nav.contact"]}
+            </a>
           </nav>
 
           <div className="flex items-center gap-2">
@@ -93,7 +111,17 @@ export function Header({ lang }: { lang: LanguageType }) {
             {navItems.map((item) => (
               <a
                 key={item.href}
-                href={item.href}
+                href={getHref(item.href)}
+                className="px-3 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {t[item.key]}
+              </a>
+            ))}
+            {pageNavItems.map((item) => (
+              <a
+                key={item.href}
+                href={getHref(item.href)}
                 className="px-3 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >

@@ -58,11 +58,10 @@ const toolHref: Record<string, string> = {
 
 interface FestivalCardProps {
   festival: Festival;
-  userType: string;
   lang?: string;
 }
 
-export function FestivalCard({ festival, userType, lang = "en" }: FestivalCardProps) {
+export function FestivalCard({ festival, lang = "en" }: FestivalCardProps) {
   return (
     <Card className="group relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-rose-200/50">
       {/* Gradient overlay on hover */}
@@ -111,7 +110,7 @@ export function FestivalCard({ festival, userType, lang = "en" }: FestivalCardPr
         </div>
 
         <div className="pt-2 space-y-3">
-          <Link href={`/${lang}/culture/${festival.id}/${userType}`}>
+          <Link href={`/${lang}/culture/${festival.id}`}>
             <Button
               variant="outline"
               size="sm"
@@ -124,7 +123,7 @@ export function FestivalCard({ festival, userType, lang = "en" }: FestivalCardPr
             </Button>
           </Link>
 
-          <Link href={`/${lang}/quiz/${festival.id}/${userType}`}>
+          <Link href={`/${lang}/quiz/${festival.id}`}>
             <Button
               variant="outline"
               size="sm"

@@ -48,14 +48,30 @@ export const festival = {
 
   // User types
   "festival.user.tourist": "Tourist",
-  "festival.user.tourist.description": "Experience authentic holiday atmosphere",
-  "festival.user.tourist.focus": ["Survival phrases", "Local customs", "Food ordering", "Photo opportunities"],
+  "festival.user.tourist.description":
+    "Experience authentic holiday atmosphere",
+  "festival.user.tourist.focus": [
+    "Survival phrases",
+    "Local customs",
+    "Food ordering",
+    "Photo opportunities",
+  ],
   "festival.user.student": "Student",
   "festival.user.student.description": "Deeply understand cultural meaning",
-  "festival.user.student.focus": ["Festival history", "Cultural context", "Social scripts", "Celebrating with friends"],
+  "festival.user.student.focus": [
+    "Festival history",
+    "Cultural context",
+    "Social scripts",
+    "Celebrating with friends",
+  ],
   "festival.user.worker": "Worker",
   "festival.user.worker.description": "Appropriate workplace expressions",
-  "festival.user.worker.focus": ["Boss greetings", "Party conversations", "Gift etiquette", "Team activities"],
+  "festival.user.worker.focus": [
+    "Boss greetings",
+    "Party conversations",
+    "Gift etiquette",
+    "Team activities",
+  ],
 
   // Common expressions
   "expression.happy": "Happy {festival}",
@@ -198,8 +214,10 @@ export const festival = {
   "quiz.excellent": "Excellent!",
   "quiz.goodJob": "Good Job!",
   "quiz.keepLearning": "Keep Learning!",
-  "quiz.scoreDetail": "You answered {score} out of {total} questions correctly.",
-  "quiz.greatJob": " Great job! You have a good understanding of this festival.",
+  "quiz.scoreDetail":
+    "You answered {score} out of {total} questions correctly.",
+  "quiz.greatJob":
+    " Great job! You have a good understanding of this festival.",
   "quiz.reviewMore": " Review the cultural overview to learn more.",
   "quiz.tryAgain": "Try Again",
   "quiz.studyMore": "Study More",

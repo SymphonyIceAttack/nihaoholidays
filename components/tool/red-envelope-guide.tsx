@@ -10,8 +10,8 @@ import {
   Wallet,
 } from "lucide-react";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const amountGuidelines = [
   {
@@ -97,10 +97,26 @@ const etiquetteTips = [
 ];
 
 const phrases = [
-  { chinese: "祝您新年快乐，万事如意！", pinyin: "Zhù nín xīn nián kuài lè, wàn shì rú yì!", english: "Happy New Year, may everything go your way!" },
-  { chinese: "给您拜年啦！", pinyin: "Gěi nín bài nián la!", english: "I'm here to wish you a Happy New Year!" },
-  { chinese: "恭喜发财，红包拿来！", pinyin: "Gōng xǐ fā cái, hóng bāo ná lái!", english: "Congratulations on your wealth, give me the red envelope!" },
-  { chinese: "祝您和家人新春快乐，阖家幸福！", pinyin: "Zhù nín hé jiā rén xīn chūn kuài lè, hé jiā xìng fú!", english: "Wishing you and your family a happy Spring Festival!" },
+  {
+    chinese: "祝您新年快乐，万事如意！",
+    pinyin: "Zhù nín xīn nián kuài lè, wàn shì rú yì!",
+    english: "Happy New Year, may everything go your way!",
+  },
+  {
+    chinese: "给您拜年啦！",
+    pinyin: "Gěi nín bài nián la!",
+    english: "I'm here to wish you a Happy New Year!",
+  },
+  {
+    chinese: "恭喜发财，红包拿来！",
+    pinyin: "Gōng xǐ fā cái, hóng bāo ná lái!",
+    english: "Congratulations on your wealth, give me the red envelope!",
+  },
+  {
+    chinese: "祝您和家人新春快乐，阖家幸福！",
+    pinyin: "Zhù nín hé jiā rén xīn chūn kuài lè, hé jiā xìng fú!",
+    english: "Wishing you and your family a happy Spring Festival!",
+  },
 ];
 
 export function RedEnvelopeGuidePage({ lang = "en" }: { lang?: string } = {}) {
@@ -115,7 +131,8 @@ export function RedEnvelopeGuidePage({ lang = "en" }: { lang?: string } = {}) {
               Red Envelope (红包) Guide
             </h1>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Learn the proper amounts and etiquette for giving red envelopes during Chinese New Year.
+              Learn the proper amounts and etiquette for giving red envelopes
+              during Chinese New Year.
             </p>
           </div>
 
@@ -126,8 +143,12 @@ export function RedEnvelopeGuidePage({ lang = "en" }: { lang?: string } = {}) {
                 <Wallet className="h-6 w-6" />
               </div>
               <div>
-                <h3 className="font-semibold text-foreground">Quick Amount Guide</h3>
-                <p className="text-sm text-muted-foreground">Common amounts by relationship</p>
+                <h3 className="font-semibold text-foreground">
+                  Quick Amount Guide
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  Common amounts by relationship
+                </p>
               </div>
             </div>
             <div className="grid gap-3 md:grid-cols-4">
@@ -157,8 +178,12 @@ export function RedEnvelopeGuidePage({ lang = "en" }: { lang?: string } = {}) {
                 <Users className="h-5 w-5 text-blue-600 dark:text-blue-400" />
               </div>
               <div>
-                <h2 className="text-xl font-semibold text-foreground">Amount Guidelines</h2>
-                <p className="text-sm text-muted-foreground">How much to give by relationship</p>
+                <h2 className="text-xl font-semibold text-foreground">
+                  Amount Guidelines
+                </h2>
+                <p className="text-sm text-muted-foreground">
+                  How much to give by relationship
+                </p>
               </div>
             </div>
             <div className="grid gap-4">
@@ -167,15 +192,21 @@ export function RedEnvelopeGuidePage({ lang = "en" }: { lang?: string } = {}) {
                   key={index}
                   className="p-5 rounded-xl border border-rose-200 dark:border-rose-800 bg-white/60 dark:bg-zinc-800/60"
                 >
-                  <h3 className="font-semibold text-foreground mb-3">{guide.recipient}</h3>
+                  <h3 className="font-semibold text-foreground mb-3">
+                    {guide.recipient}
+                  </h3>
                   <div className="grid gap-2 md:grid-cols-2 lg:grid-cols-3">
                     {guide.amounts.map((item, i) => (
                       <div
                         key={i}
                         className="flex items-center justify-between p-2 rounded-lg bg-muted/50"
                       >
-                        <span className="font-bold text-rose-600">¥{item.amount}</span>
-                        <span className="text-xs text-muted-foreground">{item.meaning}</span>
+                        <span className="font-bold text-rose-600">
+                          ¥{item.amount}
+                        </span>
+                        <span className="text-xs text-muted-foreground">
+                          {item.meaning}
+                        </span>
                       </div>
                     ))}
                   </div>
@@ -191,8 +222,12 @@ export function RedEnvelopeGuidePage({ lang = "en" }: { lang?: string } = {}) {
                 <Gift className="h-5 w-5 text-green-600 dark:text-green-400" />
               </div>
               <div>
-                <h2 className="text-xl font-semibold text-foreground">Etiquette Tips</h2>
-                <p className="text-sm text-muted-foreground">Proper ways to give and receive</p>
+                <h2 className="text-xl font-semibold text-foreground">
+                  Etiquette Tips
+                </h2>
+                <p className="text-sm text-muted-foreground">
+                  Proper ways to give and receive
+                </p>
               </div>
             </div>
             <div className="grid gap-4 md:grid-cols-2">
@@ -208,11 +243,16 @@ export function RedEnvelopeGuidePage({ lang = "en" }: { lang?: string } = {}) {
                 >
                   <div className="flex items-center gap-2 mb-3">
                     <span className="text-xl">{tip.icon}</span>
-                    <h3 className="font-semibold text-foreground">{tip.title}</h3>
+                    <h3 className="font-semibold text-foreground">
+                      {tip.title}
+                    </h3>
                   </div>
                   <ul className="space-y-2">
                     {tip.items.map((item, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <li
+                        key={i}
+                        className="flex items-start gap-2 text-sm text-muted-foreground"
+                      >
                         <span className="text-foreground mt-0.5">{item}</span>
                       </li>
                     ))}
@@ -236,15 +276,21 @@ export function RedEnvelopeGuidePage({ lang = "en" }: { lang?: string } = {}) {
             <div className="grid gap-4 md:grid-cols-4">
               <div className="text-center p-3 rounded-lg bg-white/60 dark:bg-zinc-800/60">
                 <p className="text-2xl font-bold text-amber-600">8</p>
-                <p className="text-xs text-muted-foreground">八 - Wealth (发)</p>
+                <p className="text-xs text-muted-foreground">
+                  八 - Wealth (发)
+                </p>
               </div>
               <div className="text-center p-3 rounded-lg bg-white/60 dark:bg-zinc-800/60">
                 <p className="text-2xl font-bold text-amber-600">6</p>
-                <p className="text-xs text-muted-foreground">六 - Smooth (顺)</p>
+                <p className="text-xs text-muted-foreground">
+                  六 - Smooth (顺)
+                </p>
               </div>
               <div className="text-center p-3 rounded-lg bg-white/60 dark:bg-zinc-800/60">
                 <p className="text-2xl font-bold text-amber-600">9</p>
-                <p className="text-xs text-muted-foreground">九 - Eternal (久)</p>
+                <p className="text-xs text-muted-foreground">
+                  九 - Eternal (久)
+                </p>
               </div>
               <div className="text-center p-3 rounded-lg bg-white/60 dark:bg-zinc-800/60">
                 <p className="text-2xl font-bold text-amber-600">2</p>
@@ -260,16 +306,29 @@ export function RedEnvelopeGuidePage({ lang = "en" }: { lang?: string } = {}) {
                 <Copy className="h-5 w-5 text-blue-600 dark:text-blue-400" />
               </div>
               <div>
-                <h3 className="font-semibold text-foreground">Useful Phrases</h3>
-                <p className="text-sm text-muted-foreground">What to say when giving/receiving</p>
+                <h3 className="font-semibold text-foreground">
+                  Useful Phrases
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  What to say when giving/receiving
+                </p>
               </div>
             </div>
             <div className="grid gap-3">
               {phrases.map((phrase, index) => (
-                <div key={index} className="p-3 rounded-lg bg-white/60 dark:bg-zinc-800/60">
-                  <p className="font-medium text-foreground mb-1">{phrase.chinese}</p>
-                  <p className="text-sm text-blue-600 dark:text-blue-400 mb-1">{phrase.pinyin}</p>
-                  <p className="text-xs text-muted-foreground">{phrase.english}</p>
+                <div
+                  key={index}
+                  className="p-3 rounded-lg bg-white/60 dark:bg-zinc-800/60"
+                >
+                  <p className="font-medium text-foreground mb-1">
+                    {phrase.chinese}
+                  </p>
+                  <p className="text-sm text-blue-600 dark:text-blue-400 mb-1">
+                    {phrase.pinyin}
+                  </p>
+                  <p className="text-xs text-muted-foreground">
+                    {phrase.english}
+                  </p>
                 </div>
               ))}
             </div>
@@ -296,7 +355,9 @@ export function RedEnvelopeGuidePage({ lang = "en" }: { lang?: string } = {}) {
       {/* Footer */}
       <footer className="border-t mt-16 py-8 bg-muted/30">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>No account needed • No registration • Start learning immediately</p>
+          <p>
+            No account needed • No registration • Start learning immediately
+          </p>
         </div>
       </footer>
     </div>

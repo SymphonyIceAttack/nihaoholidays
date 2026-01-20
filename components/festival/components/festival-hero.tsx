@@ -8,7 +8,13 @@ interface FestivalHeroProps {
   description: string;
 }
 
-export function FestivalHero({ name, emoji, date, lunarDate, description }: FestivalHeroProps) {
+export function FestivalHero({
+  name,
+  emoji,
+  date,
+  lunarDate,
+  description,
+}: FestivalHeroProps) {
   return (
     <div className="text-center mb-12">
       <span className="text-7xl mb-4 block animate-in fade-in slide-in-from-bottom-4">
