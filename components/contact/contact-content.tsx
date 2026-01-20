@@ -33,7 +33,10 @@ export function ContactContent({ lang }: { lang: LanguageType }) {
   return (
     <div className="py-16 md:py-24">
       <div className="container mx-auto px-4">
-        <ContactHero title={t["contact.title"]} subtitle={t["contact.subtitle"]} />
+        <ContactHero
+          title={t["contact.title"]}
+          subtitle={t["contact.subtitle"]}
+        />
 
         <ContactMethods
           emailLabel={t["contact.email.label"]}

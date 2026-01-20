@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  ArrowLeft,
   Check,
   ChevronRight,
   Copy,
@@ -411,7 +410,8 @@ export function MenuAssistantPage({ lang = "en" }: { lang?: string } = {}) {
                     <>
                       <ul className="space-y-2 mb-4">
                         {selectedDishes.map((id) => {
-                          const dish = dishes.find((d) => d.id === id)!;
+                          const dish = dishes.find((d) => d.id === id);
+                          if (!dish) return null;
                           return (
                             <li
                               key={id}

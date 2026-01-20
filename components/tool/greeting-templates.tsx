@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowLeft, ChevronRight, Copy, Heart, Volume2 } from "lucide-react";
+import { ChevronRight, Copy, Volume2 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";

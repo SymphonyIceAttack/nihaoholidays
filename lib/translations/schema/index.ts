@@ -1,21 +1,21 @@
 import type { z } from "zod";
+import { aboutSchema } from "./about";
 import { commonSchema } from "./common";
+import { contactSchema } from "./contact";
 import { festivalSchema } from "./festival";
 import { homeSchema } from "./home";
-import { quizSchema } from "./quiz";
-import { aboutSchema } from "./about";
-import { contactSchema } from "./contact";
 import { privacySchema } from "./privacy";
+import { quizSchema } from "./quiz";
 import { termsSchema } from "./terms";
 
+export { aboutSchema } from "./about";
 // Re-export all schema modules
 export { commonSchema, navSchema } from "./common";
+export { contactSchema } from "./contact";
 export { festivalSchema } from "./festival";
 export { homeSchema } from "./home";
-export { quizSchema } from "./quiz";
-export { aboutSchema } from "./about";
-export { contactSchema } from "./contact";
 export { privacySchema } from "./privacy";
+export { quizSchema } from "./quiz";
 export { termsSchema } from "./terms";
 
 // Type exports

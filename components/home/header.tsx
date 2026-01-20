@@ -45,7 +45,10 @@ export function Header() {
 
           {/* Actions */}
           <div className="flex items-center gap-3">
-            <button className="hidden sm:flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+            <button
+              type="button"
+              className="hidden sm:flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+            >
               <Globe className="h-4 w-4" />
               <span>中文</span>
               <ChevronDown className="h-3 w-3" />
@@ -58,6 +61,7 @@ export function Header() {
               <Link href="/en/learn">开始学习</Link>
             </Button>
             <button
+              type="button"
               className="md:hidden p-2 -mr-2"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >

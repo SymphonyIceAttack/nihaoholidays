@@ -52,7 +52,6 @@ function QuizContentInner({ lang, festivalId }: QuizContentInnerProps) {
     translate(key, lang, params);
 
   const festival = festivalData[festivalId] || festivalData.spring;
-  const userData = userTypeData[userType];
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);

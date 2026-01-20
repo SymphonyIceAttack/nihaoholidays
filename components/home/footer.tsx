@@ -1,4 +1,5 @@
 import { Globe, Mail, MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const footerLinks = {
   product: {
@@ -47,24 +48,30 @@ export function Footer() {
               帮助外国朋友通过节日场景，学会说什么、做什么、怎么做。从"知道"到"会用"，让文化理解变得实用。
             </p>
             <div className="flex gap-4">
-              <a
-                href="#"
-                className="text-background/60 hover:text-background transition-colors"
+              <Button
+                variant="ghost"
+                size="icon"
+                className="text-background/60 hover:text-background"
+                aria-label="Language"
               >
                 <Globe className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="text-background/60 hover:text-background transition-colors"
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="text-background/60 hover:text-background"
+                aria-label="Contact"
               >
                 <MessageCircle className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="text-background/60 hover:text-background transition-colors"
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="text-background/60 hover:text-background"
+                aria-label="Email"
               >
                 <Mail className="h-5 w-5" />
-              </a>
+              </Button>
             </div>
           </div>
 
@@ -91,10 +98,16 @@ export function Footer() {
         <div className="pt-8 border-t border-background/10 flex flex-col sm:flex-row justify-between gap-4 text-sm text-background/50">
           <p>&copy; 2026 节日文化通. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-background transition-colors">
+            <a
+              href="/en/privacy"
+              className="hover:text-background transition-colors"
+            >
               隐私政策
             </a>
-            <a href="#" className="hover:text-background transition-colors">
+            <a
+              href="/en/terms"
+              className="hover:text-background transition-colors"
+            >
               使用条款
             </a>
           </div>

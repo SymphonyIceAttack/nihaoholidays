@@ -1,14 +1,6 @@
 "use client";
 
-import {
-  ArrowLeft,
-  ChevronRight,
-  Copy,
-  Gift,
-  Info,
-  Users,
-  Wallet,
-} from "lucide-react";
+import { ChevronRight, Copy, Gift, Info, Users, Wallet } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";

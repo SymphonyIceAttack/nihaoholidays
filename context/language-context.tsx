@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect } from "react";
 import type { LanguageType } from "@/lib/translations";
 
 interface LanguageContextType {
@@ -19,10 +19,8 @@ export function LanguageProvider({
   children: React.ReactNode;
   lang: LanguageType;
 }) {
-  const [mounted, setMounted] = useState(false);
-
   useEffect(() => {
-    setMounted(true);
+    // Trigger any side effects needed after mount
   }, []);
 
   return (
