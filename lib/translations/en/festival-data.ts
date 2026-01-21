@@ -1085,3 +1085,428 @@ export const festivalData: FestivalDataCollection = {
     ],
   },
 };
+
+// Learn page festivals data
+export const learnPageFestivals = [
+  {
+    id: "spring",
+    nameKey: "spring.name",
+    emoji: "🧧",
+    subtitleKey: "spring.learn.subtitle",
+    tools: 12,
+    difficultyKey: "difficulty.beginner",
+  },
+  {
+    id: "lantern",
+    nameKey: "lantern.name",
+    emoji: "🏮",
+    subtitleKey: "lantern.learn.subtitle",
+    tools: 5,
+    difficultyKey: "difficulty.beginner",
+  },
+  {
+    id: "mid-autumn",
+    nameKey: "mid_autumn.name",
+    emoji: "🥮",
+    subtitleKey: "mid_autumn.learn.subtitle",
+    tools: 8,
+    difficultyKey: "difficulty.beginner",
+  },
+  {
+    id: "dragon-boat",
+    nameKey: "dragon_boat.name",
+    emoji: "🐉",
+    subtitleKey: "dragon_boat.learn.subtitle",
+    tools: 6,
+    difficultyKey: "difficulty.intermediate",
+  },
+  {
+    id: "qingming",
+    nameKey: "qingming.name",
+    emoji: "🌿",
+    subtitleKey: "qingming.learn.subtitle",
+    tools: 4,
+    difficultyKey: "difficulty.intermediate",
+  },
+  {
+    id: "qixi",
+    nameKey: "qixi.name",
+    emoji: "💕",
+    subtitleKey: "qixi.learn.subtitle",
+    tools: 5,
+    difficultyKey: "difficulty.beginner",
+  },
+] as const;
+
+// Learn page steps
+export const learningSteps = [
+  {
+    step: 1,
+    titleKey: "learn.step.choose",
+    description: "Start with recommended ones or explore freely",
+    icon: "calendar",
+  },
+  {
+    step: 2,
+    titleKey: "learn.step.expressions",
+    description: "Master practical phrases with pinyin and audio",
+    icon: "message",
+  },
+  {
+    step: 3,
+    titleKey: "learn.step.practice",
+    description: "Use interactive tools to practice real situations",
+    icon: "tools",
+  },
+];
+
+// Quiz questions by festival
+export const quizQuestions: Record<
+  string,
+  Array<{
+    id: number;
+    questionKey: string;
+    options: string[];
+    correctIndex: number;
+    explanationKey: string;
+    category: "history" | "customs" | "food" | "etiquette";
+  }>
+> = {
+  spring: [
+    {
+      id: 1,
+      questionKey: "quiz.spring.q1",
+      options: [
+        "January/February",
+        "January 1st",
+        "December 25th",
+        "March 15th",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.spring.q1.explain",
+      category: "history",
+    },
+    {
+      id: 2,
+      questionKey: "quiz.spring.q2",
+      options: [
+        "15th day of 8th lunar month",
+        "1st day of 1st lunar month",
+        "5th day of 5th lunar month",
+        "7th day of 7th lunar month",
+      ],
+      correctIndex: 1,
+      explanationKey: "quiz.spring.q2.explain",
+      category: "history",
+    },
+    {
+      id: 3,
+      questionKey: "quiz.spring.q3",
+      options: [
+        "Cleaning house to sweep away bad luck",
+        "Exchanging gifts on Valentine's Day",
+        "Eating turkey on Thanksgiving",
+        "Trick-or-treating on Halloween",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.spring.q3.explain",
+      category: "customs",
+    },
+    {
+      id: 4,
+      questionKey: "quiz.spring.q4",
+      options: [
+        "Don't wash hair or clothes on New Year's Day",
+        "Eating delicious food",
+        "Spending time with family",
+        "Wearing new clothes",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.spring.q4.explain",
+      category: "etiquette",
+    },
+    {
+      id: 5,
+      questionKey: "quiz.spring.q5",
+      options: ["Fish", "Thanksgiving turkey", "Christmas ham", "Easter eggs"],
+      correctIndex: 0,
+      explanationKey: "quiz.spring.q5.explain",
+      category: "food",
+    },
+  ],
+  lantern: [
+    {
+      id: 1,
+      questionKey: "quiz.lantern.q1",
+      options: ["February", "January", "March", "April"],
+      correctIndex: 0,
+      explanationKey: "quiz.lantern.q1.explain",
+      category: "history",
+    },
+    {
+      id: 2,
+      questionKey: "quiz.lantern.q2",
+      options: [
+        "1st day of 1st lunar month",
+        "15th day of 1st lunar month",
+        "15th day of 8th lunar month",
+        "5th day of 5th lunar month",
+      ],
+      correctIndex: 1,
+      explanationKey: "quiz.lantern.q2.explain",
+      category: "history",
+    },
+    {
+      id: 3,
+      questionKey: "quiz.lantern.q3",
+      options: [
+        "Lighting and hanging lanterns",
+        "Exchanging gifts",
+        "Decorating with pumpkins",
+        "Giving red envelopes",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.lantern.q3.explain",
+      category: "customs",
+    },
+    {
+      id: 4,
+      questionKey: "quiz.lantern.q4",
+      options: ["Tangyuan", "Mooncake", "Zongzi", "Qingtuan"],
+      correctIndex: 0,
+      explanationKey: "quiz.lantern.q4.explain",
+      category: "food",
+    },
+    {
+      id: 5,
+      questionKey: "quiz.lantern.q5",
+      options: [
+        "Solving lantern riddles",
+        "Swimming in rivers",
+        "Pointing at the moon",
+        "Using scissors",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.lantern.q5.explain",
+      category: "etiquette",
+    },
+  ],
+  mid_autumn: [
+    {
+      id: 1,
+      questionKey: "quiz.mid_autumn.q1",
+      options: ["September/October", "August", "November", "December"],
+      correctIndex: 0,
+      explanationKey: "quiz.mid_autumn.q1.explain",
+      category: "history",
+    },
+    {
+      id: 2,
+      questionKey: "quiz.mid_autumn.q2",
+      options: [
+        "15th day of 8th lunar month",
+        "1st day of 1st lunar month",
+        "15th day of 1st lunar month",
+        "5th day of 5th lunar month",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.mid_autumn.q2.explain",
+      category: "history",
+    },
+    {
+      id: 3,
+      questionKey: "quiz.mid_autumn.q3",
+      options: [
+        "Admiring the full moon",
+        "Swimming in rivers",
+        "Flying kites",
+        "Lighting lanterns",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.mid_autumn.q3.explain",
+      category: "customs",
+    },
+    {
+      id: 4,
+      questionKey: "quiz.mid_autumn.q4",
+      options: ["Mooncake", "Tangyuan", "Zongzi", "Dumplings"],
+      correctIndex: 0,
+      explanationKey: "quiz.mid_autumn.q4.explain",
+      category: "food",
+    },
+    {
+      id: 5,
+      questionKey: "quiz.mid_autumn.q5",
+      options: [
+        "Don't point at the moon",
+        "Don't eat meat",
+        "Don't wash hair",
+        "Don't use scissors",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.mid_autumn.q5.explain",
+      category: "etiquette",
+    },
+  ],
+  dragon_boat: [
+    {
+      id: 1,
+      questionKey: "quiz.dragon_boat.q1",
+      options: ["June", "July", "May", "August"],
+      correctIndex: 0,
+      explanationKey: "quiz.dragon_boat.q1.explain",
+      category: "history",
+    },
+    {
+      id: 2,
+      questionKey: "quiz.dragon_boat.q2",
+      options: [
+        "5th day of 5th lunar month",
+        "15th day of 8th lunar month",
+        "1st day of 1st lunar month",
+        "7th day of 7th lunar month",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.dragon_boat.q2.explain",
+      category: "history",
+    },
+    {
+      id: 3,
+      questionKey: "quiz.dragon_boat.q3",
+      options: [
+        "Dragon boat racing",
+        "Exchanging gifts",
+        "Lighting lanterns",
+        "Family reunions",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.dragon_boat.q3.explain",
+      category: "customs",
+    },
+    {
+      id: 4,
+      questionKey: "quiz.dragon_boat.q4",
+      options: ["Zongzi", "Mooncake", "Tangyuan", "Qingtuan"],
+      correctIndex: 0,
+      explanationKey: "quiz.dragon_boat.q4.explain",
+      category: "food",
+    },
+    {
+      id: 5,
+      questionKey: "quiz.dragon_boat.q5",
+      options: ["Qu Yuan", "Confucius", "Laozi", "Mencius"],
+      correctIndex: 0,
+      explanationKey: "quiz.dragon_boat.q5.explain",
+      category: "history",
+    },
+  ],
+  qingming: [
+    {
+      id: 1,
+      questionKey: "quiz.qingming.q1",
+      options: ["April 4-5", "March 15th", "May 1st", "June 1st"],
+      correctIndex: 0,
+      explanationKey: "quiz.qingming.q1.explain",
+      category: "history",
+    },
+    {
+      id: 2,
+      questionKey: "quiz.qingming.q2",
+      options: [
+        "Solar term around April 4-5",
+        "15th day of 8th lunar month",
+        "1st day of 1st lunar month",
+        "5th day of 5th lunar month",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.qingming.q2.explain",
+      category: "history",
+    },
+    {
+      id: 3,
+      questionKey: "quiz.qingming.q3",
+      options: [
+        "Tomb sweeping and cleaning graves",
+        "Dragon boat racing",
+        "Admiring the full moon",
+        "Lighting lanterns",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.qingming.q3.explain",
+      category: "customs",
+    },
+    {
+      id: 4,
+      questionKey: "quiz.qingming.q4",
+      options: ["Qingtuan", "Zongzi", "Mooncake", "Tangyuan"],
+      correctIndex: 0,
+      explanationKey: "quiz.qingming.q4.explain",
+      category: "food",
+    },
+    {
+      id: 5,
+      questionKey: "quiz.qingming.q5",
+      options: [
+        "Tomb sweeping and honoring ancestors",
+        "Romantic celebrations",
+        "Gift giving",
+        "Fireworks",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.qingming.q5.explain",
+      category: "etiquette",
+    },
+  ],
+  qixi: [
+    {
+      id: 1,
+      questionKey: "quiz.qixi.q1",
+      options: ["August", "July", "September", "June"],
+      correctIndex: 0,
+      explanationKey: "quiz.qixi.q1.explain",
+      category: "history",
+    },
+    {
+      id: 2,
+      questionKey: "quiz.qixi.q2",
+      options: [
+        "7th day of 7th lunar month",
+        "15th day of 8th lunar month",
+        "1st day of 1st lunar month",
+        "5th day of 5th lunar month",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.qixi.q2.explain",
+      category: "history",
+    },
+    {
+      id: 3,
+      questionKey: "quiz.qixi.q3",
+      options: ["Cowherd and Weaver Girl", "Qu Yuan", "Chang'e", "Zhu Bajie"],
+      correctIndex: 0,
+      explanationKey: "quiz.qixi.q3.explain",
+      category: "history",
+    },
+    {
+      id: 4,
+      questionKey: "quiz.qixi.q4",
+      options: ["Qiaoguo", "Zongzi", "Mooncake", "Qingtuan"],
+      correctIndex: 0,
+      explanationKey: "quiz.qixi.q4.explain",
+      category: "food",
+    },
+    {
+      id: 5,
+      questionKey: "quiz.qixi.q5",
+      options: [
+        "China's traditional Valentine's Day",
+        "Dragon boat racing",
+        "Tomb sweeping day",
+        "Family reunion festival",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.qixi.q5.explain",
+      category: "customs",
+    },
+  ],
+};

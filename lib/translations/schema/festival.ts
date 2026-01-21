@@ -143,10 +143,127 @@ export const festivalSchema = z.object({
   "food.qiaoguo": z.string(),
   "food.qiaoguo.meaning": z.string(),
 
+  // Festival learn page subtitles
+  "spring.learn.subtitle": z.string(),
+  "lantern.learn.subtitle": z.string(),
+  "mid_autumn.learn.subtitle": z.string(),
+  "dragon_boat.learn.subtitle": z.string(),
+  "qingming.learn.subtitle": z.string(),
+  "qixi.learn.subtitle": z.string(),
+
+  // Difficulty levels
+  "difficulty.beginner": z.string(),
+  "difficulty.intermediate": z.string(),
+  "difficulty.advanced": z.string(),
+
+  // Tools count
+  "tools.count": z.string(),
+
   // Footer
   "footer.noAccount": z.string(),
   "footer.noRegistration": z.string(),
   "footer.startImmediately": z.string(),
+
+  // Learn page
+  "learn.chooseFestival": z.string(),
+  "learn.readyToLearn": z.string(),
+  "learn.startJourney": z.string(),
+  "learn.learning": z.string(),
+  "learn.clickStart": z.string(),
+  "learn.selectFestival": z.string(),
+  "learn.fiveMinutes": z.string(),
+  "learn.readyLearn": z.string(),
+  "learn.getExpressions": z.string(),
+  "learn.startNow": z.string(),
+  "learn.viewDetails": z.string(),
+  "learn.whatLearn": z.string(),
+  "learn.comprehensive": z.string(),
+  "learn.expressions": z.string(),
+  "learn.expressions.desc": z.string(),
+  "learn.foodGuide": z.string(),
+  "learn.foodGuide.desc": z.string(),
+  "learn.etiquette": z.string(),
+  "learn.etiquette.desc": z.string(),
+  "learn.practice": z.string(),
+  "learn.practice.desc": z.string(),
+  "learn.noAccount": z.string(),
+  "learn.noRegistration": z.string(),
+  "learn.startImmediately": z.string(),
+  "learn.step.choose": z.string(),
+  "learn.step.expressions": z.string(),
+  "learn.step.practice": z.string(),
+
+  // Quiz Spring Festival questions
+  "quiz.spring.q1": z.string(),
+  "quiz.spring.q1.explain": z.string(),
+  "quiz.spring.q2": z.string(),
+  "quiz.spring.q2.explain": z.string(),
+  "quiz.spring.q3": z.string(),
+  "quiz.spring.q3.explain": z.string(),
+  "quiz.spring.q4": z.string(),
+  "quiz.spring.q4.explain": z.string(),
+  "quiz.spring.q5": z.string(),
+  "quiz.spring.q5.explain": z.string(),
+
+  // Quiz Lantern Festival questions
+  "quiz.lantern.q1": z.string(),
+  "quiz.lantern.q1.explain": z.string(),
+  "quiz.lantern.q2": z.string(),
+  "quiz.lantern.q2.explain": z.string(),
+  "quiz.lantern.q3": z.string(),
+  "quiz.lantern.q3.explain": z.string(),
+  "quiz.lantern.q4": z.string(),
+  "quiz.lantern.q4.explain": z.string(),
+  "quiz.lantern.q5": z.string(),
+  "quiz.lantern.q5.explain": z.string(),
+
+  // Quiz Mid-Autumn Festival questions
+  "quiz.mid_autumn.q1": z.string(),
+  "quiz.mid_autumn.q1.explain": z.string(),
+  "quiz.mid_autumn.q2": z.string(),
+  "quiz.mid_autumn.q2.explain": z.string(),
+  "quiz.mid_autumn.q3": z.string(),
+  "quiz.mid_autumn.q3.explain": z.string(),
+  "quiz.mid_autumn.q4": z.string(),
+  "quiz.mid_autumn.q4.explain": z.string(),
+  "quiz.mid_autumn.q5": z.string(),
+  "quiz.mid_autumn.q5.explain": z.string(),
+
+  // Quiz Dragon Boat Festival questions
+  "quiz.dragon_boat.q1": z.string(),
+  "quiz.dragon_boat.q1.explain": z.string(),
+  "quiz.dragon_boat.q2": z.string(),
+  "quiz.dragon_boat.q2.explain": z.string(),
+  "quiz.dragon_boat.q3": z.string(),
+  "quiz.dragon_boat.q3.explain": z.string(),
+  "quiz.dragon_boat.q4": z.string(),
+  "quiz.dragon_boat.q4.explain": z.string(),
+  "quiz.dragon_boat.q5": z.string(),
+  "quiz.dragon_boat.q5.explain": z.string(),
+
+  // Quiz Qingming Festival questions
+  "quiz.qingming.q1": z.string(),
+  "quiz.qingming.q1.explain": z.string(),
+  "quiz.qingming.q2": z.string(),
+  "quiz.qingming.q2.explain": z.string(),
+  "quiz.qingming.q3": z.string(),
+  "quiz.qingming.q3.explain": z.string(),
+  "quiz.qingming.q4": z.string(),
+  "quiz.qingming.q4.explain": z.string(),
+  "quiz.qingming.q5": z.string(),
+  "quiz.qingming.q5.explain": z.string(),
+
+  // Quiz Qixi Festival questions
+  "quiz.qixi.q1": z.string(),
+  "quiz.qixi.q1.explain": z.string(),
+  "quiz.qixi.q2": z.string(),
+  "quiz.qixi.q2.explain": z.string(),
+  "quiz.qixi.q3": z.string(),
+  "quiz.qixi.q3.explain": z.string(),
+  "quiz.qixi.q4": z.string(),
+  "quiz.qixi.q4.explain": z.string(),
+  "quiz.qixi.q5": z.string(),
+  "quiz.qixi.q5.explain": z.string(),
 });
 
 export type FestivalSchema = z.infer<typeof festivalSchema>;

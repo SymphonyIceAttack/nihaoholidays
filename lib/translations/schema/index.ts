@@ -19,6 +19,8 @@ export {
   type FestivalDataItem,
   festivalDataCollectionSchema,
   festivalDataItemSchema,
+  type QuizQuestion,
+  type QuizQuestionCollection,
   type UserTypeData,
   type UserTypeDataCollection,
   userTypeDataCollectionSchema,

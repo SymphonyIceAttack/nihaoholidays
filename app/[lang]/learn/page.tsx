@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { LearnPageContent } from "@/components/learn/learn-page";
 import { siteConfig } from "@/lib/config";
-import type { LanguageType } from "@/lib/translations/config";
-import { supportedLocales } from "@/lib/translations/config";
+import { type LanguageType, supportedLocales } from "@/lib/translations/config";
 import { generateHreflangLinks } from "@/lib/translations/hreflang";
 
 export function generateStaticParams() {
@@ -74,6 +73,6 @@ export default async function LearnPage({
 }: {
   params: Promise<{ lang: LanguageType }>;
 }) {
-  await params;
-  return <LearnPageContent />;
+  const { lang } = await params;
+  return <LearnPageContent lang={lang} />;
 }

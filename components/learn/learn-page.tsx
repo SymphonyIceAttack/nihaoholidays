@@ -4,111 +4,27 @@ import { ArrowRight, CheckCircle2, ChevronRight, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { Suspense, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { translate } from "@/lib/translations";
+import {
+  learningSteps,
+  learnPageFestivals,
+} from "@/lib/translations/en/festival-data";
 import { cn } from "@/lib/utils";
 
-const festivals = [
-  {
-    id: "spring",
-    name: "Spring Festival",
-    emoji: "🧧",
-    subtitle: "Start with the most important festival",
-    tools: 12,
-    difficulty: "Beginner",
-  },
-  {
-    id: "lantern",
-    name: "Lantern Festival",
-    emoji: "🏮",
-    subtitle: "The grand finale of Spring Festival",
-    tools: 5,
-    difficulty: "Beginner",
-  },
-  {
-    id: "mid-autumn",
-    name: "Mid-Autumn Festival",
-    emoji: "🥮",
-    subtitle: "Mooncakes and family reunion",
-    tools: 8,
-    difficulty: "Beginner",
-  },
-  {
-    id: "dragon-boat",
-    name: "Dragon Boat Festival",
-    emoji: "🐉",
-    subtitle: "Zongzi and dragon boats",
-    tools: 6,
-    difficulty: "Intermediate",
-  },
-  {
-    id: "qingming",
-    name: "Qingming Festival",
-    emoji: "🌿",
-    subtitle: "Tomb sweeping and spring outings",
-    tools: 4,
-    difficulty: "Intermediate",
-  },
-  {
-    id: "qixi",
-    name: "Qixi Festival",
-    emoji: "💕",
-    subtitle: "China's Valentine's Day",
-    tools: 5,
-    difficulty: "Beginner",
-  },
-] as const;
-
-const learningSteps = [
-  {
-    step: 1,
-    title: "Choose a festival",
-    description: "Start with recommended ones or explore freely",
-    icon: "calendar",
-  },
-  {
-    step: 2,
-    title: "Learn expressions",
-    description: "Master practical phrases with pinyin and audio",
-    icon: "message",
-  },
-  {
-    step: 3,
-    title: "Practice scenarios",
-    description: "Use interactive tools to practice real situations",
-    icon: "tools",
-  },
-];
-
-function LearnPageInner() {
+function LearnPageInner({ lang }: { lang: string }) {
+  const t = (key: string, params?: Record<string, string>) =>
+    translate(key, lang as "en", params);
   const [selectedFestival, setSelectedFestival] = useState<string | null>(null);
   const currentStep = selectedFestival ? 2 : 1;
 
   const handleStart = () => {
     if (selectedFestival) {
-      window.location.href = `/en/festival/${selectedFestival}`;
+      window.location.href = `/${lang}/festival/${selectedFestival}`;
     }
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-rose-50/50 via-background to-background">
-      {/* Header */}
-      <header className="border-b bg-white/60 dark:bg-zinc-900/60 backdrop-blur-md sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link
-            href="/en"
-            className="text-lg font-semibold flex items-center gap-2 hover:opacity-80 transition-opacity"
-          >
-            <span className="text-2xl">🏮</span>
-            <span>NihaoHolidays</span>
-          </Link>
-          <div className="text-sm text-muted-foreground">
-            <span className="inline-flex items-center gap-1.5">
-              <Sparkles className="h-4 w-4 text-rose-500" />5 minutes to start
-              learning
-            </span>
-          </div>
-        </div>
-      </header>
-
       <main className="container mx-auto px-4 py-12">
         {/* Progress Steps */}
         <div className="mb-12">
@@ -141,7 +57,7 @@ function LearnPageInner() {
                       item.step
                     )}
                   </span>
-                  <span className="hidden sm:inline">{item.title}</span>
+                  <span className="hidden sm:inline">{t(item.titleKey)}</span>
                 </div>
                 {index < learningSteps.length - 1 && (
                   <ChevronRight className="h-4 w-4 mx-2 text-muted-foreground/50" />
@@ -162,23 +78,30 @@ function LearnPageInner() {
                 )}
               />
               {currentStep === 1
-                ? "Choose a festival to start"
-                : "Ready to learn!"}
+                ? t("learn.chooseFestival")
+                : t("learn.readyToLearn")}
             </div>
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
               {currentStep === 1
-                ? "Start your learning journey"
-                : `Learning ${festivals.find((f) => f.id === selectedFestival)?.name}`}
+                ? t("learn.startJourney")
+                : t("learn.learning", {
+                    name:
+                      t(
+                        learnPageFestivals.find(
+                          (f) => f.id === selectedFestival,
+                        )?.nameKey || "",
+                      ) || "",
+                  })}
             </h1>
             <p className="text-muted-foreground max-w-xl mx-auto">
               {currentStep === 1
-                ? "Select a festival to explore Chinese traditions, learn practical expressions, and discover holiday customs."
-                : "Click 'Start Learning Now' to begin your personalized learning experience."}
+                ? t("learn.selectFestival")
+                : t("learn.clickStart")}
             </p>
           </div>
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
-            {festivals.map((festival) => {
+            {learnPageFestivals.map((festival) => {
               const isSelected = selectedFestival === festival.id;
 
               return (
@@ -203,24 +126,24 @@ function LearnPageInner() {
                     <span className="text-4xl">{festival.emoji}</span>
                     <div className="flex-1">
                       <h3 className="font-semibold text-foreground mb-1">
-                        {festival.name}
+                        {t(festival.nameKey)}
                       </h3>
                       <p className="text-sm text-muted-foreground mb-2">
-                        {festival.subtitle}
+                        {t(festival.subtitleKey)}
                       </p>
                       <div className="flex items-center gap-3">
                         <span className="text-xs px-2 py-1 rounded-full bg-muted text-muted-foreground">
-                          {festival.tools} tools
+                          {t("tools.count", { count: String(festival.tools) })}
                         </span>
                         <span
                           className={cn(
                             "text-xs px-2 py-1 rounded-full",
-                            festival.difficulty === "Beginner"
+                            festival.difficultyKey === "difficulty.beginner"
                               ? "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300"
                               : "bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300",
                           )}
                         >
-                          {festival.difficulty}
+                          {t(festival.difficultyKey)}
                         </span>
                       </div>
                     </div>
@@ -239,15 +162,20 @@ function LearnPageInner() {
                 <div className="text-center mb-6">
                   <div className="inline-flex items-center gap-2 bg-white/80 dark:bg-white/5 backdrop-blur-sm px-3 py-1 rounded-full text-sm text-rose-700 dark:text-rose-300 mb-4">
                     <Sparkles className="h-4 w-4" />
-                    Ready to start learning!
+                    {t("learn.readyLearn")}
                   </div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">
-                    Learning{" "}
-                    {festivals.find((f) => f.id === selectedFestival)?.name}
+                    {t("learn.learning", {
+                      name:
+                        t(
+                          learnPageFestivals.find(
+                            (f) => f.id === selectedFestival,
+                          )?.nameKey || "",
+                        ) || "",
+                    })}
                   </h3>
                   <p className="text-muted-foreground text-sm">
-                    You&apos;ll get personalized expressions, practical
-                    scenarios, and interactive tools.
+                    {t("learn.getExpressions")}
                   </p>
                 </div>
 
@@ -257,7 +185,7 @@ function LearnPageInner() {
                     onClick={handleStart}
                     className="flex-1 bg-rose-600 hover:bg-rose-700 text-white shadow-lg shadow-rose-600/20"
                   >
-                    Start Learning Now
+                    {t("learn.startNow")}
                     <ArrowRight className="h-4 w-4 ml-2" />
                   </Button>
                   <Button
@@ -266,8 +194,8 @@ function LearnPageInner() {
                     asChild
                     className="flex-1"
                   >
-                    <Link href={`/en/festival/${selectedFestival}`}>
-                      View Festival Details
+                    <Link href={`/${lang}/festival/${selectedFestival}`}>
+                      {t("learn.viewDetails")}
                     </Link>
                   </Button>
                 </div>
@@ -280,10 +208,10 @@ function LearnPageInner() {
         <section>
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-foreground mb-3">
-              What you&apos;ll learn
+              {t("learn.whatLearn")}
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Comprehensive learning experience for every festival
+              {t("learn.comprehensive")}
             </p>
           </div>
 
@@ -293,51 +221,48 @@ function LearnPageInner() {
                 <span className="text-2xl">📝</span>
               </div>
               <h3 className="font-semibold text-foreground mb-1">
-                Expressions
+                {t("learn.expressions")}
               </h3>
               <p className="text-sm text-muted-foreground">
-                Phrases with pinyin and audio
+                {t("learn.expressions.desc")}
               </p>
             </div>
             <div className="text-center p-6 rounded-xl bg-muted/50 hover:bg-muted transition-colors">
               <div className="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mx-auto mb-3">
                 <span className="text-2xl">🍜</span>
               </div>
-              <h3 className="font-semibold text-foreground mb-1">Food Guide</h3>
+              <h3 className="font-semibold text-foreground mb-1">
+                {t("learn.foodGuide")}
+              </h3>
               <p className="text-sm text-muted-foreground">
-                Dishes and ordering phrases
+                {t("learn.foodGuide.desc")}
               </p>
             </div>
             <div className="text-center p-6 rounded-xl bg-muted/50 hover:bg-muted transition-colors">
               <div className="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center mx-auto mb-3">
                 <span className="text-2xl">🎁</span>
               </div>
-              <h3 className="font-semibold text-foreground mb-1">Etiquette</h3>
+              <h3 className="font-semibold text-foreground mb-1">
+                {t("learn.etiquette")}
+              </h3>
               <p className="text-sm text-muted-foreground">
-                Gifts and taboos guide
+                {t("learn.etiquette.desc")}
               </p>
             </div>
             <div className="text-center p-6 rounded-xl bg-muted/50 hover:bg-muted transition-colors">
               <div className="w-12 h-12 rounded-xl bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mx-auto mb-3">
                 <span className="text-2xl">💬</span>
               </div>
-              <h3 className="font-semibold text-foreground mb-1">Practice</h3>
+              <h3 className="font-semibold text-foreground mb-1">
+                {t("learn.practice")}
+              </h3>
               <p className="text-sm text-muted-foreground">
-                Interactive scenarios
+                {t("learn.practice.desc")}
               </p>
             </div>
           </div>
         </section>
       </main>
-
-      {/* Footer */}
-      <footer className="border-t mt-16 py-8 bg-muted/30">
-        <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>
-            No account needed • No registration • Start learning immediately
-          </p>
-        </div>
-      </footer>
     </div>
   );
 }
@@ -345,14 +270,6 @@ function LearnPageInner() {
 function LearnPageSkeleton() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-rose-50/50 via-background to-background">
-      <header className="border-b bg-white/60 dark:bg-zinc-900/60 backdrop-blur-md sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="text-lg font-semibold flex items-center gap-2">
-            <span className="text-2xl">🏮</span>
-            <span>NihaoHolidays</span>
-          </div>
-        </div>
-      </header>
       <main className="container mx-auto px-4 py-12">
         <div className="animate-pulse">
           <div className="h-8 bg-muted rounded-full w-64 mx-auto mb-8" />
@@ -367,10 +284,10 @@ function LearnPageSkeleton() {
   );
 }
 
-export function LearnPageContent() {
+export function LearnPageContent({ lang }: { lang: string }) {
   return (
     <Suspense fallback={<LearnPageSkeleton />}>
-      <LearnPageInner />
+      <LearnPageInner lang={lang} />
     </Suspense>
   );
 }

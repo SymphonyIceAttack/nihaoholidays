@@ -126,6 +126,16 @@ export const userTypeDataCollectionSchema = z.record(
   userTypeDataSchema,
 );
 
+// Quiz question schema
+export const quizQuestionSchema = z.object({
+  id: z.number(),
+  questionKey: z.string(),
+  options: z.array(z.string()),
+  correctIndex: z.number(),
+  explanationKey: z.string(),
+  category: z.enum(["history", "customs", "food", "etiquette"]),
+});
+
 export type UserTypeLabel = z.infer<typeof userTypeLabelSchema>;
 export type UserTypeDescription = z.infer<typeof userTypeDescriptionSchema>;
 export type UserTypeFocus = z.infer<typeof userTypeFocusSchema>;
@@ -143,3 +153,5 @@ export type FestivalDataCollection = z.infer<
 export type UserTypeDataCollection = z.infer<
   typeof userTypeDataCollectionSchema
 >;
+export type QuizQuestion = z.infer<typeof quizQuestionSchema>;
+export type QuizQuestionCollection = Record<string, QuizQuestion[]>;

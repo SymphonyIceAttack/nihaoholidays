@@ -11,18 +11,11 @@ import Link from "next/link";
 import { Suspense, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { translate } from "@/lib/translations";
-import { festivalData } from "@/lib/translations/en/festival-data";
+import {
+  festivalData,
+  quizQuestions,
+} from "@/lib/translations/en/festival-data";
 import { cn } from "@/lib/utils";
-
-interface QuizQuestion {
-  id: number;
-  question: string;
-  options: string[];
-  correctIndex: number;
-  explanation: string;
-  category: "history" | "customs" | "food" | "etiquette";
-  userType?: "tourist" | "student" | "worker";
-}
 
 interface QuizContentProps {
   lang: "en";
@@ -41,6 +34,10 @@ function QuizContentInner({ lang, festivalId }: QuizContentInnerProps) {
   const currentFestival = festivalData[festivalId] || festivalData.spring;
   const basicInfo = currentFestival.basicInfo;
 
+  // Get festival-specific quiz questions
+  const festivalQuizQuestions =
+    quizQuestions[festivalId] || quizQuestions.spring;
+
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [showExplanation, setShowExplanation] = useState(false);
@@ -48,83 +45,18 @@ function QuizContentInner({ lang, festivalId }: QuizContentInnerProps) {
   const [quizCompleted, setQuizCompleted] = useState(false);
   const [answers, setAnswers] = useState<number[]>([]);
 
-  const baseQuestions: QuizQuestion[] = [
-    {
-      id: 1,
-      question: `When is ${basicInfo.name} typically celebrated?`,
-      options: [basicInfo.date, "January 1st", "December 25th", "March 15th"],
-      correctIndex: 0,
-      explanation: `${basicInfo.name} is celebrated on ${basicInfo.lunarDate}.`,
-      category: "history",
-    },
-    {
-      id: 2,
-      question: `What is the lunar date of ${basicInfo.name}?`,
-      options: [
-        basicInfo.lunarDate,
-        "15th day of 8th lunar month",
-        "1st day of 1st lunar month",
-        "5th day of 5th lunar month",
-      ],
-      correctIndex: 0,
-      explanation: `${basicInfo.name} falls on ${basicInfo.lunarDate}.`,
-      category: "history",
-    },
-    {
-      id: 3,
-      question: `Which of the following is a traditional custom for ${basicInfo.name}?`,
-      options: [
-        basicInfo.customs[0] || "Decorating with lights",
-        "Exchanging gifts on Valentine's Day",
-        "Eating turkey on Thanksgiving",
-        "Trick-or-treating on Halloween",
-      ],
-      correctIndex: 0,
-      explanation: `${basicInfo.customs[0] || "This is a traditional custom for the festival"}.`,
-      category: "customs",
-    },
-    {
-      id: 4,
-      question: `What should you avoid doing during ${basicInfo.name}?`,
-      options: [
-        basicInfo.taboo?.[0] || "Breaking things",
-        "Eating delicious food",
-        "Spending time with family",
-        "Wearing new clothes",
-      ],
-      correctIndex: 0,
-      explanation: `${basicInfo.taboo?.[0] || "This is something to avoid during the festival"}.`,
-      category: "etiquette",
-    },
-    {
-      id: 5,
-      question: `What is a traditional food for ${basicInfo.name}?`,
-      options: [
-        currentFestival.foods[0]?.name || "Traditional dumplings",
-        "Thanksgiving turkey",
-        "Christmas ham",
-        "Easter eggs",
-      ],
-      correctIndex: 0,
-      explanation: `${currentFestival.foods[0]?.name || "This is a traditional food for the festival"}: ${currentFestival.foods[0]?.meaning || ""}`,
-      category: "food",
-    },
-  ];
-
-  const quizQuestions = baseQuestions;
-
   const handleAnswerSelect = (index: number) => {
     if (showExplanation) return;
     setSelectedAnswer(index);
     setShowExplanation(true);
-    if (index === quizQuestions[currentQuestion].correctIndex) {
+    if (index === festivalQuizQuestions[currentQuestion].correctIndex) {
       setScore(score + 1);
     }
     setAnswers([...answers, index]);
   };
 
   const handleNextQuestion = () => {
-    if (currentQuestion < quizQuestions.length - 1) {
+    if (currentQuestion < festivalQuizQuestions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
       setSelectedAnswer(null);
       setShowExplanation(false);
@@ -143,7 +75,7 @@ function QuizContentInner({ lang, festivalId }: QuizContentInnerProps) {
   };
 
   const getScoreMessage = () => {
-    const percentage = (score / quizQuestions.length) * 100;
+    const percentage = (score / festivalQuizQuestions.length) * 100;
     if (percentage === 100)
       return {
         message: t("quiz.perfectScore"),
@@ -179,7 +111,7 @@ function QuizContentInner({ lang, festivalId }: QuizContentInnerProps) {
               {basicInfo.emoji}
             </span>
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-3 animate-in fade-in slide-in-from-bottom-4 duration-500">
-              {basicInfo.name} - {t("quiz.quizResults")}
+              {t(basicInfo.name)} - {t("quiz.quizResults")}
             </h1>
           </div>
 
@@ -192,13 +124,13 @@ function QuizContentInner({ lang, festivalId }: QuizContentInnerProps) {
               <div className="text-6xl font-bold text-foreground mb-4">
                 {score}{" "}
                 <span className="text-2xl text-muted-foreground">
-                  / {quizQuestions.length}
+                  / {festivalQuizQuestions.length}
                 </span>
               </div>
               <p className="text-muted-foreground mb-6">
                 {t("quiz.scoreDetail", {
                   score: String(score),
-                  total: String(quizQuestions.length),
+                  total: String(festivalQuizQuestions.length),
                 })}
                 {score >= 4 ? t("quiz.greatJob") : t("quiz.reviewMore")}
               </p>
@@ -231,7 +163,7 @@ function QuizContentInner({ lang, festivalId }: QuizContentInnerProps) {
     );
   }
 
-  const question = quizQuestions[currentQuestion];
+  const question = festivalQuizQuestions[currentQuestion];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50/50 via-background to-background">
@@ -242,7 +174,7 @@ function QuizContentInner({ lang, festivalId }: QuizContentInnerProps) {
             {basicInfo.emoji}
           </span>
           <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-3 animate-in fade-in slide-in-from-bottom-4 duration-500">
-            {basicInfo.name} {t("quiz.takeQuiz")}
+            {t(basicInfo.name)} {t("quiz.takeQuiz")}
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6 animate-in fade-in slide-in-from-bottom-4 duration-500 delay-100">
             {t("quiz.testKnowledge")}
@@ -254,14 +186,17 @@ function QuizContentInner({ lang, festivalId }: QuizContentInnerProps) {
           <div className="flex justify-between text-sm text-muted-foreground mb-2">
             <span>{t("quiz.progress")}</span>
             <span>
-              {Math.round((currentQuestion / quizQuestions.length) * 100)}%
+              {Math.round(
+                (currentQuestion / festivalQuizQuestions.length) * 100,
+              )}
+              %
             </span>
           </div>
           <div className="h-2 bg-muted rounded-full overflow-hidden">
             <div
               className="h-full bg-gradient-to-r from-rose-500 to-purple-500 transition-all duration-500"
               style={{
-                width: `${(currentQuestion / quizQuestions.length) * 100}%`,
+                width: `${(currentQuestion / festivalQuizQuestions.length) * 100}%`,
               }}
             />
           </div>
@@ -278,7 +213,7 @@ function QuizContentInner({ lang, festivalId }: QuizContentInnerProps) {
             </div>
 
             <h2 className="text-xl font-semibold text-foreground mb-6">
-              {question.question}
+              {t(question.questionKey)}
             </h2>
 
             <div className="space-y-3">
@@ -338,7 +273,7 @@ function QuizContentInner({ lang, festivalId }: QuizContentInnerProps) {
                         : t("quiz.notCorrect")}
                     </h4>
                     <p className="text-blue-600 dark:text-blue-400 text-sm">
-                      {question.explanation}
+                      {t(question.explanationKey)}
                     </p>
                   </div>
                 </div>
@@ -355,7 +290,7 @@ function QuizContentInner({ lang, festivalId }: QuizContentInnerProps) {
               onClick={handleNextQuestion}
               className="bg-rose-600 hover:bg-rose-700 text-white shadow-lg shadow-rose-600/20"
             >
-              {currentQuestion < quizQuestions.length - 1
+              {currentQuestion < festivalQuizQuestions.length - 1
                 ? t("quiz.nextQuestion")
                 : t("quiz.seeResults")}
               <Sparkles className="h-4 w-4 ml-2" />
@@ -370,14 +305,6 @@ function QuizContentInner({ lang, festivalId }: QuizContentInnerProps) {
 function QuizContentSkeleton() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50/50 via-background to-background">
-      <header className="border-b bg-white/60 dark:bg-zinc-900/60 backdrop-blur-md sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="h-4 w-24 bg-muted rounded animate-pulse" />
-            <div className="h-4 w-32 bg-muted rounded animate-pulse" />
-          </div>
-        </div>
-      </header>
       <main className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
           <div className="h-32 w-32 mx-auto bg-muted rounded-full animate-pulse mb-4" />
