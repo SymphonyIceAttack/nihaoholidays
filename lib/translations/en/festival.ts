@@ -192,6 +192,50 @@ export const festival = {
     "Buying flowers and gifts",
   ],
 
+  // Double Ninth Festival
+  "double_ninth.name": "Double Ninth Festival",
+  "double_ninth.date": "October",
+  "double_ninth.lunarDate": "9th day of 9th lunar month",
+  "double_ninth.description": "Festival honoring elders",
+  "double_ninth.history":
+    "Double Ninth Festival dates back over 2,500 years to the Warring States period. Also known as Chongyang Festival, it celebrates the yang energy of the highest double-nine day.",
+  "double_ninth.customs": [
+    "Climbing heights to avoid disasters",
+    "Appreciating chrysanthemums",
+    "Eating chrysanthemum wine",
+    "Visiting elderly relatives",
+    "Putting dogwood in clothing",
+  ],
+
+  // Winter Solstice
+  "winter_solstice.name": "Winter Solstice",
+  "winter_solstice.date": "December 21-23",
+  "winter_solstice.lunarDate": "22nd day of 11th lunar month",
+  "winter_solstice.description": "The longest night of the year",
+  "winter_solstice.history":
+    "Winter Solstice has been celebrated for over 2,000 years. It marks the return of yang energy after the longest night, symbolizing hope and renewal.",
+  "winter_solstice.customs": [
+    "Eating dumplings in the north",
+    "Eating tangyuan in the south",
+    "Family reunion dinners",
+    "Worshipping ancestors",
+  ],
+
+  // Laba Festival
+  "laba.name": "Laba Festival",
+  "laba.date": "January",
+  "laba.lunarDate": "8th day of 12th lunar month",
+  "laba.description": "Rice porridge festival",
+  "laba.history":
+    "Laba Festival commemorates Buddha's enlightenment and marks the beginning of Spring Festival preparations. Celebrated for over 1,500 years.",
+  "laba.customs": [
+    "Eating laba porridge (八宝粥)",
+    "Making laba garlic",
+    "Visiting temples for blessings",
+    "Ancestor worship",
+    "Preparing for Spring Festival",
+  ],
+
   // Foods
   "food.fish": "Fish",
   "food.fish.meaning": "Surplus and prosperity",
@@ -218,6 +262,9 @@ export const festival = {
   "dragon_boat.learn.subtitle": "Zongzi and dragon boats",
   "qingming.learn.subtitle": "Tomb sweeping and spring outings",
   "qixi.learn.subtitle": "China's Valentine's Day",
+  "double_ninth.learn.subtitle": "Honoring elders and chrysanthemums",
+  "winter_solstice.learn.subtitle": "The longest night and dumplings",
+  "laba.learn.subtitle": "Rice porridge and Spring Festival prep",
 
   // Difficulty levels
   "difficulty.beginner": "Beginner",
@@ -365,6 +412,63 @@ export const festival = {
   "quiz.qixi.q5": "What is Qixi Festival also known as?",
   "quiz.qixi.q5.explain":
     "Qixi Festival is also known as China's traditional Valentine's Day.",
+
+  // Quiz Double Ninth questions
+  "quiz.double_ninth.q1": "When is Double Ninth Festival typically celebrated?",
+  "quiz.double_ninth.q1.explain":
+    "Double Ninth Festival is celebrated in October, on the 9th day of the 9th lunar month.",
+  "quiz.double_ninth.q2": "What is the lunar date of Double Ninth Festival?",
+  "quiz.double_ninth.q2.explain":
+    "Double Ninth Festival falls on the 9th day of the 9th lunar month, hence its name.",
+  "quiz.double_ninth.q3":
+    "Which of the following is a traditional custom for Double Ninth Festival?",
+  "quiz.double_ninth.q3.explain":
+    "Appreciating chrysanthemums is a traditional Double Ninth Festival custom.",
+  "quiz.double_ninth.q4":
+    "What is a traditional food for Double Ninth Festival?",
+  "quiz.double_ninth.q4.explain":
+    "Double Ninth Cake is the traditional food eaten during the festival.",
+  "quiz.double_ninth.q5":
+    "What is a key activity during Double Ninth Festival?",
+  "quiz.double_ninth.q5.explain":
+    "Climbing mountains or high places is a traditional Double Ninth Festival activity.",
+
+  // Quiz Winter Solstice questions
+  "quiz.winter_solstice.q1": "When is Winter Solstice typically celebrated?",
+  "quiz.winter_solstice.q1.explain":
+    "Winter Solstice is celebrated around December 21-23, depending on the year.",
+  "quiz.winter_solstice.q2":
+    "What astronomical event does Winter Solstice mark?",
+  "quiz.winter_solstice.q2.explain":
+    "Winter Solstice marks the shortest day and longest night of the year in the Northern Hemisphere.",
+  "quiz.winter_solstice.q3":
+    "What is a traditional food for Northern Chinese on Winter Solstice?",
+  "quiz.winter_solstice.q3.explain":
+    "Eating dumplings is the traditional Northern Chinese custom for Winter Solstice.",
+  "quiz.winter_solstice.q4":
+    "What foods are eaten on Winter Solstice in different regions?",
+  "quiz.winter_solstice.q4.explain":
+    "Northerners eat dumplings while southerners eat tangyuan, though both are traditional.",
+  "quiz.winter_solstice.q5": "Why is Winter Solstice celebrated?",
+  "quiz.winter_solstice.q5.explain":
+    "Winter Solstice marks the return of yang energy and the gradual lengthening of days after the longest night.",
+
+  // Quiz Laba questions
+  "quiz.laba.q1": "When is Laba Festival celebrated?",
+  "quiz.laba.q1.explain":
+    "Laba Festival is celebrated on the 8th day of the 12th lunar month.",
+  "quiz.laba.q2": "What is the origin of Laba Festival?",
+  "quiz.laba.q2.explain":
+    "Laba Festival commemorates the day when Buddha achieved enlightenment, traditionally observed by eating porridge.",
+  "quiz.laba.q3": "What is the main food of Laba Festival?",
+  "quiz.laba.q3.explain":
+    "Laba Porridge (八宝粥) is the traditional food of Laba Festival.",
+  "quiz.laba.q4": "What traditional item is made during Laba Festival?",
+  "quiz.laba.q4.explain":
+    "Laba garlic, preserved in vinegar until green, is a traditional Laba Festival preparation.",
+  "quiz.laba.q5": "What does Laba Festival mark in the calendar?",
+  "quiz.laba.q5.explain":
+    "Laba Festival marks the beginning of intensive preparations for Spring Festival.",
 
   // Learn page
   "learn.chooseFestival": "Choose a festival to start",

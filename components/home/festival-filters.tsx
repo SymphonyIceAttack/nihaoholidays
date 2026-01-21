@@ -2,12 +2,13 @@
 
 import { Filter } from "lucide-react";
 import { useEffect, useState } from "react";
+import type { LanguageType } from "@/lib/translations/config";
 import { cn } from "@/lib/utils";
 
 type ThemeFilter = "all" | "family" | "food" | "romance";
 
 interface FestivalFiltersProps {
-  lang: string;
+  lang: LanguageType;
   onFilterChange?: (theme: ThemeFilter) => void;
 }
 
@@ -28,16 +29,9 @@ const translations: Record<string, Record<string, string>> = {
     "filters.theme.food": "Food-focused",
     "filters.theme.romance": "Romantic",
   },
-  zh: {
-    "filters.title": "筛选节日",
-    "filters.theme.all": "全部节日",
-    "filters.theme.family": "家庭团聚",
-    "filters.theme.food": "美食主题",
-    "filters.theme.romance": "浪漫氛围",
-  },
 };
 
-function getTranslation(key: string, lang: string): string {
+function getTranslation(key: string, lang: LanguageType): string {
   return translations[lang]?.[key] || translations.en[key] || key;
 }
 

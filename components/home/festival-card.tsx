@@ -10,21 +10,9 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import type { FestivalWithDisplayInfo } from "@/lib/festivals";
 import { cn } from "@/lib/utils";
-
-interface Festival {
-  id: string;
-  name: string;
-  emoji: string;
-  subtitle: string;
-  description: string;
-  tags: string[];
-  isRecommended?: boolean;
-  tools: {
-    name: string;
-    type: "food" | "expression" | "gift" | "other";
-  }[];
-}
+import { translations } from "@/lib/translations";
 
 const toolIcons = {
   food: ChefHat,
@@ -56,9 +44,11 @@ const toolHref: Record<string, string> = {
   "Winter Solstice Blessings": "/en/tool/winter-solstice-blessings",
 };
 
+import type { LanguageType } from "@/lib/translations/config";
+
 interface FestivalCardProps {
-  festival: Festival;
-  lang?: string;
+  festival: FestivalWithDisplayInfo;
+  lang?: LanguageType;
 }
 
 export function FestivalCard({ festival, lang = "en" }: FestivalCardProps) {
@@ -119,7 +109,7 @@ export function FestivalCard({ festival, lang = "en" }: FestivalCardProps) {
               <div className="p-1 rounded-md bg-rose-50">
                 <BookOpen className="h-4 w-4 text-rose-500" />
               </div>
-              了解文化概览
+              {translations[lang]["common.exploreCulture"]}
             </Button>
           </Link>
 
@@ -132,7 +122,7 @@ export function FestivalCard({ festival, lang = "en" }: FestivalCardProps) {
               <div className="p-1 rounded-md bg-emerald-50">
                 <Gamepad2 className="h-4 w-4 text-emerald-500" />
               </div>
-              玩互动测验
+              {translations[lang]["common.playQuiz"]}
             </Button>
           </Link>
 

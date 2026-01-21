@@ -1,14 +1,12 @@
 "use client";
 
-import {
-  cultureUserTypeData,
-  festivalData,
-} from "@/lib/translations/en/festival-data";
+import { cultureUserTypeData, festivalData } from "@/lib/festivals";
 import { cn } from "@/lib/utils";
 import { CulturalTopicsGrid } from "./components/cultural-topics-grid";
 import { CultureHero } from "./components/culture-hero";
 import { ContinueLearningSection } from "./components/culture-navigation";
 import { CustomsSection } from "./components/customs-section";
+import { DeepContentSection } from "./components/deep-content-section";
 import { TaboosSection } from "./components/taboos-section";
 
 interface CultureDetailContentProps {
@@ -84,6 +82,8 @@ export function CultureDetailContent({
         <CustomsSection customs={basicInfo.customs} />
 
         <TaboosSection taboo={basicInfo.taboo || []} />
+
+        <DeepContentSection basicInfo={basicInfo} />
 
         <ContinueLearningSection
           lang={lang}

@@ -1,6 +1,8 @@
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 
+import type { LanguageType } from "@/lib/translations/config";
+
 interface Tool {
   name: string;
   description: string;
@@ -9,7 +11,7 @@ interface Tool {
 
 interface ToolsSectionProps {
   tools: Tool[];
-  lang: string;
+  lang: LanguageType;
   festivalId: string;
 }
 

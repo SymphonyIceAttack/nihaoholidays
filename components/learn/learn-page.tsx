@@ -4,16 +4,14 @@ import { ArrowRight, CheckCircle2, ChevronRight, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { Suspense, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { learningSteps, learnPageFestivals } from "@/lib/festivals";
 import { translate } from "@/lib/translations";
-import {
-  learningSteps,
-  learnPageFestivals,
-} from "@/lib/translations/en/festival-data";
+import type { LanguageType } from "@/lib/translations/config";
 import { cn } from "@/lib/utils";
 
-function LearnPageInner({ lang }: { lang: string }) {
+function LearnPageInner({ lang }: { lang: LanguageType }) {
   const t = (key: string, params?: Record<string, string>) =>
-    translate(key, lang as "en", params);
+    translate(key, lang, params);
   const [selectedFestival, setSelectedFestival] = useState<string | null>(null);
   const currentStep = selectedFestival ? 2 : 1;
 
@@ -284,7 +282,7 @@ function LearnPageSkeleton() {
   );
 }
 
-export function LearnPageContent({ lang }: { lang: string }) {
+export function LearnPageContent({ lang }: { lang: LanguageType }) {
   return (
     <Suspense fallback={<LearnPageSkeleton />}>
       <LearnPageInner lang={lang} />

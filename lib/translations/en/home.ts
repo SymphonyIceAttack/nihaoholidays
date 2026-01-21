@@ -17,6 +17,19 @@ export const home = {
   "upcoming.comingSoon": "Coming soon",
   "upcoming.daysLeft": "{days} days left",
 
+  // Subscribe page
+  "subscribe.title": "Festival Calendar",
+  "subscribe.description":
+    "Add Chinese festivals to your calendar with cultural insights",
+  "subscribe.why.title": "Why subscribe to Chinese festivals?",
+  "subscribe.why.benefits": [
+    "Never miss important cultural celebrations and family gatherings",
+    "Get reminders a week before each festival to prepare in advance",
+    "Learn the cultural significance of each festival through the calendar descriptions",
+    "Each event includes links to detailed guides on our website",
+  ],
+  "subscribe.daysUntil": "{days} days until this festival",
+
   // User Type Selector
   "userType.label": "Which type of user are you?",
   "userType.customScenario": "Your personalized scenario",

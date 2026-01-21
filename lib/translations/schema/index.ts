@@ -1,4 +1,5 @@
 import type { z } from "zod";
+import type { LanguageType } from "../config";
 import { aboutSchema } from "./about";
 import { commonSchema } from "./common";
 import { contactSchema } from "./contact";
@@ -93,7 +94,7 @@ export function getRequiredKeys(): string[] {
 // Validation function
 export function validateTranslations(
   translations: Record<string, unknown>,
-  lang: string,
+  lang: LanguageType,
 ): boolean {
   const requiredKeys = getRequiredKeys();
   const transKeys = Object.keys(translations);

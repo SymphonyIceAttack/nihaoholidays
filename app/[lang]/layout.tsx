@@ -63,6 +63,8 @@ export default async function RootLayout({
     notFound();
   }
 
+  const typedLang = lang as LanguageType;
+
   return (
     <html
       lang={lang}
@@ -76,12 +78,12 @@ export default async function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <LanguageProvider lang={lang as LanguageType}>
+          <LanguageProvider lang={typedLang}>
             <UserTypeProvider>
               <div className="min-h-screen flex flex-col cyber-grid">
-                <Header lang={lang as LanguageType} />
+                <Header lang={typedLang} />
                 <main className="flex-1 relative">{children}</main>
-                <Footer lang={lang as LanguageType} />
+                <Footer lang={typedLang} />
               </div>
             </UserTypeProvider>
           </LanguageProvider>

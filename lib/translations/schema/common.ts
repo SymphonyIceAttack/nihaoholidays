@@ -18,6 +18,8 @@ export const commonSchema = z.object({
   "page.title.privacy": z.string(),
   "page.title.terms": z.string(),
   "common.learnMore": z.string(),
+  "common.exploreCulture": z.string(),
+  "common.playQuiz": z.string(),
 });
 
 export type CommonSchema = z.infer<typeof commonSchema>;

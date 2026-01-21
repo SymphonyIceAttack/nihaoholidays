@@ -5,6 +5,9 @@ import {
   Gift,
   Menu as MenuIcon,
   MessageCircleHeart,
+  Sparkles,
+  Thermometer,
+  Utensils,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -36,9 +39,63 @@ const tools = [
     href: "/tool/red-envelope",
     color: "from-red-500 to-pink-500",
   },
+  {
+    id: "chongyang-blessings",
+    title: "Chongyang Blessings",
+    description:
+      "Double Ninth Festival greetings for honoring elders with pronunciation.",
+    icon: Sparkles,
+    href: "/tool/chongyang-blessings",
+    color: "from-amber-500 to-yellow-500",
+  },
+  {
+    id: "chrysanthemum-tea",
+    title: "Chrysanthemum Tea Guide",
+    description: "Traditional chrysanthemum tea varieties and brewing methods.",
+    icon: Thermometer,
+    href: "/tool/chrysanthemum-tea",
+    color: "from-orange-500 to-amber-500",
+  },
+  {
+    id: "winter-solstice-blessings",
+    title: "Winter Solstice Blessings",
+    description:
+      "Dongzhi Festival greetings for the longest night of the year.",
+    icon: MessageCircleHeart,
+    href: "/tool/winter-solstice-blessings",
+    color: "from-cyan-500 to-blue-500",
+  },
+  {
+    id: "dumpling-tangyuan",
+    title: "Dumpling vs Tangyuan",
+    description:
+      "Winter Solstice traditions: dumplings in the north, tangyuan in the south.",
+    icon: Utensils,
+    href: "/tool/dumpling-tangyuan",
+    color: "from-cyan-400 to-sky-500",
+  },
+  {
+    id: "laba-blessings",
+    title: "Laba Festival Blessings",
+    description:
+      "Laba Festival greetings and sayings for the rice porridge festival.",
+    icon: Sparkles,
+    href: "/tool/laba-blessings",
+    color: "from-orange-400 to-amber-500",
+  },
+  {
+    id: "laba-porridge",
+    title: "Laba Porridge Guide",
+    description: "Traditional Eight Treasure Porridge recipe and history.",
+    icon: Utensils,
+    href: "/tool/laba-porridge",
+    color: "from-orange-500 to-red-500",
+  },
 ];
 
-export function ToolListPage({ lang = "en" }: { lang?: string } = {}) {
+import type { LanguageType } from "@/lib/translations/config";
+
+export function ToolListPage({ lang = "en" }: { lang?: LanguageType } = {}) {
   return (
     <div className="min-h-screen bg-gradient-to-b from-rose-50/50 via-background to-background">
       <main className="container mx-auto px-4 py-8">
@@ -118,11 +175,7 @@ export function ToolListPage({ lang = "en" }: { lang?: string } = {}) {
 
       {/* Footer */}
       <footer className="border-t mt-16 py-8 bg-muted/30">
-        <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>
-            No account needed • No registration • Start learning immediately
-          </p>
-        </div>
+        <div className="container mx-auto px-4 text-center text-sm text-muted-foreground"></div>
       </footer>
     </div>
   );

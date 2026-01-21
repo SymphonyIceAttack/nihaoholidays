@@ -111,7 +111,13 @@ const phrases = [
   },
 ];
 
-export function RedEnvelopeGuidePage({ lang = "en" }: { lang?: string } = {}) {
+import type { LanguageType } from "@/lib/translations/config";
+
+export function RedEnvelopeGuidePage({
+  lang = "en",
+}: {
+  lang?: LanguageType;
+} = {}) {
   return (
     <div className="min-h-screen bg-gradient-to-b from-rose-50/50 via-background to-background">
       <main className="container mx-auto px-4 py-8">
@@ -340,11 +346,7 @@ export function RedEnvelopeGuidePage({ lang = "en" }: { lang?: string } = {}) {
 
       {/* Footer */}
       <footer className="border-t mt-16 py-8 bg-muted/30">
-        <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>
-            No account needed • No registration • Start learning immediately
-          </p>
-        </div>
+        <div className="container mx-auto px-4 text-center text-sm text-muted-foreground"></div>
       </footer>
     </div>
   );

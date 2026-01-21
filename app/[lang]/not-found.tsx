@@ -4,10 +4,11 @@ import { ArrowLeft, Home, Search } from "lucide-react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import type { LanguageType } from "@/lib/translations/config";
 
 export default function NotFound() {
   const params = useParams();
-  const lang = (params.lang as string) || "en";
+  const lang = (params.lang as LanguageType) || "en";
 
   return (
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden cyber-grid">

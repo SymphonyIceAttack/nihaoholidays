@@ -50,6 +50,25 @@ export const festivalBasicInfoSchema = z.object({
   history: z.string(),
   customs: z.array(z.string()),
   taboo: z.array(z.string()).optional(),
+  // Deep content extensions
+  historyStory: z.string().optional(),
+  regionalVariations: z
+    .object({
+      north: z.string().optional(),
+      south: z.string().optional(),
+      east: z.string().optional(),
+      west: z.string().optional(),
+    })
+    .optional(),
+  modernEvolution: z.string().optional(),
+  misconceptions: z
+    .array(
+      z.object({
+        myth: z.string(),
+        reality: z.string(),
+      }),
+    )
+    .optional(),
 });
 
 // Expression schema

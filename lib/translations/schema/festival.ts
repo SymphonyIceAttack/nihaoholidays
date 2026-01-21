@@ -124,6 +124,30 @@ export const festivalSchema = z.object({
   "qixi.history": z.string(),
   "qixi.customs": z.array(z.string()),
 
+  // Double Ninth Festival
+  "double_ninth.name": z.string(),
+  "double_ninth.date": z.string(),
+  "double_ninth.lunarDate": z.string(),
+  "double_ninth.description": z.string(),
+  "double_ninth.history": z.string(),
+  "double_ninth.customs": z.array(z.string()),
+
+  // Winter Solstice
+  "winter_solstice.name": z.string(),
+  "winter_solstice.date": z.string(),
+  "winter_solstice.lunarDate": z.string(),
+  "winter_solstice.description": z.string(),
+  "winter_solstice.history": z.string(),
+  "winter_solstice.customs": z.array(z.string()),
+
+  // Laba Festival
+  "laba.name": z.string(),
+  "laba.date": z.string(),
+  "laba.lunarDate": z.string(),
+  "laba.description": z.string(),
+  "laba.history": z.string(),
+  "laba.customs": z.array(z.string()),
+
   // Foods
   "food.fish": z.string(),
   "food.fish.meaning": z.string(),
@@ -150,6 +174,9 @@ export const festivalSchema = z.object({
   "dragon_boat.learn.subtitle": z.string(),
   "qingming.learn.subtitle": z.string(),
   "qixi.learn.subtitle": z.string(),
+  "double_ninth.learn.subtitle": z.string(),
+  "winter_solstice.learn.subtitle": z.string(),
+  "laba.learn.subtitle": z.string(),
 
   // Difficulty levels
   "difficulty.beginner": z.string(),
@@ -264,6 +291,42 @@ export const festivalSchema = z.object({
   "quiz.qixi.q4.explain": z.string(),
   "quiz.qixi.q5": z.string(),
   "quiz.qixi.q5.explain": z.string(),
+
+  // Quiz Double Ninth Festival questions
+  "quiz.double_ninth.q1": z.string(),
+  "quiz.double_ninth.q1.explain": z.string(),
+  "quiz.double_ninth.q2": z.string(),
+  "quiz.double_ninth.q2.explain": z.string(),
+  "quiz.double_ninth.q3": z.string(),
+  "quiz.double_ninth.q3.explain": z.string(),
+  "quiz.double_ninth.q4": z.string(),
+  "quiz.double_ninth.q4.explain": z.string(),
+  "quiz.double_ninth.q5": z.string(),
+  "quiz.double_ninth.q5.explain": z.string(),
+
+  // Quiz Winter Solstice questions
+  "quiz.winter_solstice.q1": z.string(),
+  "quiz.winter_solstice.q1.explain": z.string(),
+  "quiz.winter_solstice.q2": z.string(),
+  "quiz.winter_solstice.q2.explain": z.string(),
+  "quiz.winter_solstice.q3": z.string(),
+  "quiz.winter_solstice.q3.explain": z.string(),
+  "quiz.winter_solstice.q4": z.string(),
+  "quiz.winter_solstice.q4.explain": z.string(),
+  "quiz.winter_solstice.q5": z.string(),
+  "quiz.winter_solstice.q5.explain": z.string(),
+
+  // Quiz Laba Festival questions
+  "quiz.laba.q1": z.string(),
+  "quiz.laba.q1.explain": z.string(),
+  "quiz.laba.q2": z.string(),
+  "quiz.laba.q2.explain": z.string(),
+  "quiz.laba.q3": z.string(),
+  "quiz.laba.q3.explain": z.string(),
+  "quiz.laba.q4": z.string(),
+  "quiz.laba.q4.explain": z.string(),
+  "quiz.laba.q5": z.string(),
+  "quiz.laba.q5.explain": z.string(),
 });
 
 export type FestivalSchema = z.infer<typeof festivalSchema>;

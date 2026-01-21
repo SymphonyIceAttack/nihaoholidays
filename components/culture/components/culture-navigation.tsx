@@ -2,8 +2,10 @@ import { BookOpen, ChevronRight, GraduationCap, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
+import type { LanguageType } from "@/lib/translations/config";
+
 interface CultureNavigationProps {
-  lang: string;
+  lang: LanguageType;
   festivalId: string;
 }
 
@@ -34,7 +36,7 @@ export function CultureNavigation({
 }
 
 interface ContinueLearningSectionProps {
-  lang: string;
+  lang: LanguageType;
   festivalId: string;
   festivalName: string;
 }

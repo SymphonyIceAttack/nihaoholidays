@@ -18,6 +18,13 @@ export const homeSchema = z.object({
   "upcoming.comingSoon": z.string(),
   "upcoming.daysLeft": z.string(),
 
+  // Subscribe page
+  "subscribe.title": z.string(),
+  "subscribe.description": z.string(),
+  "subscribe.why.title": z.string(),
+  "subscribe.why.benefits": z.array(z.string()),
+  "subscribe.daysUntil": z.string(),
+
   // User Type Selector
   "userType.label": z.string(),
   "userType.customScenario": z.string(),

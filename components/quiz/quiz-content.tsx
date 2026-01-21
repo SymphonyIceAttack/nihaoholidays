@@ -10,11 +10,8 @@ import {
 import Link from "next/link";
 import { Suspense, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { festivalData, quizQuestions } from "@/lib/festivals";
 import { translate } from "@/lib/translations";
-import {
-  festivalData,
-  quizQuestions,
-} from "@/lib/translations/en/festival-data";
 import { cn } from "@/lib/utils";
 
 interface QuizContentProps {

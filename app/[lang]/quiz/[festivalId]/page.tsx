@@ -1,22 +1,14 @@
 import type { Metadata } from "next";
 import { QuizContent } from "@/components/quiz/quiz-content";
 import { siteConfig } from "@/lib/config";
+import { getAllFestivalIds } from "@/lib/festivals";
 import type { LanguageType } from "@/lib/translations/config";
 import { supportedLocales } from "@/lib/translations/config";
 import { generateHreflangLinks } from "@/lib/translations/hreflang";
 
-const festivalIds = [
-  "spring",
-  "lantern",
-  "mid_autumn",
-  "dragon_boat",
-  "qingming",
-  "qixi",
-];
-
 export function generateStaticParams() {
   return supportedLocales.flatMap((lang) =>
-    festivalIds.map((festivalId) => ({ lang, festivalId })),
+    getAllFestivalIds().map((festivalId) => ({ lang, festivalId })),
   );
 }
 

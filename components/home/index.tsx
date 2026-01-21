@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import type { LanguageType } from "@/lib/translations/config";
 import { FeaturedTools } from "./featured-tools";
 import { FestivalFilters } from "./festival-filters";
 import { FestivalGrid } from "./festival-grid";
@@ -22,7 +23,7 @@ export {
 };
 
 interface HomePageContentProps {
-  lang: string;
+  lang: LanguageType;
 }
 
 export function HomePageContent({ lang }: HomePageContentProps) {
@@ -31,7 +32,7 @@ export function HomePageContent({ lang }: HomePageContentProps) {
   return (
     <>
       <HeroSection />
-      <UpcomingFestivals />
+      <UpcomingFestivals lang={lang} />
       <div className="container mx-auto px-4 py-12">
         <FestivalFilters
           lang={lang}
@@ -41,7 +42,7 @@ export function HomePageContent({ lang }: HomePageContentProps) {
         />
         <FestivalGrid lang={lang} theme={themeFilter} />
       </div>
-      <FeaturedTools />
+      <FeaturedTools lang={lang} />
       <FoodPreview />
       <QuickStart />
       <ValueProposition />

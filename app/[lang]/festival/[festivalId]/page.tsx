@@ -1,22 +1,14 @@
 import type { Metadata } from "next";
-import { FestivalDetailPage } from "@/components/festival";
+import { FestivalDetailContent } from "@/components/festival/festival-detail-content";
 import { siteConfig } from "@/lib/config";
+import { getAllFestivalIds } from "@/lib/festivals";
 import type { LanguageType } from "@/lib/translations/config";
 import { supportedLocales } from "@/lib/translations/config";
 import { generateHreflangLinks } from "@/lib/translations/hreflang";
 
-const festivalIds = [
-  "spring",
-  "lantern",
-  "mid_autumn",
-  "dragon_boat",
-  "qingming",
-  "qixi",
-];
-
 export function generateStaticParams() {
   return supportedLocales.flatMap((lang) =>
-    festivalIds.map((festivalId) => ({ lang, festivalId })),
+    getAllFestivalIds().map((festivalId) => ({ lang, festivalId })),
   );
 }
 
@@ -84,5 +76,5 @@ export default async function FestivalPage({
   params: Promise<{ lang: LanguageType; festivalId: string }>;
 }) {
   const { lang, festivalId } = await params;
-  return <FestivalDetailPage lang={lang} festivalId={festivalId} />;
+  return <FestivalDetailContent lang={lang} festivalId={festivalId} />;
 }
