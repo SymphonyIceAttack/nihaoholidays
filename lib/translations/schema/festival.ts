@@ -46,6 +46,16 @@ export const festivalSchema = z.object({
   // Continue
   "festival.continue": z.string(),
   "festival.startOver": z.string(),
+  "festival.continueJourney": z.string(),
+  "festival.exploreAbout": z.string(),
+  "festival.culturalOverview": z.string(),
+  "festival.culturalOverview.desc": z.string(),
+  "festival.interactiveQuiz": z.string(),
+  "festival.quiz.desc": z.string(),
+  "festival.takeQuiz": z.string(),
+  "festival.exploreFestivals": z.string(),
+  "festival.discoverFestivals": z.string(),
+  "festival.browse": z.string(),
 
   // User types
   "festival.user.tourist": z.string(),

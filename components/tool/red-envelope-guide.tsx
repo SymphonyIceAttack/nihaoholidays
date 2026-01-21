@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronRight, Copy, Gift, Info, Users, Wallet } from "lucide-react";
+import { ArrowLeft, Copy, Gift, Info, Users, Wallet } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -326,18 +326,12 @@ export function RedEnvelopeGuidePage({ lang = "en" }: { lang?: string } = {}) {
             </div>
           </div>
 
-          {/* Navigate to Other Tools */}
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Button className="bg-rose-600 hover:bg-rose-700" asChild>
-              <Link href={`/${lang}/tool/menu`}>
-                <ChevronRight className="h-4 w-4 mr-2" />
-                Menu Assistant
-              </Link>
-            </Button>
+          {/* Back to Tools */}
+          <div className="mt-8 flex justify-center">
             <Button variant="outline" asChild>
-              <Link href={`/${lang}/tool/greetings`}>
-                <ChevronRight className="h-4 w-4 mr-2" />
-                Greeting Templates
+              <Link href={`/${lang}/tool`}>
+                <ArrowLeft className="h-4 w-4 mr-2" />
+                Back to Tools
               </Link>
             </Button>
           </div>

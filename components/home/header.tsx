@@ -58,7 +58,7 @@ export function Header() {
               asChild
               className="bg-rose-600 hover:bg-rose-700 text-white"
             >
-              <Link href="/en/learn">开始学习</Link>
+              <Link href="/en/learn">Start Learning</Link>
             </Button>
             <button
               type="button"

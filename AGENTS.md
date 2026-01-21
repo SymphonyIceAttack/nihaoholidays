@@ -14,7 +14,7 @@ Next.js 16 application for a Chinese holidays/cultural learning platform. Built 
 - **Validation**: Zod
 - **Forms**: @tanstack/react-form
 - **Date Handling**: date-fns, react-day-picker
-- **Internationalization**: Custom i18n with EN/ZH support
+- **Internationalization**: Custom i18n (English only)
 
 ## Essential Commands
 
@@ -75,25 +75,24 @@ The project uses `@/*` as the path alias:
 
 ### Language Support
 - **en**: English
-- **zh**: Chinese
 
 ### Translation Files
 
 **lib/translations/config.ts** - Language configuration:
 ```typescript
-export const supportedLocales = ["en", "zh"] as const;
+export const supportedLocales = ["en"] as const;
 export type LanguageType = (typeof supportedLocales)[number];
 ```
 
 **lib/translations/index.ts** - Translations object and utilities:
 ```typescript
-export type LanguageType = "en" | "zh";
+export type LanguageType = "en";
 // ... localeNames, translations, translate function
 ```
 
 ### Adding New Translations
 
-1. Create `lib/translations/[lang]/common.ts`:
+1. Create `lib/translations/en/common.ts`:
 ```typescript
 export const common = {
   "common.nav.home": "Home",
@@ -102,7 +101,7 @@ export const common = {
 } as const;
 ```
 
-2. Create `lib/translations/[lang]/index.ts`:
+2. Create `lib/translations/en/index.ts`:
 ```typescript
 import * as common from "./common";
 
@@ -113,9 +112,8 @@ export default flat;
 3. Import in `lib/translations/index.ts`:
 ```typescript
 import en from "./en/index";
-import zh from "./zh/index";
 
-export const translations = { en, zh } as const;
+export const translations = { en } as const;
 ```
 
 ### Using Translations in Components
@@ -123,14 +121,13 @@ export const translations = { en, zh } as const;
 ```typescript
 // Server components
 import { translate } from "@/lib/translations";
-const t = translate("common.nav.home", "zh"); // "首页"
+const t = translate("common.nav.home", "en"); // "Home"
 
 // Client components with inline translations
 const translations = {
   en: { "common.nav.home": "Home", ... },
-  zh: { "common.nav.home": "首页", ... },
 };
-const t = translations[lang]["common.nav.home"];
+const t = translations["en"]["common.nav.home"];
 ```
 
 ## Code Patterns

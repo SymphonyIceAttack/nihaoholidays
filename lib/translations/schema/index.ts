@@ -13,6 +13,16 @@ export { aboutSchema } from "./about";
 export { commonSchema, navSchema } from "./common";
 export { contactSchema } from "./contact";
 export { festivalSchema } from "./festival";
+// Festival data schemas
+export {
+  type FestivalDataCollection,
+  type FestivalDataItem,
+  festivalDataCollectionSchema,
+  festivalDataItemSchema,
+  type UserTypeData,
+  type UserTypeDataCollection,
+  userTypeDataCollectionSchema,
+} from "./festival-data";
 export { homeSchema } from "./home";
 export { privacySchema } from "./privacy";
 export { quizSchema } from "./quiz";

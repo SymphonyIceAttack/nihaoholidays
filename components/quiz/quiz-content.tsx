@@ -9,13 +9,9 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { Suspense, useState } from "react";
-
-import {
-  festivalData,
-  userTypeData,
-} from "@/components/festival/data/festival-data";
 import { Button } from "@/components/ui/button";
 import { translate } from "@/lib/translations";
+import { festivalData } from "@/lib/translations/en/festival-data";
 import { cn } from "@/lib/utils";
 
 interface QuizQuestion {
@@ -33,25 +29,17 @@ interface QuizContentProps {
   festivalId: string;
 }
 
-const userTypes = [
-  { id: "tourist", label: "Tourist", icon: "✈️" },
-  { id: "student", label: "Student", icon: "🎓" },
-  { id: "worker", label: "Worker", icon: "💼" },
-] as const;
-
-type UserType = (typeof userTypes)[number]["id"];
-
 interface QuizContentInnerProps {
   lang: "en";
   festivalId: string;
 }
 
 function QuizContentInner({ lang, festivalId }: QuizContentInnerProps) {
-  const [userType, setUserType] = useState<UserType>("tourist");
   const t = (key: string, params?: Record<string, string>) =>
     translate(key, lang, params);
 
-  const festival = festivalData[festivalId] || festivalData.spring;
+  const currentFestival = festivalData[festivalId] || festivalData.spring;
+  const basicInfo = currentFestival.basicInfo;
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
@@ -63,175 +51,67 @@ function QuizContentInner({ lang, festivalId }: QuizContentInnerProps) {
   const baseQuestions: QuizQuestion[] = [
     {
       id: 1,
-      question: `When is ${festival.name} typically celebrated?`,
-      options: [festival.date, "January 1st", "December 25th", "March 15th"],
+      question: `When is ${basicInfo.name} typically celebrated?`,
+      options: [basicInfo.date, "January 1st", "December 25th", "March 15th"],
       correctIndex: 0,
-      explanation: `${festival.name} is celebrated on ${festival.lunarDate}.`,
+      explanation: `${basicInfo.name} is celebrated on ${basicInfo.lunarDate}.`,
       category: "history",
     },
     {
       id: 2,
-      question: `What is the lunar date of ${festival.name}?`,
+      question: `What is the lunar date of ${basicInfo.name}?`,
       options: [
-        festival.lunarDate,
+        basicInfo.lunarDate,
         "15th day of 8th lunar month",
         "1st day of 1st lunar month",
         "5th day of 5th lunar month",
       ],
       correctIndex: 0,
-      explanation: `${festival.name} falls on ${festival.lunarDate}.`,
+      explanation: `${basicInfo.name} falls on ${basicInfo.lunarDate}.`,
       category: "history",
     },
     {
       id: 3,
-      question: `Which of the following is a traditional custom for ${festival.name}?`,
+      question: `Which of the following is a traditional custom for ${basicInfo.name}?`,
       options: [
-        festival.customs[0] || "Decorating with lights",
+        basicInfo.customs[0] || "Decorating with lights",
         "Exchanging gifts on Valentine's Day",
         "Eating turkey on Thanksgiving",
         "Trick-or-treating on Halloween",
       ],
       correctIndex: 0,
-      explanation: `${festival.customs[0] || "This is a traditional custom for the festival"}.`,
+      explanation: `${basicInfo.customs[0] || "This is a traditional custom for the festival"}.`,
       category: "customs",
     },
     {
       id: 4,
-      question: `What should you avoid doing during ${festival.name}?`,
+      question: `What should you avoid doing during ${basicInfo.name}?`,
       options: [
-        festival.taboo[0] || "Breaking things",
+        basicInfo.taboo?.[0] || "Breaking things",
         "Eating delicious food",
         "Spending time with family",
         "Wearing new clothes",
       ],
       correctIndex: 0,
-      explanation: `${festival.taboo[0] || "This is something to avoid during the festival"}.`,
+      explanation: `${basicInfo.taboo?.[0] || "This is something to avoid during the festival"}.`,
       category: "etiquette",
     },
     {
       id: 5,
-      question: `What is a traditional food for ${festival.name}?`,
+      question: `What is a traditional food for ${basicInfo.name}?`,
       options: [
-        festival.foods[0]?.name || "Traditional dumplings",
+        currentFestival.foods[0]?.name || "Traditional dumplings",
         "Thanksgiving turkey",
         "Christmas ham",
         "Easter eggs",
       ],
       correctIndex: 0,
-      explanation: `${festival.foods[0]?.name || "This is a traditional food for the festival"}: ${festival.foods[0]?.meaning || ""}`,
+      explanation: `${currentFestival.foods[0]?.name || "This is a traditional food for the festival"}: ${currentFestival.foods[0]?.meaning || ""}`,
       category: "food",
     },
   ];
 
-  const touristQuestions: QuizQuestion[] = [
-    {
-      id: 6,
-      question: `You're at a restaurant during ${festival.name}. What phrase helps you order the festive fish dish?`,
-      options: [
-        festival.foods[0]?.howToOrder || "Qǐng gěi wǒ yì tiáo hóng shāo yú",
-        "Wǒ bù xǐ huān chī yú",
-        "Zài jiàn",
-        "Duō shǎo qián?",
-      ],
-      correctIndex: 0,
-      explanation:
-        "This is how you order fish in Chinese. The phrase means 'Please give me one braised fish.'",
-      category: "etiquette",
-      userType: "tourist",
-    },
-    {
-      id: 7,
-      question: `A local family invites you to their ${festival.name} celebration. What gift is appropriate?`,
-      options: [
-        "Red envelope with money",
-        "Alcohol",
-        "Clock as a gift",
-        "Empty gift box",
-      ],
-      correctIndex: 0,
-      explanation:
-        "Red envelopes (hongbao) with money are the traditional gift during Spring Festival.",
-      category: "customs",
-      userType: "tourist",
-    },
-  ];
-
-  const studentQuestions: QuizQuestion[] = [
-    {
-      id: 6,
-      question: `Your Chinese roommate invites you to make dumplings together. What phrase could you use?`,
-      options: [
-        "Wǒmen yìqǐ bā jiǎozi ba (Let's make dumplings together)",
-        "Wǒ bù xǐ huān chī jiǎozi",
-        "Jīn tiān bú shì jié rì",
-        "Wǒ yào huí jiā le",
-      ],
-      correctIndex: 0,
-      explanation:
-        "This is a friendly phrase to suggest making dumplings together.",
-      category: "customs",
-      userType: "student",
-    },
-    {
-      id: 7,
-      question: `At a campus ${festival.name} celebration, what might you hear about Qu Yuan?`,
-      options: [
-        "An ancient poet known for dragon boat racing",
-        "A modern pop singer",
-        "A famous chef",
-        "A sports champion",
-      ],
-      correctIndex: 0,
-      explanation:
-        "Qu Yuan was a famous ancient poet. Dragon Boat Festival commemorates him.",
-      category: "history",
-      userType: "student",
-    },
-  ];
-
-  const workerQuestions: QuizQuestion[] = [
-    {
-      id: 6,
-      question: `At your company ${festival.name} dinner, your boss enters. What is an appropriate greeting?`,
-      options: [
-        "Lǐngdǎo, xīn nián hǎo, zhù nín wàn shì rú yì",
-        "Wǒ jīn tiān bú shàng bān",
-        "Gěi wǒ jiā xīn",
-        "Nǐ zhǎng de hěn chǒu",
-      ],
-      correctIndex: 0,
-      explanation:
-        "This means 'Boss, Happy New Year. May everything go your way.' - a respectful professional greeting.",
-      category: "etiquette",
-      userType: "worker",
-    },
-    {
-      id: 7,
-      question: `During your company ${festival.name} party, what topic is appropriate for conversation?`,
-      options: [
-        "Company achievements and team efforts",
-        "How much money your colleagues make",
-        "Negative complaints about the company",
-        "Politics and religion",
-      ],
-      correctIndex: 0,
-      explanation:
-        "Discussing positive topics like company achievements is appropriate at work gatherings.",
-      category: "etiquette",
-      userType: "worker",
-    },
-  ];
-
-  const userTypeQuestions = {
-    tourist: touristQuestions,
-    student: studentQuestions,
-    worker: workerQuestions,
-  };
-
-  const quizQuestions = [
-    ...baseQuestions,
-    ...(userTypeQuestions[userType] || []),
-  ];
+  const quizQuestions = baseQuestions;
 
   const handleAnswerSelect = (index: number) => {
     if (showExplanation) return;
@@ -296,10 +176,10 @@ function QuizContentInner({ lang, festivalId }: QuizContentInnerProps) {
         <main className="container mx-auto px-4 py-12">
           <div className="text-center mb-12">
             <span className="text-7xl mb-4 block animate-in fade-in slide-in-from-bottom-4">
-              {festival.emoji}
+              {basicInfo.emoji}
             </span>
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-3 animate-in fade-in slide-in-from-bottom-4 duration-500">
-              {festival.name} - {t("quiz.quizResults")}
+              {basicInfo.name} - {t("quiz.quizResults")}
             </h1>
           </div>
 
@@ -359,37 +239,14 @@ function QuizContentInner({ lang, festivalId }: QuizContentInnerProps) {
         {/* Quiz Header */}
         <div className="text-center mb-12">
           <span className="text-7xl mb-4 block animate-in fade-in slide-in-from-bottom-4">
-            {festival.emoji}
+            {basicInfo.emoji}
           </span>
           <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-3 animate-in fade-in slide-in-from-bottom-4 duration-500">
-            {festival.name} {t("quiz.takeQuiz")}
+            {basicInfo.name} {t("quiz.takeQuiz")}
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6 animate-in fade-in slide-in-from-bottom-4 duration-500 delay-100">
             {t("quiz.testKnowledge")}
           </p>
-
-          {/* User Type Tabs */}
-          <div className="inline-flex justify-center gap-2 mb-4">
-            {userTypes.map((type) => {
-              const typeData = userTypeData[type.id];
-              return (
-                <button
-                  key={type.id}
-                  type="button"
-                  onClick={() => setUserType(type.id)}
-                  className={cn(
-                    "flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer",
-                    userType === type.id
-                      ? "bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300 shadow-sm"
-                      : "bg-muted text-muted-foreground hover:text-foreground",
-                  )}
-                >
-                  <span>{typeData.icon}</span>
-                  <span>{typeData.label}</span>
-                </button>
-              );
-            })}
-          </div>
         </div>
 
         {/* Progress Bar */}

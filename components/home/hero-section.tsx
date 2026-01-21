@@ -72,7 +72,7 @@ export function HeroSection() {
             className="bg-rose-600 hover:bg-rose-700 text-white shadow-lg shadow-rose-600/20 gap-2 px-8"
           >
             <Link href="/en/learn">
-              Start with Spring Festival
+              Start Learning
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>

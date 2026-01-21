@@ -1,47 +1,10 @@
 "use client";
 
-import {
-  ArrowRight,
-  Briefcase,
-  CheckCircle2,
-  ChevronRight,
-  GraduationCap,
-  Plane,
-  Sparkles,
-} from "lucide-react";
+import { ArrowRight, CheckCircle2, ChevronRight, Sparkles } from "lucide-react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import { Suspense, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-
-const userTypes = [
-  {
-    id: "tourist",
-    label: "I'm visiting",
-    icon: Plane,
-    description: "Experience authentic holiday atmosphere",
-    scenario: "Generate a Spring Festival day itinerary + survival phrases",
-    color: "rose",
-  },
-  {
-    id: "student",
-    label: "I'm studying",
-    icon: GraduationCap,
-    description: "Deeply understand cultural meaning",
-    scenario:
-      "Social scripts and expressions for celebrating with roommates/classmates",
-    color: "blue",
-  },
-  {
-    id: "worker",
-    label: "I'm working here",
-    icon: Briefcase,
-    description: "Appropriate workplace expressions",
-    scenario: "Templates for company parties, gift-giving, and greeting bosses",
-    color: "emerald",
-  },
-] as const;
 
 const festivals = [
   {
@@ -97,24 +60,18 @@ const festivals = [
 const learningSteps = [
   {
     step: 1,
-    title: "Choose your identity",
-    description: "Get content tailored to your situation",
-    icon: "user",
-  },
-  {
-    step: 2,
-    title: "Pick a festival",
+    title: "Choose a festival",
     description: "Start with recommended ones or explore freely",
     icon: "calendar",
   },
   {
-    step: 3,
+    step: 2,
     title: "Learn expressions",
     description: "Master practical phrases with pinyin and audio",
     icon: "message",
   },
   {
-    step: 4,
+    step: 3,
     title: "Practice scenarios",
     description: "Use interactive tools to practice real situations",
     icon: "tools",
@@ -122,13 +79,8 @@ const learningSteps = [
 ];
 
 function LearnPageInner() {
-  const searchParams = useSearchParams();
-  const initialType = searchParams.get("type") || "tourist";
-  const [selectedType, setSelectedType] = useState(initialType);
   const [selectedFestival, setSelectedFestival] = useState<string | null>(null);
-  const [isStarted, setIsStarted] = useState(false);
-
-  const currentType = userTypes.find((t) => t.id === selectedType);
+  const currentStep = selectedFestival ? 2 : 1;
 
   const handleStart = () => {
     if (selectedFestival) {
@@ -166,9 +118,9 @@ function LearnPageInner() {
                 <div
                   className={cn(
                     "flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300",
-                    isStarted && index < 3
+                    currentStep > index
                       ? "bg-rose-100 dark:bg-rose-900/30 text-rose-700 dark:text-rose-300"
-                      : index === 0 && !isStarted
+                      : currentStep === index
                         ? "bg-rose-100 dark:bg-rose-900/30 text-rose-700 dark:text-rose-300"
                         : "bg-muted text-muted-foreground",
                   )}
@@ -176,15 +128,17 @@ function LearnPageInner() {
                   <span
                     className={cn(
                       "w-6 h-6 rounded-full flex items-center justify-center text-xs",
-                      (isStarted && index < 3) || (index === 0 && !isStarted)
+                      currentStep > index
                         ? "bg-rose-500 text-white"
-                        : "bg-muted-foreground/20",
+                        : currentStep === index
+                          ? "bg-rose-500 text-white animate-pulse"
+                          : "bg-muted-foreground/20",
                     )}
                   >
-                    {index < 3 || !isStarted ? (
-                      item.step
+                    {currentStep > index ? (
+                      <CheckCircle2 className="h-3.5 w-3.5" />
                     ) : (
-                      <CheckCircle2 className="h-3 w-3" />
+                      item.step
                     )}
                   </span>
                   <span className="hidden sm:inline">{item.title}</span>
@@ -197,116 +151,29 @@ function LearnPageInner() {
           </div>
         </div>
 
-        {/* Step 1: Choose Identity */}
+        {/* Step 1: Pick a Festival */}
         <section className="mb-16">
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 bg-rose-100 dark:bg-rose-900/30 text-rose-700 dark:text-rose-300 px-4 py-1.5 rounded-full text-sm font-medium mb-4">
-              <span className="w-2 h-2 rounded-full bg-rose-500 animate-pulse" />
-              Step 1: Who are you?
+              <span
+                className={cn(
+                  "w-2 h-2 rounded-full bg-rose-500",
+                  currentStep === 1 && "animate-pulse",
+                )}
+              />
+              {currentStep === 1
+                ? "Choose a festival to start"
+                : "Ready to learn!"}
             </div>
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-              Choose your learning path
+              {currentStep === 1
+                ? "Start your learning journey"
+                : `Learning ${festivals.find((f) => f.id === selectedFestival)?.name}`}
             </h1>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              We&apos;ll customize content based on your identity. Different
-              users need different expressions and scenarios.
-            </p>
-          </div>
-
-          <div className="grid gap-4 md:grid-cols-3 max-w-4xl mx-auto">
-            {userTypes.map((type) => {
-              const Icon = type.icon;
-              const isSelected = selectedType === type.id;
-
-              return (
-                <button
-                  key={type.id}
-                  type="button"
-                  onClick={() => {
-                    setSelectedType(type.id);
-                    setIsStarted(true);
-                  }}
-                  className={cn(
-                    "relative p-6 rounded-2xl border-2 text-left transition-all duration-300 hover:shadow-lg hover:-translate-y-1",
-                    isSelected
-                      ? `border-${type.color}-500 bg-${type.color}-50/50 dark:bg-${type.color}-900/20 shadow-md`
-                      : "border-border bg-background hover:border-rose-200 dark:hover:border-rose-800",
-                  )}
-                >
-                  {isSelected && (
-                    <div
-                      className={cn(
-                        "absolute -top-3 -right-3 w-8 h-8 rounded-full bg-rose-500 text-white flex items-center justify-center shadow-lg",
-                      )}
-                    >
-                      <CheckCircle2 className="h-5 w-5" />
-                    </div>
-                  )}
-
-                  <div
-                    className={cn(
-                      "w-14 h-14 rounded-2xl flex items-center justify-center mb-4",
-                      isSelected
-                        ? `bg-${type.color}-100 dark:bg-${type.color}-900/40`
-                        : "bg-muted",
-                    )}
-                  >
-                    <Icon
-                      className={cn(
-                        "h-7 w-7",
-                        isSelected
-                          ? `text-${type.color}-600 dark:text-${type.color}-400`
-                          : "text-muted-foreground",
-                      )}
-                    />
-                  </div>
-
-                  <h3
-                    className={cn(
-                      "text-lg font-semibold mb-2",
-                      isSelected
-                        ? `text-${type.color}-700 dark:text-${type.color}-300`
-                        : "text-foreground",
-                    )}
-                  >
-                    {type.label}
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-3">
-                    {type.description}
-                  </p>
-                  <div
-                    className={cn(
-                      "text-sm p-3 rounded-lg",
-                      isSelected
-                        ? `bg-${type.color}-100/50 dark:bg-${type.color}-900/30`
-                        : "bg-muted/50",
-                    )}
-                  >
-                    <span className="text-xs text-muted-foreground block mb-1">
-                      Your scenario:
-                    </span>
-                    <span className="font-medium text-sm">{type.scenario}</span>
-                  </div>
-                </button>
-              );
-            })}
-          </div>
-        </section>
-
-        {/* Step 2: Pick a Festival */}
-        <section className="mb-16">
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-4 py-1.5 rounded-full text-sm font-medium mb-4">
-              <span className="w-2 h-2 rounded-full bg-blue-500" />
-              Step 2: Choose a festival
-            </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
-              Start your learning journey
-            </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              {currentType
-                ? `As a ${currentType.label}, we recommend starting with Spring Festival. Or choose any festival that interests you.`
-                : "Select your identity first to get personalized recommendations."}
+              {currentStep === 1
+                ? "Select a festival to explore Chinese traditions, learn practical expressions, and discover holiday customs."
+                : "Click 'Start Learning Now' to begin your personalized learning experience."}
             </p>
           </div>
 
@@ -319,10 +186,8 @@ function LearnPageInner() {
                   key={festival.id}
                   type="button"
                   onClick={() => setSelectedFestival(festival.id)}
-                  disabled={!selectedType}
                   className={cn(
                     "relative p-5 rounded-xl border-2 text-left transition-all duration-300 hover:shadow-md",
-                    !selectedType && "opacity-50 cursor-not-allowed",
                     isSelected
                       ? "border-rose-500 bg-rose-50/50 dark:bg-rose-900/20 shadow-md"
                       : "border-border bg-background hover:border-rose-200 dark:hover:border-rose-800",
@@ -367,7 +232,7 @@ function LearnPageInner() {
         </section>
 
         {/* Quick Actions */}
-        {selectedType && selectedFestival && (
+        {selectedFestival && (
           <section className="mb-16 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <div className="max-w-2xl mx-auto">
               <div className="bg-gradient-to-r from-rose-100/80 to-orange-100/80 dark:from-rose-900/30 dark:to-orange-900/20 border border-rose-200 dark:border-rose-800 rounded-2xl p-6 md:p-8">
@@ -377,7 +242,7 @@ function LearnPageInner() {
                     Ready to start learning!
                   </div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">
-                    {currentType?.label} learning{" "}
+                    Learning{" "}
                     {festivals.find((f) => f.id === selectedFestival)?.name}
                   </h3>
                   <p className="text-muted-foreground text-sm">
@@ -491,11 +356,6 @@ function LearnPageSkeleton() {
       <main className="container mx-auto px-4 py-12">
         <div className="animate-pulse">
           <div className="h-8 bg-muted rounded-full w-64 mx-auto mb-8" />
-          <div className="grid gap-4 md:grid-cols-3 max-w-4xl mx-auto mb-16">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="h-64 bg-muted rounded-2xl" />
-            ))}
-          </div>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
             {[1, 2, 3, 4, 5, 6].map((i) => (
               <div key={i} className="h-40 bg-muted rounded-xl" />

@@ -45,6 +45,17 @@ export const festival = {
   // Continue
   "festival.continue": "Continue Learning",
   "festival.startOver": "Start Over",
+  "festival.continueJourney": "Continue Your Learning Journey",
+  "festival.exploreAbout": "Explore more ways to learn about {name}",
+  "festival.culturalOverview": "Cultural Overview",
+  "festival.culturalOverview.desc":
+    "Deep dive into history, significance, and traditions",
+  "festival.interactiveQuiz": "Interactive Quiz",
+  "festival.quiz.desc": "Test your knowledge with a fun quiz",
+  "festival.takeQuiz": "Take quiz",
+  "festival.exploreFestivals": "Explore Festivals",
+  "festival.discoverFestivals": "Discover other Chinese festivals to learn",
+  "festival.browse": "Browse",
 
   // User types
   "festival.user.tourist": "Tourist",

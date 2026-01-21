@@ -1,8 +1,8 @@
 "use client";
 
 import {
+  ArrowLeft,
   Check,
-  ChevronRight,
   Copy,
   Plus,
   Search,
@@ -448,12 +448,6 @@ export function MenuAssistantPage({ lang = "en" }: { lang?: string } = {}) {
                             </>
                           )}
                         </Button>
-                        <Button variant="outline" asChild>
-                          <Link href={`/${lang}/learn`}>
-                            <ChevronRight className="h-4 w-4 mr-2" />
-                            More Tools
-                          </Link>
-                        </Button>
                       </div>
                     </>
                   )}
@@ -492,6 +486,16 @@ export function MenuAssistantPage({ lang = "en" }: { lang?: string } = {}) {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Back to Tools */}
+          <div className="mt-8 flex justify-center">
+            <Button variant="outline" asChild>
+              <Link href={`/${lang}/tool`}>
+                <ArrowLeft className="h-4 w-4 mr-2" />
+                Back to Tools
+              </Link>
+            </Button>
           </div>
         </div>
       </main>

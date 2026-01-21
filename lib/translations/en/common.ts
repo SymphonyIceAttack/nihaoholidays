@@ -13,4 +13,7 @@ export const common = {
   "page.title.contact": "Contact",
   "page.title.privacy": "Privacy Policy",
   "page.title.terms": "Terms of Service",
+
+  // Common
+  "common.learnMore": "Learn more",
 } as const;

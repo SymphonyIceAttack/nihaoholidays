@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronRight, Copy, Volume2 } from "lucide-react";
+import { ArrowLeft, Copy, Volume2 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -310,12 +310,12 @@ export function GreetingTemplatesPage({ lang = "en" }: { lang?: string } = {}) {
             </div>
           </div>
 
-          {/* Navigate to Other Tools */}
+          {/* Back to Tools */}
           <div className="mt-6 flex justify-center">
             <Button variant="outline" asChild>
-              <Link href={`/${lang}/tool/menu`}>
-                <ChevronRight className="h-4 w-4 mr-2" />
-                Try Menu Assistant Tool
+              <Link href={`/${lang}/tool`}>
+                <ArrowLeft className="h-4 w-4 mr-2" />
+                Back to Tools
               </Link>
             </Button>
           </div>
