@@ -152,6 +152,92 @@ export const festivalDisplayInfo: Record<string, FestivalDisplayInfo> = {
       { name: "Spring Festival Prep Guide", type: "other" },
     ],
   },
+  longtaitou: {
+    id: "longtaitou",
+    subtitle: "A festival about dragons and getting haircuts",
+    fullDescription:
+      "Dragon Head Festival celebrates the awakening of dragons and the arrival of spring rains. Get a lucky haircut and eat traditional dragon foods!",
+    tags: ["Beginner", "Food"],
+    tools: [
+      { name: "Haircut Guide", type: "other" },
+      { name: "Dragon Foods Guide", type: "food" },
+      { name: "Spring Pancake Recipe", type: "food" },
+    ],
+  },
+  shangsi: {
+    id: "shangsi",
+    subtitle: "A festival about spring purification and renewal",
+    fullDescription:
+      "Shangsi Festival is one of China's oldest traditions, dating back over 2,000 years. Originally a day for bathing, purification, and driving away misfortune.",
+    tags: ["Intermediate"],
+    tools: [
+      { name: "Spring Outing Planner", type: "other" },
+      { name: "Kite Flying Guide", type: "other" },
+      { name: "Chrysanthemum Recipe Collection", type: "food" },
+    ],
+  },
+  new_years_eve: {
+    id: "new_years_eve",
+    subtitle: "A festival about reunion dinner and welcoming the new year",
+    fullDescription:
+      "New Year's Eve is the most important family reunion night of the year. Enjoy reunion dinner, stay up late, and welcome the new year together!",
+    tags: ["Family Reunion", "Food", "Beginner"],
+    isRecommended: true,
+    tools: [
+      { name: "Reunion Dinner Menu", type: "food" },
+      { name: "Red Envelope Guide", type: "gift" },
+      { name: "New Year Greetings", type: "expression" },
+      { name: "Taboo Guide", type: "other" },
+    ],
+  },
+  cold_food: {
+    id: "cold_food",
+    subtitle: "A festival about cold food and remembrance",
+    fullDescription:
+      "Cold Food Festival is an ancient tradition from over 2,600 years ago. Commemorate loyal Jie Zitui with cold food and ancestor honors.",
+    tags: ["Intermediate"],
+    tools: [
+      { name: "Cold Food Guide", type: "other" },
+      { name: "Qingtuan Recipe", type: "food" },
+      { name: "Kite Flying Guide", type: "other" },
+    ],
+  },
+  ghost: {
+    id: "ghost",
+    subtitle: "A festival about honoring ancestors and appeasing spirits",
+    fullDescription:
+      "Ghost Festival honors ancestors and appeases hungry spirits. Traditional rituals include offerings, incense, and burning joss paper.",
+    tags: ["Intermediate"],
+    tools: [
+      { name: "Ghost Festival Guide", type: "other" },
+      { name: "Offering Etiquette", type: "other" },
+      { name: "Taboo Guide", type: "other" },
+    ],
+  },
+  renri: {
+    id: "renri",
+    subtitle: "A festival celebrating human creation and life",
+    fullDescription:
+      "Human Day celebrates the creation of humanity by goddess Nüwa. Eat seven-vegetable porridge and make wishes for the year!",
+    tags: ["Beginner"],
+    tools: [
+      { name: "Human Day Guide", type: "other" },
+      { name: "Seven-Vegetable Porridge Recipe", type: "food" },
+      { name: "Poetry Templates", type: "other" },
+    ],
+  },
+  wealth_god: {
+    id: "wealth_god",
+    subtitle: "A festival celebrating prosperity and business success",
+    fullDescription:
+      "God of Wealth Festival celebrates the Wealth God's birthday. Businesses and families pray for wealth and prosperity in the new year.",
+    tags: ["Beginner", "Food"],
+    tools: [
+      { name: "Wealth God Guide", type: "other" },
+      { name: "Business Blessings", type: "expression" },
+      { name: "Wealth Expressions", type: "expression" },
+    ],
+  },
 };
 
 export const festivalDefinitions: FestivalDefinition[] = [
@@ -261,6 +347,90 @@ export const festivalDefinitions: FestivalDefinition[] = [
     },
     description: {
       en: "Rice porridge festival. Eat laba porridge and prepare for Spring Festival.",
+    },
+  },
+  {
+    id: "longtaitou",
+    emoji: "🐉",
+    lunarMonth: 2,
+    lunarDay: 2,
+    name: {
+      en: "Dragon Head Festival",
+    },
+    description: {
+      en: "Festival marking the awakening of dragons and spring rains. Get a haircut for good luck!",
+    },
+  },
+  {
+    id: "shangsi",
+    emoji: "🌸",
+    lunarMonth: 3,
+    lunarDay: 3,
+    name: {
+      en: "Shangsi Festival",
+    },
+    description: {
+      en: "Ancient spring bathing festival. One of China's oldest traditions for purification and renewal.",
+    },
+  },
+  {
+    id: "new_years_eve",
+    emoji: "🎊",
+    lunarMonth: 12,
+    lunarDay: 30,
+    name: {
+      en: "New Year's Eve",
+    },
+    description: {
+      en: "The most important family reunion night. Reunion dinner, staying up late, and welcoming the new year.",
+    },
+  },
+  {
+    id: "cold_food",
+    emoji: "🥗",
+    lunarMonth: -1,
+    lunarDay: 4,
+    name: {
+      en: "Cold Food Festival",
+    },
+    description: {
+      en: "Ancient festival of cold food and remembrance. The day before Qingming with unique customs.",
+    },
+  },
+  {
+    id: "ghost",
+    emoji: "👻",
+    lunarMonth: 7,
+    lunarDay: 15,
+    name: {
+      en: "Ghost Festival",
+    },
+    description: {
+      en: "Festival when spirits visit the mortal world. Honor ancestors and appease hungry ghosts.",
+    },
+  },
+  {
+    id: "renri",
+    emoji: "👤",
+    lunarMonth: 1,
+    lunarDay: 7,
+    name: {
+      en: "Human Day",
+    },
+    description: {
+      en: "Festival celebrating the creation of humans. The birthday of all humanity on the 7th day of the first lunar month.",
+    },
+  },
+  {
+    id: "wealth_god",
+    emoji: "💰",
+    lunarMonth: 1,
+    lunarDay: 5,
+    name: {
+      en: "God of Wealth Festival",
+    },
+    description: {
+      en: "Celebrate the Wealth God's birthday. Businesses and families pray for prosperity.",
     },
   },
 ];
@@ -453,6 +623,41 @@ export const festivalLearnPageInfo: Record<
     emoji: "🥣",
     tools: 5,
   },
+  longtaitou: {
+    id: "longtaitou",
+    emoji: "🐉",
+    tools: 3,
+  },
+  shangsi: {
+    id: "shangsi",
+    emoji: "🌸",
+    tools: 3,
+  },
+  new_years_eve: {
+    id: "new_years_eve",
+    emoji: "🎊",
+    tools: 4,
+  },
+  cold_food: {
+    id: "cold_food",
+    emoji: "🥗",
+    tools: 3,
+  },
+  ghost: {
+    id: "ghost",
+    emoji: "👻",
+    tools: 3,
+  },
+  renri: {
+    id: "renri",
+    emoji: "👤",
+    tools: 3,
+  },
+  wealth_god: {
+    id: "wealth_god",
+    emoji: "💰",
+    tools: 3,
+  },
 };
 
 export function getLearnPageFestivals(): FestivalLearnPageInfo[] {
@@ -527,6 +732,62 @@ export function getLearnPageFestivals(): FestivalLearnPageInfo[] {
       emoji: "🥣",
       subtitleKey: "laba.learn.subtitle",
       tools: 5,
+      difficultyKey: "difficulty.beginner",
+    },
+    {
+      id: "longtaitou",
+      nameKey: "longtaitou.name",
+      emoji: "🐉",
+      subtitleKey: "longtaitou.learn.subtitle",
+      tools: 3,
+      difficultyKey: "difficulty.beginner",
+    },
+    {
+      id: "shangsi",
+      nameKey: "shangsi.name",
+      emoji: "🌸",
+      subtitleKey: "shangsi.learn.subtitle",
+      tools: 3,
+      difficultyKey: "difficulty.intermediate",
+    },
+    {
+      id: "new_years_eve",
+      nameKey: "new_years_eve.name",
+      emoji: "🎊",
+      subtitleKey: "new_years_eve.learn.subtitle",
+      tools: 4,
+      difficultyKey: "difficulty.beginner",
+    },
+    {
+      id: "cold_food",
+      nameKey: "cold_food.name",
+      emoji: "🥗",
+      subtitleKey: "cold_food.learn.subtitle",
+      tools: 3,
+      difficultyKey: "difficulty.intermediate",
+    },
+    {
+      id: "ghost",
+      nameKey: "ghost.name",
+      emoji: "👻",
+      subtitleKey: "ghost.learn.subtitle",
+      tools: 3,
+      difficultyKey: "difficulty.intermediate",
+    },
+    {
+      id: "renri",
+      nameKey: "renri.name",
+      emoji: "👤",
+      subtitleKey: "renri.learn.subtitle",
+      tools: 3,
+      difficultyKey: "difficulty.beginner",
+    },
+    {
+      id: "wealth_god",
+      nameKey: "wealth_god.name",
+      emoji: "💰",
+      subtitleKey: "wealth_god.learn.subtitle",
+      tools: 3,
       difficultyKey: "difficulty.beginner",
     },
   ];

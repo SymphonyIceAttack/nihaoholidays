@@ -236,6 +236,104 @@ export const festival = {
     "Preparing for Spring Festival",
   ],
 
+  // Dragon Head Festival (Longtaitou)
+  "longtaitou.name": "Dragon Head Festival",
+  "longtaitou.date": "February/March",
+  "longtaitou.lunarDate": "2nd day of 2nd lunar month",
+  "longtaitou.description": "Festival marking the awakening of dragons",
+  "longtaitou.history":
+    "Dragon Head Festival has been celebrated for over 1,000 years. It's believed to be the day when dragons wake from winter hibernation and bring spring rains.",
+  "longtaitou.customs": [
+    "Getting haircuts for good luck",
+    "Eating dragon foods",
+    "Worshiping the dragon king",
+    "Eating spring pancakes",
+  ],
+
+  // Shangsi Festival
+  "shangsi.name": "Shangsi Festival",
+  "shangsi.date": "March/April",
+  "shangsi.lunarDate": "3rd day of 3rd lunar month",
+  "shangsi.description": "Ancient spring bathing festival",
+  "shangsi.history":
+    "Shangsi Festival is one of the oldest Chinese festivals, dating back over 2,000 years. Originally a day for bathing and purification.",
+  "shangsi.customs": [
+    "Spring bathing with flower water",
+    "Eating spring foods",
+    "Flying kites",
+    "Spring outings and picnics",
+  ],
+
+  // New Year's Eve
+  "new_years_eve.name": "New Year's Eve",
+  "new_years_eve.date": "January/February",
+  "new_years_eve.lunarDate": "Last day of 12th lunar month",
+  "new_years_eve.description": "The most important family reunion night",
+  "new_years_eve.history":
+    "New Year's Eve is the climax of Spring Festival celebrations. Families gather for reunion dinners and stay up late to welcome the new year.",
+  "new_years_eve.customs": [
+    "Reunion dinner with family",
+    "Staying up late (守岁)",
+    "Setting off fireworks at midnight",
+    "Giving early New Year greetings",
+  ],
+
+  // Cold Food Festival
+  "cold_food.name": "Cold Food Festival",
+  "cold_food.date": "April 3-5",
+  "cold_food.lunarDate": "Day before Qingming",
+  "cold_food.description": "Ancient festival of cold food and remembrance",
+  "cold_food.history":
+    "Cold Food Festival has a history of over 2,600 years. It commemorates Jie Zitui, a loyal retainer who died in a fire.",
+  "cold_food.customs": [
+    "Eating cold food only",
+    "Visiting ancestral graves",
+    "Flying kites",
+    "Making qingtuan",
+  ],
+
+  // Ghost Festival
+  "ghost.name": "Ghost Festival",
+  "ghost.date": "August/September",
+  "ghost.lunarDate": "15th day of 7th lunar month",
+  "ghost.description": "Festival when spirits roam the mortal world",
+  "ghost.history":
+    "Ghost Festival has been celebrated for over 1,500 years. Gates of the underworld open, allowing spirits to visit.",
+  "ghost.customs": [
+    "Burning joss paper and incense",
+    "Offering food to ancestors",
+    "Releasing river lanterns",
+    "Feeding hungry ghosts",
+  ],
+
+  // Human Day (Renri)
+  "renri.name": "Human Day",
+  "renri.date": "January/February",
+  "renri.lunarDate": "7th day of 1st lunar month",
+  "renri.description": "Festival celebrating human life and creation",
+  "renri.history":
+    "Human Day celebrates the creation of humans by goddess Nüwa. It's considered the birthday of all humanity.",
+  "renri.customs": [
+    "Eating seven-vegetable porridge",
+    "Eating noodles for longevity",
+    "Making wishes",
+    "Honoring all living beings",
+  ],
+
+  // God of Wealth Festival
+  "wealth_god.name": "God of Wealth Festival",
+  "wealth_god.date": "January/February",
+  "wealth_god.lunarDate": "5th day of 1st lunar month",
+  "wealth_god.description": "Festival honoring the Wealth God for prosperity",
+  "wealth_god.history":
+    "God of Wealth Festival celebrates the birthday of the Wealth God. Businesses and families pray for good fortune.",
+  "wealth_god.customs": [
+    "Offering incense to Wealth God",
+    "Burning joss paper",
+    "Eating dumplings",
+    "Opening businesses for the day",
+  ],
+
   // Foods
   "food.fish": "Fish",
   "food.fish.meaning": "Surplus and prosperity",
@@ -265,6 +363,13 @@ export const festival = {
   "double_ninth.learn.subtitle": "Honoring elders and chrysanthemums",
   "winter_solstice.learn.subtitle": "The longest night and dumplings",
   "laba.learn.subtitle": "Rice porridge and Spring Festival prep",
+  "longtaitou.learn.subtitle": "Dragons and getting haircuts",
+  "shangsi.learn.subtitle": "Spring purification and renewal",
+  "new_years_eve.learn.subtitle": "Reunion dinner and new year wishes",
+  "cold_food.learn.subtitle": "Cold food and remembrance",
+  "ghost.learn.subtitle": "Honoring ancestors and spirits",
+  "renri.learn.subtitle": "Celebrating human creation",
+  "wealth_god.learn.subtitle": "Prosperity and business success",
 
   // Difficulty levels
   "difficulty.beginner": "Beginner",

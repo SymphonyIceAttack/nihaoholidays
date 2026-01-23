@@ -148,6 +148,62 @@ export const festivalSchema = z.object({
   "laba.history": z.string(),
   "laba.customs": z.array(z.string()),
 
+  // Dragon Head Festival (Longtaitou)
+  "longtaitou.name": z.string(),
+  "longtaitou.date": z.string(),
+  "longtaitou.lunarDate": z.string(),
+  "longtaitou.description": z.string(),
+  "longtaitou.history": z.string(),
+  "longtaitou.customs": z.array(z.string()),
+
+  // Shangsi Festival
+  "shangsi.name": z.string(),
+  "shangsi.date": z.string(),
+  "shangsi.lunarDate": z.string(),
+  "shangsi.description": z.string(),
+  "shangsi.history": z.string(),
+  "shangsi.customs": z.array(z.string()),
+
+  // New Year's Eve
+  "new_years_eve.name": z.string(),
+  "new_years_eve.date": z.string(),
+  "new_years_eve.lunarDate": z.string(),
+  "new_years_eve.description": z.string(),
+  "new_years_eve.history": z.string(),
+  "new_years_eve.customs": z.array(z.string()),
+
+  // Cold Food Festival
+  "cold_food.name": z.string(),
+  "cold_food.date": z.string(),
+  "cold_food.lunarDate": z.string(),
+  "cold_food.description": z.string(),
+  "cold_food.history": z.string(),
+  "cold_food.customs": z.array(z.string()),
+
+  // Ghost Festival
+  "ghost.name": z.string(),
+  "ghost.date": z.string(),
+  "ghost.lunarDate": z.string(),
+  "ghost.description": z.string(),
+  "ghost.history": z.string(),
+  "ghost.customs": z.array(z.string()),
+
+  // Human Day (Renri)
+  "renri.name": z.string(),
+  "renri.date": z.string(),
+  "renri.lunarDate": z.string(),
+  "renri.description": z.string(),
+  "renri.history": z.string(),
+  "renri.customs": z.array(z.string()),
+
+  // God of Wealth Festival
+  "wealth_god.name": z.string(),
+  "wealth_god.date": z.string(),
+  "wealth_god.lunarDate": z.string(),
+  "wealth_god.description": z.string(),
+  "wealth_god.history": z.string(),
+  "wealth_god.customs": z.array(z.string()),
+
   // Foods
   "food.fish": z.string(),
   "food.fish.meaning": z.string(),
@@ -177,6 +233,13 @@ export const festivalSchema = z.object({
   "double_ninth.learn.subtitle": z.string(),
   "winter_solstice.learn.subtitle": z.string(),
   "laba.learn.subtitle": z.string(),
+  "longtaitou.learn.subtitle": z.string(),
+  "shangsi.learn.subtitle": z.string(),
+  "new_years_eve.learn.subtitle": z.string(),
+  "cold_food.learn.subtitle": z.string(),
+  "ghost.learn.subtitle": z.string(),
+  "renri.learn.subtitle": z.string(),
+  "wealth_god.learn.subtitle": z.string(),
 
   // Difficulty levels
   "difficulty.beginner": z.string(),
@@ -327,6 +390,90 @@ export const festivalSchema = z.object({
   "quiz.laba.q4.explain": z.string(),
   "quiz.laba.q5": z.string(),
   "quiz.laba.q5.explain": z.string(),
+
+  // Quiz Longtaitou Festival questions
+  "quiz.longtaitou.q1": z.string(),
+  "quiz.longtaitou.q1.explain": z.string(),
+  "quiz.longtaitou.q2": z.string(),
+  "quiz.longtaitou.q2.explain": z.string(),
+  "quiz.longtaitou.q3": z.string(),
+  "quiz.longtaitou.q3.explain": z.string(),
+  "quiz.longtaitou.q4": z.string(),
+  "quiz.longtaitou.q4.explain": z.string(),
+  "quiz.longtaitou.q5": z.string(),
+  "quiz.longtaitou.q5.explain": z.string(),
+
+  // Quiz Shangsi Festival questions
+  "quiz.shangsi.q1": z.string(),
+  "quiz.shangsi.q1.explain": z.string(),
+  "quiz.shangsi.q2": z.string(),
+  "quiz.shangsi.q2.explain": z.string(),
+  "quiz.shangsi.q3": z.string(),
+  "quiz.shangsi.q3.explain": z.string(),
+  "quiz.shangsi.q4": z.string(),
+  "quiz.shangsi.q4.explain": z.string(),
+  "quiz.shangsi.q5": z.string(),
+  "quiz.shangsi.q5.explain": z.string(),
+
+  // Quiz New Year's Eve questions
+  "quiz.new_years_eve.q1": z.string(),
+  "quiz.new_years_eve.q1.explain": z.string(),
+  "quiz.new_years_eve.q2": z.string(),
+  "quiz.new_years_eve.q2.explain": z.string(),
+  "quiz.new_years_eve.q3": z.string(),
+  "quiz.new_years_eve.q3.explain": z.string(),
+  "quiz.new_years_eve.q4": z.string(),
+  "quiz.new_years_eve.q4.explain": z.string(),
+  "quiz.new_years_eve.q5": z.string(),
+  "quiz.new_years_eve.q5.explain": z.string(),
+
+  // Quiz Cold Food Festival questions
+  "quiz.cold_food.q1": z.string(),
+  "quiz.cold_food.q1.explain": z.string(),
+  "quiz.cold_food.q2": z.string(),
+  "quiz.cold_food.q2.explain": z.string(),
+  "quiz.cold_food.q3": z.string(),
+  "quiz.cold_food.q3.explain": z.string(),
+  "quiz.cold_food.q4": z.string(),
+  "quiz.cold_food.q4.explain": z.string(),
+  "quiz.cold_food.q5": z.string(),
+  "quiz.cold_food.q5.explain": z.string(),
+
+  // Quiz Ghost Festival questions
+  "quiz.ghost.q1": z.string(),
+  "quiz.ghost.q1.explain": z.string(),
+  "quiz.ghost.q2": z.string(),
+  "quiz.ghost.q2.explain": z.string(),
+  "quiz.ghost.q3": z.string(),
+  "quiz.ghost.q3.explain": z.string(),
+  "quiz.ghost.q4": z.string(),
+  "quiz.ghost.q4.explain": z.string(),
+  "quiz.ghost.q5": z.string(),
+  "quiz.ghost.q5.explain": z.string(),
+
+  // Quiz Renri (Human Day) questions
+  "quiz.renri.q1": z.string(),
+  "quiz.renri.q1.explain": z.string(),
+  "quiz.renri.q2": z.string(),
+  "quiz.renri.q2.explain": z.string(),
+  "quiz.renri.q3": z.string(),
+  "quiz.renri.q3.explain": z.string(),
+  "quiz.renri.q4": z.string(),
+  "quiz.renri.q4.explain": z.string(),
+  "quiz.renri.q5": z.string(),
+  "quiz.renri.q5.explain": z.string(),
+
+  // Quiz Wealth God Festival questions
+  "quiz.wealth_god.q1": z.string(),
+  "quiz.wealth_god.q1.explain": z.string(),
+  "quiz.wealth_god.q2": z.string(),
+  "quiz.wealth_god.q2.explain": z.string(),
+  "quiz.wealth_god.q3": z.string(),
+  "quiz.wealth_god.q3.explain": z.string(),
+  "quiz.wealth_god.q4": z.string(),
+  "quiz.wealth_god.q4.explain": z.string(),
+  "quiz.wealth_god.q5": z.string(),
+  "quiz.wealth_god.q5.explain": z.string(),
 });
 
 export type FestivalSchema = z.infer<typeof festivalSchema>;

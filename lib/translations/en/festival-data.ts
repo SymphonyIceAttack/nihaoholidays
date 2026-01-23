@@ -2352,6 +2352,1242 @@ Another origin relates to ancient Chinese harvest celebrations. After the autumn
       },
     ],
   },
+  longtaitou: {
+    basicInfo: {
+      name: "Dragon Head Festival",
+      emoji: "🐉",
+      date: "February/March",
+      lunarDate: "2nd day of 2nd lunar month",
+      description: "Festival marking the awakening of dragons and spring rains",
+      history:
+        "Dragon Head Festival, also known as Longtaitou, has been celebrated for over 1,000 years. It's believed to be the day when dragons wake from winter hibernation and bring spring rains for agriculture.",
+      customs: [
+        "Getting haircuts for good luck",
+        "Eating dragon foods (dragon beard candy, dragon liver)",
+        "Worshiping the dragon king for rain",
+        "Eating spring pancakes (春饼)",
+        "Braiding hair in dragon patterns",
+        "Women's hairpin ceremonies",
+      ],
+      taboo: [
+        "Don't do laundry or house cleaning",
+        "Don't break things",
+        "Don't use needles or scissors",
+        "Avoid eating mutant or deformed foods",
+      ],
+      // Deep content extensions
+      historyStory: `The Dragon Head Festival (龙抬头), also known as Longtaitou (龙抬头), is a traditional Chinese festival celebrated on the second day of the second lunar month. The festival marks the beginning of spring plowing and is associated with the awakening of dragons after their winter hibernation.
+
+According to Chinese mythology, dragons control the rains and waters. After sleeping through winter, dragons awaken on this day and begin their work of bringing spring rains to nourish crops. Ancient farmers would pray to the dragon king for abundant rainfall and a good harvest.
+
+The festival has roots in ancient agricultural traditions. In northern China, where the climate is drier, spring rains were essential for crops. The dragon, as the mythical creature controlling water, became a central figure in spring agricultural rituals. Temples dedicated to the Dragon King would hold special ceremonies on this day.
+
+Another origin story relates to the legendary Emperor Yu the Great (大禹王), who tamed China's floods. According to legend, Yu was so busy with flood control work that he passed his own wedding three times. When he finally married, the wedding fell on the second day of the second lunar month. Since then, this day became associated with dragons and became an auspicious day for various activities.`,
+      regionalVariations: {
+        north: `**Beijing**: Getting haircuts is the most important tradition. Barbershops are especially busy on this day. Dragon beard candy (龙须糖) is a popular traditional treat. Spring pancakes (春饼) with various fillings are eaten, representing the first spring harvest.
+
+**Northern China (Hebei, Shandong)**: The festival is closely tied to agricultural rituals. Families pray to the Dragon King for spring rains. Eating "dragon foods" is popular - dragon liver (pig's liver), dragon ears (ear-shaped noodles), and dragon scales (striped pancakes).`,
+        south: `**Southern China (Guangdong, Fujian)**: The festival is less prominently celebrated than in the north but still has significance. Some regions worship the Dragon King at local temples. Fresh spring vegetables and shoots are featured in meals.
+
+**Jiangsu and Zhejiang**: Dragon-related foods are prepared, and some families visit temples. The festival coincides with the beginning of spring tea season in some areas.`,
+        east: `**Shanghai**: Haircut traditions are observed, with many visiting barbershops. Dragon beard candy and spring pancakes are popular. The festival signals the transition from winter to spring in the local calendar.
+
+**Shandong**: Strong agricultural traditions. Some rural areas still perform Dragon King worship rituals. Spring plowing ceremonies may be held.`,
+        west: `**Sichuan**: The festival overlaps with preparations for Dragon Boat Festival. Some regions have unique local customs. Spring foods featuring fresh vegetables are emphasized.
+
+**Shaanxi**: Traditional customs include eating specific foods and avoiding certain activities. Some ancient folk traditions are still maintained in rural areas.`,
+      },
+      modernEvolution: `**Haircut Industry Peak**:
+- Dragon Head Festival is the busiest day of the year for barbershops
+- Many Chinese avoid haircuts in the month before the festival
+- The saying "Dragon Head doesn't cut hair" (二月二不剃头) reflects this custom
+- Many salons run special promotions and extend hours
+
+**Food Culture**:
+- Dragon-themed foods have become popular marketing items
+- Restaurants create special "dragon menus" for the occasion
+- Dragon beard candy has become a popular souvenir
+- Spring pancake restaurants see increased business
+
+**Declining Traditions**:
+- Many young people are unaware of the Dragon King worship traditions
+- Agricultural rituals have largely disappeared in urban areas
+- Some customs like avoiding needles are rarely observed
+- The festival has become more of a haircut and food celebration
+
+**Cultural Awareness**:
+- The festival has gained attention as a "Chinese haircut day"
+- Social media campaigns promote dragon-themed activities
+- Some cities organize cultural events to preserve traditions
+- The connection to agricultural cycles is less understood`,
+      misconceptions: [
+        {
+          myth: "Dragon Head Festival is only about getting haircuts",
+          reality:
+            "While haircuts are the most visible modern tradition, the festival originally had broader significance. It was an agricultural festival celebrating the dragon's role in bringing spring rains. Other traditions included Dragon King worship, eating specific foods, and various rituals for good fortune and harvest.",
+        },
+        {
+          myth: "You can't eat dragon foods on this day",
+          reality:
+            "Eating 'dragon foods' is actually encouraged! Foods like dragon liver (pig's liver), dragon ears (ear-shaped noodles), and dragon scales (striped pancakes) are traditional. The foods are named after dragons to invoke good luck and blessings.",
+        },
+        {
+          myth: "Dragon Head Festival is only for northern China",
+          reality:
+            "While the festival is more prominently celebrated in northern China where spring rain was crucial for agriculture, it is observed throughout China with regional variations. Southern regions have their own ways of celebrating, though the customs may differ.",
+        },
+        {
+          myth: "The festival must be celebrated on February 2nd",
+          reality:
+            "Dragon Head Festival falls on the second day of the second lunar month, which varies between late February and mid-March in the Gregorian calendar. The lunar date is what matters, not the Gregorian equivalent.",
+        },
+        {
+          myth: "Women cannot participate in Dragon Head Festival",
+          reality:
+            "Women have traditionally participated in the festival through women's hairpin ceremonies, especially in ancient times. In some regions, young women would wear special hairpins or have their hair styled in dragon patterns. The festival was traditionally inclusive.",
+        },
+      ],
+    },
+    expressions: [
+      {
+        chinese: "二月二龙抬头",
+        pinyin: "Èr yuè èr lóng tái tóu",
+        english: "Dragon raises its head on the second day of the second month",
+        scenario: "General festival greeting",
+      },
+      {
+        chinese: "剃龙头",
+        pinyin: "Tì lóng tóu",
+        english: "Getting a dragon head haircut",
+        scenario: "Talking about getting a haircut",
+      },
+      {
+        chinese: "吃龙食",
+        pinyin: "Chī lóng shí",
+        english: "Eating dragon foods",
+        scenario: "Talking about traditional foods",
+      },
+    ],
+    foods: [
+      {
+        name: "Spring Pancakes",
+        emoji: "🫓",
+        meaning: "First spring harvest",
+        description: "Thin pancakes rolled with vegetables and meat",
+        howToOrder: "Wǒ yào chūn bǐng",
+      },
+      {
+        name: "Dragon Beard Candy",
+        emoji: "🍬",
+        meaning: "Sweet blessings",
+        description: "Fine sugar filaments resembling dragon whiskers",
+      },
+      {
+        name: "Dragon Ear Noodles",
+        emoji: "🍜",
+        meaning: "Good fortune",
+        description: "Ear-shaped noodles symbolizing dragon's ears",
+      },
+    ],
+    gifts: [
+      {
+        name: "Haircut Voucher",
+        emoji: "✂️",
+        suitability: "Everyone",
+        note: "For getting a lucky haircut",
+      },
+      {
+        name: "Dragon Toys",
+        emoji: "🐉",
+        suitability: "Children",
+        note: "Dragon-themed toys for good luck",
+      },
+      {
+        name: "Spring Pancake Set",
+        emoji: "🫓",
+        suitability: "Families",
+        note: "Ingredients for making spring pancakes",
+      },
+    ],
+    tools: [
+      {
+        name: "Haircut Guide",
+        description: "Tips for the perfect Dragon Head haircut",
+        badge: "New",
+      },
+      {
+        name: "Dragon Foods Guide",
+        description: "Traditional foods and recipes",
+      },
+      {
+        name: "Spring Pancake Recipe",
+        description: "How to make authentic spring pancakes",
+      },
+    ],
+  },
+  shangsi: {
+    basicInfo: {
+      name: "Shangsi Festival",
+      emoji: "🌸",
+      date: "March/April",
+      lunarDate: "3rd day of 3rd lunar month",
+      description: "Ancient spring bathing and purification festival",
+      history:
+        "Shangsi Festival is one of the oldest Chinese festivals, dating back over 2,000 years. Originally a day for bathing, purification, and driving away misfortune, it later became associated with spring outings and romantic encounters.",
+      customs: [
+        "Spring bathing with peach blossom water",
+        "Eating spring foods",
+        "Flying kites",
+        "Wearing dogwood decorations",
+        "Seeking romance and blessings",
+        "Spring outings and picnics",
+        "Drinking chrysanthemum wine",
+      ],
+      taboo: [
+        "Don't stay indoors on Shangsi",
+        "Don't bathe in cold water without proper preparation",
+        "Avoid negative thoughts and words",
+      ],
+      // Deep content extensions
+      historyStory: `Shangsi Festival (上巳节) is one of the oldest traditional Chinese festivals, with origins dating back to the Zhou Dynasty (1046-256 BCE). The name "Shangsi" means "the first auspicious day" and refers to the third day of the third lunar month.
+
+In ancient times, Shangsi was primarily a purification festival. According to historical records, people would bathe in rivers on this day to wash away illness and misfortune. The practice was based on the belief that spring waters had special cleansing properties. Royal courts would hold elaborate bathing ceremonies, and common people would participate in communal river bathing.
+
+The festival also had romantic dimensions. During the Han Dynasty, young men and women would gather by rivers for courtship purposes. Young women would float lotus leaves on the water, and young men would try to sink them with arrows - a practice similar to the later Qixi festival. These romantic encounters could lead to marriages.
+
+Another important aspect was the worship of Xi He, the goddess of the sun. Ancient people believed that on Shangsi, Xi We would bathe in the celestial waters, symbolizing the purification of the sun itself. This connection to the sun goddess gave the festival its auspicious character.
+
+During the Tang Dynasty, Shangsi became a major celebration. Emperors would host grand banquets, and the day was marked by poetry, music, and outdoor activities. The festival's popularity rivaled that of other major holidays.`,
+      regionalVariations: {
+        north: `**Beijing**: During imperial times, the emperor would host grand spring banquets. Common people would fly kites and eat spring foods. The festival has influenced modern "Women's Day" celebrations on March 8th.
+
+**Northern China**: Spring outings are popular, with families visiting parks and scenic areas. Traditional foods include chrysanthemum dishes and spring vegetables. Kite flying is a common activity.`,
+        south: `**Southern China (Yangtze River region)**: The festival coincides with the peach blossom season. Peach blossom viewing becomes a popular activity. Some regions have preserved ancient customs of river bathing or purification rituals.
+
+**Guangdong**: Spring outings to historical sites and gardens are common. The festival is sometimes combined with modern tomb-sweeping activities in some areas.`,
+        east: `**Shanghai and Jiangsu**: The city comes alive with spring activities. Parks and gardens host special events. Traditional Shangsi foods are prepared in restaurants. The festival has influenced local spring culture.
+
+**Zhejiang**: West Lake in Hangzhou becomes a major destination for spring outings. The festival has strong connections to local literary and cultural traditions.`,
+        west: `**Sichuan**: Spring outings combine with local cuisine traditions. The festival may overlap with the beginning of tea season. Outdoor activities are popular as weather improves.
+
+**Yunnan**: Multiple ethnic groups have their own spring festivals around this time. The Bai people's festival customs may overlap with Shangsi.`,
+      },
+      modernEvolution: `**Decline and Resurgence**:
+- Shangsi declined significantly after the Tang Dynasty
+- The festival was largely absorbed by Qingming Festival by the Ming and Qing periods
+- Some customs survived in regional variations
+- Recently, there has been cultural revival interest
+
+**Modern Analogues**:
+- International Women's Day (March 8th) has been influenced by Shangsi traditions
+- Some Chinese communities have attempted to revive Shangsi celebrations
+- Spring outings and picnics on the third day of the third lunar month are promoted
+
+**Cultural Significance**:
+- Shangsi is considered an ancestor of modern spring festivals
+- Some scholars advocate for reviving the festival
+- Cultural heritage organizations have organized Shangsi events
+- The romantic traditions have influenced Qixi Festival
+
+**Literary Heritage**:
+- Many famous poems reference Shangsi Festival
+- The festival appears in classical Chinese literature
+- Tang Dynasty poems about Shangsi are still studied today
+- The festival's cultural significance is recognized academically`,
+      misconceptions: [
+        {
+          myth: "Shangsi Festival no longer exists",
+          reality:
+            "While Shangsi is no longer officially celebrated as a major holiday, its traditions have been absorbed into other festivals. Qingming Festival inherited some spring outing customs, and Qixi inherited romantic elements. Recently, there have been cultural revival movements to restore Shangsi celebrations.",
+        },
+        {
+          myth: "Shangsi was always a romantic festival",
+          reality:
+            "Shangsi originally focused on purification and bathing. The romantic aspects developed later during the Han and Tang dynasties. Initially, it was more about washing away illness and misfortune than romance.",
+        },
+        {
+          myth: "Shangsi and Qixi are the same festival",
+          reality:
+            "While both have romantic elements, they are distinct festivals. Shangsi falls on the third day of the third lunar month (spring), while Qixi falls on the seventh day of the seventh lunar month (autumn). Qixi developed from a different tradition and became more focused on the Cowherd and Weaver Girl legend.",
+        },
+        {
+          myth: "Bathing in rivers on Shangsi is always safe",
+          reality:
+            "Ancient bathing rituals were performed in specific, often ritualistically prepared waters. Modern attempts at revival should consider water safety and appropriate locations. The ritual meaning was more important than the actual bathing.",
+        },
+        {
+          myth: "Shangsi is only for young women",
+          reality:
+            "Shangsi was traditionally celebrated by all members of society. While young women had specific activities like flower appreciation, men participated in hunting, military exercises, and court ceremonies. The festival was inclusive.",
+        },
+      ],
+    },
+    expressions: [
+      {
+        chinese: "上巳节安康",
+        pinyin: "Shàng sì jié ān kāng",
+        english: "Peaceful Shangsi Festival",
+        scenario: "General greeting",
+      },
+      {
+        chinese: "踏青去",
+        pinyin: "Tà qīng qù",
+        english: "Going for a spring outing",
+        scenario: "Planning outdoor activities",
+      },
+      {
+        chinese: "春游愉快",
+        pinyin: "Chūn yóu yú kuài",
+        english: "Have a pleasant spring outing",
+        scenario: "Wishing someone a good spring trip",
+      },
+    ],
+    foods: [
+      {
+        name: "Chrysanthemum Greens",
+        emoji: "🥬",
+        meaning: "Purification and health",
+        description: "Wild greens picked for spring festivals",
+      },
+      {
+        name: "Spring Tea",
+        emoji: "🍵",
+        meaning: "New beginnings",
+        description: "First tea of the spring season",
+      },
+      {
+        name: "Peach Blossom Cake",
+        emoji: "🌸",
+        meaning: "Romance and beauty",
+        description: "Flower-shaped desserts for the festival",
+      },
+    ],
+    gifts: [
+      {
+        name: "Kite",
+        emoji: "🪁",
+        suitability: "Children/Families",
+        note: "For flying on spring outings",
+      },
+      {
+        name: "Spring Tea Set",
+        emoji: "🍵",
+        suitability: "Friends/Family",
+        note: "Premium tea for spring",
+      },
+      {
+        name: "Dogwood Decorations",
+        emoji: "🌿",
+        suitability: "Everyone",
+        note: "Traditional protective charms",
+      },
+    ],
+    tools: [
+      {
+        name: "Spring Outing Planner",
+        description: "Best spots for spring activities",
+        badge: "New",
+      },
+      {
+        name: "Kite Flying Guide",
+        description: "Tips and techniques for kite flying",
+      },
+      {
+        name: "Chrysanthemum Recipe Collection",
+        description: "Traditional Shangsi foods",
+      },
+    ],
+  },
+  new_years_eve: {
+    basicInfo: {
+      name: "New Year's Eve",
+      emoji: "🎊",
+      date: "January/February",
+      lunarDate: "Last day of 12th lunar month",
+      description: "The most important family reunion night of the year",
+      history:
+        "New Year's Eve (除夕) is the climax of Spring Festival celebrations. Families gather for reunion dinners, stay up late to welcome the new year, and perform rituals to send off the old year and welcome good fortune.",
+      customs: [
+        "Reunion dinner with family",
+        "Staying up late (守岁)",
+        "Posting spring couplets",
+        "Setting off fireworks at midnight",
+        "Giving early New Year greetings",
+        "Eating fish for surplus",
+        "Cleaning the house thoroughly",
+      ],
+      taboo: [
+        "Don't cry or argue on New Year's Eve",
+        "Don't break things",
+        "Don't use negative words",
+        "Don't clean or sweep (to avoid sweeping away luck)",
+        "Don't wake sleeping people",
+      ],
+      // Deep content extensions
+      historyStory: `New Year's Eve (除夕), known as Chuxi in Chinese, is the most important evening of the lunar year. The name means "removing the evening" or "passing the evening," symbolizing the transition from the old year to the new.
+
+The traditions of New Year's Eve are deeply rooted in ancient Chinese cosmology and mythology. According to legend, a fierce monster named Nian (年) would emerge on the last day of the year to devour villagers. The monster was frightened by loud noises and the color red, so people developed customs of setting off firecrackers, decorating with red items, and staying awake through the night to protect themselves.
+
+The reunion dinner (年夜饭) is the most important meal of the year. Every dish has symbolic meaning: whole fish represents surplus (余), dumplings shaped like ancient gold ingots symbolize wealth, and noodles represent longevity. Families go to great lengths to ensure all family members are present, as an empty seat is considered bad luck.
+
+Staying up late on New Year's Eve (守岁) is another crucial tradition. The practice originated from the belief that parents should stay awake to protect their children from the Nian monster. Over time, it evolved into a way of spending the last moments of the year with family, talking, playing games, and watching the Spring Festival Gala together.
+
+At midnight, as the new year arrives, fireworks are set off to scare away evil spirits and celebrate the arrival of the new year. Families exchange New Year greetings, and children receive red envelopes from elders.`,
+      regionalVariations: {
+        north: `**Beijing**: The reunion dinner features jiaozi (dumplings) as the essential dish. Families gather early to make dumplings together. The Summer Palace and other historic sites may have special New Year's Eve events.
+
+**Northern China**: Jiaozi with various fillings are central to the meal. Some families eat noodles after midnight for longevity. Winter activities and indoor family games are popular.`,
+        south: `**Southern China (Canton)**: A whole fish is mandatory at the reunion dinner. Other dishes include roasted duck, abalone, and various delicacies. Some families eat tangyuan (sweet rice balls) after midnight.
+
+**Hong Kong and Guangdong**: The reunion dinner is elaborate and expensive. TVB's New Year's Eve variety show is a tradition. Families may visit temples for the first prayer of the new year.`,
+        east: `**Shanghai**: The reunion dinner features a mix of local and imported delicacies. Nian Gao (sticky rice cake) is common. Families gather to watch the Spring Festival Gala and welcome the new year together.
+
+**Jiangsu and Zhejiang**: Regional specialties are featured in reunion dinners. Some families eat vegetarian meals as a religious practice. The atmosphere combines solemnity and celebration.`,
+        west: `**Sichuan**: Hot pot reunion dinners are popular in modern times. Traditional dishes include fish with spicy sauce. Fireworks displays are elaborate, especially in rural areas.
+
+**Yunnan**: Multiple ethnic groups have their own New Year's Eve traditions. Family gatherings are universal, but specific foods vary by ethnicity.`,
+      },
+      modernEvolution: `**Technology Transformation**:
+- Spring Festival Gala has become an essential tradition since 1983
+- WeChat red envelopes have replaced some physical red envelopes
+- Video calls allow distant family members to join dinners
+- Online shopping has changed food preparation
+
+**Changing Traditions**:
+- Many families now eat reunion dinners at restaurants
+- Some young people travel abroad for the holiday
+- Digital firecrackers and virtual celebrations have emerged
+- The Spring Festival Gala is watched by over 700 million people
+
+**Generational Shifts**:
+- Young people increasingly prefer "reverse reunion" (parents visiting them)
+- Some families split celebrations between in-laws
+- Going to the movies on New Year's Eve has become popular
+- "Staycations" in hotels are chosen by some urban families
+
+**Commercial Impact**:
+- New Year's Eve is one of the busiest restaurant booking days
+- Tourism during the period has increased significantly
+- Online platforms offer reunion dinner delivery services
+- The entertainment industry sees major revenue during the period`,
+      misconceptions: [
+        {
+          myth: "New Year's Eve is just like December 31st",
+          reality:
+            "While both mark the end of a year, Chinese New Year's Eve is fundamentally different. It's not about parties and counting down but about family reunion. The festival is part of a 15-day celebration period, not a single evening. The focus is on traditions, ancestors, and collective family activities.",
+        },
+        {
+          myth: "You must eat jiaozi on New Year's Eve",
+          reality:
+            "While jiaozi are traditional in northern China, southern families typically eat other dishes. Whole fish is essential in southern regions. Some families eat noodles, tangyuan, or regional specialties. The key is the reunion dinner, not a specific dish.",
+        },
+        {
+          myth: "Staying up late is optional",
+          reality:
+            'Staying up late (守岁) is considered important but not absolutely mandatory. The practice symbolizes resisting the urge to sleep so that parents can "protect" their children from misfortune. However, many families, especially with young children, do go to bed at their normal time.',
+        },
+        {
+          myth: "Fireworks are essential for celebrating",
+          reality:
+            "While traditional, fireworks are now banned or restricted in most major Chinese cities due to pollution and safety concerns. Many families substitute with virtual firecrackers on phones, decoration lights, or simply focus on other traditions like watching the gala or visiting temples.",
+        },
+        {
+          myth: "New Year's Eve celebrations are the same everywhere",
+          reality:
+            "Regional variations are significant. Northern and southern China have different traditional foods. Some regions have unique customs like eating vegetarian meals or visiting temples at midnight. Ethnic minorities have their own distinct traditions.",
+        },
+      ],
+    },
+    expressions: [
+      {
+        chinese: "除夕快乐",
+        pinyin: "Chú xì kuài lè",
+        english: "Happy New Year's Eve",
+        scenario: "General greeting",
+      },
+      {
+        chinese: "年夜饭",
+        pinyin: "Nián yè fàn",
+        english: "Reunion dinner",
+        scenario: "Talking about the special meal",
+      },
+      {
+        chinese: "守岁",
+        pinyin: "Shǒu suì",
+        english: "Staying up for the new year",
+        scenario: "Describing the tradition of staying awake",
+      },
+      {
+        chinese: "新年好",
+        pinyin: "Xīn nián hǎo",
+        english: "Happy New Year",
+        scenario: "New Year greeting",
+      },
+    ],
+    foods: [
+      {
+        name: "Fish",
+        emoji: "🐟",
+        meaning: "Surplus and prosperity",
+        description: "Whole fish served at reunion dinner",
+        howToOrder: "Qǐng gěi wǒ yì tiáo hóng shāo yú",
+      },
+      {
+        name: "Jiaozi",
+        emoji: "🥟",
+        meaning: "Wealth and treasure",
+        description: "Dumplings shaped like ancient gold ingots",
+        howToOrder: "Wǒ yào jiǎo zi",
+      },
+      {
+        name: "Niangao",
+        emoji: "🍚",
+        meaning: "Yearly progress",
+        description: "Sticky rice cake for advancement",
+      },
+      {
+        name: "Noodles",
+        emoji: "🍜",
+        meaning: "Longevity",
+        description: "Uncut noodles for long life",
+      },
+    ],
+    gifts: [
+      {
+        name: "Red Envelope",
+        emoji: "🧧",
+        suitability: "Children",
+        note: "Money in red paper for good luck",
+      },
+      {
+        name: "Food Gifts",
+        emoji: "🎁",
+        suitability: "Family visits",
+        note: "Quality food items for reunion dinner",
+      },
+      {
+        name: "New Year Decorations",
+        emoji: "🏮",
+        suitability: "Homes",
+        note: "Couplets and decorative items",
+      },
+    ],
+    tools: [
+      {
+        name: "Reunion Dinner Menu",
+        description: "Design your perfect New Year's Eve feast",
+        badge: "Essential",
+      },
+      {
+        name: "Red Envelope Guide",
+        description: "Amounts and etiquette for giving",
+        badge: "New",
+      },
+      {
+        name: "New Year Greetings",
+        description: "Blessings for every occasion",
+      },
+      {
+        name: "Taboo Guide",
+        description: "What to avoid during Spring Festival",
+      },
+    ],
+  },
+  cold_food: {
+    basicInfo: {
+      name: "Cold Food Festival",
+      emoji: "🥗",
+      date: "April 3-5",
+      lunarDate: "105th day after winter solstice (approx.清明前一天)",
+      description: "Ancient festival of cold food and remembrance",
+      history:
+        "Cold Food Festival (寒食节) has a history of over 2,600 years. It commemorates Jie Zitui, a loyal retainer who died in a fire. The festival involves eating cold food and honoring ancestors.",
+      customs: [
+        "Eating cold food only",
+        "Visiting ancestral graves",
+        "Flying kites",
+        "Making and eating qingtuan",
+        "Spring outings",
+        "Bonfire offerings",
+      ],
+      taboo: [
+        "No fires or cooking",
+        "Don't eat hot food",
+        "Don't make noise near graves",
+        "Avoid red clothing at gravesites",
+      ],
+      // Deep content extensions
+      historyStory: `The Cold Food Festival (寒食节) has a history dating back over 2,600 years to the Spring and Autumn Period. The most famous origin story involves Jie Zitui (介子推), a loyal retainer of Duke Wen of Jin (晋文公).
+
+Jie Zitui was a devoted follower who, during a period of political turmoil, saved the duke's life by cutting flesh from his own thigh to make soup. When the duke eventually came to power, he rewarded those who had helped him but overlooked Jie. Jie retired to a forest with his mother, content to live in obscurity.
+
+When the duke finally remembered Jie and tried to reward him, Jie refused to leave the forest. In desperation, the duke ordered the forest to be set on fire to force Jie out, hoping he would flee to safety. Instead, Jie and his mother died in the fire, embracing death rather than leaving their simple life.
+
+Grieved by this tragedy, the duke ordered that no fires could be lit on the anniversary of Jie's death. People could only eat cold food, hence the name "Cold Food Festival." Over time, this festival merged with Qingming Festival, and most cold food customs have been absorbed into Qingming.
+
+Originally, Cold Food Festival was celebrated for one to three days, with strict prohibition on using fire. Families would prepare cold dishes the day before and eat only cold food on the festival day.`,
+      regionalVariations: {
+        north: `**Northern China**: In ancient times, the whole village would participate in Cold Food rituals. Families would gather for cold meals and visit ancestral graves together. Modern celebrations emphasize the connection to Qingming.
+
+**Beijing and Hebei**: Some traditional families still observe cold food traditions. Kite flying is particularly popular during this period.`,
+        south: `**Southern China**: The festival is less prominently observed as a separate event, having merged with Qingming. However, some regions maintain cold food customs in ancestral worship.
+
+**Fujian and Guangdong**: Ancestor worship ceremonies may include cold food offerings. The festival has influenced local tomb-sweeping customs.`,
+        east: `**Shandong and Jiangsu**: Traditional communities may observe cold food customs. The festival is a time for family gatherings and spring activities. Historical reenactments are held in some cultural sites.
+
+**Shanghai**: Modern families typically combine Cold Food with Qingming activities. The distinction between the two festivals has largely disappeared.`,
+        west: `**Shaanxi and Shanxi**: These regions, close to the origin story of Jie Zitui, maintain stronger Cold Food traditions. Some rural areas still observe the no-fire custom.
+
+**Sichuan**: Cold food customs blend with local Qingming traditions. The festival is a time for spring outings and family gatherings.`,
+      },
+      modernEvolution: `**Merger with Qingming**:
+- Cold Food Festival has largely merged with Qingming Festival
+- Most people no longer observe the cold food tradition
+- The historical significance is remembered through cultural education
+- Some communities attempt to revive Cold Food traditions
+
+**Cultural Revival**:
+- Some cultural organizations promote Cold Food as a separate festival
+- Historical reenactments of the Jie Zitui story are performed
+- The festival has educational value about ancient Chinese customs
+- Academic interest in the festival's origins has increased
+
+**Customs Today**:
+- Tomb sweeping and ancestor worship remain important
+- Kite flying is a popular modern activity
+- Some families eat cold food as a conscious cultural choice
+- The festival is recognized in cultural heritage databases`,
+      misconceptions: [
+        {
+          myth: "Cold Food Festival no longer exists",
+          reality:
+            "While Cold Food Festival has merged with Qingming in most of China, it still exists as a cultural concept. Some regions and cultural organizations actively maintain the traditions. The customs of ancestor worship and spring activities continue, even if the cold food aspect has declined.",
+        },
+        {
+          myth: "Cold Food Festival is the same as Qingming",
+          reality:
+            "Originally, they were separate festivals. Cold Food commemorated Jie Zitui with cold food and ancestor worship. Qingming was a solar term for spring cultivation that evolved into tomb sweeping. Over time, they merged, with Qingming becoming dominant and Cold Food customs being absorbed.",
+        },
+        {
+          myth: "You must eat completely cold food on Cold Food Festival",
+          reality:
+            "In ancient times, this was strictly observed. Today, very few people maintain this practice. Modern observances may include cold dishes or simply acknowledge the historical tradition without actual cold food consumption.",
+        },
+        {
+          myth: "Cold Food Festival is only about sad remembrance",
+          reality:
+            "While honoring Jie Zitui is the origin, the festival also celebrates spring, family gatherings, and outdoor activities. Kite flying and spring outings are important aspects that balance the solemnity of remembrance.",
+        },
+        {
+          myth: "Cold Food Festival is only a northern Chinese tradition",
+          reality:
+            "The festival originated in northern China (Shanxi area), but it was historically celebrated throughout China. Regional variations existed everywhere, and the cultural significance was recognized nationally.",
+        },
+      ],
+    },
+    expressions: [
+      {
+        chinese: "寒食节安康",
+        pinyin: "Hán shí jié ān kāng",
+        english: "Peaceful Cold Food Festival",
+        scenario: "General greeting",
+      },
+      {
+        chinese: "清明时节雨纷纷",
+        pinyin: "Qīng míng shí jié yǔ fēn fēn",
+        english: "During Qingming, rain falls softly",
+        scenario: "Poetic reference to spring festivals",
+      },
+      {
+        chinese: "祭祖扫墓",
+        pinyin: "Jì zǔ sǎo mù",
+        english: "Honoring ancestors and cleaning graves",
+        scenario: "Describing festival activities",
+      },
+    ],
+    foods: [
+      {
+        name: "Cold Dishes",
+        emoji: "🥗",
+        meaning: "Remembrance and tradition",
+        description: "Various cold dishes eaten as per tradition",
+      },
+      {
+        name: "Qingtuan",
+        emoji: "🟢",
+        meaning: "Spring renewal",
+        description: "Green rice balls made with mugwort",
+      },
+      {
+        name: "Cold Noodles",
+        emoji: "🍜",
+        meaning: "Simplicity",
+        description: "Noodles served cold, traditional for the occasion",
+      },
+    ],
+    gifts: [
+      {
+        name: "Fresh Flowers",
+        emoji: "💐",
+        suitability: "Ancestor offerings",
+        note: "Yellow chrysantheums traditional for graves",
+      },
+      {
+        name: "Kite",
+        emoji: "🪁",
+        suitability: "Children/Families",
+        note: "For flying during spring outings",
+      },
+      {
+        name: "Cold Food Set",
+        emoji: "🥗",
+        suitability: "Families",
+        note: "Ingredients for cold dishes",
+      },
+    ],
+    tools: [
+      {
+        name: "Cold Food Guide",
+        description: "History and traditions of the festival",
+        badge: "New",
+      },
+      {
+        name: "Qingtuan Recipe",
+        description: "Traditional green rice ball recipe",
+      },
+      {
+        name: "Kite Flying Guide",
+        description: "Tips for spring kite flying",
+      },
+    ],
+  },
+  ghost: {
+    basicInfo: {
+      name: "Ghost Festival",
+      emoji: "👻",
+      date: "August/September",
+      lunarDate: "15th day of 7th lunar month",
+      description: "Festival when spirits roam the mortal world",
+      history:
+        "Ghost Festival (中元节) has been celebrated for over 1,500 years. It's believed that the gates of the underworld open on this day, allowing spirits to visit the living world.",
+      customs: [
+        "Burning joss paper and incense",
+        "Offering food to ancestors",
+        "Releasing river lanterns",
+        "Preparing ancestor altars",
+        "Avoiding swimming or going out at night",
+        " Feeding hungry ghosts",
+      ],
+      taboo: [
+        "Don't swim in rivers or lakes",
+        "Don't walk alone at night",
+        "Don't hang clothes outside at night",
+        "Don't tap on someone's shoulder",
+        "Don't step on or kick offerings",
+      ],
+      // Deep content extensions
+      historyStory: `The Ghost Festival (中元节), also known as Zhongyuan Festival, is one of the most important traditional Chinese festivals dedicated to honoring ancestors and appeasing spirits. The festival falls on the 15th day of the seventh lunar month, when道教 (Taoist) and Buddhist traditions believe the gates of the underworld open.
+
+The festival has multiple religious origins. In Taoism, the Jade Emperor divides the underworld into three realms, and the 15th day of the seventh month is when all three realms are open simultaneously. In Buddhism, the festival relates to the story of Mulian (目连), a devoted son who descended into hell to rescue his mother from starvation.
+
+According to Buddhist legend, Mulian's mother had been greedy in her lifetime and was punished by being reborn in a hungry ghost realm, unable to eat. Through Buddhist practice, Mulian gained the power to see his mother and attempted to feed her, but the food turned to fire in her mouth due to her past karma. Buddha instructed Mulian to make offerings to all hungry ghosts on the 15th day of the seventh month, which would save not only his mother but all suffering spirits.
+
+The festival also relates to ancient Chinese ancestor worship traditions. Families prepare offerings to ensure ancestors are well-fed in the afterlife and to prevent them from becoming hungry ghosts who might trouble the living.`,
+      regionalVariations: {
+        north: `**Northern China**: Burning joss paper and offerings at ancestral graves is common. Families prepare food offerings at home altars. Temple ceremonies may be held for community-wide appeasement.
+
+**Beijing**: The festival is observed with traditional rituals at temples and ancestral sites. Some communities hold lantern releases at lakes.`,
+        south: `**Southern China (Guangdong, Hong Kong)**: The Ghost Festival is one of the most important traditional occasions. Elaborate offerings include roast pigs, ducks, and fruits. Burning paper money and offerings is widespread.
+
+**Hong Kong**: Taoist and Buddhist ceremonies are held. The Che Kung Festival overlaps with Ghost Festival traditions. Some communities release lanterns on water.
+
+**Fujian and Taiwan**: The festival is celebrated with temple fairs and offerings. The "Zhongyuan" water lantern festival is famous in some coastal areas.`,
+        east: `**Shanghai and Jiangsu**: Families prepare ancestor offerings and burn joss paper. Some communities hold ceremonies at temples. The festival overlaps with the Hungry Ghost month observances.
+
+**Zhejiang**: Coastal communities may release river lanterns. Traditional foods are prepared for ancestors. Temple ceremonies are common.`,
+        west: `**Sichuan**: The festival is observed with ancestor offerings and paper burning. Some rural areas maintain elaborate ritual traditions. The month-long ghost month has various customs.
+
+**Yunnan**: Multiple ethnic groups have their own ghost-related traditions. The festival may overlap with local harvest celebrations.`,
+      },
+      modernEvolution: `**Commercialization**:
+- Pre-made joss paper offerings are sold in abundance
+- Funeral and ritual supply businesses see peak sales
+- Restaurants offer special "ghost festival" meals
+- Paper houses and luxury items for burning have become elaborate
+
+**Technology Integration**:
+- Online memorial platforms allow virtual offerings
+- Virtual burning of paper offerings through apps
+- Live-streamed ancestor ceremonies for distant family members
+- Social media discussions about ghost month superstitions
+
+**Changing Attitudes**:
+- Younger generations are less likely to observe traditional rituals
+- Urban residents may simplify or skip observances
+- Some view the festival as cultural heritage rather than religious practice
+- Others embrace it as a time for family remembrance
+
+**Environmental Concerns**:
+- Burning paper offerings causes pollution concerns
+- Some cities have restricted burning practices
+- Eco-friendly alternatives are being promoted
+- River lantern releases have been banned in some areas due to pollution`,
+      misconceptions: [
+        {
+          myth: "Ghost Festival is a scary or evil festival",
+          reality:
+            "While ghosts have a fearsome reputation, Ghost Festival is fundamentally about honoring ancestors and showing filial piety. The rituals are meant to appease spirits and ensure they rest peacefully. It's a time of remembrance and family connection, not fear.",
+        },
+        {
+          myth: "All ghosts are dangerous and should be feared",
+          reality:
+            "Chinese ghost beliefs distinguish between ancestor spirits (which are honored) and wandering hungry ghosts (which need appeasement). The festival specifically aims to feed and appease hungry ghosts to prevent them from troubling the living. Not all ghosts are malevolent.",
+        },
+        {
+          myth: "You must avoid everything during Ghost Festival",
+          reality:
+            "While some taboos exist, normal life continues during Ghost Festival. Most people work, travel, and go about their daily activities. The taboos are specific practices to avoid, not complete withdrawal from life. Many people observe the festival traditions while maintaining normal routines.",
+        },
+        {
+          myth: "Ghost Festival is only for Taoists",
+          reality:
+            "The festival has Buddhist, Taoist, and folk religion elements. People of all backgrounds may participate, often mixing traditions. Many Chinese people observe the customs without formal religious affiliation, viewing them as cultural traditions.",
+        },
+        {
+          myth: "The Ghost Festival is always on August 15th",
+          reality:
+            "Ghost Festival falls on the 15th day of the seventh lunar month, which varies between August and September in the Gregorian calendar. In 2024, it falls on August 18th. Always check the lunar calendar for the exact date.",
+        },
+      ],
+    },
+    expressions: [
+      {
+        chinese: "中元节安康",
+        pinyin: "Zhōng yuán jié ān kāng",
+        english: "Peaceful Ghost Festival",
+        scenario: "General greeting",
+      },
+      {
+        chinese: "七月十五",
+        pinyin: "Qī yuè shí wǔ",
+        english: "Fifteenth day of the seventh month",
+        scenario: "Referring to the festival date",
+      },
+      {
+        chinese: "祭祖",
+        pinyin: "Jì zǔ",
+        english: "Honoring ancestors",
+        scenario: "Describing festival activities",
+      },
+    ],
+    foods: [
+      {
+        name: "Ancestor Offerings",
+        emoji: "🍖",
+        meaning: "Feeding ancestors",
+        description: "Meat, fish, and dishes offered to spirits",
+      },
+      {
+        name: "Fresh Fruits",
+        emoji: "🍎",
+        meaning: "Freshness and abundance",
+        description: "Seasonal fruits for offerings",
+      },
+      {
+        name: "Rice",
+        emoji: "🍚",
+        meaning: "Sustenance for spirits",
+        description: "Staple food for ancestor offerings",
+      },
+    ],
+    gifts: [
+      {
+        name: "Joss Paper",
+        emoji: "📜",
+        suitability: "Ritual use",
+        note: "Paper money for burning",
+      },
+      {
+        name: "Incense",
+        emoji: "香",
+        suitability: "Ritual use",
+        note: "For ancestor offerings",
+      },
+      {
+        name: "Food Offerings",
+        emoji: "🍖",
+        suitability: "Ancestor worship",
+        note: "Traditional foods for spirits",
+      },
+    ],
+    tools: [
+      {
+        name: "Ghost Festival Guide",
+        description: "History and traditions of the festival",
+        badge: "New",
+      },
+      {
+        name: "Offering Etiquette",
+        description: "How to properly honor ancestors",
+      },
+      {
+        name: "Taboo Guide",
+        description: "What to avoid during Ghost Festival",
+      },
+    ],
+  },
+  renri: {
+    basicInfo: {
+      name: "Human Day",
+      emoji: "👤",
+      date: "January/February",
+      lunarDate: "7th day of 1st lunar month",
+      description: "Festival celebrating human life and all beings",
+      history:
+        "Human Day (人日), also known as Renri, celebrates the creation of humans according to Chinese mythology. It's considered the birthday of all humanity.",
+      customs: [
+        "Eating seven-vegetable porridge (七菜粥)",
+        "Eating noodles for longevity",
+        "Human-shaped foods",
+        "Wishing for good fortune",
+        "Honoring all living beings",
+        "Writing poetry",
+      ],
+      taboo: [
+        "Don't fight or argue",
+        "Don't hurt living things",
+        "Don't criticize others",
+        "Don't destroy nature",
+      ],
+      // Deep content extensions
+      historyStory: `Human Day (人日), known as Renri (人日) in Chinese, is a traditional festival celebrated on the seventh day of the first lunar month. According to Chinese mythology, this is the day when the goddess Nüwa (女娲) created human beings.
+
+The legend says that on the first day of the first lunar month, Nüwa created chickens. On the second day, she created dogs. On the third day, she created pigs. This pattern continued: fourth day created sheep, fifth day created horses, sixth day created donkeys, and on the seventh day, she created human beings.
+
+Because humans were created last, they are considered the most intelligent and capable of all creatures. The seventh day became known as "Renri" or "Human Day," celebrating the birthday of all humanity.
+
+Another interpretation connects Human Day to the stars. In Chinese astronomy, the planet Venus is associated with the seventh day. The morning star's appearance on this day was seen as auspicious for human endeavors. Ancient people would observe the stars and make wishes on Renri.
+
+The festival also has connections to the "seven emotions" (七情) and "seven virtues" (七德) of human nature. The number seven is considered lucky and associated with human characteristics.`,
+      regionalVariations: {
+        north: `**Northern China**: Eating seven-vegetable porridge is traditional. Some families make human-shaped foods or eat noodles. The day is considered auspicious for new beginnings.
+
+**Beijing**: Traditional customs include eating seven vegetables and noodles. Families gather for special meals. The festival is a time for making wishes for the year.`,
+        south: `**Southern China**: The festival is celebrated with special foods and family gatherings. Seven-vegetable porridge is eaten in some regions. Noodles for longevity are common.
+
+**Guangdong and Hong Kong**: The festival is known as "Yen Yat" (人日). Families eat noodles and special foods. The day is considered auspicious for starting new projects.
+
+**Fujian**: Traditional customs include eating seven vegetables and making wishes. The festival is connected to spring activities and new beginnings.`,
+        east: `**Shanghai and Jiangsu**: Eating seven-vegetable porridge is traditional. Families gather for special meals. The day is seen as a time for renewal and hope.
+
+**Zhejiang**: Special foods are prepared for Human Day. Some regions maintain traditions of human-shaped foods. Poetry writing is associated with the festival.`,
+        west: `**Sichuan**: The festival is celebrated with traditional foods. Seven-vegetable porridge may be eaten. Family gatherings are common.
+
+**Other regions**: Various local customs exist for honoring Human Day. The specific traditions vary by community.`,
+      },
+      modernEvolution: `**Reduced Recognition**:
+- Human Day is one of the less recognized traditional festivals
+- Many young people are unaware of the tradition
+- The festival has largely been overshadowed by Spring Festival
+- Some cultural organizations promote awareness
+
+**Cultural Awareness**:
+- Some educators use Human Day to discuss human creation myths
+- The festival appears in historical and cultural studies
+- Literary circles may organize poetry events
+- Social media has helped spread awareness of the tradition
+
+**Food Traditions**:
+- Seven-vegetable porridge is the most recognized custom
+- Some restaurants offer special Human Day meals
+- Noodles remain popular as a longevity symbol
+- Human-shaped foods are rarely made today
+
+**Symbolic Meaning**:
+- The festival celebrates human life and potential
+- It's a time for reflecting on human values
+- Some view it as a day for environmental consciousness
+- The "don't hurt living things" taboo has been interpreted as animal welfare`,
+      misconceptions: [
+        {
+          myth: "Human Day is not important",
+          reality:
+            "While Human Day is less prominent than Spring Festival, it has significant cultural value. It celebrates the creation of humanity and is associated with hopes for the year. The festival reflects ancient Chinese cosmology and mythology.",
+        },
+        {
+          myth: "Human Day is only about eating",
+          reality:
+            "While food customs are important, Human Day has deeper significance. It's a day for reflecting on human nature, making wishes, and honoring all living beings. Poetry writing and philosophical contemplation are associated traditions.",
+        },
+        {
+          myth: "Human Day must be celebrated on January 7th",
+          reality:
+            "Human Day falls on the seventh day of the first lunar month, not January 7th. The lunar date is what matters. In 2024, it falls on February 16th. Always check the lunar calendar.",
+        },
+        {
+          myth: "Human Day is only for certain people",
+          reality:
+            "According to tradition, Human Day celebrates all humans. It's considered the birthday of everyone, regardless of when they were actually born. The festival has universal significance.",
+        },
+        {
+          myth: "Human Day is no longer relevant",
+          reality:
+            "While the festival has declined in modern times, it still has cultural and educational value. Some people use the day to reflect on human nature, environmental consciousness, and the relationship between humans and nature.",
+        },
+      ],
+    },
+    expressions: [
+      {
+        chinese: "人日快乐",
+        pinyin: "Rén rì kuài lè",
+        english: "Happy Human Day",
+        scenario: "General greeting",
+      },
+      {
+        chinese: "七菜粥",
+        pinyin: "Qī cài zhōu",
+        english: "Seven-vegetable porridge",
+        scenario: "Talking about traditional food",
+      },
+      {
+        chinese: "长寿面",
+        pinyin: "Cháng shòu miàn",
+        english: "Longevity noodles",
+        scenario: "Wishing for long life",
+      },
+    ],
+    foods: [
+      {
+        name: "Seven-Vegetable Porridge",
+        emoji: "🥣",
+        meaning: "Variety and abundance",
+        description: "Porridge with seven different vegetables",
+      },
+      {
+        name: "Longevity Noodles",
+        emoji: "🍜",
+        meaning: "Long life",
+        description: "Uneven long noodles for longevity",
+      },
+      {
+        name: "Human-Shaped Foods",
+        emoji: "🥟",
+        meaning: "Human creation",
+        description: "Foods shaped like humans for the festival",
+      },
+    ],
+    gifts: [
+      {
+        name: "Vegetable Set",
+        emoji: "🥬",
+        suitability: "Families",
+        note: "Seven vegetables for porridge",
+      },
+      {
+        name: "Noodles",
+        emoji: "🍜",
+        suitability: "Everyone",
+        note: "Long noodles for longevity",
+      },
+      {
+        name: "Books",
+        emoji: "📚",
+        suitability: "Students/Children",
+        note: "For learning and growth",
+      },
+    ],
+    tools: [
+      {
+        name: "Human Day Guide",
+        description: "History and traditions of the festival",
+        badge: "New",
+      },
+      {
+        name: "Seven-Vegetable Porridge Recipe",
+        description: "Traditional recipe for the occasion",
+      },
+      {
+        name: "Poetry Templates",
+        description: "Traditional Human Day poems",
+      },
+    ],
+  },
+  wealth_god: {
+    basicInfo: {
+      name: "God of Wealth Festival",
+      emoji: "💰",
+      date: "January/February",
+      lunarDate: "5th day of 1st lunar month",
+      description: "Festival honoring the Wealth God for prosperity",
+      history:
+        "God of Wealth Festival (财神节) celebrates the deity who brings wealth and prosperity. Businesses and families honor the Wealth God for good fortune in the coming year.",
+      customs: [
+        "Offering incense to Wealth God",
+        "Burning joss paper",
+        "Eating dumplings",
+        "Opening businesses for the day",
+        "Red decorations and decorations",
+        "Praying for wealth and prosperity",
+      ],
+      taboo: [
+        "Don't be stingy with offerings",
+        "Don't argue about money",
+        "Don't refuse visitors",
+        "Don't leave the Wealth God waiting",
+      ],
+      // Deep content extensions
+      historyStory: `The God of Wealth Festival (财神节) is celebrated on the fifth day of the first lunar month, the birthday of the Wealth God (财神). This festival is particularly important for businesses and families hoping for prosperity in the new year.
+
+There are several Wealth Gods in Chinese mythology. The most commonly worshipped is Zhao Gongming (赵公明), a Taoist deity who serves as the General of Wealth. According to legend, Zhao Gongming was a mortal general during the Yuan Dynasty who became a powerful deity after his death. He is often depicted riding a black tiger, holding a golden staff, and wearing armor.
+
+Another important Wealth God is Bi Gan (比干), a loyal minister from the Shang Dynasty who was martyred for his honesty. Because of his pure heart and honesty, he was deified as a Wealth God. Offerings to Bi Gan emphasize honest business practices.
+
+A third Wealth God is Fan Li (范蠡), a famous businessman from the Spring and Autumn Period who became the Taoist deity of wealth. Fan Li was known for his business acumen and generosity, and is worshipped by merchants as the patron of commerce.
+
+The fifth day of the first lunar month is considered especially auspicious because it marks the beginning of the "wealth period" in the lunar calendar. Businesses often choose this day to reopen after the New Year holidays, believing it sets the tone for the year's prosperity.`,
+      regionalVariations: {
+        north: `**Northern China**: Businesses often reopen on this day with elaborate ceremonies. Offerings include meat, fruits, and joss paper. Red decorations are prominent.
+
+**Beijing**: Temple fairs may feature Wealth God celebrations. Businesses offer special prayers. The day is important for commercial activities.`,
+        south: `**Southern China**: The festival is particularly important for businesses. Elaborate offerings are made at temples and business premises. Firecrackers and decorations are common.
+
+**Guangdong and Hong Kong**: Businesses reopen with ceremonies. Wealth God temples see increased attendance. The day is considered crucial for the year's business success.
+
+**Fujian and Taiwan**: The festival is celebrated with temple ceremonies. Businesses make elaborate offerings. Cultural performances may accompany celebrations.`,
+        east: `**Shanghai and Jiangsu**: Businesses reopen and offer prayers. Wealth God decorations are prominent. The day is important for commercial and personal prosperity.
+
+**Zhejiang**: Business communities celebrate with ceremonies. Temple visits are common. The festival has strong connections to local commerce.`,
+        west: `**Sichuan**: Businesses celebrate with offerings and ceremonies. The day marks the end of the New Year holiday period for many. Traditional customs are observed.
+
+**Other regions**: Various local traditions exist for honoring the Wealth God. The celebration often coincides with business reopenings.`,
+      },
+      modernEvolution: `**Business Focus**:
+- The festival has become increasingly commercial
+- Businesses use it as a PR opportunity
+- Banks and financial institutions may hold special events
+- The day is often used for business planning
+
+**Religious Practices**:
+- Temple attendance increases on this day
+- Some people make elaborate offerings at home
+- Businesses may hire ritual specialists for ceremonies
+- The religious aspects remain important to many
+
+**Cultural Events**:
+- Some cities organize wealth-related cultural events
+- Art exhibitions and performances may be held
+- The festival appears in cultural heritage celebrations
+- Social media campaigns promote wealth-related content
+
+**Changing Attitudes**:
+- Younger generations may observe less formally
+- Some view it as a cultural tradition rather than religious practice
+- The business aspects are emphasized in urban areas
+- Environmental concerns have affected some practices`,
+      misconceptions: [
+        {
+          myth: "Wealth God Festival is only for businesses",
+          reality:
+            "While businesses place particular importance on the festival, families also participate. Many households make offerings to the Wealth God for household prosperity. The festival has both commercial and domestic dimensions.",
+        },
+        {
+          myth: "Worshipping the Wealth God guarantees wealth",
+          reality:
+            "The festival is about showing respect and making wishes, not guaranteeing results. Traditional teachings emphasize that virtue and hard work are more important than worship. The rituals are expressions of hope, not magical solutions.",
+        },
+        {
+          myth: "You must be wealthy to celebrate",
+          reality:
+            "The festival is for everyone, regardless of their current wealth status. People of all economic backgrounds participate, making wishes for improvement. The celebration is about hope and aspiration, not existing wealth.",
+        },
+        {
+          myth: "Wealth God Festival is materialistic",
+          reality:
+            "While the festival involves wishes for prosperity, it also emphasizes honest business practices (especially for the Bi Gan tradition) and generosity. Some Wealth Gods are specifically associated with moral virtues, not just material wealth.",
+        },
+        {
+          myth: "The festival must be on February 5th",
+          reality:
+            "Wealth God Festival falls on the fifth day of the first lunar month, which varies between late January and mid-February in the Gregorian calendar. The lunar date is what matters, not the Gregorian equivalent.",
+        },
+      ],
+    },
+    expressions: [
+      {
+        chinese: "财源滚滚",
+        pinyin: "Cái yuán gǔn gǔn",
+        english: "May wealth roll in",
+        scenario: "Wealth blessing",
+      },
+      {
+        chinese: "招财进宝",
+        pinyin: "Zhāo cái jìn bǎo",
+        english: "May wealth and treasures come",
+        scenario: "Prosperity wish",
+      },
+      {
+        chinese: "恭喜发财",
+        pinyin: "Gōng xǐ fā cái",
+        english: "Wishing you wealth and prosperity",
+        scenario: "Traditional blessing",
+      },
+    ],
+    foods: [
+      {
+        name: "Dumplings",
+        emoji: "🥟",
+        meaning: "Wealth and treasure",
+        description: "Dumplings shaped like ancient gold ingots",
+      },
+      {
+        name: "Whole Fish",
+        emoji: "🐟",
+        meaning: "Surplus and abundance",
+        description: "Fish for wealth and prosperity",
+      },
+      {
+        name: "Prosperity Noodles",
+        emoji: "🍜",
+        meaning: "Long-lasting wealth",
+        description: "Long noodles for sustained prosperity",
+      },
+    ],
+    gifts: [
+      {
+        name: "Wealth God Statue",
+        emoji: "🗿",
+        suitability: "Businesses/Homes",
+        note: "For home or business altar",
+      },
+      {
+        name: "Red Decorations",
+        emoji: "🏮",
+        suitability: "Businesses",
+        note: "Red items for prosperity",
+      },
+      {
+        name: "Prosperity Symbol",
+        emoji: "💰",
+        suitability: "Everyone",
+        note: "Symbolic wealth items",
+      },
+    ],
+    tools: [
+      {
+        name: "Wealth God Guide",
+        description: "History and traditions of the festival",
+        badge: "New",
+      },
+      {
+        name: "Business Blessings",
+        description: "Prayers for commercial success",
+      },
+      {
+        name: "Wealth Expressions",
+        description: "Traditional prosperity phrases",
+      },
+    ],
+  },
 };
 
 // Learn page festivals data
@@ -2426,6 +3662,62 @@ export const learnPageFestivals = [
     emoji: "🥣",
     subtitleKey: "laba.learn.subtitle",
     tools: 5,
+    difficultyKey: "difficulty.beginner",
+  },
+  {
+    id: "longtaitou",
+    nameKey: "longtaitou.name",
+    emoji: "🐉",
+    subtitleKey: "longtaitou.learn.subtitle",
+    tools: 3,
+    difficultyKey: "difficulty.beginner",
+  },
+  {
+    id: "shangsi",
+    nameKey: "shangsi.name",
+    emoji: "🌸",
+    subtitleKey: "shangsi.learn.subtitle",
+    tools: 3,
+    difficultyKey: "difficulty.intermediate",
+  },
+  {
+    id: "new_years_eve",
+    nameKey: "new_years_eve.name",
+    emoji: "🎊",
+    subtitleKey: "new_years_eve.learn.subtitle",
+    tools: 4,
+    difficultyKey: "difficulty.beginner",
+  },
+  {
+    id: "cold_food",
+    nameKey: "cold_food.name",
+    emoji: "🥗",
+    subtitleKey: "cold_food.learn.subtitle",
+    tools: 3,
+    difficultyKey: "difficulty.intermediate",
+  },
+  {
+    id: "ghost",
+    nameKey: "ghost.name",
+    emoji: "👻",
+    subtitleKey: "ghost.learn.subtitle",
+    tools: 3,
+    difficultyKey: "difficulty.intermediate",
+  },
+  {
+    id: "renri",
+    nameKey: "renri.name",
+    emoji: "👤",
+    subtitleKey: "renri.learn.subtitle",
+    tools: 3,
+    difficultyKey: "difficulty.beginner",
+  },
+  {
+    id: "wealth_god",
+    nameKey: "wealth_god.name",
+    emoji: "💰",
+    subtitleKey: "wealth_god.learn.subtitle",
+    tools: 3,
     difficultyKey: "difficulty.beginner",
   },
 ] as const;
@@ -2969,6 +4261,415 @@ export const quizQuestions: Record<
       ],
       correctIndex: 0,
       explanationKey: "quiz.laba.q5.explain",
+      category: "customs",
+    },
+  ],
+  longtaitou: [
+    {
+      id: 1,
+      questionKey: "quiz.longtaitou.q1",
+      options: ["February/March", "January", "April", "May"],
+      correctIndex: 0,
+      explanationKey: "quiz.longtaitou.q1.explain",
+      category: "history",
+    },
+    {
+      id: 2,
+      questionKey: "quiz.longtaitou.q2",
+      options: [
+        "2nd day of 2nd lunar month",
+        "1st day of 2nd lunar month",
+        "15th day of 1st lunar month",
+        "5th day of 5th lunar month",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.longtaitou.q2.explain",
+      category: "history",
+    },
+    {
+      id: 3,
+      questionKey: "quiz.longtaitou.q3",
+      options: ["Getting a haircut", "Eating zongzi", "Lighting lanterns", "Flying kites"],
+      correctIndex: 0,
+      explanationKey: "quiz.longtaitou.q3.explain",
+      category: "customs",
+    },
+    {
+      id: 4,
+      questionKey: "quiz.longtaitou.q4",
+      options: ["Spring Pancakes", "Mooncakes", "Qingtuan", "Tangyuan"],
+      correctIndex: 0,
+      explanationKey: "quiz.longtaitou.q4.explain",
+      category: "food",
+    },
+    {
+      id: 5,
+      questionKey: "quiz.longtaitou.q5",
+      options: [
+        "It celebrates the dragon's awakening",
+        "It is the Chinese New Year",
+        "It honors ancestors",
+        "It celebrates harvest",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.longtaitou.q5.explain",
+      category: "customs",
+    },
+  ],
+  shangsi: [
+    {
+      id: 1,
+      questionKey: "quiz.shangsi.q1",
+      options: ["March/April", "February", "May", "June"],
+      correctIndex: 0,
+      explanationKey: "quiz.shangsi.q1.explain",
+      category: "history",
+    },
+    {
+      id: 2,
+      questionKey: "quiz.shangsi.q2",
+      options: [
+        "3rd day of 3rd lunar month",
+        "15th day of 1st lunar month",
+        "5th day of 5th lunar month",
+        "9th day of 9th lunar month",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.shangsi.q2.explain",
+      category: "history",
+    },
+    {
+      id: 3,
+      questionKey: "quiz.shangsi.q3",
+      options: [
+        "Spring bathing and purification",
+        "Dragon boat racing",
+        "Moon viewing",
+        "Tomb sweeping",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.shangsi.q3.explain",
+      category: "customs",
+    },
+    {
+      id: 4,
+      questionKey: "quiz.shangsi.q4",
+      options: ["Kite flying", "Eating mooncakes", "Lighting lanterns", "Setting off fireworks"],
+      correctIndex: 0,
+      explanationKey: "quiz.shangsi.q4.explain",
+      category: "customs",
+    },
+    {
+      id: 5,
+      questionKey: "quiz.shangsi.q5",
+      options: [
+        "One of China's oldest traditions",
+        "A modern holiday",
+        "A Buddhist festival",
+        "A harvest celebration only",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.shangsi.q5.explain",
+      category: "history",
+    },
+  ],
+  new_years_eve: [
+    {
+      id: 1,
+      questionKey: "quiz.new_years_eve.q1",
+      options: ["January/February", "December 31", "March 15", "October 1"],
+      correctIndex: 0,
+      explanationKey: "quiz.new_years_eve.q1.explain",
+      category: "history",
+    },
+    {
+      id: 2,
+      questionKey: "quiz.new_years_eve.q2",
+      options: [
+        "30th day of 12th lunar month",
+        "1st day of 1st lunar month",
+        "15th day of 1st lunar month",
+        "29th day of 12th lunar month",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.new_years_eve.q2.explain",
+      category: "history",
+    },
+    {
+      id: 3,
+      questionKey: "quiz.new_years_eve.q3",
+      options: [
+        "Reunion dinner with family",
+        "Watching dragon boat races",
+        "Moon viewing",
+        "Tomb sweeping",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.new_years_eve.q3.explain",
+      category: "customs",
+    },
+    {
+      id: 4,
+      questionKey: "quiz.new_years_eve.q4",
+      options: ["Dumplings", "Mooncakes", "Zongzi", "Qingtuan"],
+      correctIndex: 0,
+      explanationKey: "quiz.new_years_eve.q4.explain",
+      category: "food",
+    },
+    {
+      id: 5,
+      questionKey: "quiz.new_years_eve.q5",
+      options: [
+        "Staying up late to welcome the new year",
+        "Sleeping early for luck",
+        "Working late",
+        "Avoiding all activities",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.new_years_eve.q5.explain",
+      category: "etiquette",
+    },
+  ],
+  cold_food: [
+    {
+      id: 1,
+      questionKey: "quiz.cold_food.q1",
+      options: ["April 3-5", "April 4-5", "March 15", "May 1"],
+      correctIndex: 0,
+      explanationKey: "quiz.cold_food.q1.explain",
+      category: "history",
+    },
+    {
+      id: 2,
+      questionKey: "quiz.cold_food.q2",
+      options: [
+        "Day before Qingming",
+        "Day after Qingming",
+        "Same day as Qingming",
+        "Unrelated to Qingming",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.cold_food.q2.explain",
+      category: "history",
+    },
+    {
+      id: 3,
+      questionKey: "quiz.cold_food.q3",
+      options: [
+        "Eating cold food only",
+        "Lighting fires",
+        "Eating hot soup",
+        "Setting off fireworks",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.cold_food.q3.explain",
+      category: "customs",
+    },
+    {
+      id: 4,
+      questionKey: "quiz.cold_food.q4",
+      options: ["Qingtuan", "Zongzi", "Mooncakes", "Dumplings"],
+      correctIndex: 0,
+      explanationKey: "quiz.cold_food.q4.explain",
+      category: "food",
+    },
+    {
+      id: 5,
+      questionKey: "quiz.cold_food.q5",
+      options: [
+        "Commemorating Jie Zitui",
+        "Honoring Qu Yuan",
+        "Celebrating the harvest",
+        "Welcoming spring",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.cold_food.q5.explain",
+      category: "history",
+    },
+  ],
+  ghost: [
+    {
+      id: 1,
+      questionKey: "quiz.ghost.q1",
+      options: ["August", "July", "September", "October"],
+      correctIndex: 0,
+      explanationKey: "quiz.ghost.q1.explain",
+      category: "history",
+    },
+    {
+      id: 2,
+      questionKey: "quiz.ghost.q2",
+      options: [
+        "15th day of 7th lunar month",
+        "15th day of 8th lunar month",
+        "1st day of 7th lunar month",
+        "30th day of 6th lunar month",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.ghost.q2.explain",
+      category: "history",
+    },
+    {
+      id: 3,
+      questionKey: "quiz.ghost.q3",
+      options: [
+        "Honoring ancestors and appeasing spirits",
+        "Dragon boat racing",
+        "Moon viewing",
+        "Family reunions",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.ghost.q3.explain",
+      category: "customs",
+    },
+    {
+      id: 4,
+      questionKey: "quiz.ghost.q4",
+      options: [
+        "Burning joss paper and offerings",
+        "Eating mooncakes",
+        "Lighting lanterns",
+        "Setting off fireworks",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.ghost.q4.explain",
+      category: "customs",
+    },
+    {
+      id: 5,
+      questionKey: "quiz.ghost.q5",
+      options: [
+        "Spirits visit the mortal world",
+        "It is a happy festival",
+        "It celebrates dragons",
+        "It honors warriors only",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.ghost.q5.explain",
+      category: "history",
+    },
+  ],
+  renri: [
+    {
+      id: 1,
+      questionKey: "quiz.renri.q1",
+      options: ["January/February", "March", "April", "December"],
+      correctIndex: 0,
+      explanationKey: "quiz.renri.q1.explain",
+      category: "history",
+    },
+    {
+      id: 2,
+      questionKey: "quiz.renri.q2",
+      options: [
+        "7th day of 1st lunar month",
+        "1st day of 1st lunar month",
+        "15th day of 1st lunar month",
+        "2nd day of 2nd lunar month",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.renri.q2.explain",
+      category: "history",
+    },
+    {
+      id: 3,
+      questionKey: "quiz.renri.q3",
+      options: [
+        "Human Day - celebrating human creation",
+        "Dragon festival",
+        "Ancestor worship day",
+        "Harvest festival",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.renri.q3.explain",
+      category: "history",
+    },
+    {
+      id: 4,
+      questionKey: "quiz.renri.q4",
+      options: [
+        "Seven-vegetable porridge",
+        "Mooncakes",
+        "Zongzi",
+        "Qingtuan",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.renri.q4.explain",
+      category: "food",
+    },
+    {
+      id: 5,
+      questionKey: "quiz.renri.q5",
+      options: [
+        "Celebrating goddess Nüwa's creation of humans",
+        "Honoring the Dragon King",
+        "Commemorating Qu Yuan",
+        "Celebrating harvest",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.renri.q5.explain",
+      category: "history",
+    },
+  ],
+  wealth_god: [
+    {
+      id: 1,
+      questionKey: "quiz.wealth_god.q1",
+      options: ["January/February", "March", "September", "December"],
+      correctIndex: 0,
+      explanationKey: "quiz.wealth_god.q1.explain",
+      category: "history",
+    },
+    {
+      id: 2,
+      questionKey: "quiz.wealth_god.q2",
+      options: [
+        "5th day of 1st lunar month",
+        "1st day of 1st lunar month",
+        "15th day of 1st lunar month",
+        "2nd day of 2nd lunar month",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.wealth_god.q2.explain",
+      category: "history",
+    },
+    {
+      id: 3,
+      questionKey: "quiz.wealth_god.q3",
+      options: [
+        "The Wealth God's birthday",
+        "Dragon Boat Festival",
+        "Mid-Autumn Festival",
+        "Spring Festival",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.wealth_god.q3.explain",
+      category: "history",
+    },
+    {
+      id: 4,
+      questionKey: "quiz.wealth_god.q4",
+      options: [
+        "Business prayers and prosperity wishes",
+        "Eating mooncakes",
+        "Tomb sweeping",
+        "Dragon boat racing",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.wealth_god.q4.explain",
+      category: "customs",
+    },
+    {
+      id: 5,
+      questionKey: "quiz.wealth_god.q5",
+      options: [
+        "Praying for wealth and prosperity",
+        "Honoring ancestors",
+        "Celebrating harvest",
+        "Family reunions",
+      ],
+      correctIndex: 0,
+      explanationKey: "quiz.wealth_god.q5.explain",
       category: "customs",
     },
   ],
