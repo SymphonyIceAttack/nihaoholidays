@@ -17,6 +17,7 @@ export const common = {
   "common.learnMore": "Learn more",
   "common.exploreCulture": "Explore Culture",
   "common.playQuiz": "Play Quiz",
+  "common.tools": "Tools",
 
   // Header
   "header.start": "Start Learning",

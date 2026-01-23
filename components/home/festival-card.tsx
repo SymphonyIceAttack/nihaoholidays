@@ -23,26 +23,47 @@ const toolIcons = {
 };
 
 const toolHref: Record<string, string> = {
-  "Design a New Year's Eve Feast": "{lang}/tool/menu",
-  "New Year Greeting Generator": "{lang}/tool/greetings",
-  "Red Envelope Guide": "{lang}/tool/red-envelope",
-  "Lantern Riddles Game": "{lang}/tool/riddles",
-  "Tangyuan Filling Guide": "{lang}/tool/tangyuan",
-  "Qingming Traditions Guide": "{lang}/tool/qingming",
-  "Ceremonial Expressions & Taboos": "{lang}/tool/qingming-etiquette",
-  "Zongzi Flavor Guide": "{lang}/tool/zongzi",
-  "Dragon Boat Festival Blessings": "{lang}/tool/dragon-boat-blessings",
-  "Dragon Boat Culture Introduction": "{lang}/tool/dragon-boat-culture",
-  "Qixi Blessings": "{lang}/tool/qixi-blessings",
-  "Date Spot Recommendations": "{lang}/tool/qixi-dates",
-  "Gift Guide": "{lang}/tool/qixi-gifts",
-  "Choose a Mooncake Gift Box": "{lang}/tool/mooncake",
-  "Mooncake Flavor Guide": "{lang}/tool/mooncake-flavor",
-  "Mid-Autumn Blessing Templates": "{lang}/tool/mid-autumn-blessings",
-  "Double Ninth Blessings": "{lang}/tool/chongyang-blessings",
-  "Elder Respect Etiquette": "{lang}/tool/chongyang-etiquette",
-  "North-South Food Differences": "{lang}/tool/winter-solstice-food",
-  "Winter Solstice Blessings": "{lang}/tool/winter-solstice-blessings",
+  "Design a New Year's Eve Feast": "/tool/menu",
+  "New Year Greeting Generator": "/tool/greetings",
+  "Red Envelope Guide": "/tool/red-envelope",
+  "Lantern Riddles Game": "/tool/riddles",
+  "Tangyuan Filling Guide": "/tool/tangyuan",
+  "Qingming Traditions Guide": "/tool/qingming",
+  "Ceremonial Expressions & Taboos": "/tool/qingming-etiquette",
+  "Zongzi Flavor Guide": "/tool/zongzi",
+  "Dragon Boat Festival Blessings": "/tool/dragon-boat-blessings",
+  "Dragon Boat Culture Introduction": "/tool/dragon-boat-culture",
+  "Qixi Blessings": "/tool/qixi-blessings",
+  "Date Spot Recommendations": "/tool/qixi-dates",
+  "Gift Guide": "/tool/qixi-gifts",
+  "Choose a Mooncake Gift Box": "/tool/mooncake",
+  "Mooncake Flavor Guide": "/tool/mooncake-flavor",
+  "Mid-Autumn Blessing Templates": "/tool/mid-autumn-blessings",
+  "Double Ninth Blessings": "/tool/chongyang-blessings",
+  "Elder Respect Etiquette": "/tool/chongyang-etiquette",
+  "Chrysanthemum Tea Guide": "/tool/chrysanthemum-tea",
+  "North-South Food Differences": "/tool/winter-solstice-food",
+  "Winter Solstice Blessings": "/tool/winter-solstice-blessings",
+  "Dumpling vs Tangyuan Guide": "/tool/dumpling-tangyuan",
+  "Laba Porridge Recipe": "/tool/laba-porridge",
+  "Laba Festival Blessings": "/tool/laba-blessings",
+  "Spring Festival Prep Guide": "/tool/spring-prep",
+  "Haircut Guide": "/tool/haircut",
+  "Dragon Foods Guide": "/tool/dragon-foods",
+  "Spring Pancake Recipe": "/tool/spring-pancake",
+  "Spring Outing Planner": "/tool/spring-outing",
+  "Kite Flying Guide": "/tool/kite-flying",
+  "Chrysanthemum Recipe Collection": "/tool/chrysanthemum-recipes",
+  "Reunion Dinner Menu": "/tool/menu",
+  "New Year Greetings": "/tool/greetings",
+  "Taboo Guide": "/tool/taboo",
+  "Cold Food Guide": "/tool/cold-food",
+  "Qingtuan Recipe": "/tool/qingtuan",
+  "Ghost Festival Guide": "/tool/ghost-festival",
+  "Offering Etiquette": "/tool/offering-etiquette",
+  "Human Day Guide": "/tool/human-day",
+  "Seven-Vegetable Porridge Recipe": "/tool/seven-vegetable-porridge",
+  "Poetry Templates": "/tool/poetry-templates",
 };
 
 interface FestivalCardProps {
@@ -127,7 +148,7 @@ export function FestivalCard({ festival, lang = "en" }: FestivalCardProps) {
           <div className="pt-2 border-t border-border/50">
             <p className="text-xs text-muted-foreground mb-2 flex items-center gap-1">
               <span className="w-1 h-1 rounded-full bg-rose-400" />
-              场景工具
+              {translations[lang]["common.tools"]}
             </p>
             <div className="flex flex-wrap gap-2">
               {festival.tools.map((tool) => {

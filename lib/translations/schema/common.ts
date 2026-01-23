@@ -19,6 +19,7 @@ export const commonSchema = z.object({
   "common.learnMore": z.string(),
   "common.exploreCulture": z.string(),
   "common.playQuiz": z.string(),
+  "common.tools": z.string(),
   // Header translations
   "header.start": z.string(),
   "header.explore": z.string(),

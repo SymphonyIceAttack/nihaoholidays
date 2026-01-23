@@ -226,6 +226,118 @@ const tools = [
     color: "from-orange-500 to-amber-500",
   },
   {
+    id: "chrysanthemum-recipes",
+    title: "Chrysanthemum Recipes",
+    description: "Traditional dishes and culinary uses of chrysanthemum flowers.",
+    icon: Utensils,
+    href: "/tool/chrysanthemum-recipes",
+    color: "from-yellow-500 to-orange-500",
+  },
+  {
+    id: "dragon-foods",
+    title: "Dragon Foods Guide",
+    description: "Traditional foods and customs during Dragon Boat Festival.",
+    icon: Utensils,
+    href: "/tool/dragon-foods",
+    color: "from-cyan-500 to-teal-500",
+  },
+  {
+    id: "haircut",
+    title: "Haircut Guide",
+    description: "Traditional customs and taboos for getting a haircut during festivals.",
+    icon: Sparkles,
+    href: "/tool/haircut",
+    color: "from-violet-500 to-purple-500",
+  },
+  {
+    id: "human-day",
+    title: "Human Day Guide",
+    description: "Celebrating the 7th day of the first lunar month and the creation of humanity.",
+    icon: Heart,
+    href: "/tool/human-day",
+    color: "from-purple-500 to-pink-500",
+  },
+  {
+    id: "kite-flying",
+    title: "Kite Flying Guide",
+    description: "Traditional kite flying customs and techniques for festivals.",
+    icon: Sparkles,
+    href: "/tool/kite-flying",
+    color: "from-sky-500 to-blue-500",
+  },
+  {
+    id: "offering-etiquette",
+    title: "Offering Etiquette",
+    description: "Proper customs for making offerings to ancestors and spirits.",
+    icon: Heart,
+    href: "/tool/offering-etiquette",
+    color: "from-amber-500 to-yellow-500",
+  },
+  {
+    id: "poetry-templates",
+    title: "Poetry Templates",
+    description: "Traditional Chinese poetry templates for expressing wishes.",
+    icon: BookOpen,
+    href: "/tool/poetry-templates",
+    color: "from-red-500 to-rose-500",
+  },
+  {
+    id: "qingtuan",
+    title: "Qingtuan Recipe",
+    description: "Traditional green rice balls made with mugwort leaves for Qingming Festival.",
+    icon: Utensils,
+    href: "/tool/qingtuan",
+    color: "from-green-500 to-emerald-500",
+  },
+  {
+    id: "seven-vegetable-porridge",
+    title: "Seven-Vegetable Porridge",
+    description: "Traditional seven-vegetable porridge recipe for Human Day.",
+    icon: Utensils,
+    href: "/tool/seven-vegetable-porridge",
+    color: "from-green-400 to-teal-500",
+  },
+  {
+    id: "spring-outing",
+    title: "Spring Outing Guide",
+    description: "Traditions and customs of spring outings during Qingming Festival.",
+    icon: Sparkles,
+    href: "/tool/spring-outing",
+    color: "from-green-500 to-lime-500",
+  },
+  {
+    id: "spring-pancake",
+    title: "Spring Pancake Guide",
+    description: "Traditional spring pancake recipes and customs.",
+    icon: Utensils,
+    href: "/tool/spring-pancake",
+    color: "from-yellow-500 to-amber-500",
+  },
+  {
+    id: "taboo",
+    title: "Festival Taboo Guide",
+    description: "Traditional Chinese festival taboos and what to avoid for good luck.",
+    icon: Sparkles,
+    href: "/tool/taboo",
+    color: "from-red-600 to-orange-600",
+  },
+  {
+    id: "cold-food",
+    title: "Cold Food Guide",
+    description: "Understanding Cold Food Festival traditions and customs.",
+    icon: Thermometer,
+    href: "/tool/cold-food",
+    color: "from-cyan-500 to-blue-500",
+  },
+  {
+    id: "ghost-festival",
+    title: "Ghost Festival Guide",
+    description: "Understanding Ghost Festival traditions and ancestor worship customs.",
+    icon: Sparkles,
+    href: "/tool/ghost-festival",
+    color: "from-slate-500 to-gray-500",
+  },
+  {
     id: "spring-prep",
     title: "Spring Prep Guide",
     description: "Preparing for Spring Festival with traditional customs.",
@@ -243,11 +355,11 @@ export function ToolListPage({ lang = "en" }: { lang?: LanguageType } = {}) {
           <div className="text-center mb-12">
             <span className="text-6xl mb-4 block">🛠️</span>
             <h1 className="text-3xl font-bold text-foreground mb-3">
-              Chinese New Year Tools
+              Festival Tools
             </h1>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Handy tools to help you celebrate and navigate Chinese New Year
-              with confidence.
+              Handy tools to help you celebrate Chinese festivals and navigate
+              traditions with confidence.
             </p>
           </div>
 
@@ -296,7 +408,7 @@ export function ToolListPage({ lang = "en" }: { lang?: LanguageType } = {}) {
                   Want to Learn More?
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Explore our comprehensive learning resources
+                  Explore our comprehensive festival learning resources
                 </p>
               </div>
             </div>
