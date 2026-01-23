@@ -4289,7 +4289,12 @@ export const quizQuestions: Record<
     {
       id: 3,
       questionKey: "quiz.longtaitou.q3",
-      options: ["Getting a haircut", "Eating zongzi", "Lighting lanterns", "Flying kites"],
+      options: [
+        "Getting a haircut",
+        "Eating zongzi",
+        "Lighting lanterns",
+        "Flying kites",
+      ],
       correctIndex: 0,
       explanationKey: "quiz.longtaitou.q3.explain",
       category: "customs",
@@ -4354,7 +4359,12 @@ export const quizQuestions: Record<
     {
       id: 4,
       questionKey: "quiz.shangsi.q4",
-      options: ["Kite flying", "Eating mooncakes", "Lighting lanterns", "Setting off fireworks"],
+      options: [
+        "Kite flying",
+        "Eating mooncakes",
+        "Lighting lanterns",
+        "Setting off fireworks",
+      ],
       correctIndex: 0,
       explanationKey: "quiz.shangsi.q4.explain",
       category: "customs",
@@ -4587,12 +4597,7 @@ export const quizQuestions: Record<
     {
       id: 4,
       questionKey: "quiz.renri.q4",
-      options: [
-        "Seven-vegetable porridge",
-        "Mooncakes",
-        "Zongzi",
-        "Qingtuan",
-      ],
+      options: ["Seven-vegetable porridge", "Mooncakes", "Zongzi", "Qingtuan"],
       correctIndex: 0,
       explanationKey: "quiz.renri.q4.explain",
       category: "food",

@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import type { FestivalWithDisplayInfo } from "@/lib/festivals";
 import { translations } from "@/lib/translations";
+import type { LanguageType } from "@/lib/translations/config";
 import { cn } from "@/lib/utils";
 
 const toolIcons = {
@@ -22,29 +23,27 @@ const toolIcons = {
 };
 
 const toolHref: Record<string, string> = {
-  "Design a New Year's Eve Feast": "/en/tool/menu",
-  "New Year Greeting Generator": "/en/tool/greetings",
-  "Red Envelope Guide": "/en/tool/red-envelope",
-  "Lantern Riddles Game": "/en/tool/riddles",
-  "Tangyuan Filling Guide": "/en/tool/tangyuan",
-  "Qingming Traditions Guide": "/en/tool/qingming",
-  "Ceremonial Expressions & Taboos": "/en/tool/qingming-etiquette",
-  "Zongzi Flavor Guide": "/en/tool/zongzi",
-  "Dragon Boat Festival Blessings": "/en/tool/dragon-boat-blessings",
-  "Dragon Boat Culture Introduction": "/en/tool/dragon-boat-culture",
-  "Qixi Blessings": "/en/tool/qixi-blessings",
-  "Date Spot Recommendations": "/en/tool/qixi-dates",
-  "Gift Guide": "/en/tool/qixi-gifts",
-  "Choose a Mooncake Gift Box": "/en/tool/mooncake",
-  "Mooncake Flavor Guide": "/en/tool/mooncake-flavor",
-  "Mid-Autumn Blessing Templates": "/en/tool/mid-autumn-blessings",
-  "Double Ninth Blessings": "/en/tool/chongyang-blessings",
-  "Elder Respect Etiquette": "/en/tool/chongyang-etiquette",
-  "North-South Food Differences": "/en/tool/winter-solstice-food",
-  "Winter Solstice Blessings": "/en/tool/winter-solstice-blessings",
+  "Design a New Year's Eve Feast": "{lang}/tool/menu",
+  "New Year Greeting Generator": "{lang}/tool/greetings",
+  "Red Envelope Guide": "{lang}/tool/red-envelope",
+  "Lantern Riddles Game": "{lang}/tool/riddles",
+  "Tangyuan Filling Guide": "{lang}/tool/tangyuan",
+  "Qingming Traditions Guide": "{lang}/tool/qingming",
+  "Ceremonial Expressions & Taboos": "{lang}/tool/qingming-etiquette",
+  "Zongzi Flavor Guide": "{lang}/tool/zongzi",
+  "Dragon Boat Festival Blessings": "{lang}/tool/dragon-boat-blessings",
+  "Dragon Boat Culture Introduction": "{lang}/tool/dragon-boat-culture",
+  "Qixi Blessings": "{lang}/tool/qixi-blessings",
+  "Date Spot Recommendations": "{lang}/tool/qixi-dates",
+  "Gift Guide": "{lang}/tool/qixi-gifts",
+  "Choose a Mooncake Gift Box": "{lang}/tool/mooncake",
+  "Mooncake Flavor Guide": "{lang}/tool/mooncake-flavor",
+  "Mid-Autumn Blessing Templates": "{lang}/tool/mid-autumn-blessings",
+  "Double Ninth Blessings": "{lang}/tool/chongyang-blessings",
+  "Elder Respect Etiquette": "{lang}/tool/chongyang-etiquette",
+  "North-South Food Differences": "{lang}/tool/winter-solstice-food",
+  "Winter Solstice Blessings": "{lang}/tool/winter-solstice-blessings",
 };
-
-import type { LanguageType } from "@/lib/translations/config";
 
 interface FestivalCardProps {
   festival: FestivalWithDisplayInfo;
@@ -54,7 +53,6 @@ interface FestivalCardProps {
 export function FestivalCard({ festival, lang = "en" }: FestivalCardProps) {
   return (
     <Card className="group relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-rose-200/50">
-      {/* Gradient overlay on hover */}
       <div className="absolute inset-0 bg-gradient-to-br from-rose-50/50 via-transparent to-orange-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
       {festival.isRecommended && (
@@ -134,7 +132,9 @@ export function FestivalCard({ festival, lang = "en" }: FestivalCardProps) {
             <div className="flex flex-wrap gap-2">
               {festival.tools.map((tool) => {
                 const Icon = toolIcons[tool.type];
-                const href = toolHref[tool.name] || "/en/tool";
+                const href = toolHref[tool.name]
+                  ? `/${lang}${toolHref[tool.name]}`
+                  : `/${lang}/tool`;
                 return (
                   <Link key={tool.name} href={href}>
                     <Button

@@ -1,8 +1,7 @@
 export const common = {
   "common.nav.home": "Home",
-  "common.nav.festivals": "Festivals",
   "common.nav.food": "Food",
-  "common.nav.tools": "Tools",
+  "common.nav.tool": "Tool",
   "common.nav.about": "About",
   "common.nav.contact": "Contact",
   "common.nav.privacy": "Privacy Policy",
@@ -18,4 +17,12 @@ export const common = {
   "common.learnMore": "Learn more",
   "common.exploreCulture": "Explore Culture",
   "common.playQuiz": "Play Quiz",
+
+  // Header
+  "header.start": "Start Learning",
+  "header.explore": "Explore",
+  "header.about": "About",
+  "header.legal": "Legal",
+  "header.closeMenu": "Close menu",
+  "header.openMenu": "Open menu",
 } as const;

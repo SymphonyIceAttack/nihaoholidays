@@ -128,9 +128,8 @@ export function DragonBoatBlessingsPage({
               </p>
               <p>
                 Legend says local fishermen raced boats to find his body and
-                threw zongzi into the water to prevent fish from eating it.
-                This is why we celebrate with dragon boat races and eat zongzi
-                today.
+                threw zongzi into the water to prevent fish from eating it. This
+                is why we celebrate with dragon boat races and eat zongzi today.
               </p>
             </div>
           </div>

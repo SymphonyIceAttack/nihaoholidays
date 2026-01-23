@@ -24,7 +24,7 @@ const featuredTools = [
     color: "orange",
     badge: "Popular",
     festival: "Spring Festival",
-    href: "/en/tool/menu",
+    href: "/tool/menu",
   },
   {
     id: "greeting-generator",
@@ -35,7 +35,7 @@ const featuredTools = [
     color: "blue",
     badge: "AI-powered",
     festival: "All",
-    href: "/en/tool/greetings",
+    href: "/tool/greetings",
   },
   {
     id: "gift-guide",
@@ -45,7 +45,7 @@ const featuredTools = [
       "Understand Chinese gift-giving taboos and customs to avoid awkward situations and choose the most appropriate gifts.",
     color: "purple",
     festival: "All",
-    href: "/en/tool/red-envelope",
+    href: "/tool/red-envelope",
   },
   {
     id: "dumpling-tangyuan",
@@ -55,7 +55,7 @@ const featuredTools = [
       "Learn the cultural significance of dumplings and tangyuan, their traditions, and how to enjoy them during festivals.",
     color: "emerald",
     festival: "Winter Solstice",
-    href: "/en/tool/dumpling-tangyuan",
+    href: "/tool/dumpling-tangyuan",
   },
 ];
 
@@ -115,8 +115,9 @@ export function FeaturedTools({ lang = "en" }: { lang?: LanguageType }) {
           {featuredTools.map((tool) => {
             const Icon = tool.icon;
             const colors = colorMap[tool.color as keyof typeof colorMap];
+            const href = tool.href ? `/${lang}${tool.href}` : `/${lang}/tool`;
             return (
-              <Link key={tool.id} href={tool.href || `#`}>
+              <Link key={tool.id} href={href}>
                 <Card
                   className={cn(
                     "overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer",

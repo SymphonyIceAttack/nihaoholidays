@@ -1,6 +1,8 @@
 import {
   ArrowLeft,
+  BookOpen,
   Gift,
+  Heart,
   Menu as MenuIcon,
   MessageCircleHeart,
   Sparkles,
@@ -39,6 +41,115 @@ const tools = [
     color: "from-red-500 to-pink-500",
   },
   {
+    id: "riddles",
+    title: "Lantern Riddles Game",
+    description:
+      "Test your knowledge with traditional Chinese lantern riddles.",
+    icon: Sparkles,
+    href: "/tool/riddles",
+    color: "from-yellow-500 to-amber-500",
+  },
+  {
+    id: "tangyuan",
+    title: "Tangyuan Guide",
+    description: "Sweet rice balls and their significance during festivals.",
+    icon: Utensils,
+    href: "/tool/tangyuan",
+    color: "from-pink-500 to-rose-500",
+  },
+  {
+    id: "qingming",
+    title: "Qingming Guide",
+    description: "Tomb sweeping traditions and customs for Qingming Festival.",
+    icon: BookOpen,
+    href: "/tool/qingming",
+    color: "from-green-500 to-emerald-500",
+  },
+  {
+    id: "qingming-etiquette",
+    title: "Qingming Etiquette",
+    description:
+      "Proper ceremonies and respectful behaviors during Qingming Festival.",
+    icon: Heart,
+    href: "/tool/qingming-etiquette",
+    color: "from-green-400 to-teal-500",
+  },
+  {
+    id: "zongzi",
+    title: "Zongzi Guide",
+    description: "Traditional rice dumplings for Dragon Boat Festival.",
+    icon: Utensils,
+    href: "/tool/zongzi",
+    color: "from-green-600 to-lime-500",
+  },
+  {
+    id: "dragon-boat-blessings",
+    title: "Dragon Boat Blessings",
+    description:
+      "Traditional blessings and greetings for Dragon Boat Festival.",
+    icon: Sparkles,
+    href: "/tool/dragon-boat-blessings",
+    color: "from-cyan-500 to-blue-500",
+  },
+  {
+    id: "dragon-boat-culture",
+    title: "Dragon Boat Culture",
+    description:
+      "Explore the rich cultural traditions of Dragon Boat Festival.",
+    icon: Heart,
+    href: "/tool/dragon-boat-culture",
+    color: "from-cyan-400 to-sky-500",
+  },
+  {
+    id: "qixi-blessings",
+    title: "Qixi Blessings",
+    description: "Chinese Valentine's Day blessings and romantic expressions.",
+    icon: Heart,
+    href: "/tool/qixi-blessings",
+    color: "from-pink-400 to-rose-500",
+  },
+  {
+    id: "qixi-dates",
+    title: "Qixi Date Ideas",
+    description: "Romantic date spots and activities for Qixi Festival.",
+    icon: Sparkles,
+    href: "/tool/qixi-dates",
+    color: "from-pink-300 to-rose-400",
+  },
+  {
+    id: "qixi-gifts",
+    title: "Qixi Gift Guide",
+    description: "Thoughtful gift ideas for Chinese Valentine's Day.",
+    icon: Gift,
+    href: "/tool/qixi-gifts",
+    color: "from-purple-400 to-pink-500",
+  },
+  {
+    id: "mooncake",
+    title: "Mooncake Gift Box",
+    description:
+      "Choose the perfect mooncake gift box for Mid-Autumn Festival.",
+    icon: Gift,
+    href: "/tool/mooncake",
+    color: "from-amber-500 to-orange-500",
+  },
+  {
+    id: "mooncake-flavor",
+    title: "Mooncake Flavors",
+    description: "Explore traditional and modern mooncake flavors.",
+    icon: Utensils,
+    href: "/tool/mooncake-flavor",
+    color: "from-orange-500 to-red-500",
+  },
+  {
+    id: "mid-autumn-blessings",
+    title: "Mid-Autumn Blessings",
+    description: "Traditional blessings for Mid-Autumn Festival reunion.",
+    icon: Heart,
+    href: "/tool/mid-autumn-blessings",
+    color: "from-amber-400 to-yellow-500",
+  },
+  {
     id: "chongyang-blessings",
     title: "Chongyang Blessings",
     description:
@@ -48,12 +159,20 @@ const tools = [
     color: "from-amber-500 to-yellow-500",
   },
   {
-    id: "chrysanthemum-tea",
-    title: "Chrysanthemum Tea Guide",
-    description: "Traditional chrysanthemum tea varieties and brewing methods.",
-    icon: Thermometer,
-    href: "/tool/chrysanthemum-tea",
-    color: "from-orange-500 to-amber-500",
+    id: "chongyang-etiquette",
+    title: "Chongyang Etiquette",
+    description: "Proper customs for honoring elders on Double Ninth Festival.",
+    icon: Heart,
+    href: "/tool/chongyang-etiquette",
+    color: "from-orange-400 to-amber-500",
+  },
+  {
+    id: "winter-solstice-food",
+    title: "Winter Solstice Foods",
+    description: "Traditional foods for Winter Solstice across China.",
+    icon: Utensils,
+    href: "/tool/winter-solstice-food",
+    color: "from-cyan-500 to-blue-500",
   },
   {
     id: "winter-solstice-blessings",
@@ -62,7 +181,7 @@ const tools = [
       "Dongzhi Festival greetings for the longest night of the year.",
     icon: MessageCircleHeart,
     href: "/tool/winter-solstice-blessings",
-    color: "from-cyan-500 to-blue-500",
+    color: "from-blue-400 to-cyan-500",
   },
   {
     id: "dumpling-tangyuan",
@@ -90,6 +209,30 @@ const tools = [
     href: "/tool/laba-porridge",
     color: "from-orange-500 to-red-500",
   },
+  {
+    id: "laba-garlic",
+    title: "Laba Garlic Guide",
+    description: "Traditional Laba garlic preservation methods and uses.",
+    icon: Thermometer,
+    href: "/tool/laba-garlic",
+    color: "from-violet-500 to-purple-500",
+  },
+  {
+    id: "chrysanthemum-tea",
+    title: "Chrysanthemum Tea Guide",
+    description: "Traditional chrysanthemum tea varieties and brewing methods.",
+    icon: Thermometer,
+    href: "/tool/chrysanthemum-tea",
+    color: "from-orange-500 to-amber-500",
+  },
+  {
+    id: "spring-prep",
+    title: "Spring Prep Guide",
+    description: "Preparing for Spring Festival with traditional customs.",
+    icon: Sparkles,
+    href: "/tool/spring-prep",
+    color: "from-red-500 to-orange-500",
+  },
 ];
 
 export function ToolListPage({ lang = "en" }: { lang?: LanguageType } = {}) {
@@ -97,7 +240,6 @@ export function ToolListPage({ lang = "en" }: { lang?: LanguageType } = {}) {
     <div className="min-h-screen bg-gradient-to-b from-rose-50/50 via-background to-background">
       <main className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
-          {/* Title */}
           <div className="text-center mb-12">
             <span className="text-6xl mb-4 block">🛠️</span>
             <h1 className="text-3xl font-bold text-foreground mb-3">
@@ -109,14 +251,14 @@ export function ToolListPage({ lang = "en" }: { lang?: LanguageType } = {}) {
             </p>
           </div>
 
-          {/* Tools Grid */}
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {tools.map((tool) => {
               const Icon = tool.icon;
+              const href = `/${lang}${tool.href}`;
               return (
                 <Link
                   key={tool.id}
-                  href={`/${lang}${tool.href}`}
+                  href={href}
                   className="group relative overflow-hidden rounded-2xl border border-rose-200 dark:border-rose-800 bg-white/60 dark:bg-zinc-800/60 p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                 >
                   <div
@@ -144,7 +286,6 @@ export function ToolListPage({ lang = "en" }: { lang?: LanguageType } = {}) {
             })}
           </div>
 
-          {/* Learning Section */}
           <div className="mt-12 bg-gradient-to-r from-amber-50/80 to-orange-50/80 dark:from-amber-900/20 dark:to-orange-900/20 border border-amber-200 dark:border-amber-800 rounded-2xl p-6">
             <div className="flex items-center gap-4 mb-4">
               <div className="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center">
@@ -170,7 +311,6 @@ export function ToolListPage({ lang = "en" }: { lang?: LanguageType } = {}) {
         </div>
       </main>
 
-      {/* Footer */}
       <footer className="border-t mt-16 py-8 bg-muted/30">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground"></div>
       </footer>

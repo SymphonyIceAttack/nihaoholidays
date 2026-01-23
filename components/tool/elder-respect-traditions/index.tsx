@@ -7,7 +7,8 @@ const traditions = [
   {
     title: "Visiting Elderly Relatives",
     emoji: "👴👵",
-    description: "Spend quality time with grandparents and elderly family members",
+    description:
+      "Spend quality time with grandparents and elderly family members",
     details: [
       "Prepare special meals for them",
       "Listen to their stories and advice",
@@ -52,8 +53,16 @@ const traditions = [
 
 const elderlyWishes = [
   { wish: "身体健康", pinyin: "Jiàn kāng", meaning: "Good health" },
-  { wish: "福如东海", pinyin: "Fú rú dōng hǎi", meaning: "Blessings like the East Sea" },
-  { wish: "寿比南山", pinyin: "Shòu bǐ nán shān", meaning: "Longevity like Southern Mountain" },
+  {
+    wish: "福如东海",
+    pinyin: "Fú rú dōng hǎi",
+    meaning: "Blessings like the East Sea",
+  },
+  {
+    wish: "寿比南山",
+    pinyin: "Shòu bǐ nán shān",
+    meaning: "Longevity like Southern Mountain",
+  },
   { wish: "笑口常开", pinyin: "Xiào kǒu cháng kāi", meaning: "Always smiling" },
   { wish: "平安喜乐", pinyin: "Píng ān xǐ lè", meaning: "Peace and joy" },
 ];
@@ -73,8 +82,8 @@ export function ElderRespectTraditionsPage({
               Elder Respect Traditions
             </h1>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Ways to honor and celebrate elderly family members on Double
-              Ninth Festival, also known as Respect for the Aged Day.
+              Ways to honor and celebrate elderly family members on Double Ninth
+              Festival, also known as Respect for the Aged Day.
             </p>
           </div>
 
@@ -99,9 +108,10 @@ export function ElderRespectTraditionsPage({
                 wisdom, experience, and family heritage.
               </p>
               <p>
-                Double Ninth Festival (重阳节) has been designated as China&apos;s
-                Respect for the Aged Day, making it the perfect occasion to
-                express love and gratitude to elderly family members.
+                Double Ninth Festival (重阳节) has been designated as
+                China&apos;s Respect for the Aged Day, making it the perfect
+                occasion to express love and gratitude to elderly family
+                members.
               </p>
             </div>
           </div>

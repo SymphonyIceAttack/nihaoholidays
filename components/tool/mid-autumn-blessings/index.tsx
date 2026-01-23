@@ -140,9 +140,9 @@ export function MidAutumnBlessingsPage({
             <div className="space-y-4 text-sm text-muted-foreground">
               <p>
                 Mid-Autumn Festival is connected to the beautiful legend of
-                Chang&apos;e, the Moon Goddess. According to legend, Chang&apos;e
-                accidentally drank the elixir of immortality and floated to the
-                moon, where she now lives as the moon goddess.
+                Chang&apos;e, the Moon Goddess. According to legend,
+                Chang&apos;e accidentally drank the elixir of immortality and
+                floated to the moon, where she now lives as the moon goddess.
               </p>
               <p>
                 Another legend tells of Houyi, the archer who shot down nine

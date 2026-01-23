@@ -7,28 +7,32 @@ const dateSpots = [
   {
     name: "Qianmen Street",
     location: "Beijing",
-    description: "Historic street with traditional architecture, perfect for evening strolls under lanterns",
+    description:
+      "Historic street with traditional architecture, perfect for evening strolls under lanterns",
     atmosphere: "Traditional & Romantic",
     emoji: "🏮",
   },
   {
     name: "West Lake",
     location: "Hangzhou",
-    description: "Legendary lake where the Cowherd and Weaver Girl meet, with beautiful moon reflections",
+    description:
+      "Legendary lake where the Cowherd and Weaver Girl meet, with beautiful moon reflections",
     atmosphere: "Legendary & Peaceful",
     emoji: "🌙",
   },
   {
     name: "The Bund",
     location: "Shanghai",
-    description: "Stunning skyline views across the Huangpu River, perfect for photography",
+    description:
+      "Stunning skyline views across the Huangpu River, perfect for photography",
     atmosphere: "Modern & Glamorous",
     emoji: "🌃",
   },
   {
     name: "Gulangyu Island",
     location: "Xiamen",
-    description: "Piano island with colonial architecture and romantic sunset views",
+    description:
+      "Piano island with colonial architecture and romantic sunset views",
     atmosphere: "Artistic & Tranquil",
     emoji: "🎹",
   },
@@ -42,7 +46,8 @@ const dateSpots = [
   {
     name: "Yuyuan Garden",
     location: "Shanghai",
-    description: "Classical Chinese garden with lanterns and moon viewing pavilions",
+    description:
+      "Classical Chinese garden with lanterns and moon viewing pavilions",
     atmosphere: "Classical & Elegant",
     emoji: "🏯",
   },

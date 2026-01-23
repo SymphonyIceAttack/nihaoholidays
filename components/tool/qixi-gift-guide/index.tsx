@@ -7,7 +7,11 @@ const giftIdeas = [
   {
     category: "Traditional Gifts",
     items: [
-      { name: "Jade pendant", meaning: "Pure love and commitment", emoji: "🪡" },
+      {
+        name: "Jade pendant",
+        meaning: "Pure love and commitment",
+        emoji: "🪡",
+      },
       { name: "Silk scarf", meaning: "Softness and care", emoji: "🧣" },
       { name: "Tea set", meaning: "Sharing peaceful moments", emoji: "🍵" },
       { name: "Fan", meaning: "Cool and gentle love", emoji: "🪭" },
@@ -45,7 +49,11 @@ const giftIdeas = [
 const romanticPhrases = [
   { chinese: "我爱你", pinyin: "Wǒ ài nǐ", english: "I love you" },
   { chinese: "执子之手", pinyin: "Zhí zǐ zhī shǒu", english: "Hold your hand" },
-  { chinese: "与子偕老", pinyin: "Yǔ zǐ xié lǎo", english: "Grow old together" },
+  {
+    chinese: "与子偕老",
+    pinyin: "Yǔ zǐ xié lǎo",
+    english: "Grow old together",
+  },
   { chinese: "一生一世", pinyin: "Yì shēng yí shì", english: "Forever" },
 ];
 
@@ -90,9 +98,9 @@ export function QixiGiftGuidePage({
                 related to love, prosperity, and togetherness.
               </p>
               <p>
-                The most important thing is the thought and sentiment behind
-                the gift, not its monetary value. A heartfelt gift is always
-                more meaningful.
+                The most important thing is the thought and sentiment behind the
+                gift, not its monetary value. A heartfelt gift is always more
+                meaningful.
               </p>
             </div>
           </div>
@@ -103,7 +111,9 @@ export function QixiGiftGuidePage({
                 key={idx}
                 className="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm"
               >
-                <h2 className="text-xl font-semibold mb-4">{category.category}</h2>
+                <h2 className="text-xl font-semibold mb-4">
+                  {category.category}
+                </h2>
                 <div className="grid gap-3 md:grid-cols-2">
                   {category.items.map((item, itemIdx) => (
                     <div
