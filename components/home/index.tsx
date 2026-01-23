@@ -43,7 +43,7 @@ export function HomePageContent({ lang }: HomePageContentProps) {
         <FestivalGrid lang={lang} theme={themeFilter} />
       </div>
       <FeaturedTools lang={lang} />
-      <FoodPreview />
+      <FoodPreview lang={lang} />
       <QuickStart />
       <ValueProposition />
     </>

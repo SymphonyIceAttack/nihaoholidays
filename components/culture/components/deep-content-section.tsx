@@ -136,7 +136,9 @@ export function DeepContentSection({ basicInfo }: DeepContentSectionProps) {
                     >
                       <div className="flex items-start gap-3 mb-2">
                         <span className="text-rose-500 mt-0.5">✕</span>
-                        <p className="font-medium text-foreground">{item.myth}</p>
+                        <p className="font-medium text-foreground">
+                          {item.myth}
+                        </p>
                       </div>
                       <div className="pl-6">
                         <p className="text-green-600 dark:text-green-400 font-medium text-sm mb-1">

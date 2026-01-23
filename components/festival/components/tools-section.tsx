@@ -15,6 +15,91 @@ interface ToolsSectionProps {
   festivalId: string;
 }
 
+function getToolHref(
+  toolName: string,
+  lang: LanguageType,
+  festivalId: string,
+): string {
+  const name = toolName.toLowerCase();
+
+  if (
+    name.includes("greeting") ||
+    name.includes("blessing") ||
+    name.includes("祝福")
+  )
+    return `/${lang}/tool/greetings`;
+  if (
+    name.includes("red envelope") ||
+    name.includes("red-envelope") ||
+    name.includes("红包")
+  )
+    return `/${lang}/tool/red-envelope`;
+  if (
+    name.includes("menu") ||
+    name.includes("dinner") ||
+    name.includes("reunion")
+  )
+    return `/${lang}/tool/menu`;
+  if (
+    name.includes("culture") ||
+    name.includes("overview") ||
+    name.includes("文化概览")
+  )
+    return `/${lang}/culture/${festivalId}`;
+  if (name.includes("quiz") || name.includes("测验"))
+    return `/${lang}/quiz/${festivalId}`;
+  if (
+    name.includes("recipe") ||
+    name.includes("porridge") ||
+    name.includes("粥")
+  )
+    return `/${lang}/tool/laba-porridge`;
+  if (name.includes("garlic") || name.includes("蒜"))
+    return `/${lang}/tool/laba-garlic`;
+  if (name.includes("prep") || name.includes("准备") || name.includes("list"))
+    return `/${lang}/tool/spring-prep`;
+  if (name.includes("riddle") || name.includes("谜语"))
+    return `/${lang}/tool/riddles`;
+  if (
+    name.includes("tangyuan") ||
+    name.includes("汤圆") ||
+    name.includes("picker")
+  )
+    return `/${lang}/tool/dumpling-tangyuan`;
+  if (name.includes("mooncake") || name.includes("月饼"))
+    return `/${lang}/tool/mooncake`;
+  if (
+    name.includes("zongzi") ||
+    name.includes("粽子") ||
+    name.includes("guide")
+  )
+    return `/${lang}/tool/zongzi`;
+  if (
+    name.includes("tomb") ||
+    name.includes("qingming") ||
+    name.includes("扫墓")
+  )
+    return `/${lang}/tool/qingming`;
+  if (name.includes("love") || name.includes("letter") || name.includes("情书"))
+    return `/${lang}/tool/qixi-blessings`;
+  if (
+    name.includes("elder") ||
+    name.includes("respect") ||
+    name.includes("重阳")
+  )
+    return `/${lang}/tool/chongyang-blessings`;
+  if (name.includes("chrysanthemum") || name.includes("菊花"))
+    return `/${lang}/tool/chrysanthemum-tea`;
+  if (
+    name.includes("dumpling") ||
+    name.includes("饺子") ||
+    name.includes("dining")
+  )
+    return `/${lang}/tool/winter-solstice-blessings`;
+
+  return `/${lang}/tool/menu`;
+}
+
 export function ToolsSection({ tools, lang, festivalId }: ToolsSectionProps) {
   if (tools.length === 0) return null;
 
@@ -31,19 +116,7 @@ export function ToolsSection({ tools, lang, festivalId }: ToolsSectionProps) {
         </div>
         <div className="grid gap-4 md:grid-cols-3">
           {tools.map((tool, index) => {
-            let href = `/${lang}/tool/menu`;
-
-            if (tool.name.includes("Greeting"))
-              href = `/${lang}/tool/greetings`;
-            else if (tool.name.includes("Red Envelope"))
-              href = `/${lang}/tool/red-envelope`;
-            else if (
-              tool.name.includes("Culture") ||
-              tool.name.includes("文化概览")
-            )
-              href = `/${lang}/culture/${festivalId}`;
-            else if (tool.name.includes("Quiz") || tool.name.includes("测验"))
-              href = `/${lang}/quiz/${festivalId}`;
+            const href = getToolHref(tool.name, lang, festivalId);
 
             return (
               <Link

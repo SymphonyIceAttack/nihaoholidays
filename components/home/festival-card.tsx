@@ -11,8 +11,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import type { FestivalWithDisplayInfo } from "@/lib/festivals";
-import { cn } from "@/lib/utils";
 import { translations } from "@/lib/translations";
+import { cn } from "@/lib/utils";
 
 const toolIcons = {
   food: ChefHat,

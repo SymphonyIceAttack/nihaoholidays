@@ -1,8 +1,7 @@
-"use client";
-
 import { ArrowLeft, Copy, Gift, Info, Users, Wallet } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import type { LanguageType } from "@/lib/translations/config";
 import { cn } from "@/lib/utils";
 
 const amountGuidelines = [
@@ -110,8 +109,6 @@ const phrases = [
     english: "Wishing you and your family a happy Spring Festival!",
   },
 ];
-
-import type { LanguageType } from "@/lib/translations/config";
 
 export function RedEnvelopeGuidePage({
   lang = "en",

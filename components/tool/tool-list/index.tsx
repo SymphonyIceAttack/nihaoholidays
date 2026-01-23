@@ -1,5 +1,3 @@
-"use client";
-
 import {
   ArrowLeft,
   Gift,
@@ -10,6 +8,7 @@ import {
   Utensils,
 } from "lucide-react";
 import Link from "next/link";
+import type { LanguageType } from "@/lib/translations/config";
 
 const tools = [
   {
@@ -92,8 +91,6 @@ const tools = [
     color: "from-orange-500 to-red-500",
   },
 ];
-
-import type { LanguageType } from "@/lib/translations/config";
 
 export function ToolListPage({ lang = "en" }: { lang?: LanguageType } = {}) {
   return (

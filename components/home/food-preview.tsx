@@ -1,7 +1,8 @@
 import { ArrowRight, Flame } from "lucide-react";
+import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import type { LanguageType } from "@/lib/translations/config";
 
 const featuredDishes = [
   {
@@ -50,7 +51,7 @@ const featuredDishes = [
   },
 ];
 
-export function FoodPreview() {
+export function FoodPreview({ lang = "en" }: { lang?: LanguageType } = {}) {
   return (
     <section
       className="py-16 bg-gradient-to-b from-orange-50/30 via-background to-background"
@@ -59,7 +60,7 @@ export function FoodPreview() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
           <div>
-            <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm text-orange-600 px-3 py-1 rounded-full text-sm font-medium mb-4 shadow-sm border border-orange-100">
+            <div className="inline-flex items-center gap-2 bg-secondary/80 backdrop-blur-sm text-orange-600 dark:text-orange-400 px-3 py-1 rounded-full text-sm font-medium mb-4 shadow-sm border border-orange-100 dark:border-orange-900/30">
               <Flame className="h-4 w-4" />
               <span>Holiday foods</span>
             </div>
@@ -71,13 +72,13 @@ export function FoodPreview() {
               meanings, and know how to order.
             </p>
           </div>
-          <Button
-            variant="outline"
-            className="gap-2 w-fit bg-transparent hover:bg-orange-50 hover:border-orange-200 transition-all duration-200"
+          <Link
+            href={`/${lang}/food`}
+            className="inline-flex items-center justify-center gap-2 w-fit px-4 py-2 rounded-md text-sm font-medium border border-input bg-background hover:bg-accent hover:text-accent-foreground transition-colors"
           >
             Explore food guide
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Button>
+          </Link>
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -93,7 +94,10 @@ export function FoodPreview() {
                   alt={dish.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <Badge className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-foreground text-xs shadow-sm">
+                <Badge
+                  variant="secondary"
+                  className="absolute top-3 right-3 text-xs"
+                >
                   {dish.festival}
                 </Badge>
               </div>

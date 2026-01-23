@@ -1,5 +1,3 @@
-"use client";
-
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -200,9 +198,9 @@ export function DumplingTangyuanGuidePage({
             </div>
             <div className="space-y-4 text-sm text-muted-foreground">
               <p>
-                Winter Solstice (Dongzhi) is one of the most important traditional
-                Chinese festivals, celebrated since ancient times. It marks the
-                shortest day and longest night of the year.
+                Winter Solstice (Dongzhi) is one of the most important
+                traditional Chinese festivals, celebrated since ancient times.
+                It marks the shortest day and longest night of the year.
               </p>
               <p>
                 The saying goes: "Dongzhi dǎnjiǎo, xiàzhì chī tangyuan" (Eat
@@ -210,8 +208,9 @@ export function DumplingTangyuanGuidePage({
                 This reflects the beautiful North-South culinary divide.
               </p>
               <p>
-                After Winter Solstice, yang energy begins to grow, symbolizing the
-                return of longer days and the promise of spring's eventual arrival.
+                After Winter Solstice, yang energy begins to grow, symbolizing
+                the return of longer days and the promise of spring's eventual
+                arrival.
               </p>
             </div>
             <div className="mt-4 pt-4 border-t border-cyan-200 dark:border-cyan-800">

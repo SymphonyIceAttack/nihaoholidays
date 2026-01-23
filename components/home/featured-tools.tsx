@@ -10,9 +10,9 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
-import type { LanguageType } from "@/lib/translations/config";
 import { translations } from "@/lib/translations";
+import type { LanguageType } from "@/lib/translations/config";
+import { cn } from "@/lib/utils";
 
 const featuredTools = [
   {
