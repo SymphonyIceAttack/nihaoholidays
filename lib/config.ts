@@ -3,8 +3,8 @@ import type { LanguageType } from "./translations/config";
 export const siteConfig = {
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   siteName: "nihaoholidays",
-  contactEmail: "hello@nihaoholidays.org",
-  imageCdn: "https://image.nihaoholidays.org",
+  contactEmail: "hello@nihaoholidays.com",
+  imageCdn: "https://image.nihaoholidays.com",
 };
 
 // Helper to generate festival URLs

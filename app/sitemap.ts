@@ -183,24 +183,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         },
       });
     }
+  }
 
-    const posts = await getBlogPostsForSitemap();
-    for (const post of posts) {
-      sitemapEntries.push({
-        url: `${baseUrl}/${lang}/posts/${post.slug}`,
-        lastModified: post.publishedAt.split("T")[0],
-        changeFrequency: "monthly",
-        priority: 0.6,
-        alternates: {
-          languages: Object.fromEntries(
-            supportedLocales.map((l) => [
-              l,
-              `${baseUrl}/${l}/posts/${post.slug}`,
-            ]),
-          ),
+  const posts = await getBlogPostsForSitemap();
+  for (const post of posts) {
+    sitemapEntries.push({
+      url: `${baseUrl}/en/posts/${post.slug}`,
+      lastModified: post.publishedAt.split("T")[0],
+      changeFrequency: "monthly",
+      priority: 0.6,
+      alternates: {
+        languages: {
+          en: `${baseUrl}/en/posts/${post.slug}`,
         },
-      });
-    }
+      },
+    });
   }
 
   return sitemapEntries;
