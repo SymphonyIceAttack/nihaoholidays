@@ -73,8 +73,9 @@ interface FestivalCardProps {
 
 export function FestivalCard({ festival, lang = "en" }: FestivalCardProps) {
   return (
-    <Card className="group relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-rose-200/50">
+    <Card className="group relative overflow-hidden aurora-card hover-glow transition-all duration-300 hover:-translate-y-1">
       <div className="absolute inset-0 bg-gradient-to-br from-rose-50/50 via-transparent to-orange-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-rose-400 via-primary to-rose-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
       {festival.isRecommended && (
         <div className="absolute top-3 right-3 z-10">
@@ -91,7 +92,7 @@ export function FestivalCard({ festival, lang = "en" }: FestivalCardProps) {
             {festival.emoji}
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="text-xl font-bold text-foreground group-hover:text-rose-600 transition-colors">
+            <h3 className="text-xl font-bold text-foreground group-hover:text-rose-600 transition-colors font-serif">
               {festival.name}
             </h3>
             <p className="text-sm text-muted-foreground mt-1">

@@ -22,6 +22,7 @@ function getToolHref(
 ): string {
   const name = toolName.toLowerCase();
 
+  // Spring Festival tools
   if (
     name.includes("greeting") ||
     name.includes("blessing") ||
@@ -37,17 +38,153 @@ function getToolHref(
   if (
     name.includes("menu") ||
     name.includes("dinner") ||
-    name.includes("reunion")
+    name.includes("reunion") ||
+    name.includes("feast")
   )
     return `/${lang}/tool/menu`;
+
+  // Lantern Festival tools
+  if (name.includes("riddle") || name.includes("谜语"))
+    return `/${lang}/tool/riddles`;
   if (
-    name.includes("culture") ||
-    name.includes("overview") ||
-    name.includes("文化概览")
+    name.includes("tangyuan") ||
+    name.includes("汤圆") ||
+    name.includes("filling")
   )
-    return `/${lang}/culture/${festivalId}`;
-  if (name.includes("quiz") || name.includes("测验"))
-    return `/${lang}/quiz/${festivalId}`;
+    return `/${lang}/tool/dumpling-tangyuan`;
+
+  // Qingming Festival tools
+  if (
+    name.includes("qingming") ||
+    name.includes("tomb") ||
+    name.includes("扫墓") ||
+    name.includes("tradition")
+  )
+    return `/${lang}/tool/qingming`;
+  if (
+    name.includes("taboo") ||
+    name.includes("expression") ||
+    name.includes("ceremonial")
+  )
+    return `/${lang}/tool/taboo`;
+
+  // Dragon Boat Festival tools
+  if (
+    name.includes("zongzi") ||
+    name.includes("粽子") ||
+    name.includes("flavor")
+  )
+    return `/${lang}/tool/zongzi`;
+  if (
+    name.includes("dragon boat") ||
+    name.includes("龙舟") ||
+    name.includes("blessing")
+  )
+    return `/${lang}/tool/dragon-boat-blessings`;
+  if (
+    name.includes("dragon boat") ||
+    name.includes("龙舟") ||
+    name.includes("culture") ||
+    name.includes("introduction")
+  )
+    return `/${lang}/tool/dragon-boat-culture`;
+
+  // Mid-Autumn Festival tools
+  if (name.includes("mooncake") || name.includes("月饼")) {
+    if (name.includes("gift") || name.includes("box"))
+      return `/${lang}/tool/mooncake`;
+    if (name.includes("flavor")) return `/${lang}/tool/mooncake-flavor`;
+    return `/${lang}/tool/mooncake`;
+  }
+  if (
+    name.includes("mid-autumn") ||
+    name.includes("中秋") ||
+    name.includes("template")
+  )
+    return `/${lang}/tool/mid-autumn-blessings`;
+
+  // Qixi Festival tools
+  if (
+    name.includes("qixi") ||
+    name.includes("七夕") ||
+    name.includes("blessing")
+  )
+    return `/${lang}/tool/qixi-blessings`;
+  if (
+    name.includes("qixi") ||
+    name.includes("七夕") ||
+    name.includes("date") ||
+    name.includes("spot")
+  )
+    return `/${lang}/tool/qixi-dates`;
+  if (name.includes("qixi") || name.includes("七夕") || name.includes("gift"))
+    return `/${lang}/tool/qixi-gifts`;
+
+  // Double Ninth Festival tools
+  if (
+    name.includes("chongyang") ||
+    name.includes("重阳") ||
+    name.includes("blessing")
+  )
+    return `/${lang}/tool/chongyang-blessings`;
+  if (
+    name.includes("chrysanthemum") ||
+    name.includes("菊花") ||
+    name.includes("tea")
+  )
+    return `/${lang}/tool/chrysanthemum-tea`;
+  if (
+    name.includes("elder") ||
+    name.includes("respect") ||
+    name.includes("tradition")
+  )
+    return `/${lang}/tool/elder-respect-traditions`;
+
+  // Winter Solstice tools
+  if (
+    name.includes("winter") ||
+    name.includes("冬至") ||
+    name.includes("dumpling") ||
+    name.includes("饺子")
+  )
+    return `/${lang}/tool/winter-solstice-food`;
+  if (
+    name.includes("winter") ||
+    name.includes("冬至") ||
+    name.includes("blessing")
+  )
+    return `/${lang}/tool/winter-solstice-blessings`;
+
+  // Dragon Head Festival tools
+  if (
+    name.includes("haircut") ||
+    name.includes("理发") ||
+    name.includes("剪发")
+  )
+    return `/${lang}/tool/haircut`;
+  if (
+    name.includes("dragon food") ||
+    name.includes("dragon-food") ||
+    name.includes("龙食")
+  )
+    return `/${lang}/tool/dragon-foods`;
+  if (name.includes("pancake") || name.includes("煎饼"))
+    return `/${lang}/tool/spring-pancake`;
+
+  // Ghost Festival tools
+  if (name.includes("ghost") || name.includes("鬼节"))
+    return `/${lang}/tool/ghost-festival`;
+  if (
+    name.includes("offering") ||
+    name.includes("etiquette") ||
+    name.includes("祭祀") ||
+    name.includes("供品")
+  )
+    return `/${lang}/tool/offering-etiquette`;
+  if (name.includes("taboo") || name.includes("禁忌") || name.includes("guide"))
+    return `/${lang}/tool/taboo`;
+
+  // Laba Festival tools
   if (
     name.includes("recipe") ||
     name.includes("porridge") ||
@@ -56,48 +193,49 @@ function getToolHref(
     return `/${lang}/tool/laba-porridge`;
   if (name.includes("garlic") || name.includes("蒜"))
     return `/${lang}/tool/laba-garlic`;
+  if (name.includes("blessing") || name.includes("祝福"))
+    return `/${lang}/tool/laba-blessings`;
+
+  // Qingming additional tools
+  if (name.includes("qingming etiquette") || name.includes("清明礼仪"))
+    return `/${lang}/tool/qingming-etiquette`;
+
+  // Double Ninth additional tools
+  if (name.includes("chongyang etiquette") || name.includes("重阳礼仪"))
+    return `/${lang}/tool/chongyang-etiquette`;
+
+  // Wealth God Festival tools
+  if (
+    name.includes("wealth god") ||
+    name.includes("wealth-god") ||
+    name.includes("财神")
+  )
+    return `/${lang}/tool/wealth-god`;
+  if (
+    name.includes("business") ||
+    name.includes("commercial") ||
+    name.includes("商")
+  )
+    return `/${lang}/tool/business-blessings`;
+  if (
+    name.includes("wealth") &&
+    (name.includes("expression") || name.includes("phrase"))
+  )
+    return `/${lang}/tool/wealth-expressions`;
+
+  // Other festivals
+  if (
+    name.includes("culture") ||
+    name.includes("overview") ||
+    name.includes("文化概览")
+  )
+    return `/${lang}/culture/${festivalId}`;
+  if (name.includes("quiz") || name.includes("测验"))
+    return `/${lang}/quiz/${festivalId}`;
   if (name.includes("prep") || name.includes("准备") || name.includes("list"))
     return `/${lang}/tool/spring-prep`;
-  if (name.includes("riddle") || name.includes("谜语"))
-    return `/${lang}/tool/riddles`;
-  if (
-    name.includes("tangyuan") ||
-    name.includes("汤圆") ||
-    name.includes("picker")
-  )
-    return `/${lang}/tool/dumpling-tangyuan`;
-  if (name.includes("mooncake") || name.includes("月饼"))
-    return `/${lang}/tool/mooncake`;
-  if (
-    name.includes("zongzi") ||
-    name.includes("粽子") ||
-    name.includes("guide")
-  )
-    return `/${lang}/tool/zongzi`;
-  if (
-    name.includes("tomb") ||
-    name.includes("qingming") ||
-    name.includes("扫墓")
-  )
-    return `/${lang}/tool/qingming`;
-  if (name.includes("love") || name.includes("letter") || name.includes("情书"))
-    return `/${lang}/tool/qixi-blessings`;
-  if (
-    name.includes("elder") ||
-    name.includes("respect") ||
-    name.includes("重阳")
-  )
-    return `/${lang}/tool/chongyang-blessings`;
-  if (name.includes("chrysanthemum") || name.includes("菊花"))
-    return `/${lang}/tool/chrysanthemum-tea`;
-  if (
-    name.includes("dumpling") ||
-    name.includes("饺子") ||
-    name.includes("dining")
-  )
-    return `/${lang}/tool/winter-solstice-blessings`;
 
-  return `/${lang}/tool/menu`;
+  return `/${lang}/tool`;
 }
 
 export function ToolsSection({ tools, lang, festivalId }: ToolsSectionProps) {

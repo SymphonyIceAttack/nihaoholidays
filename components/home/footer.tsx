@@ -33,16 +33,20 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="bg-foreground text-background py-12">
-      <div className="container mx-auto px-4">
+    <footer className="bg-foreground text-background py-12 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-t from-rose-600/5 to-transparent pointer-events-none" />
+      <div className="container relative mx-auto px-4">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5 mb-10">
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-rose-600 flex items-center justify-center text-white font-bold text-sm">
-                节
+              <div className="relative group">
+                <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-rose-500 to-rose-600 flex items-center justify-center text-white font-bold text-sm shadow-lg shadow-rose-500/20 transition-transform group-hover:scale-105">
+                  节
+                </div>
+                <div className="absolute inset-0 rounded-xl bg-rose-400 blur-lg opacity-30 group-hover:opacity-50 transition-opacity" />
               </div>
-              <span className="font-semibold">节日文化通</span>
+              <span className="font-semibold font-serif">节日文化通</span>
             </div>
             <p className="text-sm text-background/70 mb-6 max-w-sm">
               帮助外国朋友通过节日场景，学会说什么、做什么、怎么做。从"知道"到"会用"，让文化理解变得实用。
@@ -51,7 +55,7 @@ export function Footer() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="text-background/60 hover:text-background"
+                className="text-background/60 hover:text-background hover:bg-background/10 transition-all duration-200"
                 aria-label="Language"
               >
                 <Globe className="h-5 w-5" />
@@ -59,7 +63,7 @@ export function Footer() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="text-background/60 hover:text-background"
+                className="text-background/60 hover:text-background hover:bg-background/10 transition-all duration-200"
                 aria-label="Contact"
               >
                 <MessageCircle className="h-5 w-5" />
@@ -67,7 +71,7 @@ export function Footer() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="text-background/60 hover:text-background"
+                className="text-background/60 hover:text-background hover:bg-background/10 transition-all duration-200"
                 aria-label="Email"
               >
                 <Mail className="h-5 w-5" />
@@ -84,7 +88,7 @@ export function Footer() {
                   <li key={link.label}>
                     <a
                       href={link.href}
-                      className="text-sm text-background/60 hover:text-background transition-colors"
+                      className="text-sm text-background/60 hover:text-background transition-colors hover:translate-x-1 inline-block"
                     >
                       {link.label}
                     </a>

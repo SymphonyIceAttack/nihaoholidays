@@ -149,7 +149,7 @@ export function cn(...inputs: ClassValue[]) {
 export const siteConfig = {
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   siteName: "nihaoholidays",
-  contactEmail: "hello@nihaoholidays.org",
+  contactEmail: "hello@nihaoholidays.com",
 }
 ```
 
@@ -374,7 +374,7 @@ UI components are in `components/ui/`:
 
 Required in `.env`:
 ```bash
-NEXT_PUBLIC_SITE_URL=https://nihaoholidays.org
+NEXT_PUBLIC_SITE_URL=https://nihaoholidays.com
 ```
 
 Optional (Cloudflare):

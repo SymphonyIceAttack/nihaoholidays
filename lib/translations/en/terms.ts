@@ -1,40 +1,35 @@
 export const terms = {
-  "terms.title": "Terms of Service",
+  "terms.title": "Terms",
   "terms.intro": "Last updated: January 2026",
-  "terms.intro.description":
-    "By accessing and using NihaoHolidays, you accept and agree to be bound by the terms and provisions of this agreement.",
-  "terms.accept.title": "Acceptance of Terms",
-  "terms.accept.description":
-    "If you do not agree to these terms, please do not use our website.",
-  "terms.use.title": "Use of Services",
+  "terms.intro.description": "By using the site, you agree to these terms.",
+  "terms.accept.title": "Using our site",
+  "terms.accept.description": "Don't agree? Don't use the site.",
+  "terms.use.title": "What you can do",
   "terms.use.description":
-    "Our services are intended for personal, non-commercial use. You agree to use our website only for lawful purposes.",
+    "Use the site to learn about festivals, practice scenarios, and plan your visits.",
   "terms.use.items":
-    "You may not use our services for any illegal or unauthorized purpose, You may not interfere with or disrupt our services",
-  "terms.prohibited.title": "Prohibited Activities",
-  "terms.prohibited.description": "The following activities are prohibited:",
+    "Use our services lawfully, Don't disrupt the site, Don't steal content",
+  "terms.prohibited.title": "What you can't do",
+  "terms.prohibited.description": "Don't:",
   "terms.prohibited.items":
-    "Attempting to gain unauthorized access to our systems, using our website for any fraudulent purpose, copying or distributing our content without permission",
-  "terms.content.title": "User Content",
-  "terms.content.description":
-    "You retain ownership of any content you submit to our website.",
+    "Hack our systems, Use the site for fraud, Copy content without permission",
+  "terms.content.title": "Your content",
+  "terms.content.description": "You own what you submit to us.",
   "terms.disclaimer.title": "Disclaimer",
   "terms.disclaimer.description":
-    "Our website provides cultural information for educational purposes. We strive for accuracy but cannot guarantee the completeness or timeliness of all content.",
-  "terms.links.title": "Third-Party Links",
+    "We do our best to be accurate. Cultural practices vary by region and family. When in doubt, ask someone local.",
+  "terms.links.title": "External links",
   "terms.links.description":
-    "Our website may contain links to third-party websites. We are not responsible for the content or privacy practices of these sites.",
-  "terms.termination.title": "Termination",
+    "We link to other sites. We don't control their content or privacy practices.",
+  "terms.termination.title": "Ending access",
   "terms.termination.description":
-    "We may terminate or suspend access to our services without prior notice for conduct that we believe violates these terms of service.",
-  "terms.liability.title": "Limitation of Liability",
+    "We can block access if you violate these terms.",
+  "terms.liability.title": "Liability",
   "terms.liability.description":
-    "NihaoHolidays shall not be liable for any indirect, incidental, or consequential damages arising out of your use of our services.",
-  "terms.governing.title": "Governing Law",
-  "terms.governing.description":
-    "These terms shall be governed by and construed in accordance with applicable laws.",
-  "terms.contact.title": "Contact Information",
-  "terms.contact.description":
-    "If you have any questions about these terms, please contact us at:",
-  "terms.contact.email": "legal@nihaoholidays.org",
+    "We're not responsible for what happens when you use this information.",
+  "terms.governing.title": "Governing law",
+  "terms.governing.description": "Standard legal stuff applies.",
+  "terms.contact.title": "Questions?",
+  "terms.contact.description": "Email us:",
+  "terms.contact.email": "hello@nihaoholidays.org",
 } as const;

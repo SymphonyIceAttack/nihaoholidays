@@ -20,7 +20,7 @@ const featuredTools = [
     icon: ChefHat,
     title: "New Year's Eve Menu Assistant",
     description:
-      "Enter number of people and preferences, get an authentic Spring Festival dinner menu with dish introductions and ordering phrases.",
+      "Enter number of people and preferences, get a Spring Festival dinner menu with dishes and ordering phrases.",
     color: "orange",
     badge: "Popular",
     festival: "Spring Festival",

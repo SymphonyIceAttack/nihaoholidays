@@ -1,7 +1,7 @@
 import type { z } from "zod";
 import type { LanguageType } from "../config";
 import { aboutSchema } from "./about";
-import { breadcrumbSchema, commonSchema, navSchema } from "./common";
+import { type breadcrumbSchema, commonSchema } from "./common";
 import { contactSchema } from "./contact";
 import { festivalSchema } from "./festival";
 import { homeSchema } from "./home";

@@ -193,9 +193,9 @@ export default async function BlogPage({
                 Ready to celebrate like a local?
               </h2>
               <p className="text-muted-foreground mb-6">
-                Explore our interactive tools and practical guides for Chinese
-                festivals. From greeting generators to food ordering tips, we
-                have everything you need.
+                Interactive tools and practical guides for Chinese festivals.
+                From greeting generators to food ordering tips, here's what you
+                need.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button

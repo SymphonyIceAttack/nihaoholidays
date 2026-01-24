@@ -158,7 +158,7 @@ export function Header({ lang }: { lang: LanguageType }) {
             mobileMenuOpen ? "translate-y-0" : "translate-y-8",
           )}
         >
-          <nav className="space-y-2">
+          <nav className="space-y-2 bg-background rounded-xl p-2 shadow-sm">
             <a
               href={`/${lang}/posts`}
               className="flex items-center gap-3 px-4 py-3 text-base text-muted-foreground hover:text-foreground hover:bg-muted/60 rounded-xl transition-all duration-200 animate-in slide-in-from-left-2"

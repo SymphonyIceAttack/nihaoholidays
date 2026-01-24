@@ -8,14 +8,16 @@ interface CustomsSectionProps {
 export function CustomsSection({ customs }: CustomsSectionProps) {
   return (
     <section className="max-w-4xl mx-auto mb-12">
-      <Card>
+      <Card className="aurora-card">
         <CardHeader>
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-xl bg-rose-100 dark:bg-rose-900/30 flex items-center justify-center">
-              <BookOpen className="h-6 w-6 text-rose-600 dark:text-rose-400" />
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-rose-400 to-rose-500 flex items-center justify-center shadow-lg shadow-rose-500/20">
+              <BookOpen className="h-6 w-6 text-white" />
             </div>
             <div>
-              <CardTitle>Traditional Customs & Practices</CardTitle>
+              <CardTitle className="font-serif">
+                Traditional Customs & Practices
+              </CardTitle>
               <p className="text-sm text-muted-foreground">
                 The rituals and traditions that define this festival
               </p>
@@ -27,12 +29,10 @@ export function CustomsSection({ customs }: CustomsSectionProps) {
             {customs.map((custom, i) => (
               <div
                 key={i}
-                className="flex items-start gap-3 p-4 rounded-xl bg-muted/50 hover:bg-muted transition-colors"
+                className="flex items-start gap-3 p-4 rounded-xl aurora-card hover-glow transition-all duration-300 cursor-pointer"
               >
-                <span className="w-8 h-8 rounded-full bg-rose-100 dark:bg-rose-900/30 flex items-center justify-center flex-shrink-0">
-                  <span className="text-rose-600 dark:text-rose-400 font-medium">
-                    {i + 1}
-                  </span>
+                <span className="w-8 h-8 rounded-full bg-gradient-to-br from-rose-400 to-rose-500 flex items-center justify-center flex-shrink-0 text-white font-medium shadow-md">
+                  {i + 1}
                 </span>
                 <span className="text-foreground">{custom}</span>
               </div>

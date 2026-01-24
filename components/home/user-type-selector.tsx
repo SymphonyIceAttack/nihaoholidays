@@ -9,7 +9,7 @@ const userTypes = [
     id: "tourist",
     label: "I'm visiting",
     icon: Plane,
-    description: "Experience authentic holiday atmosphere",
+    description: "Experience the holiday atmosphere",
     scenario: "Generate a Spring Festival day itinerary + survival phrases",
   },
   {

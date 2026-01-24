@@ -21,10 +21,10 @@ const metadataConfig: Record<
   en: {
     title: "Festival Guide - NihaoHolidays",
     description:
-      "Practical guide for Chinese festivals: essential phrases, holiday foods, etiquette, and gift suggestions.",
+      "Guide for Chinese festivals: phrases, foods, etiquette, and gift ideas.",
     ogTitle: "Festival Guide - NihaoHolidays",
     ogDescription:
-      "Practical guide for Chinese festivals: essential phrases, holiday foods, etiquette, and gift suggestions.",
+      "Guide for Chinese festivals: phrases, foods, etiquette, and gift ideas.",
   },
 };
 

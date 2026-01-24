@@ -18,9 +18,9 @@ const quickStartItems = [
   },
   {
     step: 3,
-    title: "Try interactive tools",
+    title: "Try tools",
     description:
-      "Order food, send greetings, give gifts—practice in real scenarios",
+      "Order food, send greetings, give gifts—practice real scenarios",
     time: "5 min",
   },
 ];
@@ -35,7 +35,7 @@ export function QuickStart() {
             <span>5 minutes to get started</span>
           </div>
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
-            Three steps to start your cultural learning journey
+            Three steps to get started
           </h2>
           <p className="text-muted-foreground max-w-lg mx-auto">
             No account needed. Start immediately. We'll remember your progress.

@@ -19,7 +19,8 @@ export async function generateMetadata({
 
   return {
     title: "Dragon Boat Culture - NihaoHolidays",
-    description: "Explore the rich cultural traditions of Dragon Boat Festival",
+    description:
+      "Dragon Boat Festival history, traditions, and cultural practices.",
     alternates: {
       canonical: `${siteConfig.siteUrl}/${lang}/tool/dragon-boat-culture`,
       languages: generateHreflangLinks("/tool/dragon-boat-culture"),
@@ -52,8 +53,8 @@ export default async function DragonBoatCulturePage({
               Dragon Boat Culture
             </h1>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Discover the history, traditions, and cultural significance of
-              Dragon Boat Festival.
+              Dragon Boat Festival: where it started, what people do today, and
+              why it matters.
             </p>
           </div>
 

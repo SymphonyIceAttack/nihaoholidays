@@ -84,7 +84,7 @@ export const festivalDisplayInfo: Record<string, FestivalDisplayInfo> = {
     id: "dragon_boat",
     subtitle: "A festival about Qu Yuan and zongzi",
     fullDescription:
-      "Commemorating the patriotic poet Qu Yuan. Experience vibrant folk customs through dragon boat racing, making zongzi, and hanging mugwort.",
+      "Commemorating the poet Qu Yuan. Dragon boat races, zongzi dumplings, and hanging mugwort.",
     tags: ["Food", "Intermediate"],
     tools: [
       { name: "Zongzi Flavor Guide", type: "food" },

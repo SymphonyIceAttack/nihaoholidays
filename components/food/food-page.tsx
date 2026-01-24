@@ -23,8 +23,17 @@ export function FoodPageContent({ lang = "en" }: { lang?: LanguageType } = {}) {
     : foodDataList;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-orange-50/30 via-background to-background">
-      <main className="container mx-auto px-4 py-8">
+    <div className="min-h-screen aurora-bg">
+      <main className="container relative mx-auto px-4 py-8">
+        {/* Decorative aurora effects */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10">
+          <div className="absolute top-20 left-1/4 w-96 h-96 bg-aurora-1 rounded-full blur-3xl animate-aurora" />
+          <div
+            className="absolute top-40 right-1/4 w-72 h-72 bg-aurora-2 rounded-full blur-3xl animate-aurora"
+            style={{ animationDelay: "2s" }}
+          />
+        </div>
+
         {/* Header */}
         <div className="max-w-4xl mx-auto mb-8">
           <Link
@@ -36,16 +45,17 @@ export function FoodPageContent({ lang = "en" }: { lang?: LanguageType } = {}) {
           </Link>
 
           <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 px-4 py-1.5 rounded-full text-sm font-medium mb-4">
+            <div className="inline-flex items-center gap-2 aurora-card text-orange-700 dark:text-orange-300 px-4 py-1.5 text-sm font-medium mb-4">
               <Utensils className="h-4 w-4" />
               Holiday Foods Guide
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-3 font-serif">
               Experience Chinese Culture Through Taste
             </h1>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Every holiday dish has a story. Learn the names, understand the
-              meanings, know how to order, and connect with ancient traditions.
+              Every holiday dish has a story. Learn the names, understand what
+              they mean, know how to order, and where these traditions come
+              from.
             </p>
           </div>
 
@@ -57,7 +67,7 @@ export function FoodPageContent({ lang = "en" }: { lang?: LanguageType } = {}) {
               className={cn(
                 "px-4 py-2 rounded-full text-sm font-medium transition-all duration-200",
                 !selectedFestival
-                  ? "bg-rose-500 text-white shadow-lg shadow-rose-500/20"
+                  ? "bg-rose-500 text-white shadow-lg shadow-rose-500/20 hover-glow"
                   : "bg-muted text-muted-foreground hover:bg-rose-100 dark:hover:bg-rose-900/30",
               )}
             >
@@ -71,7 +81,7 @@ export function FoodPageContent({ lang = "en" }: { lang?: LanguageType } = {}) {
                 className={cn(
                   "px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 flex items-center gap-1.5",
                   selectedFestival === festival.key
-                    ? "bg-rose-500 text-white shadow-lg shadow-rose-500/20"
+                    ? "bg-rose-500 text-white shadow-lg shadow-rose-500/20 hover-glow"
                     : "bg-muted text-muted-foreground hover:bg-rose-100 dark:hover:bg-rose-900/30",
                 )}
               >
@@ -88,7 +98,7 @@ export function FoodPageContent({ lang = "en" }: { lang?: LanguageType } = {}) {
             <Link
               key={food.id}
               href={`/${lang}/food/${food.id}`}
-              className="group relative overflow-hidden rounded-2xl border cursor-pointer transition-all duration-300 hover:-translate-y-1 block"
+              className="group relative overflow-hidden aurora-card cursor-pointer hover-glow transition-all duration-300 hover:-translate-y-1 block"
             >
               {/* Header with color gradient */}
               <div
@@ -171,11 +181,13 @@ export function FoodPageContent({ lang = "en" }: { lang?: LanguageType } = {}) {
 
         {/* Navigation Footer */}
         <div className="max-w-4xl mx-auto mt-12">
-          <div className="bg-gradient-to-r from-rose-100/80 to-orange-100/80 dark:from-rose-900/30 dark:to-orange-900/20 border border-rose-200 dark:border-rose-800 rounded-2xl p-6">
+          <div className="aurora-card p-6">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-rose-100 dark:bg-rose-900/30 flex items-center justify-center">
-                  <Heart className="h-6 w-6 text-rose-500" />
+                <div className="relative group">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-rose-400 to-rose-500 flex items-center justify-center shadow-lg shadow-rose-500/20 transition-transform group-hover:scale-105">
+                    <Heart className="h-6 w-6 text-white" />
+                  </div>
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground">
@@ -189,7 +201,7 @@ export function FoodPageContent({ lang = "en" }: { lang?: LanguageType } = {}) {
               <div className="flex gap-3">
                 <Link
                   href={`/${lang}/learn`}
-                  className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-rose-600 text-white font-medium hover:bg-rose-700 transition-colors"
+                  className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-rose-600 text-white font-medium hover:bg-rose-700 hover-glow transition-all duration-300 shadow-lg shadow-rose-600/20"
                 >
                   <Calendar className="h-4 w-4 mr-2" />
                   Explore Festivals

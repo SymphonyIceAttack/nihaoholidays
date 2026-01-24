@@ -64,9 +64,9 @@ export const foodData: FoodDataCollection = {
     english: "Sweet Rice Balls",
     festival: "Lantern Festival",
     description:
-      "Tangyuan are chewy glutinous rice balls filled with sweet black sesame paste, red bean, or peanut butter. They are the signature dessert of the Lantern Festival, symbolizing family reunion and the hope for a full, complete life.",
+      "Tangyuan are chewy glutinous rice balls filled with sweet black sesame paste, red bean, or peanut butter. They're eaten during Lantern Festival, symbolizing family reunion.",
     story:
-      "On the fifteenth day of the first lunar month, after weeks of New Year celebrations, families gather again to enjoy tangyuan under the glow of lanterns. Parents tell children the story of the Celestial Emperor sending a heavenly bird to burn their homes, and how people scared it away with fire—thus beginning the tradition of lanterns. Today, tangyuan symbolize the bright, round full moon and the togetherness of family. When you eat them, you're literally swallowing 'reunion' (团圆) into your belly.",
+      "On the fifteenth day of the first lunar month, after weeks of New Year celebrations, families gather again to enjoy tangyuan under lantern light. The story goes that the Celestial Emperor once sent a heavenly bird to burn their homes, and people scared it away with fire—thus beginning the lantern tradition. Today, tangyuan represent the full moon and family togetherness. When you eat them, you're literally swallowing 'reunion' (团圆) into your belly.",
     meaning:
       "Tangyuan (汤圆) sounds exactly like 'tuanyuan' (团圆), which means reunion. Their perfectly round shape represents the full moon, family completeness, and harmony. Eating them isn't just dessert—it's a wish for your family to stay together forever.",
     history:
@@ -163,11 +163,11 @@ export const foodData: FoodDataCollection = {
     english: "Mooncake",
     festival: "Mid-Autumn Festival",
     description:
-      "Mooncakes are round, dense pastries with rich lotus seed paste and salted egg yolk centers, traditionally eaten while admiring the full moon during Mid-Autumn Festival. They symbolize reunion, completeness, and the sharing of good fortune.",
+      "Mooncakes are round, dense pastries with lotus seed paste and salted egg yolk centers, eaten while admiring the full moon during Mid-Autumn Festival. They symbolize reunion.",
     story:
-      "Under the harvest moon, families gather on rooftops and balconies to admire the full moon—the brightest of the year. On the table: tea, fruit, and mooncakes, each cut into pieces and shared among family members. Legend says Chang'e, the moon goddess, lives in a crystal palace there, and by eating mooncakes, we're connecting with her blessings. Modern mooncake gifts travel across cities, carrying wishes from sender to receiver: 'May our families be complete, like the moon tonight.'",
+      "Under the harvest moon, families gather on rooftops and balconies to admire the full moon—the brightest of the year. On the table: tea, fruit, and mooncakes, each cut into pieces and shared. Legend says Chang'e, the moon goddess, lives in a crystal palace there. Today, mooncake gifts travel across cities carrying wishes: 'May our families be complete, like the moon tonight.'",
     meaning:
-      "The round shape represents the full moon and family reunion. The traditional lotus seed paste filling symbolizes purity and nobility. Sharing mooncakes with nine pieces (like the nine positions on ancient bronze mirrors) brings good luck to the whole family.",
+      "The round shape represents the full moon and family reunion. Sharing mooncakes with family brings good luck.",
     history:
       "Mooncakes date back over 3,000 years to the Shang Dynasty, evolving from ritual offerings to the moon. The modern form with lotus paste and egg yolk originated during the Ming Dynasty (1368-1644). During the Qing Dynasty, mooncake culture became elaborate with regional styles emerging across China.",
     regional:
@@ -213,11 +213,11 @@ export const foodData: FoodDataCollection = {
     english: "Longevity Noodles",
     festival: "Birthdays",
     description:
-      "Longevity noodles are exceptionally long, unbroken noodles served on birthdays to wish the celebrant a long, healthy life. They represent the hope that life's blessings will continue without interruption.",
+      "Longevity noodles are exceptionally long, unbroken noodles served on birthdays to wish the celebrant a long life.",
     story:
-      "In a Chinese family home, the birthday elder sits at the head of the table. Before them appears a single, impossibly long noodle—steaming, golden, and glistening with oil. The family sings 'Happy Birthday' (生日快乐的变奏), and the elder takes up chopsticks, ceremonially lifting the entire length of noodle from bowl to mouth without breaking it. Each bite extends life; each slurp adds years. This isn't just a meal—it's a living prayer made of flour and water.",
+      "In a Chinese family home, the birthday elder sits at the head of the table. Before them appears a single, impossibly long noodle—steaming, golden, and glistening with oil. The family sings, and the elder lifts the entire noodle from bowl to mouth without breaking it. Each bite extends life. This is a living prayer made of flour and water.",
     meaning:
-      "The long, unbroken noodle symbolizes a long, uninterrupted life. The 'long' (长) in the name directly references longevity (长寿). The single piece represents wholeness—the wish that life's blessings won't be cut short by misfortune.",
+      "The long, unbroken noodle symbolizes a long, uninterrupted life. The 'long' (长) in the name directly references longevity (长寿).",
     history:
       "Longevity noodles have been eaten in China since at least the Han Dynasty (206 BC - 220 AD). They became specifically associated with birthdays during the Tang Dynasty when Emperor Xuanzong officially designated noodles as birthday food. The tradition spread to Japan, Korea, and other East Asian cultures.",
     regional:

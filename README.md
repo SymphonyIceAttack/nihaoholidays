@@ -3,9 +3,9 @@
 <div align="center">
   <img src="public/base-logo.png" alt="NihaoHolidays Logo" width="120" height="120" />
 
-  **Your gateway to Chinese festivals and culture. Learn, celebrate, and connect.**
+  **Learn about Chinese festivals. Know what to say and what to do.**
 
-  [Website](https://nihaoholidays.org) • [GitHub](https://github.com/SymphonyIceAttack/nihaoholidays)
+  [Website](https://nihaoholidays.com) • [GitHub](https://github.com/SymphonyIceAttack/nihaoholidays)
 
 </div>
 
@@ -13,15 +13,15 @@
 
 ## About
 
-NihaoHolidays is an open-source web application dedicated to helping people around the world learn about and celebrate Chinese festivals and culture. From Chinese New Year to Mid-Autumn Festival, we provide educational resources, cultural insights, and interactive tools to bridge cultural understanding.
+NihaoHolidays is an open-source web app helping people learn about Chinese festivals and culture. From Chinese New Year to Mid-Autumn Festival, we provide practical guides, cultural context, and useful tools.
 
 ## Features
 
-- **Festival Guides** - Comprehensive information about major Chinese festivals including dates, traditions, and cultural significance
-- **Cultural Learning** - Explore Chinese food, customs, and traditions through interactive content
-- **AI Assistant** - Get answers to your questions about Chinese culture and festivals
-- **Interactive Tools** - Create greeting cards, design red envelopes, and more
-- **Multi-language Support** - Content available in English and Chinese
+- **Festival Guides** - Dates, traditions, and cultural context for major Chinese festivals
+- **Cultural Learning** - Food, customs, and traditions explained clearly
+- **AI Assistant** - Get answers to your questions about Chinese culture
+- **Practical Tools** - Create greetings, design red envelopes, and more
+- **Multi-language Support** - Content in English and Chinese
 
 ## Tech Stack
 
@@ -123,9 +123,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-- **Website**: [https://nihaoholidays.org](https://nihaoholidays.org)
+- **Website**: [https://nihaoholidays.com](https://nihaoholidays.com)
 - **GitHub**: [https://github.com/SymphonyIceAttack/nihaoholidays](https://github.com/SymphonyIceAttack/nihaoholidays)
-- **Email**: hello@nihaoholidays.org
+- **Email**: hello@nihaoholidays.com
 
 ---
 

@@ -33,8 +33,8 @@ export function RecentPosts({ posts }: RecentPostsProps) {
 
   return (
     <section className="mt-12">
-      <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-8 border border-border/50">
-        <h2 className="text-2xl sm:text-3xl font-display font-bold mb-4 text-center">
+      <div className="aurora-card p-8">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-center font-serif">
           Recent Posts
         </h2>
         <p className="text-muted-foreground text-lg mb-8 text-center">
@@ -48,7 +48,7 @@ export function RecentPosts({ posts }: RecentPostsProps) {
               onClick={(e) => handlePostClick(e, post.slug)}
               className="group"
             >
-              <Card className="h-full transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:border-primary/30">
+              <Card className="h-full aurora-card hover-glow transition-all duration-300 hover:-translate-y-1">
                 <CardHeader className="p-6">
                   <CardTitle className="text-lg font-bold group-hover:text-primary transition-colors line-clamp-2">
                     {post.title}

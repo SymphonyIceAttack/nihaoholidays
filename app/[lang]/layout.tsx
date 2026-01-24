@@ -22,9 +22,9 @@ const geist = Geist({
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
   variable: "--font-mono",
-  display: "optional",
   preload: true,
   fallback: ["ui-monospace", "monospace"],
 });

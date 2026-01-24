@@ -2,7 +2,6 @@
 @import "tw-animate-css";
 @source "../node_modules/streamdown/dist/*.js";
 
-
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -50,6 +49,14 @@
   --shadow-xl:
     0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --aurora-1: rgba(225, 29, 72, 0.12);
+  --aurora-2: rgba(244, 63, 94, 0.08);
+  --aurora-3: rgba(251, 113, 133, 0.05);
+  --aurora-glow: radial-gradient(
+    ellipse 80% 50% at 50% -20%,
+    rgba(225, 29, 72, 0.15),
+    transparent
+  );
 }
 
 .dark {
@@ -93,11 +100,20 @@
   --shadow-xl:
     0 20px 25px -5px rgb(0 0 0 / 0.4), 0 8px 10px -6px rgb(0 0 0 / 0.3);
   --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.5);
+  --aurora-1: rgba(244, 63, 94, 0.2);
+  --aurora-2: rgba(225, 29, 72, 0.15);
+  --aurora-3: rgba(251, 113, 133, 0.1);
+  --aurora-glow: radial-gradient(
+    ellipse 80% 50% at 50% -20%,
+    rgba(244, 63, 94, 0.25),
+    transparent
+  );
 }
 
 @theme inline {
-  --font-sans: "Noto Sans SC", "Noto Sans SC Fallback", system-ui, sans-serif;
-  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --font-sans: var(--font-mono), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-mono), Georgia, serif;
+  --font-mono: var(--font-mono), ui-monospace, monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -135,12 +151,14 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  --font-serif: "Source Serif 4", "Source Serif 4 Fallback";
   --shadow-sm: var(--shadow-sm);
   --shadow-md: var(--shadow-md);
   --shadow-lg: var(--shadow-lg);
   --shadow-xl: var(--shadow-xl);
   --shadow-2xl: var(--shadow-2xl);
+  --color-aurora-1: rgba(225, 29, 72, 0.12);
+  --color-aurora-2: rgba(244, 63, 94, 0.08);
+  --color-aurora-3: rgba(251, 113, 133, 0.05);
 }
 
 @layer base {
@@ -170,12 +188,44 @@
     @apply bg-white/80 dark:bg-white/10 backdrop-blur-xl border border-white/20 dark:border-white/10;
   }
 
+  .aurora-bg {
+    @apply relative overflow-hidden;
+    background: linear-gradient(
+      to bottom,
+      var(--aurora-1) 0%,
+      transparent 40%,
+      transparent 60%,
+      var(--aurora-2) 100%
+    );
+  }
+
+  .aurora-bg::before {
+    content: "";
+    @apply absolute inset-0 pointer-events-none;
+    background: var(--aurora-glow);
+    opacity: 0.6;
+  }
+
+  .aurora-card {
+    @apply relative overflow-hidden bg-white/70 dark:bg-white/5 backdrop-blur-xl rounded-xl border border-white/20 dark:border-white/10;
+  }
+
+  .aurora-card::before {
+    content: "";
+    @apply absolute inset-0 pointer-events-none opacity-50;
+    background: radial-gradient(
+      ellipse 80% 50% at 50% 0%,
+      var(--aurora-1) 0%,
+      transparent 70%
+    );
+  }
+
   .gradient-text {
-    @apply bg-gradient-to-r from-primary to-rose-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-rose-600 via-primary to-rose-500 bg-clip-text text-transparent;
   }
 
   .gradient-border {
-    @apply relative before:absolute before:inset-0 before:rounded-xl before:p-[1px] before:bg-gradient-to-r before:from-primary/50 before:to-rose-400/50 before:-z-10;
+    @apply relative before:absolute before:inset-0 before:rounded-xl before:p-[1px] before:bg-gradient-to-r before:from-rose-600/50 before:to-primary/50 before:-z-10;
   }
 
   .hover-lift {
@@ -186,7 +236,26 @@
     @apply transition-transform duration-300 hover:scale-[1.02];
   }
 
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-primary/15;
+  }
+
   .focus-ring {
     @apply focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:outline-none;
+  }
+
+  .animate-aurora {
+    animation: aurora 8s ease-in-out infinite alternate;
+  }
+
+  @keyframes aurora {
+    0% {
+      opacity: 0.4;
+      transform: translateY(-10px) scale(0.98);
+    }
+    100% {
+      opacity: 0.7;
+      transform: translateY(0) scale(1);
+    }
   }
 }

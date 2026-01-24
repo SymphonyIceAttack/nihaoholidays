@@ -19,12 +19,12 @@ const metadataConfig: Record<
   { title: string; description: string; ogTitle: string; ogDescription: string }
 > = {
   en: {
-    title: "Interactive Quiz - NihaoHolidays",
+    title: "Quiz - NihaoHolidays",
     description:
-      "Test your knowledge about Chinese festivals with interactive quizzes.",
-    ogTitle: "Interactive Quiz - NihaoHolidays",
+      "Test what you know about Chinese festivals with quick quizzes.",
+    ogTitle: "Quiz - NihaoHolidays",
     ogDescription:
-      "Test your knowledge about Chinese festivals with interactive quizzes.",
+      "Test what you know about Chinese festivals with quick quizzes.",
   },
 };
 

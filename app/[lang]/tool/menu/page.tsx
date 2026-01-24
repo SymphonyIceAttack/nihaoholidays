@@ -18,10 +18,10 @@ const metadataConfig: Record<
   en: {
     title: "Menu Assistant - NihaoHolidays",
     description:
-      "Design your Spring Festival reunion dinner with authentic Chinese dishes and ordering phrases.",
+      "Plan your Spring Festival reunion dinner with Chinese dishes and ordering phrases.",
     ogTitle: "Menu Assistant - NihaoHolidays",
     ogDescription:
-      "Design your Spring Festival reunion dinner with authentic Chinese dishes and ordering phrases.",
+      "Plan your Spring Festival reunion dinner with Chinese dishes and ordering phrases.",
   },
 };
 

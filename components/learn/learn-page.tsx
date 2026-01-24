@@ -22,8 +22,17 @@ function LearnPageInner({ lang }: { lang: LanguageType }) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-rose-50/50 via-background to-background">
-      <main className="container mx-auto px-4 py-12">
+    <div className="min-h-screen aurora-bg">
+      <main className="container relative mx-auto px-4 py-12">
+        {/* Decorative aurora effects */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10">
+          <div className="absolute top-20 left-1/4 w-96 h-96 bg-aurora-1 rounded-full blur-3xl animate-aurora" />
+          <div
+            className="absolute top-40 right-1/4 w-72 h-72 bg-aurora-2 rounded-full blur-3xl animate-aurora"
+            style={{ animationDelay: "2s" }}
+          />
+        </div>
+
         {/* Progress Steps */}
         <div className="mb-12">
           <div className="flex items-center justify-center gap-2 mb-8">
@@ -33,9 +42,9 @@ function LearnPageInner({ lang }: { lang: LanguageType }) {
                   className={cn(
                     "flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300",
                     currentStep > index
-                      ? "bg-rose-100 dark:bg-rose-900/30 text-rose-700 dark:text-rose-300"
+                      ? "aurora-card text-rose-700 dark:text-rose-300"
                       : currentStep === index
-                        ? "bg-rose-100 dark:bg-rose-900/30 text-rose-700 dark:text-rose-300"
+                        ? "aurora-card text-rose-700 dark:text-rose-300"
                         : "bg-muted text-muted-foreground",
                   )}
                 >
@@ -68,7 +77,7 @@ function LearnPageInner({ lang }: { lang: LanguageType }) {
         {/* Step 1: Pick a Festival */}
         <section className="mb-16">
           <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 bg-rose-100 dark:bg-rose-900/30 text-rose-700 dark:text-rose-300 px-4 py-1.5 rounded-full text-sm font-medium mb-4">
+            <div className="inline-flex items-center gap-2 aurora-card text-rose-700 dark:text-rose-300 px-4 py-1.5 text-sm font-medium mb-4">
               <span
                 className={cn(
                   "w-2 h-2 rounded-full bg-rose-500",
@@ -79,7 +88,7 @@ function LearnPageInner({ lang }: { lang: LanguageType }) {
                 ? t("learn.chooseFestival")
                 : t("learn.readyToLearn")}
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-3 font-serif">
               {currentStep === 1
                 ? t("learn.startJourney")
                 : t("learn.learning", {
@@ -110,12 +119,12 @@ function LearnPageInner({ lang }: { lang: LanguageType }) {
                   className={cn(
                     "relative p-5 rounded-xl border-2 text-left transition-all duration-300 hover:shadow-md",
                     isSelected
-                      ? "border-rose-500 bg-rose-50/50 dark:bg-rose-900/20 shadow-md"
+                      ? "aurora-card border-rose-500"
                       : "border-border bg-background hover:border-rose-200 dark:hover:border-rose-800",
                   )}
                 >
                   {isSelected && (
-                    <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-rose-500 text-white flex items-center justify-center shadow-lg">
+                    <div className="absolute top-2 right-2 w-8 h-8 rounded-full bg-rose-500 text-white flex items-center justify-center shadow-lg ring-4 ring-background">
                       <CheckCircle2 className="h-5 w-5" />
                     </div>
                   )}
@@ -156,9 +165,9 @@ function LearnPageInner({ lang }: { lang: LanguageType }) {
         {selectedFestival && (
           <section className="mb-16 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <div className="max-w-2xl mx-auto">
-              <div className="bg-gradient-to-r from-rose-100/80 to-orange-100/80 dark:from-rose-900/30 dark:to-orange-900/20 border border-rose-200 dark:border-rose-800 rounded-2xl p-6 md:p-8">
+              <div className="aurora-card p-6 md:p-8">
                 <div className="text-center mb-6">
-                  <div className="inline-flex items-center gap-2 bg-white/80 dark:bg-white/5 backdrop-blur-sm px-3 py-1 rounded-full text-sm text-rose-700 dark:text-rose-300 mb-4">
+                  <div className="inline-flex items-center gap-2 aurora-card px-3 py-1 rounded-full text-sm text-rose-700 dark:text-rose-300 mb-4">
                     <Sparkles className="h-4 w-4" />
                     {t("learn.readyLearn")}
                   </div>
@@ -181,7 +190,7 @@ function LearnPageInner({ lang }: { lang: LanguageType }) {
                   <Button
                     size="lg"
                     onClick={handleStart}
-                    className="flex-1 bg-rose-600 hover:bg-rose-700 text-white shadow-lg shadow-rose-600/20"
+                    className="flex-1 bg-rose-600 hover:bg-rose-700 text-white shadow-lg shadow-rose-600/20 hover-glow transition-all duration-300"
                   >
                     {t("learn.startNow")}
                     <ArrowRight className="h-4 w-4 ml-2" />
@@ -205,7 +214,7 @@ function LearnPageInner({ lang }: { lang: LanguageType }) {
         {/* Learning Preview */}
         <section>
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-foreground mb-3">
+            <h2 className="text-2xl font-bold text-foreground mb-3 font-serif">
               {t("learn.whatLearn")}
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
@@ -214,8 +223,8 @@ function LearnPageInner({ lang }: { lang: LanguageType }) {
           </div>
 
           <div className="grid gap-6 md:grid-cols-4 max-w-5xl mx-auto">
-            <div className="text-center p-6 rounded-xl bg-muted/50 hover:bg-muted transition-colors">
-              <div className="w-12 h-12 rounded-xl bg-rose-100 dark:bg-rose-900/30 flex items-center justify-center mx-auto mb-3">
+            <div className="text-center p-6 rounded-xl aurora-card hover-glow transition-all duration-300 cursor-pointer">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-rose-400 to-rose-500 flex items-center justify-center mx-auto mb-3 shadow-lg shadow-rose-500/20">
                 <span className="text-2xl">📝</span>
               </div>
               <h3 className="font-semibold text-foreground mb-1">
@@ -225,8 +234,8 @@ function LearnPageInner({ lang }: { lang: LanguageType }) {
                 {t("learn.expressions.desc")}
               </p>
             </div>
-            <div className="text-center p-6 rounded-xl bg-muted/50 hover:bg-muted transition-colors">
-              <div className="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mx-auto mb-3">
+            <div className="text-center p-6 rounded-xl aurora-card hover-glow transition-all duration-300 cursor-pointer">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-400 to-blue-500 flex items-center justify-center mx-auto mb-3 shadow-lg shadow-blue-500/20">
                 <span className="text-2xl">🍜</span>
               </div>
               <h3 className="font-semibold text-foreground mb-1">
@@ -236,8 +245,8 @@ function LearnPageInner({ lang }: { lang: LanguageType }) {
                 {t("learn.foodGuide.desc")}
               </p>
             </div>
-            <div className="text-center p-6 rounded-xl bg-muted/50 hover:bg-muted transition-colors">
-              <div className="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center mx-auto mb-3">
+            <div className="text-center p-6 rounded-xl aurora-card hover-glow transition-all duration-300 cursor-pointer">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-400 to-emerald-500 flex items-center justify-center mx-auto mb-3 shadow-lg shadow-emerald-500/20">
                 <span className="text-2xl">🎁</span>
               </div>
               <h3 className="font-semibold text-foreground mb-1">
@@ -247,8 +256,8 @@ function LearnPageInner({ lang }: { lang: LanguageType }) {
                 {t("learn.etiquette.desc")}
               </p>
             </div>
-            <div className="text-center p-6 rounded-xl bg-muted/50 hover:bg-muted transition-colors">
-              <div className="w-12 h-12 rounded-xl bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mx-auto mb-3">
+            <div className="text-center p-6 rounded-xl aurora-card hover-glow transition-all duration-300 cursor-pointer">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-400 to-purple-500 flex items-center justify-center mx-auto mb-3 shadow-lg shadow-purple-500/20">
                 <span className="text-2xl">💬</span>
               </div>
               <h3 className="font-semibold text-foreground mb-1">
@@ -267,13 +276,13 @@ function LearnPageInner({ lang }: { lang: LanguageType }) {
 
 function LearnPageSkeleton() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-rose-50/50 via-background to-background">
-      <main className="container mx-auto px-4 py-12">
+    <div className="min-h-screen aurora-bg">
+      <main className="container relative mx-auto px-4 py-12">
         <div className="animate-pulse">
           <div className="h-8 bg-muted rounded-full w-64 mx-auto mb-8" />
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
             {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div key={i} className="h-40 bg-muted rounded-xl" />
+              <div key={i} className="h-40 aurora-card rounded-xl" />
             ))}
           </div>
         </div>

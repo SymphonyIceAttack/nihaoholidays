@@ -59,8 +59,8 @@ export function CulturalTopicsGrid({
           Understanding the Deeper Meaning
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto">
-          Explore the rich cultural context that makes each festival unique and
-          meaningful.
+          What makes each festival matter, where traditions come from, and how
+          they change today.
         </p>
       </div>
 
@@ -116,9 +116,9 @@ export function CulturalTopicsGrid({
                 {topic.id === "significance" && (
                   <div className="space-y-4">
                     <p className="text-muted-foreground">
-                      This festival holds profound significance in Chinese
-                      culture, representing values like family unity, respect
-                      for ancestors, and hopes for the future.
+                      This festival matters in Chinese culture. It's about
+                      family unity, respecting ancestors, and hoping for good
+                      things to come.
                     </p>
                     <div className="space-y-2">
                       {customs.slice(0, 3).map((custom, i) => (

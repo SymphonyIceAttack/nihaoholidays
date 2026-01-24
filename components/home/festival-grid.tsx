@@ -43,8 +43,7 @@ export function FestivalGrid({ lang, theme = "all" }: FestivalGridProps) {
             Festival List
           </h2>
           <p className="text-sm text-muted-foreground mt-1">
-            Each festival comes with complete cultural overviews, interactive
-            quizzes, and practical tools
+            Each festival has cultural overviews, quizzes, and useful tools
           </p>
         </div>
         <span className="text-sm text-muted-foreground hidden sm:block">

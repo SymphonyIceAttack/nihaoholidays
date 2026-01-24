@@ -26,7 +26,7 @@ export function DeepContentSection({ basicInfo }: DeepContentSectionProps) {
         <div>
           <h2 className="text-xl font-semibold text-foreground">Deep Dive</h2>
           <p className="text-sm text-muted-foreground">
-            Explore the rich cultural heritage and modern evolution
+            History, regional differences, and how traditions change today
           </p>
         </div>
       </div>

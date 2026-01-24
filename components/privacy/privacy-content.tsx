@@ -17,7 +17,7 @@ const translations: Record<LanguageType, Record<string, string | string[]>> = {
     "privacy.title": "Privacy Policy",
     "privacy.intro": "Last updated: January 2025",
     "privacy.intro.description":
-      "At NihaoHolidays, we take your privacy seriously. This Privacy Policy explains how we collect, use, and protect your information.",
+      "This policy explains how we handle your data. We keep it simple.",
     "privacy.collect.title": "Information We Collect",
     "privacy.collect.description":
       "We collect information you provide directly to us, such as when you:",
@@ -44,7 +44,7 @@ const translations: Record<LanguageType, Record<string, string | string[]>> = {
     ],
     "privacy.cookies.title": "Cookies",
     "privacy.cookies.description":
-      "We use cookies to enhance your experience. You can disable cookies in your browser settings.",
+      "We use cookies. You can disable them in your browser settings.",
     "privacy.third.title": "Third-Party Services",
     "privacy.third.description":
       "We may use third-party services (like analytics) that collect information according to their own privacy policies.",

@@ -1,31 +1,31 @@
 export const about = {
-  "about.hero.title": "Discover the Heart of Chinese Culture",
+  "about.hero.title": "Understanding Chinese festivals",
   "about.hero.subtitle":
-    "Your trusted companion for understanding and celebrating Chinese festivals and traditions",
-  "about.mission.title": "Our Mission",
+    "Real situations. Practical phrases. What to bring and what to say.",
+  "about.mission.title": "Why we built this",
   "about.mission.description":
-    "To make Chinese culture accessible to everyone, bridging gaps in understanding and fostering appreciation for centuries-old traditions.",
-  "about.story.title": "Our Story",
+    "Chinese festivals matter to millions of people. We help you participate without embarrassing yourself.",
+  "about.story.title": "How this started",
   "about.story.paragraph1":
-    "NihaoHolidays was born from a simple observation: Chinese festivals are rich with meaning, but much of that meaning remains hidden to those outside the culture.",
+    "The founders sat through awkward Chinese New Year dinners, not knowing what to say or do. They watched international friends miss entire customs because no one explained them.",
   "about.story.paragraph2":
-    "We started as a small project aimed at helping international students understand why their Chinese friends disappeared during Chinese New Year. What began as a FAQ grew into a comprehensive platform.",
+    '"What do I say to my Chinese colleague\'s parents?" "Is this gift weird?" "Why is everyone eating dumplings at midnight?" These are the real questions people have.',
   "about.story.paragraph3":
-    "Today, we help millions of people around the world connect with Chinese culture, one festival at a time.",
-  "about.values.title": "Our Values",
-  "about.values.authenticity": "Authenticity",
+    "So we built this. Answers for situations you'll actually encounter.",
+  "about.values.title": "What matters to us",
+  "about.values.authenticity": "Real customs",
   "about.values.authenticity.description":
-    "We strive to present traditions as they are practiced, consulting with cultural experts and local communities.",
-  "about.values.practicality": "Practicality",
+    "Native speakers check our content. We describe what people actually do, not tourist versions.",
+  "about.values.practicality": "Use it today",
   "about.values.practicality.description":
-    "We focus on actionable knowledge that you can use in real situations, whether you're visiting China or celebrating locally.",
-  "about.values.inclusivity": "Inclusivity",
+    "Skip the history lecture. Here is what you say and do in real situations.",
+  "about.values.inclusivity": "No Chinese required",
   "about.values.inclusivity.description":
-    "We welcome everyone curious about Chinese culture, regardless of background or prior knowledge.",
-  "about.values.continuous": "Continuous Learning",
+    "We assume no prior knowledge. No cultural background needed.",
+  "about.values.continuous": "We listen",
   "about.values.continuous.description":
-    "Culture evolves, and so do we. We regularly update our content to reflect modern practices while honoring traditions.",
-  "about.team.title": "Meet Our Team",
+    "You tell us what confuses you. We make it clearer.",
+  "about.team.title": "Who we are",
   "about.team.description":
-    "A diverse team of cultural enthusiasts, educators, and technologists working together to bring Chinese culture closer to the world.",
+    "Chinese culture experts and people who learned the hard way.",
 } as const;

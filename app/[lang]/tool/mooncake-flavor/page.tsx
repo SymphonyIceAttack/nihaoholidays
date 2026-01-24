@@ -52,8 +52,8 @@ export default async function MooncakeFlavorPage({
               Mooncake Flavor Guide
             </h1>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              From traditional lotus paste to modern innovations, discover the
-              diverse world of mooncake flavors.
+              Traditional lotus paste, modern varieties, and everything in
+              between.
             </p>
           </div>
 

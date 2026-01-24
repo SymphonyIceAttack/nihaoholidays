@@ -1,7 +1,7 @@
 import { readItems } from "@directus/sdk";
 import { unstable_cache } from "next/cache";
-import directus, { type Post } from "@/lib/directus";
 import { siteConfig } from "@/lib/config";
+import directus, { type Post } from "@/lib/directus";
 
 export interface BlogPost {
   slug: string;
@@ -29,7 +29,9 @@ function transformPost(post: Post): BlogPost {
     description: post.description,
     publishedAt: post.published_at,
     content: post.content,
-    imageUrl: post.imageurl ? `${siteConfig.imageCdn}/${post.imageurl}` : undefined,
+    imageUrl: post.imageurl
+      ? `${siteConfig.imageCdn}/${post.imageurl}`
+      : undefined,
     author: post.author
       ? {
           name: post.author,

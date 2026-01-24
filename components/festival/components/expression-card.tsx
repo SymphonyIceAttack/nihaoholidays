@@ -42,10 +42,10 @@ export function ExpressionCard({ expression }: ExpressionCardProps) {
   };
 
   return (
-    <div className="p-4 rounded-xl border border-rose-200 dark:border-rose-800 bg-white/50 dark:bg-zinc-800/50 hover:shadow-md transition-all duration-300">
+    <div className="p-4 rounded-xl aurora-card hover-glow transition-all duration-300">
       <div className="flex items-start justify-between mb-3">
         <div>
-          <h4 className="font-semibold text-foreground text-lg">
+          <h4 className="font-semibold text-foreground text-lg font-serif">
             {expression.chinese}
           </h4>
           <p className="text-sm text-rose-600 dark:text-rose-400 font-medium">
@@ -56,7 +56,7 @@ export function ExpressionCard({ expression }: ExpressionCardProps) {
           type="button"
           onClick={speak}
           disabled={isPlaying}
-          className="p-2 rounded-full bg-rose-100 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400 hover:bg-rose-200 dark:hover:bg-rose-900/50 transition-colors disabled:opacity-50"
+          className="p-2 rounded-full bg-rose-100 dark:bg-rose-900/30 text-rose-600 dark:text-rose-400 hover:bg-rose-200 dark:hover:bg-rose-900/50 transition-colors disabled:opacity-50 hover:scale-110 transition-transform"
           title="播放发音"
         >
           {isPlaying ? (

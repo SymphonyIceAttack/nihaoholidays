@@ -7,7 +7,7 @@ export const privacySchema = z.object({
   "privacy.collect.title": z.string(),
   "privacy.collect.description": z.string(),
   "privacy.collect.items": z.string(),
-  "privacy.collect自动": z.string(),
+  "privacy.collect.auto": z.string(),
   "privacy.analytics.description": z.string(),
   "privacy.analytics.items": z.string(),
   "privacy.use.title": z.string(),

@@ -129,8 +129,7 @@ export default async function SpringPrepPage({
               Spring Festival Prep List
             </h1>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Your comprehensive guide to preparing for Chinese New Year. Start
-              early to ensure a smooth and prosperous celebration.
+              What to do before Chinese New Year. Start early so you're ready.
             </p>
           </div>
 

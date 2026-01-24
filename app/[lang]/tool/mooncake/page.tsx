@@ -85,8 +85,8 @@ export default async function MooncakePage({
               Mooncake Flavor Guide
             </h1>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Discover the diverse world of mooncakes, from traditional classics
-              to modern innovations.
+              Traditional and modern mooncake flavors, and what to give as
+              gifts.
             </p>
           </div>
 

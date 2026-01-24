@@ -41,7 +41,7 @@ export const common = {
 
   // Common
   "common.learnMore": "Learn more",
-  "common.exploreCulture": "Explore Culture",
+  "common.exploreCulture": "Culture",
   "common.playQuiz": "Play Quiz",
   "common.tools": "Tools",
 

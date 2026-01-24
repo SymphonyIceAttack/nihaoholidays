@@ -1,5 +1,6 @@
 "use client";
 
+import { siteConfig } from "@/lib/config";
 import type { LanguageType } from "@/lib/translations";
 import { ContactForm } from "./components/contact-form";
 import { ContactHero } from "./components/contact-hero";
@@ -12,7 +13,7 @@ const translations: Record<LanguageType, Record<string, string>> = {
       "Have questions, suggestions, or feedback? We'd love to hear from you.",
     "contact.email.label": "Email",
     "contact.email.description": "The best way to reach us is via email.",
-    "contact.email.address": "hello@nihaoholidays.org",
+    "contact.email.address": `${siteConfig.contactEmail}`,
     "contact.response.label": "Response Time",
     "contact.response.description": "We typically respond within 24-48 hours.",
     "contact.response.value": "24-48 hours",

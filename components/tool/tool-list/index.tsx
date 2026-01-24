@@ -95,7 +95,7 @@ const tools = [
     id: "dragon-boat-culture",
     title: "Dragon Boat Culture",
     description:
-      "Explore the rich cultural traditions of Dragon Boat Festival.",
+      "Dragon Boat Festival history, traditions, and what it means today.",
     icon: Heart,
     href: "/tool/dragon-boat-culture",
     color: "from-cyan-400 to-sky-500",
@@ -358,12 +358,26 @@ const tools = [
 
 export function ToolListPage({ lang = "en" }: { lang?: LanguageType } = {}) {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-rose-50/50 via-background to-background">
-      <main className="container mx-auto px-4 py-8">
+    <div className="min-h-screen aurora-bg">
+      <main className="container relative mx-auto px-4 py-8">
+        {/* Decorative aurora effects */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10">
+          <div className="absolute top-20 left-1/4 w-96 h-96 bg-aurora-1 rounded-full blur-3xl animate-aurora" />
+          <div
+            className="absolute top-40 right-1/4 w-72 h-72 bg-aurora-2 rounded-full blur-3xl animate-aurora"
+            style={{ animationDelay: "2s" }}
+          />
+        </div>
+
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-6xl mb-4 block">🛠️</span>
-            <h1 className="text-3xl font-bold text-foreground mb-3">
+            <span className="text-6xl mb-4 block relative">
+              🛠️
+              <span className="absolute inset-0 text-6xl blur-xl opacity-30">
+                🛠️
+              </span>
+            </span>
+            <h1 className="text-3xl font-bold text-foreground mb-3 font-serif">
               Festival Tools
             </h1>
             <p className="text-muted-foreground max-w-xl mx-auto">
@@ -380,21 +394,21 @@ export function ToolListPage({ lang = "en" }: { lang?: LanguageType } = {}) {
                 <Link
                   key={tool.id}
                   href={href}
-                  className="group relative overflow-hidden rounded-2xl border border-rose-200 dark:border-rose-800 bg-white/60 dark:bg-zinc-800/60 p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                  className="group relative overflow-hidden aurora-card cursor-pointer hover-glow transition-all duration-300 hover:-translate-y-1 p-8"
                 >
                   <div
                     className={`absolute inset-0 bg-gradient-to-br ${tool.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
                   />
                   <div className="relative">
                     <div
-                      className={`w-14 h-14 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center mb-4 text-white shadow-lg`}
+                      className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${tool.color} flex items-center justify-center mb-6 text-white shadow-lg shadow-${tool.color.split(" ")[0]}/20 transition-transform group-hover:scale-105`}
                     >
-                      <Icon className="h-7 w-7" />
+                      <Icon className="h-8 w-8" />
                     </div>
-                    <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors">
+                    <h3 className="text-2xl font-semibold text-foreground mb-3 group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors">
                       {tool.title}
                     </h3>
-                    <p className="text-muted-foreground text-sm mb-4">
+                    <p className="text-muted-foreground text-base mb-6 leading-relaxed">
                       {tool.description}
                     </p>
                     <div className="flex items-center text-rose-600 dark:text-rose-400 text-sm font-medium">
@@ -407,17 +421,19 @@ export function ToolListPage({ lang = "en" }: { lang?: LanguageType } = {}) {
             })}
           </div>
 
-          <div className="mt-12 bg-gradient-to-r from-amber-50/80 to-orange-50/80 dark:from-amber-900/20 dark:to-orange-900/20 border border-amber-200 dark:border-amber-800 rounded-2xl p-6">
+          <div className="mt-12 aurora-card p-6">
             <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center">
-                <span className="text-2xl">📚</span>
+              <div className="relative group">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400 to-amber-500 flex items-center justify-center shadow-lg shadow-amber-500/20 transition-transform group-hover:scale-105">
+                  <span className="text-2xl">📚</span>
+                </div>
               </div>
               <div>
                 <h3 className="font-semibold text-foreground">
                   Want to Learn More?
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Explore our comprehensive festival learning resources
+                  Browse all our learning resources
                 </p>
               </div>
             </div>
