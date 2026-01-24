@@ -1,7 +1,7 @@
 import type { z } from "zod";
 import type { LanguageType } from "../config";
 import { aboutSchema } from "./about";
-import { commonSchema } from "./common";
+import { breadcrumbSchema, commonSchema, navSchema } from "./common";
 import { contactSchema } from "./contact";
 import { festivalSchema } from "./festival";
 import { homeSchema } from "./home";
@@ -11,7 +11,7 @@ import { termsSchema } from "./terms";
 
 export { aboutSchema } from "./about";
 // Re-export all schema modules
-export { commonSchema, navSchema } from "./common";
+export { breadcrumbSchema, commonSchema, navSchema } from "./common";
 export { contactSchema } from "./contact";
 export { festivalSchema } from "./festival";
 // Festival data schemas
@@ -32,6 +32,7 @@ export { quizSchema } from "./quiz";
 export { termsSchema } from "./terms";
 
 // Type exports
+export type BreadcrumbSchema = z.infer<typeof breadcrumbSchema>;
 export type CommonSchema = z.infer<typeof commonSchema>;
 export type HomeSchema = z.infer<typeof homeSchema>;
 export type FestivalSchema = z.infer<typeof festivalSchema>;
