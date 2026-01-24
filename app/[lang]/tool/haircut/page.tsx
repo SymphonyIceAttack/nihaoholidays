@@ -19,7 +19,8 @@ export async function generateMetadata({
 
   return {
     title: "Haircut Guide - NihaoHolidays",
-    description: "Traditional haircut customs and lucky styles for Dragon Head Festival",
+    description:
+      "Traditional haircut customs and lucky styles for Dragon Head Festival",
     alternates: {
       canonical: `${siteConfig.siteUrl}/${lang}/tool/haircut`,
       languages: generateHreflangLinks("/tool/haircut"),
@@ -66,8 +67,8 @@ export default async function HaircutPage({
                   renewing yourself for the new year
                 </li>
                 <li>
-                  • <strong>Lucky Style:</strong> Certain styles are believed
-                  to bring good fortune
+                  • <strong>Lucky Style:</strong> Certain styles are believed to
+                  bring good fortune
                 </li>
                 <li>
                   • <strong>Remove Bad Luck:</strong> Cutting hair removes
@@ -133,16 +134,12 @@ export default async function HaircutPage({
                   • Book your appointment early - salons are busy during this
                   period
                 </li>
+                <li>• Consider a style that frames your face for photos</li>
                 <li>
-                  • Consider a style that frames your face for photos
+                  • Bring a photo of your desired style to communicate with your
+                  barber
                 </li>
-                <li>
-                  • Bring a photo of your desired style to communicate with
-                  your barber
-                </li>
-                <li>
-                  • A fresh look boosts confidence for the year ahead
-                </li>
+                <li>• A fresh look boosts confidence for the year ahead</li>
               </ul>
             </div>
           </div>
@@ -151,9 +148,8 @@ export default async function HaircutPage({
             <h2 className="text-xl font-semibold mb-2">Dragon Energy</h2>
             <p className="text-muted-foreground">
               On Dragon Head Festival, getting a haircut isn&apos;t just about
-              looking good - it&apos;s about channeling the dragon&apos;s
-              power, wisdom, and good fortune into your life for the year
-              ahead.
+              looking good - it&apos;s about channeling the dragon&apos;s power,
+              wisdom, and good fortune into your life for the year ahead.
             </p>
           </div>
         </div>

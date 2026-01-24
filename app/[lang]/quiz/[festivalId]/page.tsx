@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { QuizContent } from "@/components/quiz/quiz-content";
+import { BreadcrumbStructuredData } from "@/components/structured-data/breadcrumb";
 import { siteConfig } from "@/lib/config";
 import { getAllFestivalIds } from "@/lib/festivals";
+import { getQuizBreadcrumb } from "@/lib/structured-data";
 import type { LanguageType } from "@/lib/translations/config";
 import { supportedLocales } from "@/lib/translations/config";
 import { generateHreflangLinks } from "@/lib/translations/hreflang";
@@ -76,5 +78,14 @@ export default async function QuizPage({
   params: Promise<{ lang: LanguageType; festivalId: string }>;
 }) {
   const { lang, festivalId } = await params;
-  return <QuizContent lang={lang} festivalId={festivalId} />;
+
+  return (
+    <>
+      <BreadcrumbStructuredData
+        items={getQuizBreadcrumb(lang, festivalId, festivalId)}
+        lang={lang}
+      />
+      <QuizContent lang={lang} festivalId={festivalId} />
+    </>
+  );
 }

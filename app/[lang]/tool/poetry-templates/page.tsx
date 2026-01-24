@@ -19,7 +19,8 @@ export async function generateMetadata({
 
   return {
     title: "Poetry Templates - NihaoHolidays",
-    description: "Traditional Chinese poetry templates for festivals and celebrations",
+    description:
+      "Traditional Chinese poetry templates for festivals and celebrations",
     alternates: {
       canonical: `${siteConfig.siteUrl}/${lang}/tool/poetry-templates`,
       languages: generateHreflangLinks("/tool/poetry-templates"),
@@ -59,7 +60,9 @@ export default async function PoetryTemplatesPage({
 
           <div className="grid gap-6">
             <div className="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-semibold mb-4">Spring Festival Blessings</h2>
+              <h2 className="text-xl font-semibold mb-4">
+                Spring Festival Blessings
+              </h2>
               <div className="space-y-3">
                 <div className="p-4 bg-red-50 dark:bg-red-900/20 rounded-xl">
                   <p className="font-medium text-foreground mb-1">
@@ -98,7 +101,9 @@ export default async function PoetryTemplatesPage({
             </div>
 
             <div className="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-semibold mb-4">Mid-Autumn Festival</h2>
+              <h2 className="text-xl font-semibold mb-4">
+                Mid-Autumn Festival
+              </h2>
               <div className="space-y-3">
                 <div className="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-xl">
                   <p className="font-medium text-foreground mb-1">
@@ -136,8 +141,8 @@ export default async function PoetryTemplatesPage({
                     Fú rú dōnghǎi, shòu bǐ nánshān
                   </p>
                   <p className="text-xs text-muted-foreground mt-1">
-                    - Fortune like the Eastern Sea,寿命 as enduring as
-                    Southern Mountain
+                    - Fortune like the Eastern Sea,寿命 as enduring as Southern
+                    Mountain
                   </p>
                 </div>
                 <div className="p-4 bg-purple-50 dark:bg-purple-900/20 rounded-xl">
@@ -186,7 +191,9 @@ export default async function PoetryTemplatesPage({
           </div>
 
           <div className="mt-8 bg-gradient-to-r from-red-100/80 to-pink-100/80 dark:from-red-900/30 dark:to-pink-900/20 rounded-2xl p-6 text-center">
-            <h2 className="text-xl font-semibold mb-2">The Art of Expression</h2>
+            <h2 className="text-xl font-semibold mb-2">
+              The Art of Expression
+            </h2>
             <p className="text-muted-foreground">
               Chinese poetry carries wishes in elegant, rhythmic phrases. These
               templates help express heartfelt sentiments for every occasion.

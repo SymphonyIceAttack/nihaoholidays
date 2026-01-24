@@ -59,10 +59,12 @@ export default async function HumanDayPage({
 
           <div className="grid gap-6">
             <div className="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-semibold mb-4">The Legend of Human Day</h2>
+              <h2 className="text-xl font-semibold mb-4">
+                The Legend of Human Day
+              </h2>
               <p className="text-muted-foreground mb-4">
-                Human Day (人日) is celebrated on the 7th day of the first
-                lunar month. According to legend, the goddess Nüwa (女娲) created
+                Human Day (人日) is celebrated on the 7th day of the first lunar
+                month. According to legend, the goddess Nüwa (女娲) created
                 humanity on this day:
               </p>
               <ul className="space-y-2 text-muted-foreground">
@@ -77,10 +79,14 @@ export default async function HumanDayPage({
             </div>
 
             <div className="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-semibold mb-4">Traditional Customs</h2>
+              <h2 className="text-xl font-semibold mb-4">
+                Traditional Customs
+              </h2>
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="p-4 bg-purple-50 dark:bg-purple-900/20 rounded-xl">
-                  <h3 className="font-medium mb-2">🍜 Seven-Vegetable Porridge</h3>
+                  <h3 className="font-medium mb-2">
+                    🍜 Seven-Vegetable Porridge
+                  </h3>
                   <p className="text-sm text-muted-foreground">
                     Eating seven-vegetable porridge for health and blessings
                   </p>
@@ -113,14 +119,10 @@ export default async function HumanDayPage({
                 because:
               </p>
               <ul className="space-y-3 text-muted-foreground">
-                <li>
-                  • It celebrates the creation and value of human life
-                </li>
+                <li>• It celebrates the creation and value of human life</li>
                 <li>• Energy is at its peak after the New Year celebrations</li>
                 <li>• Setting intentions on this day brings blessings</li>
-                <li>
-                  • The number 7 is considered lucky in Chinese culture
-                </li>
+                <li>• The number 7 is considered lucky in Chinese culture</li>
               </ul>
             </div>
 

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { DisclaimerContent } from "@/components/disclaimer/disclaimer-content";
+import { BreadcrumbStructuredData } from "@/components/structured-data/breadcrumb";
 import { siteConfig } from "@/lib/config";
+import { getDisclaimerBreadcrumb } from "@/lib/structured-data";
 import type { LanguageType } from "@/lib/translations/config";
 import { supportedLocales } from "@/lib/translations/config";
 import { generateHreflangLinks } from "@/lib/translations/hreflang";
@@ -61,5 +63,13 @@ export default async function DisclaimerPage({
   params: Promise<{ lang: LanguageType }>;
 }) {
   const { lang } = await params;
-  return <DisclaimerContent lang={lang} />;
+  return (
+    <>
+      <BreadcrumbStructuredData
+        items={getDisclaimerBreadcrumb(lang)}
+        lang={lang}
+      />
+      <DisclaimerContent lang={lang} />
+    </>
+  );
 }

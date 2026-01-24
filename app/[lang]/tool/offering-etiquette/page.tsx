@@ -58,7 +58,9 @@ export default async function OfferingEtiquettePage({
 
           <div className="grid gap-6">
             <div className="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-semibold mb-4">Preparing the Altar</h2>
+              <h2 className="text-xl font-semibold mb-4">
+                Preparing the Altar
+              </h2>
               <ul className="space-y-3 text-muted-foreground">
                 <li>
                   • <strong>Clean the altar:</strong> Wipe dust and prepare
@@ -73,10 +75,12 @@ export default async function OfferingEtiquettePage({
                   sticks ready
                 </li>
                 <li>
-                  • <strong>Prepare joss paper:</strong> Stack neatly for burning
+                  • <strong>Prepare joss paper:</strong> Stack neatly for
+                  burning
                 </li>
                 <li>
-                  • <strong>Lighting:</strong> Candles on both sides of the altar
+                  • <strong>Lighting:</strong> Candles on both sides of the
+                  altar
                 </li>
               </ul>
             </div>

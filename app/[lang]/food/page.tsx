@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { FoodPageContent } from "@/components/food";
+import { BreadcrumbStructuredData } from "@/components/structured-data/breadcrumb";
 import { siteConfig } from "@/lib/config";
+import { getFoodListBreadcrumb } from "@/lib/structured-data";
 import type { LanguageType } from "@/lib/translations/config";
 import { supportedLocales } from "@/lib/translations/config";
 import { generateHreflangLinks } from "@/lib/translations/hreflang";
@@ -75,5 +77,13 @@ export default async function FoodPage({
   params: Promise<{ lang: LanguageType }>;
 }) {
   const { lang } = await params;
-  return <FoodPageContent lang={lang} />;
+  return (
+    <>
+      <BreadcrumbStructuredData
+        items={getFoodListBreadcrumb(lang)}
+        lang={lang}
+      />
+      <FoodPageContent lang={lang} />
+    </>
+  );
 }

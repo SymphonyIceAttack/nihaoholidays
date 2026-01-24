@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { BreadcrumbStructuredData } from "@/components/structured-data/breadcrumb";
 import { TermsContent } from "@/components/terms/terms-content";
 import { siteConfig } from "@/lib/config";
+import { getTermsBreadcrumb } from "@/lib/structured-data";
 import type { LanguageType } from "@/lib/translations/config";
 import { supportedLocales } from "@/lib/translations/config";
 import { generateHreflangLinks } from "@/lib/translations/hreflang";
@@ -61,5 +63,10 @@ export default async function TermsPage({
   params: Promise<{ lang: LanguageType }>;
 }) {
   const { lang } = await params;
-  return <TermsContent lang={lang} />;
+  return (
+    <>
+      <BreadcrumbStructuredData items={getTermsBreadcrumb(lang)} lang={lang} />
+      <TermsContent lang={lang} />
+    </>
+  );
 }

@@ -52,14 +52,16 @@ export default async function ColdFoodPage({
               Cold Food Guide
             </h1>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              The ancient tradition of eating cold food to commemorate loyal
-              Jie Zitui.
+              The ancient tradition of eating cold food to commemorate loyal Jie
+              Zitui.
             </p>
           </div>
 
           <div className="grid gap-6">
             <div className="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-semibold mb-4">The Story of Jie Zitui</h2>
+              <h2 className="text-xl font-semibold mb-4">
+                The Story of Jie Zitui
+              </h2>
               <p className="text-muted-foreground mb-4">
                 Cold Food Festival commemorates Jie Zitui (介子推), a loyal
                 minister during the Spring and Autumn period. When Duke Wen of
@@ -69,8 +71,8 @@ export default async function ColdFoodPage({
               </p>
               <p className="text-muted-foreground">
                 To force Jie out, the duke set the forest on fire, but Jie and
-                his mother died in the flames. In mourning, the duke ordered
-                no fires to be lit for three days - thus the &quot;Cold Food&quot;
+                his mother died in the flames. In mourning, the duke ordered no
+                fires to be lit for three days - thus the &quot;Cold Food&quot;
                 tradition.
               </p>
             </div>
@@ -156,8 +158,8 @@ export default async function ColdFoodPage({
             <h2 className="text-xl font-semibold mb-2">Remembering Loyalty</h2>
             <p className="text-muted-foreground">
               Cold Food Festival teaches us to remember those who served us
-              selflessly and to appreciate the loyalty and devotion shown by
-              Jie Zitui over 2,600 years ago.
+              selflessly and to appreciate the loyalty and devotion shown by Jie
+              Zitui over 2,600 years ago.
             </p>
           </div>
         </div>

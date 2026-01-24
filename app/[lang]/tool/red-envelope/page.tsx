@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { BreadcrumbStructuredData } from "@/components/structured-data/breadcrumb";
 import { RedEnvelopeGuidePage } from "@/components/tool";
 import { siteConfig } from "@/lib/config";
+import { getToolDetailBreadcrumb } from "@/lib/structured-data";
 import type { LanguageType } from "@/lib/translations/config";
 import { supportedLocales } from "@/lib/translations/config";
 import { generateHreflangLinks } from "@/lib/translations/hreflang";
@@ -75,5 +77,17 @@ export default async function RedEnvelopePage({
   params: Promise<{ lang: LanguageType }>;
 }) {
   const { lang } = await params;
-  return <RedEnvelopeGuidePage lang={lang} />;
+  return (
+    <>
+      <BreadcrumbStructuredData
+        items={getToolDetailBreadcrumb(
+          lang,
+          "red-envelope",
+          "Red Envelope Guide",
+        )}
+        lang={lang}
+      />
+      <RedEnvelopeGuidePage lang={lang} />
+    </>
+  );
 }

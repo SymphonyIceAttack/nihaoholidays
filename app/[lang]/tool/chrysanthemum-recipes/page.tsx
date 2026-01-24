@@ -115,7 +115,9 @@ export default async function ChrysanthemumRecipesPage({
             </div>
 
             <div className="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-semibold mb-4">Chrysanthemum Congee</h2>
+              <h2 className="text-xl font-semibold mb-4">
+                Chrysanthemum Congee
+              </h2>
               <div className="grid sm:grid-cols-2 gap-4 mb-4">
                 <div>
                   <h3 className="font-medium mb-2">Ingredients:</h3>
@@ -143,14 +145,14 @@ export default async function ChrysanthemumRecipesPage({
             </div>
 
             <div className="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-semibold mb-4">Cultural Significance</h2>
+              <h2 className="text-xl font-semibold mb-4">
+                Cultural Significance
+              </h2>
               <ul className="space-y-3 text-muted-foreground">
                 <li>
                   • Chrysanthemums bloom in autumn, symbolizing resilience
                 </li>
-                <li>
-                  • Associated with longevity and noble character
-                </li>
+                <li>• Associated with longevity and noble character</li>
                 <li>
                   • Drinking chrysanthemum tea during Chongyang promotes health
                 </li>

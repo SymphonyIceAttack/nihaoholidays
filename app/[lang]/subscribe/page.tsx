@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { BreadcrumbStructuredData } from "@/components/structured-data/breadcrumb";
 import { SubscribePageContent } from "@/components/subscribe/subscribe-page-content";
 import { siteConfig } from "@/lib/config";
+import { getSubscribeBreadcrumb } from "@/lib/structured-data";
 import type { LanguageType } from "@/lib/translations/config";
 import { supportedLocales } from "@/lib/translations/config";
 import { generateHreflangLinks } from "@/lib/translations/hreflang";
@@ -75,5 +77,13 @@ export default async function SubscribePage({
   params: Promise<{ lang: LanguageType }>;
 }) {
   const { lang } = await params;
-  return <SubscribePageContent lang={lang} />;
+  return (
+    <>
+      <BreadcrumbStructuredData
+        items={getSubscribeBreadcrumb(lang)}
+        lang={lang}
+      />
+      <SubscribePageContent lang={lang} />
+    </>
+  );
 }

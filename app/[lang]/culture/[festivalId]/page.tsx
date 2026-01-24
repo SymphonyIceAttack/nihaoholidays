@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { CultureDetailServer } from "@/components/culture/culture-detail-server";
+import { BreadcrumbStructuredData } from "@/components/structured-data/breadcrumb";
 import { siteConfig } from "@/lib/config";
 import { getAllFestivalIds } from "@/lib/festivals";
+import { getCultureBreadcrumb } from "@/lib/structured-data";
 import type { LanguageType } from "@/lib/translations/config";
 import { supportedLocales } from "@/lib/translations/config";
 import { generateHreflangLinks } from "@/lib/translations/hreflang";
@@ -76,5 +78,13 @@ export default async function CulturePage({
   params: Promise<{ lang: LanguageType; festivalId: string }>;
 }) {
   const { lang, festivalId } = await params;
-  return <CultureDetailServer lang={lang} festivalId={festivalId} />;
+  return (
+    <>
+      <BreadcrumbStructuredData
+        items={getCultureBreadcrumb(lang)}
+        lang={lang}
+      />
+      <CultureDetailServer lang={lang} festivalId={festivalId} />
+    </>
+  );
 }

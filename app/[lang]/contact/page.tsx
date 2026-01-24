@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { ContactContent } from "@/components/contact/contact-content";
+import { BreadcrumbStructuredData } from "@/components/structured-data/breadcrumb";
+import { ContactPageStructuredData } from "@/components/structured-data/contact-page";
 import { siteConfig } from "@/lib/config";
+import { getContactBreadcrumb } from "@/lib/structured-data";
 import type { LanguageType } from "@/lib/translations/config";
 import { supportedLocales } from "@/lib/translations/config";
 import { generateHreflangLinks } from "@/lib/translations/hreflang";
@@ -61,5 +64,21 @@ export default async function ContactPage({
   params: Promise<{ lang: LanguageType }>;
 }) {
   const { lang } = await params;
-  return <ContactContent lang={lang} />;
+  const langData = pageMetadata[lang] || pageMetadata.en;
+  return (
+    <>
+      <ContactPageStructuredData
+        url={`${siteConfig.siteUrl}/${lang}/contact`}
+        title={langData.title}
+        description={langData.description}
+        lang={lang}
+        email={siteConfig.contactEmail}
+      />
+      <BreadcrumbStructuredData
+        items={getContactBreadcrumb(lang)}
+        lang={lang}
+      />
+      <ContactContent lang={lang} />
+    </>
+  );
 }

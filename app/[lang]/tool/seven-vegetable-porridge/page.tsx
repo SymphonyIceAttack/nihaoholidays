@@ -118,9 +118,7 @@ export default async function SevenVegetablePorridgePage({
                   <span className="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center font-medium">
                     4
                   </span>
-                  <span>
-                    Add remaining vegetables in order of cooking time
-                  </span>
+                  <span>Add remaining vegetables in order of cooking time</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center font-medium">
@@ -137,18 +135,29 @@ export default async function SevenVegetablePorridgePage({
             <div className="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm">
               <h2 className="text-xl font-semibold mb-4">Symbolic Meaning</h2>
               <ul className="space-y-3 text-muted-foreground">
-                <li>• <strong>Clean start:</strong> Eating vegetables purifies the
-                  body after rich holiday foods</li>
-                <li>• <strong>Health:</strong> Seven vegetables for seven blessings</li>
-                <li>• <strong>Balance:</strong> Different colors represent
-                  balance and harmony</li>
-                <li>• <strong>Humility:</strong> Simple food reminds us to stay
-                  grounded</li>
+                <li>
+                  • <strong>Clean start:</strong> Eating vegetables purifies the
+                  body after rich holiday foods
+                </li>
+                <li>
+                  • <strong>Health:</strong> Seven vegetables for seven
+                  blessings
+                </li>
+                <li>
+                  • <strong>Balance:</strong> Different colors represent balance
+                  and harmony
+                </li>
+                <li>
+                  • <strong>Humility:</strong> Simple food reminds us to stay
+                  grounded
+                </li>
               </ul>
             </div>
 
             <div className="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-semibold mb-4">Regional Variations</h2>
+              <h2 className="text-xl font-semibold mb-4">
+                Regional Variations
+              </h2>
               <ul className="space-y-3 text-muted-foreground">
                 <li>
                   • <strong>Northern China:</strong> Often includes dumplings in
@@ -163,7 +172,8 @@ export default async function SevenVegetablePorridgePage({
                   sticks
                 </li>
                 <li>
-                  • <strong>Modern versions:</strong> Can use any seven vegetables
+                  • <strong>Modern versions:</strong> Can use any seven
+                  vegetables
                 </li>
               </ul>
             </div>

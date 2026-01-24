@@ -59,7 +59,9 @@ export default async function GhostFestivalPage({
 
           <div className="grid gap-6">
             <div className="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-semibold mb-4">What is Ghost Festival?</h2>
+              <h2 className="text-xl font-semibold mb-4">
+                What is Ghost Festival?
+              </h2>
               <p className="text-muted-foreground mb-4">
                 Ghost Festival (中元节) falls on the 15th day of the 7th lunar
                 month. It&apos;s believed that the gates of the underworld open
@@ -74,7 +76,9 @@ export default async function GhostFestivalPage({
             </div>
 
             <div className="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-semibold mb-4">Traditional Customs</h2>
+              <h2 className="text-xl font-semibold mb-4">
+                Traditional Customs
+              </h2>
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="p-4 bg-slate-100 dark:bg-slate-700/50 rounded-xl">
                   <h3 className="font-medium mb-2">🏮 Offering Food</h3>
@@ -95,7 +99,9 @@ export default async function GhostFestivalPage({
                   </p>
                 </div>
                 <div className="p-4 bg-slate-100 dark:bg-slate-700/50 rounded-xl">
-                  <h3 className="font-medium mb-2">🌸 Releasing Water Lanterns</h3>
+                  <h3 className="font-medium mb-2">
+                    🌸 Releasing Water Lanterns
+                  </h3>
                   <p className="text-sm text-muted-foreground">
                     Floating lanterns on rivers for lost spirits
                   </p>
@@ -106,17 +112,32 @@ export default async function GhostFestivalPage({
             <div className="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm">
               <h2 className="text-xl font-semibold mb-4">Food Offerings</h2>
               <ul className="space-y-3 text-muted-foreground">
-                <li>• <strong>Fruits:</strong> Oranges, apples, peaches</li>
-                <li>• <strong>Rice dishes:</strong> Favorite dishes of ancestors</li>
-                <li>• <strong>Dim sum:</strong> Dumplings, buns, pastries</li>
-                <li>• <strong>Tea and wine:</strong> For toasting ancestors</li>
-                <li>• <strong>Joss paper:</strong> Spirit money folded in offerings</li>
-                <li>• <strong>Incense:</strong> To communicate with spirits</li>
+                <li>
+                  • <strong>Fruits:</strong> Oranges, apples, peaches
+                </li>
+                <li>
+                  • <strong>Rice dishes:</strong> Favorite dishes of ancestors
+                </li>
+                <li>
+                  • <strong>Dim sum:</strong> Dumplings, buns, pastries
+                </li>
+                <li>
+                  • <strong>Tea and wine:</strong> For toasting ancestors
+                </li>
+                <li>
+                  • <strong>Joss paper:</strong> Spirit money folded in
+                  offerings
+                </li>
+                <li>
+                  • <strong>Incense:</strong> To communicate with spirits
+                </li>
               </ul>
             </div>
 
             <div className="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-semibold mb-4">Etiquette Guidelines</h2>
+              <h2 className="text-xl font-semibold mb-4">
+                Etiquette Guidelines
+              </h2>
               <ul className="space-y-3 text-muted-foreground">
                 <li>• Bow before the altar respectfully</li>
                 <li>• Avoid stepping on offerings or burning paper</li>
@@ -129,7 +150,9 @@ export default async function GhostFestivalPage({
             </div>
 
             <div className="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-semibold mb-4">Regional Variations</h2>
+              <h2 className="text-xl font-semibold mb-4">
+                Regional Variations
+              </h2>
               <ul className="space-y-3 text-muted-foreground">
                 <li>
                   • <strong>Hong Kong:</strong> Confucian rituals and opera

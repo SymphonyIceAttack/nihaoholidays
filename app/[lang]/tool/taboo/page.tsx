@@ -1,4 +1,4 @@
-import { ArrowLeft, AlertTriangle } from "lucide-react";
+import { AlertTriangle, ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/config";
@@ -59,35 +59,48 @@ export default async function TabooPage({
 
           <div className="grid gap-6">
             <div className="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-semibold mb-4">Spring Festival Taboos</h2>
+              <h2 className="text-xl font-semibold mb-4">
+                Spring Festival Taboos
+              </h2>
               <div className="space-y-4">
                 <div className="p-4 bg-red-50 dark:bg-red-900/20 rounded-xl">
-                  <h3 className="font-medium mb-2 text-red-600">❌ Don&apos;t Wash Hair</h3>
+                  <h3 className="font-medium mb-2 text-red-600">
+                    ❌ Don&apos;t Wash Hair
+                  </h3>
                   <p className="text-sm text-muted-foreground">
                     Washing hair during the first few days is believed to wash
                     away good luck
                   </p>
                 </div>
                 <div className="p-4 bg-red-50 dark:bg-red-900/20 rounded-xl">
-                  <h3 className="font-medium mb-2 text-red-600">❌ Don&apos;t Use Sharp Objects</h3>
+                  <h3 className="font-medium mb-2 text-red-600">
+                    ❌ Don&apos;t Use Sharp Objects
+                  </h3>
                   <p className="text-sm text-muted-foreground">
-                    Scissors and knives &quot;cut&quot; good fortune and prosperity
+                    Scissors and knives &quot;cut&quot; good fortune and
+                    prosperity
                   </p>
                 </div>
                 <div className="p-4 bg-red-50 dark:bg-red-900/20 rounded-xl">
-                  <h3 className="font-medium mb-2 text-red-600">❌ Don&apos;t Cry</h3>
+                  <h3 className="font-medium mb-2 text-red-600">
+                    ❌ Don&apos;t Cry
+                  </h3>
                   <p className="text-sm text-muted-foreground">
                     Crying brings bad luck and sorrow for the coming year
                   </p>
                 </div>
                 <div className="p-4 bg-red-50 dark:bg-red-900/20 rounded-xl">
-                  <h3 className="font-medium mb-2 text-red-600">❌ Don&apos;t Break Things</h3>
+                  <h3 className="font-medium mb-2 text-red-600">
+                    ❌ Don&apos;t Break Things
+                  </h3>
                   <p className="text-sm text-muted-foreground">
                     Breaking items symbolizes breaking your fortune
                   </p>
                 </div>
                 <div className="p-4 bg-red-50 dark:bg-red-900/20 rounded-xl">
-                  <h3 className="font-medium mb-2 text-red-600">❌ Don&apos;t Say Unlucky Words</h3>
+                  <h3 className="font-medium mb-2 text-red-600">
+                    ❌ Don&apos;t Say Unlucky Words
+                  </h3>
                   <p className="text-sm text-muted-foreground">
                     Avoid words like &quot;death,&quot; &quot;ghost,&quot; or
                     &quot;empty&quot;
@@ -100,8 +113,8 @@ export default async function TabooPage({
               <h2 className="text-xl font-semibold mb-4">Gift-Giving Taboos</h2>
               <ul className="space-y-3 text-muted-foreground">
                 <li>
-                  • <strong>Clocks:</strong> &quot;Giving a clock&quot; sounds like
-                  attending a funeral
+                  • <strong>Clocks:</strong> &quot;Giving a clock&quot; sounds
+                  like attending a funeral
                 </li>
                 <li>
                   • <strong>White/black wrapping:</strong> Colors of mourning
@@ -125,18 +138,16 @@ export default async function TabooPage({
             </div>
 
             <div className="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-semibold mb-4">General Festival Taboos</h2>
+              <h2 className="text-xl font-semibold mb-4">
+                General Festival Taboos
+              </h2>
               <ul className="space-y-3 text-muted-foreground">
-                <li>
-                  • Don&apos;t visit empty-handed (always bring a gift)
-                </li>
+                <li>• Don&apos;t visit empty-handed (always bring a gift)</li>
                 <li>
                   • Don&apos;t clean or sweep during the festival (you&apos;ll
                   sweep away luck)
                 </li>
-                <li>
-                  • Don&apos;t lend money (you&apos;ll lose wealth)
-                </li>
+                <li>• Don&apos;t lend money (you&apos;ll lose wealth)</li>
                 <li>
                   • Don&apos;t return gifts (it brings bad luck to the giver)
                 </li>
@@ -150,25 +161,33 @@ export default async function TabooPage({
               <h2 className="text-xl font-semibold mb-4">Lucky Alternatives</h2>
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-xl">
-                  <h3 className="font-medium mb-2 text-green-600">✅ Do Use Red</h3>
+                  <h3 className="font-medium mb-2 text-green-600">
+                    ✅ Do Use Red
+                  </h3>
                   <p className="text-sm text-muted-foreground">
                     Red symbolizes luck, joy, and drives away evil
                   </p>
                 </div>
                 <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-xl">
-                  <h3 className="font-medium mb-2 text-green-600">✅ Do Give Oranges</h3>
+                  <h3 className="font-medium mb-2 text-green-600">
+                    ✅ Do Give Oranges
+                  </h3>
                   <p className="text-sm text-muted-foreground">
                     Oranges symbolize wealth and good fortune
                   </p>
                 </div>
                 <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-xl">
-                  <h3 className="font-medium mb-2 text-green-600">✅ Do Use Even Numbers</h3>
+                  <h3 className="font-medium mb-2 text-green-600">
+                    ✅ Do Use Even Numbers
+                  </h3>
                   <p className="text-sm text-muted-foreground">
                     Even numbers represent pairs and completeness
                   </p>
                 </div>
                 <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-xl">
-                  <h3 className="font-medium mb-2 text-green-600">✅ Do Smile</h3>
+                  <h3 className="font-medium mb-2 text-green-600">
+                    ✅ Do Smile
+                  </h3>
                   <p className="text-sm text-muted-foreground">
                     A happy demeanor invites positive energy
                   </p>
@@ -178,7 +197,9 @@ export default async function TabooPage({
           </div>
 
           <div className="mt-8 bg-gradient-to-r from-green-100/80 to-emerald-100/80 dark:from-green-900/30 dark:to-emerald-900/20 rounded-2xl p-6 text-center">
-            <h2 className="text-xl font-semibold mb-2">Understanding Matters</h2>
+            <h2 className="text-xl font-semibold mb-2">
+              Understanding Matters
+            </h2>
             <p className="text-muted-foreground">
               While taboos may seem superstitious, they reflect deep cultural
               values of respect, consideration, and the desire for good fortune.

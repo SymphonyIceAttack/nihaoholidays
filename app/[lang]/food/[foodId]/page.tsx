@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { FoodDetailContent } from "@/components/food";
+import { BreadcrumbStructuredData } from "@/components/structured-data/breadcrumb";
 import { siteConfig } from "@/lib/config";
 import { foodDataList } from "@/lib/food";
+import { getFoodDetailBreadcrumb } from "@/lib/structured-data";
 import type { LanguageType } from "@/lib/translations/config";
 import { supportedLocales } from "@/lib/translations/config";
 import { generateHreflangLinks } from "@/lib/translations/hreflang";
@@ -78,5 +80,13 @@ export default async function FoodDetailPage({
     notFound();
   }
 
-  return <FoodDetailContent food={food} lang={lang} />;
+  return (
+    <>
+      <BreadcrumbStructuredData
+        items={getFoodDetailBreadcrumb(lang, foodId, food.name)}
+        lang={lang}
+      />
+      <FoodDetailContent food={food} lang={lang} />
+    </>
+  );
 }

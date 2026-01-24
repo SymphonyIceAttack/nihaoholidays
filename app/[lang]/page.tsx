@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { HomePageContent } from "@/components/home";
+import { WebPageStructuredData } from "@/components/structured-data/web-page";
 import { siteConfig } from "@/lib/config";
 import type { LanguageType } from "@/lib/translations/config";
 import { supportedLocales } from "@/lib/translations/config";
@@ -75,5 +76,16 @@ export default async function HomePage({
   params: Promise<{ lang: LanguageType }>;
 }) {
   const { lang } = await params;
-  return <HomePageContent lang={lang} />;
+  const langData = metadataConfig[lang] || metadataConfig.en;
+  return (
+    <>
+      <WebPageStructuredData
+        url={`${siteConfig.siteUrl}/${lang}`}
+        title={langData.title}
+        description={langData.description}
+        lang={lang}
+      />
+      <HomePageContent lang={lang} />
+    </>
+  );
 }

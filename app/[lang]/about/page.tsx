@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { AboutContent } from "@/components/about/about-content";
+import { AboutPageStructuredData } from "@/components/structured-data/about-page";
+import { BreadcrumbStructuredData } from "@/components/structured-data/breadcrumb";
 import { siteConfig } from "@/lib/config";
+import { getAboutBreadcrumb } from "@/lib/structured-data";
 import type { LanguageType } from "@/lib/translations/config";
 import { supportedLocales } from "@/lib/translations/config";
 import { generateHreflangLinks } from "@/lib/translations/hreflang";
@@ -61,5 +64,17 @@ export default async function AboutPage({
   params: Promise<{ lang: LanguageType }>;
 }) {
   const { lang } = await params;
-  return <AboutContent lang={lang} />;
+  const langData = pageMetadata[lang] || pageMetadata.en;
+  return (
+    <>
+      <AboutPageStructuredData
+        url={`${siteConfig.siteUrl}/${lang}/about`}
+        title={langData.title}
+        description={langData.description}
+        lang={lang}
+      />
+      <BreadcrumbStructuredData items={getAboutBreadcrumb(lang)} lang={lang} />
+      <AboutContent lang={lang} />
+    </>
+  );
 }

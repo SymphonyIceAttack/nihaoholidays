@@ -22,6 +22,7 @@ const footerColumns: Record<LanguageType, FooterColumn[]> = {
       title: "Explore",
       links: [
         { label: "Home", href: "/en" },
+        { label: "Blog", href: "/en/posts" },
         { label: "Learn Chinese", href: "/en/learn" },
         { label: "Festivals", href: "/en/festival/chinese-new-year" },
         { label: "Chinese Culture", href: "/en/culture/chinese-new-year" },

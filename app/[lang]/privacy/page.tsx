@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { PrivacyContent } from "@/components/privacy/privacy-content";
+import { BreadcrumbStructuredData } from "@/components/structured-data/breadcrumb";
 import { siteConfig } from "@/lib/config";
+import { getPrivacyBreadcrumb } from "@/lib/structured-data";
 import type { LanguageType } from "@/lib/translations/config";
 import { supportedLocales } from "@/lib/translations/config";
 import { generateHreflangLinks } from "@/lib/translations/hreflang";
@@ -61,5 +63,13 @@ export default async function PrivacyPage({
   params: Promise<{ lang: LanguageType }>;
 }) {
   const { lang } = await params;
-  return <PrivacyContent lang={lang} />;
+  return (
+    <>
+      <BreadcrumbStructuredData
+        items={getPrivacyBreadcrumb(lang)}
+        lang={lang}
+      />
+      <PrivacyContent lang={lang} />
+    </>
+  );
 }

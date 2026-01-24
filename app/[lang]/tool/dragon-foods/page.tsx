@@ -52,8 +52,8 @@ export default async function DragonFoodsPage({
               Dragon Foods Guide
             </h1>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Traditional foods to eat on Dragon Head Festival for good luck
-              and prosperity.
+              Traditional foods to eat on Dragon Head Festival for good luck and
+              prosperity.
             </p>
           </div>
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { Utensils, Wrench } from "lucide-react";
+import { Book, Utensils, Wrench } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { type LanguageType, translations } from "@/lib/translations";
@@ -59,6 +59,16 @@ export function Header({ lang }: { lang: LanguageType }) {
           </div>
 
           <nav className="hidden lg:flex items-center gap-0.5">
+            <a
+              href={`/${lang}/posts`}
+              className="relative flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-lg transition-all duration-200 hover:bg-muted/50 group"
+              tabIndex={0}
+            >
+              <span className="opacity-60 group-hover:opacity-100 transition-opacity duration-200">
+                <Book className="w-4 h-4" />
+              </span>
+              <span className="relative z-10">{t["common.nav.blog"]}</span>
+            </a>
             <a
               href={`/${lang}/food`}
               className="relative flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-lg transition-all duration-200 hover:bg-muted/50 group"
@@ -150,8 +160,19 @@ export function Header({ lang }: { lang: LanguageType }) {
         >
           <nav className="space-y-2">
             <a
+              href={`/${lang}/posts`}
+              className="flex items-center gap-3 px-4 py-3 text-base text-muted-foreground hover:text-foreground hover:bg-muted/60 rounded-xl transition-all duration-200 animate-in slide-in-from-left-2"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <span className="opacity-60">
+                <Book className="w-4 h-4" />
+              </span>
+              <span>{t["common.nav.blog"]}</span>
+            </a>
+            <a
               href={`/${lang}/food`}
               className="flex items-center gap-3 px-4 py-3 text-base text-muted-foreground hover:text-foreground hover:bg-muted/60 rounded-xl transition-all duration-200 animate-in slide-in-from-left-2"
+              style={{ animationDelay: "50ms" }}
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="opacity-60">

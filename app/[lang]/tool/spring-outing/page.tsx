@@ -59,10 +59,12 @@ export default async function SpringOutingPage({
 
           <div className="grid gap-6">
             <div className="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-semibold mb-4">What is Spring Outing?</h2>
+              <h2 className="text-xl font-semibold mb-4">
+                What is Spring Outing?
+              </h2>
               <p className="text-muted-foreground mb-4">
-                Spring outing, or &quot;踏青&quot; (tà qīng), is the tradition of
-                walking in nature during early spring to enjoy the warming
+                Spring outing, or &quot;踏青&quot; (tà qīng), is the tradition
+                of walking in nature during early spring to enjoy the warming
                 weather and emerging greenery. This practice dates back over
                 2,000 years to Shangsi Festival.
               </p>
@@ -106,24 +108,47 @@ export default async function SpringOutingPage({
             </div>
 
             <div className="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-semibold mb-4">Traditional Foods to Bring</h2>
+              <h2 className="text-xl font-semibold mb-4">
+                Traditional Foods to Bring
+              </h2>
               <ul className="space-y-3 text-muted-foreground">
-                <li>• <strong>Spring pancakes:</strong> Symbol of spring renewal</li>
-                <li>• <strong>Fresh fruits:</strong> Especially seasonal varieties</li>
-                <li>• <strong>Tea:</strong> To enjoy with the scenery</li>
-                <li>• <strong>Snack cakes:</strong> Traditional pastries</li>
-                <li>• <strong>Hard-boiled eggs:</strong> Symbol of new life</li>
+                <li>
+                  • <strong>Spring pancakes:</strong> Symbol of spring renewal
+                </li>
+                <li>
+                  • <strong>Fresh fruits:</strong> Especially seasonal varieties
+                </li>
+                <li>
+                  • <strong>Tea:</strong> To enjoy with the scenery
+                </li>
+                <li>
+                  • <strong>Snack cakes:</strong> Traditional pastries
+                </li>
+                <li>
+                  • <strong>Hard-boiled eggs:</strong> Symbol of new life
+                </li>
               </ul>
             </div>
 
             <div className="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm">
               <h2 className="text-xl font-semibold mb-4">Best Locations</h2>
               <ul className="space-y-3 text-muted-foreground">
-                <li>• <strong>Parks:</strong> Local gardens and botanical gardens</li>
-                <li>• <strong>Mountains:</strong> Gentle slopes for easy walking</li>
-                <li>• <strong>Lakesides:</strong> Scenic waterfront views</li>
-                <li>• <strong>Temples:</strong> Historic sites with beautiful grounds</li>
-                <li>• <strong>Countryside:</strong> Rural areas with wildflowers</li>
+                <li>
+                  • <strong>Parks:</strong> Local gardens and botanical gardens
+                </li>
+                <li>
+                  • <strong>Mountains:</strong> Gentle slopes for easy walking
+                </li>
+                <li>
+                  • <strong>Lakesides:</strong> Scenic waterfront views
+                </li>
+                <li>
+                  • <strong>Temples:</strong> Historic sites with beautiful
+                  grounds
+                </li>
+                <li>
+                  • <strong>Countryside:</strong> Rural areas with wildflowers
+                </li>
               </ul>
             </div>
 
@@ -143,9 +168,9 @@ export default async function SpringOutingPage({
           <div className="mt-8 bg-gradient-to-r from-green-100/80 to-emerald-100/80 dark:from-green-900/30 dark:to-emerald-900/20 rounded-2xl p-6 text-center">
             <h2 className="text-xl font-semibold mb-2">Embrace Renewal</h2>
             <p className="text-muted-foreground">
-              Spring outing is more than just a walk - it&apos;s a celebration of
-              life&apos;s renewal. Step outside, breathe the fresh spring air,
-              and welcome the new season with an open heart.
+              Spring outing is more than just a walk - it&apos;s a celebration
+              of life&apos;s renewal. Step outside, breathe the fresh spring
+              air, and welcome the new season with an open heart.
             </p>
           </div>
         </div>

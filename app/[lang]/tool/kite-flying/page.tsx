@@ -19,7 +19,8 @@ export async function generateMetadata({
 
   return {
     title: "Kite Flying Guide - NihaoHolidays",
-    description: "Traditional kite flying customs and patterns for spring festivals",
+    description:
+      "Traditional kite flying customs and patterns for spring festivals",
     alternates: {
       canonical: `${siteConfig.siteUrl}/${lang}/tool/kite-flying`,
       languages: generateHreflangLinks("/tool/kite-flying"),
@@ -59,22 +60,34 @@ export default async function KiteFlyingPage({
 
           <div className="grid gap-6">
             <div className="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-semibold mb-4">Cultural Significance</h2>
+              <h2 className="text-xl font-semibold mb-4">
+                Cultural Significance
+              </h2>
               <p className="text-muted-foreground mb-4">
                 Kite flying has been a beloved Chinese tradition for over 2,000
                 years. During spring festivals, flying kites symbolizes:
               </p>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• <strong>Release:</strong> Letting go of misfortune</li>
-                <li>• <strong>Connection:</strong> Tethering to heaven and earth</li>
-                <li>• <strong>Joy:</strong> Celebrating the arrival of spring</li>
-                <li>• <strong>Wisdom:</strong> The kite rises on the wind like wisdom
-                  rising with knowledge</li>
+                <li>
+                  • <strong>Release:</strong> Letting go of misfortune
+                </li>
+                <li>
+                  • <strong>Connection:</strong> Tethering to heaven and earth
+                </li>
+                <li>
+                  • <strong>Joy:</strong> Celebrating the arrival of spring
+                </li>
+                <li>
+                  • <strong>Wisdom:</strong> The kite rises on the wind like
+                  wisdom rising with knowledge
+                </li>
               </ul>
             </div>
 
             <div className="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-semibold mb-4">Traditional Kite Designs</h2>
+              <h2 className="text-xl font-semibold mb-4">
+                Traditional Kite Designs
+              </h2>
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-xl">
                   <h3 className="font-medium mb-2">🐉 Dragon Kites</h3>
@@ -107,10 +120,19 @@ export default async function KiteFlyingPage({
             <div className="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm">
               <h2 className="text-xl font-semibold mb-4">Best Times to Fly</h2>
               <ul className="space-y-3 text-muted-foreground">
-                <li>• <strong>Afternoon:</strong> 2-5 PM when thermals are strongest</li>
-                <li>• <strong>Spring breeze:</strong> Gentle winds of 5-15 mph</li>
-                <li>• <strong>Open spaces:</strong> Parks, fields, beaches</li>
-                <li>• <strong>After rain:</strong> Clean, fresh air helps flight</li>
+                <li>
+                  • <strong>Afternoon:</strong> 2-5 PM when thermals are
+                  strongest
+                </li>
+                <li>
+                  • <strong>Spring breeze:</strong> Gentle winds of 5-15 mph
+                </li>
+                <li>
+                  • <strong>Open spaces:</strong> Parks, fields, beaches
+                </li>
+                <li>
+                  • <strong>After rain:</strong> Clean, fresh air helps flight
+                </li>
               </ul>
             </div>
 
@@ -119,17 +141,22 @@ export default async function KiteFlyingPage({
               <ol className="space-y-3 text-muted-foreground">
                 <li>1. Find an open area with steady wind</li>
                 <li>2. Unwind the string and hold the kite upwind</li>
-                <li>3. When a gust comes, release the kite while pulling the
+                <li>
+                  3. When a gust comes, release the kite while pulling the
                   string
                 </li>
                 <li>4. Let out string gradually as the kite rises</li>
                 <li>5. Adjust angle and tension to stabilize flight</li>
-                <li>6. Enjoy the flight - the string connects heaven and earth</li>
+                <li>
+                  6. Enjoy the flight - the string connects heaven and earth
+                </li>
               </ol>
             </div>
 
             <div className="bg-white dark:bg-zinc-800 rounded-2xl p-6 shadow-sm">
-              <h2 className="text-xl font-semibold mb-4">Traditional Sayings</h2>
+              <h2 className="text-xl font-semibold mb-4">
+                Traditional Sayings
+              </h2>
               <div className="space-y-3">
                 <div className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
                   <p className="font-medium text-foreground">

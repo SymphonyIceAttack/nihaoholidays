@@ -72,7 +72,9 @@ export default async function QingtuanPage({
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-medium mb-3">For Fillings (choose one):</h3>
+                  <h3 className="font-medium mb-3">
+                    For Fillings (choose one):
+                  </h3>
                   <ul className="space-y-2 text-muted-foreground text-sm">
                     <li>• Sweet: Red bean paste (150g)</li>
                     <li>• Sweet: Sesame paste (100g)</li>
@@ -92,8 +94,8 @@ export default async function QingtuanPage({
                   </span>
                   <span>
                     <strong>Prepare mugwort:</strong> Blanch mugwort leaves in
-                    boiling water for 30 seconds. Blend with water to make
-                    green juice.
+                    boiling water for 30 seconds. Blend with water to make green
+                    juice.
                   </span>
                 </li>
                 <li className="flex gap-3">
@@ -138,8 +140,8 @@ export default async function QingtuanPage({
                     6
                   </span>
                   <span>
-                    <strong>Steam:</strong> Place on parchment paper. Steam
-                    for 15-20 minutes until translucent.
+                    <strong>Steam:</strong> Place on parchment paper. Steam for
+                    15-20 minutes until translucent.
                   </span>
                 </li>
               </ol>

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { BreadcrumbStructuredData } from "@/components/structured-data/breadcrumb";
 import { ToolListPage } from "@/components/tool";
 import { siteConfig } from "@/lib/config";
+import { getToolListBreadcrumb } from "@/lib/structured-data";
 import type { LanguageType } from "@/lib/translations/config";
 import { supportedLocales } from "@/lib/translations/config";
 import { generateHreflangLinks } from "@/lib/translations/hreflang";
@@ -75,5 +77,13 @@ export default async function ToolPage({
   params: Promise<{ lang: LanguageType }>;
 }) {
   const { lang } = await params;
-  return <ToolListPage lang={lang} />;
+  return (
+    <>
+      <BreadcrumbStructuredData
+        items={getToolListBreadcrumb(lang)}
+        lang={lang}
+      />
+      <ToolListPage lang={lang} />
+    </>
+  );
 }

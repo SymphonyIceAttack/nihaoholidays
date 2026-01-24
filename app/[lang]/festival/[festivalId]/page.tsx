@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { FestivalDetailContent } from "@/components/festival/festival-detail-content";
+import { BreadcrumbStructuredData } from "@/components/structured-data/breadcrumb";
 import { siteConfig } from "@/lib/config";
 import { getAllFestivalIds } from "@/lib/festivals";
+import { getFestivalBreadcrumb } from "@/lib/structured-data";
 import type { LanguageType } from "@/lib/translations/config";
 import { supportedLocales } from "@/lib/translations/config";
 import { generateHreflangLinks } from "@/lib/translations/hreflang";
@@ -76,5 +78,14 @@ export default async function FestivalPage({
   params: Promise<{ lang: LanguageType; festivalId: string }>;
 }) {
   const { lang, festivalId } = await params;
-  return <FestivalDetailContent lang={lang} festivalId={festivalId} />;
+
+  return (
+    <>
+      <BreadcrumbStructuredData
+        items={getFestivalBreadcrumb(lang, festivalId, festivalId)}
+        lang={lang}
+      />
+      <FestivalDetailContent lang={lang} festivalId={festivalId} />
+    </>
+  );
 }

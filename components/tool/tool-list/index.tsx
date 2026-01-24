@@ -228,7 +228,8 @@ const tools = [
   {
     id: "chrysanthemum-recipes",
     title: "Chrysanthemum Recipes",
-    description: "Traditional dishes and culinary uses of chrysanthemum flowers.",
+    description:
+      "Traditional dishes and culinary uses of chrysanthemum flowers.",
     icon: Utensils,
     href: "/tool/chrysanthemum-recipes",
     color: "from-yellow-500 to-orange-500",
@@ -244,7 +245,8 @@ const tools = [
   {
     id: "haircut",
     title: "Haircut Guide",
-    description: "Traditional customs and taboos for getting a haircut during festivals.",
+    description:
+      "Traditional customs and taboos for getting a haircut during festivals.",
     icon: Sparkles,
     href: "/tool/haircut",
     color: "from-violet-500 to-purple-500",
@@ -252,7 +254,8 @@ const tools = [
   {
     id: "human-day",
     title: "Human Day Guide",
-    description: "Celebrating the 7th day of the first lunar month and the creation of humanity.",
+    description:
+      "Celebrating the 7th day of the first lunar month and the creation of humanity.",
     icon: Heart,
     href: "/tool/human-day",
     color: "from-purple-500 to-pink-500",
@@ -260,7 +263,8 @@ const tools = [
   {
     id: "kite-flying",
     title: "Kite Flying Guide",
-    description: "Traditional kite flying customs and techniques for festivals.",
+    description:
+      "Traditional kite flying customs and techniques for festivals.",
     icon: Sparkles,
     href: "/tool/kite-flying",
     color: "from-sky-500 to-blue-500",
@@ -268,7 +272,8 @@ const tools = [
   {
     id: "offering-etiquette",
     title: "Offering Etiquette",
-    description: "Proper customs for making offerings to ancestors and spirits.",
+    description:
+      "Proper customs for making offerings to ancestors and spirits.",
     icon: Heart,
     href: "/tool/offering-etiquette",
     color: "from-amber-500 to-yellow-500",
@@ -284,7 +289,8 @@ const tools = [
   {
     id: "qingtuan",
     title: "Qingtuan Recipe",
-    description: "Traditional green rice balls made with mugwort leaves for Qingming Festival.",
+    description:
+      "Traditional green rice balls made with mugwort leaves for Qingming Festival.",
     icon: Utensils,
     href: "/tool/qingtuan",
     color: "from-green-500 to-emerald-500",
@@ -300,7 +306,8 @@ const tools = [
   {
     id: "spring-outing",
     title: "Spring Outing Guide",
-    description: "Traditions and customs of spring outings during Qingming Festival.",
+    description:
+      "Traditions and customs of spring outings during Qingming Festival.",
     icon: Sparkles,
     href: "/tool/spring-outing",
     color: "from-green-500 to-lime-500",
@@ -316,7 +323,8 @@ const tools = [
   {
     id: "taboo",
     title: "Festival Taboo Guide",
-    description: "Traditional Chinese festival taboos and what to avoid for good luck.",
+    description:
+      "Traditional Chinese festival taboos and what to avoid for good luck.",
     icon: Sparkles,
     href: "/tool/taboo",
     color: "from-red-600 to-orange-600",
@@ -332,7 +340,8 @@ const tools = [
   {
     id: "ghost-festival",
     title: "Ghost Festival Guide",
-    description: "Understanding Ghost Festival traditions and ancestor worship customs.",
+    description:
+      "Understanding Ghost Festival traditions and ancestor worship customs.",
     icon: Sparkles,
     href: "/tool/ghost-festival",
     color: "from-slate-500 to-gray-500",

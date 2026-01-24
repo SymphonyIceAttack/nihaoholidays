@@ -154,9 +154,7 @@ export default async function SpringPancakePage({
                 <li>• Rest the dough to make rolling easier</li>
                 <li>• Keep cooked pancakes covered with a damp cloth</li>
                 <li>• Serve immediately for best texture</li>
-                <li>
-                  • Prep vegetables in advance for quick assembly
-                </li>
+                <li>• Prep vegetables in advance for quick assembly</li>
               </ul>
             </div>
           </div>
@@ -165,8 +163,8 @@ export default async function SpringPancakePage({
             <h2 className="text-xl font-semibold mb-2">Spring Blessings</h2>
             <p className="text-muted-foreground">
               Making spring pancakes together as a family is a cherished
-              tradition. May your year be as fresh and promising as these
-              spring pancakes!
+              tradition. May your year be as fresh and promising as these spring
+              pancakes!
             </p>
           </div>
         </div>

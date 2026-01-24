@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { LearnPageContent } from "@/components/learn/learn-page";
+import { BreadcrumbStructuredData } from "@/components/structured-data/breadcrumb";
 import { siteConfig } from "@/lib/config";
+import { getLearnBreadcrumb } from "@/lib/structured-data";
 import { type LanguageType, supportedLocales } from "@/lib/translations/config";
 import { generateHreflangLinks } from "@/lib/translations/hreflang";
 
@@ -74,5 +76,10 @@ export default async function LearnPage({
   params: Promise<{ lang: LanguageType }>;
 }) {
   const { lang } = await params;
-  return <LearnPageContent lang={lang} />;
+  return (
+    <>
+      <BreadcrumbStructuredData items={getLearnBreadcrumb(lang)} lang={lang} />
+      <LearnPageContent lang={lang} />
+    </>
+  );
 }
