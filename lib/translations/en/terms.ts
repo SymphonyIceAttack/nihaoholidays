@@ -31,5 +31,5 @@ export const terms = {
   "terms.governing.description": "Standard legal stuff applies.",
   "terms.contact.title": "Questions?",
   "terms.contact.description": "Email us:",
-  "terms.contact.email": "hello@nihaoholidays.org",
+  "terms.contact.email": "hello@nihaoholidays.com",
 } as const;

@@ -56,7 +56,7 @@ const translations: Record<LanguageType, Record<string, string | string[]>> = {
     "terms.contact.title": "Contact Us",
     "terms.contact.description":
       "For questions about these Terms, please contact:",
-    "terms.contact.email": "hello@nihaoholidays.org",
+    "terms.contact.email": "hello@nihaoholidays.com",
   },
 };
 
@@ -211,7 +211,7 @@ export function TermsContent({ lang }: { lang: LanguageType }) {
                   {t["terms.contact.description"]}
                 </p>
                 <a
-                  href="mailto:hello@nihaoholidays.org"
+                  href="mailto:hello@nihaoholidays.com"
                   className="text-rose-600 hover:text-rose-700 font-medium"
                 >
                   {t["terms.contact.email"]}

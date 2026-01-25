@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": false,
   "description": "Your gateway to Chinese festivals and culture. Learn, celebrate, and connect.",
-  "author": "SymphonyIceAttack <hello@nihaoholidays.org>",
+  "author": "SymphonyIceAttack <hello@nihaoholidays.com>",
   "license": "MIT",
-  "homepage": "https://nihaoholidays.org",
+  "homepage": "https://nihaoholidays.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/SymphonyIceAttack/nihaoholidays.git"
@@ -18,7 +18,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "biome check",
-    "format": "biome check --write"
+    "format": "biome check --write",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
     "@directus/sdk": "^21.0.0",

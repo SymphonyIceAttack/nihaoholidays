@@ -47,7 +47,7 @@ export function ArticleStructuredData({
       name: siteConfig.siteName,
       logo: {
         "@type": "ImageObject",
-        url: "https://nihaoholidays.org/base-logo.png",
+        url: `${siteConfig.siteUrl}/base-logo.png`,
       } satisfies ImageObject,
     } satisfies Organization,
     mainEntityOfPage: {

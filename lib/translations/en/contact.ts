@@ -3,7 +3,7 @@ export const contact = {
   "contact.subtitle": "Questions? Something wrong? Want to add content?",
   "contact.email.label": "Email us",
   "contact.email.description": "For anything at all:",
-  "contact.email.address": "hello@nihaoholidays.org",
+  "contact.email.address": "hello@nihaoholidays.com",
   "contact.response.label": "Response time",
   "contact.response.description": "Usually within a day or two.",
   "contact.form.name": "Name",

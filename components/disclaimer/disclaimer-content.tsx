@@ -54,7 +54,7 @@ const translations: Record<LanguageType, Record<string, string | string[]>> = {
     "disclaimer.contact.title": "Questions",
     "disclaimer.contact.description":
       "If you have questions about this Disclaimer, please contact us at:",
-    "disclaimer.contact.email": "hello@nihaoholidays.org",
+    "disclaimer.contact.email": "hello@nihaoholidays.com",
   },
 };
 
@@ -221,7 +221,7 @@ export function DisclaimerContent({ lang }: { lang: LanguageType }) {
                   {t["disclaimer.contact.description"]}
                 </p>
                 <a
-                  href="mailto:hello@nihaoholidays.org"
+                  href="mailto:hello@nihaoholidays.com"
                   className="text-amber-600 hover:text-amber-700 font-medium"
                 >
                   {t["disclaimer.contact.email"]}

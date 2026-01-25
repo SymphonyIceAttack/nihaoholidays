@@ -39,12 +39,12 @@ export function BlogPostStructuredData({
       name: "NihaoHolidays",
       logo: {
         "@type": "ImageObject",
-        url: "https://nihaoholidays.org/base-logo.png",
+        url: `${siteConfig.siteUrl}/base-logo.png`,
       } satisfies ImageObject,
     } satisfies Organization,
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://nihaoholidays.org/${lang}/posts/${slug}`,
+      "@id": `${siteConfig.siteUrl}/${lang}/posts/${slug}`,
     } satisfies WebPage,
     image: imageUrl ? `${siteConfig.imageCdn}/${imageUrl}` : undefined,
   };

@@ -38,7 +38,7 @@ export const privacy = {
   ],
   "privacy.contact.title": "Questions?",
   "privacy.contact.description": "Email us:",
-  "privacy.contact.email": "hello@nihaoholidays.org",
+  "privacy.contact.email": "hello@nihaoholidays.com",
   "privacy.changes.title": "Changes",
   "privacy.changes.description":
     "If we change anything major, we'll update this page.",

@@ -43,7 +43,7 @@ export function HowToStructuredData({
       name: siteConfig.siteName,
       logo: {
         "@type": "ImageObject",
-        url: "https://nihaoholidays.org/base-logo.png",
+        url: `${siteConfig.siteUrl}/base-logo.png`,
       },
     } satisfies Organization,
     step: steps.map(

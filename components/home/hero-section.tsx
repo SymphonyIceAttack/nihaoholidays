@@ -22,7 +22,7 @@ export function HeroSection() {
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-orange-100/30 dark:bg-orange-900/20 rounded-full blur-3xl" />
       </div>
 
-      <div className="container relative mx-auto px-4 text-center">
+      <div className="container relative mx-auto px-4 text-center pb-8">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 rounded-full bg-white/80 dark:bg-white/5 backdrop-blur-sm px-4 py-1.5 text-sm text-rose-700 dark:text-rose-300 shadow-sm border border-rose-100 dark:border-rose-900/30 mt-4 mb-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
           <span className="relative flex h-2 w-2">

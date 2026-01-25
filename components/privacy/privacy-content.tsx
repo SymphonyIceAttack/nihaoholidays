@@ -62,7 +62,7 @@ const translations: Record<LanguageType, Record<string, string | string[]>> = {
     "privacy.contact.title": "Contact Us",
     "privacy.contact.description":
       "If you have questions about this Privacy Policy, please contact us at:",
-    "privacy.contact.email": "hello@nihaoholidays.org",
+    "privacy.contact.email": "hello@nihaoholidays.com",
     "privacy.changes.title": "Changes to This Policy",
     "privacy.changes.description":
       "We may update this Privacy Policy from time to time. We encourage you to review this page periodically.",
@@ -205,7 +205,7 @@ export function PrivacyContent({ lang }: { lang: LanguageType }) {
                   {t["privacy.contact.description"]}
                 </p>
                 <a
-                  href="mailto:hello@nihaoholidays.org"
+                  href="mailto:hello@nihaoholidays.com"
                   className="text-rose-600 hover:text-rose-700 font-medium"
                 >
                   {t["privacy.contact.email"]}

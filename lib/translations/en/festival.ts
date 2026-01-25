@@ -382,30 +382,6 @@ export const festival = {
   "footer.noRegistration": "No registration",
   "footer.startImmediately": "Start learning immediately",
 
-  // Quiz
-  "quiz.backToFestival": "Back to Festival",
-  "quiz.quizComplete": "Quiz Complete",
-  "quiz.quizResults": "Quiz Results",
-  "quiz.takeQuiz": "Take the Quiz",
-  "quiz.perfectScore": "Perfect Score!",
-  "quiz.excellent": "Excellent!",
-  "quiz.goodJob": "Good Job!",
-  "quiz.keepLearning": "Keep Learning!",
-  "quiz.scoreDetail": "You answered {score} out of {total} correctly.",
-  "quiz.greatJob": "Great job! You know this festival well.",
-  "quiz.reviewMore": "Review the content to learn more.",
-  "quiz.tryAgain": "Try Again",
-  "quiz.studyMore": "Study More",
-  "quiz.quizTitle": "Quiz",
-  "quiz.testKnowledge": "Test what you know about this festival.",
-  "quiz.learningAs": "Learning as {role}",
-  "quiz.progress": "Progress",
-  "quiz.questionOf": "Question {current} of {total}",
-  "quiz.correct": "Correct!",
-  "quiz.notCorrect": "Not quite right",
-  "quiz.nextQuestion": "Next Question",
-  "quiz.seeResults": "See Results",
-
   // Quiz Spring Festival questions
   "quiz.spring.q1": "When is Spring Festival typically celebrated?",
   "quiz.spring.q1.explain":

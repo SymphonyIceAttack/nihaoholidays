@@ -23,12 +23,12 @@ export function AboutPageStructuredData({
     inLanguage: lang,
     mainEntity: {
       "@type": "Organization",
-      "@id": "https://nihaoholidays.org",
+      "@id": siteConfig.siteUrl,
       name: siteConfig.siteName,
       url: siteConfig.siteUrl,
       description:
         "A platform dedicated to helping non-Chinese speakers understand and celebrate Chinese festivals with confidence.",
-      logo: "https://nihaoholidays.org/base-logo.png",
+      logo: `${siteConfig.siteUrl}/base-logo.png`,
       sameAs: [
         "https://twitter.com/nihaoholidays",
         "https://facebook.com/nihaoholidays",

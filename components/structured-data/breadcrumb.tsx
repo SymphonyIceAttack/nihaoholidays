@@ -1,4 +1,5 @@
 import type { BreadcrumbList, ListItem, WithContext } from "schema-dts";
+import { siteConfig } from "@/lib/config";
 
 interface BreadcrumbStructuredDataProps {
   lang: string;
@@ -20,7 +21,7 @@ export function BreadcrumbStructuredData({
         "@type": "ListItem",
         position: index + 1,
         name: item.name,
-        item: `https://nihaoholidays.org/${lang}${item.url}`,
+        item: `${siteConfig.siteUrl}/${lang}${item.url}`,
       }),
     ),
   };

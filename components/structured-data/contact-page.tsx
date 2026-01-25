@@ -46,7 +46,7 @@ export function ContactPageStructuredData({
     inLanguage: lang,
     mainEntity: {
       "@type": "Organization",
-      "@id": "https://nihaoholidays.org",
+      "@id": siteConfig.siteUrl,
       name: siteConfig.siteName,
       url: siteConfig.siteUrl,
       contactPoint: [contactPoint],
