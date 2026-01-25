@@ -210,10 +210,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.5,
         alternates: {
           languages: Object.fromEntries(
-            supportedLocales.map((l) => [
-              l,
-              `${baseUrl}/${l}/quiz/${quiz}`,
-            ]),
+            supportedLocales.map((l) => [l, `${baseUrl}/${l}/quiz/${quiz}`]),
           ),
         },
       });

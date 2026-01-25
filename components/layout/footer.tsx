@@ -1,4 +1,8 @@
+"use client";
+
 import Link from "next/link";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 import { siteConfig } from "@/lib/config";
 import type { LanguageType } from "@/lib/translations";
 
@@ -59,12 +63,51 @@ const footerColumns: Record<LanguageType, FooterColumn[]> = {
 export function Footer({ lang }: { lang: LanguageType }) {
   const t = footerTranslations[lang];
   const columns = footerColumns[lang];
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const productHuntBadge =
+    mounted && theme === "dark" ? (
+      <a
+        href="https://www.producthunt.com/products/nihaoholidays?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-nihaoholidays"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="NihaoHolidays on Product Hunt"
+      >
+        <img
+          alt="nihaoholidays - Know what to say and do at every Chinese festival | Product Hunt"
+          width="250"
+          height="54"
+          src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1067783&theme=dark&t=1769328764014"
+          className="rounded-lg"
+        />
+      </a>
+    ) : (
+      <a
+        href="https://www.producthunt.com/products/nihaoholidays?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-nihaoholidays"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="NihaoHolidays on Product Hunt"
+      >
+        <img
+          alt="nihaoholidays - Know what to say and do at every Chinese festival | Product Hunt"
+          width="250"
+          height="54"
+          src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1067783&theme=light&t=1769328764014"
+          className="rounded-lg"
+        />
+      </a>
+    );
 
   return (
     <footer className="bg-muted/30 border-t">
       <div className="container mx-auto px-4 py-12">
         {/* Main footer content */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-8 mb-12">
           {/* Brand column */}
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-4">
@@ -77,16 +120,27 @@ export function Footer({ lang }: { lang: LanguageType }) {
                 nihaoholidays
               </span>
             </Link>
-            <p className="text-sm text-muted-foreground mb-4">
+            <p className="text-sm text-muted-foreground">
               Your gateway to Chinese festivals and culture. Learn, celebrate,
               and connect.
             </p>
-            <div className="flex items-center gap-4">
+          </div>
+
+          {/* Social column */}
+          <div className="col-span-2 md:col-span-1">
+            <h3 className="font-medium text-foreground mb-4">Connect</h3>
+            <div className="flex flex-col gap-3">
+              <a
+                href={`mailto:${siteConfig.contactEmail}`}
+                className="text-sm text-primary hover:text-primary/80 transition-colors duration-200"
+              >
+                {siteConfig.contactEmail}
+              </a>
               <a
                 href="https://github.com/SymphonyIceAttack/nihaoholidays"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
                 aria-label="GitHub"
               >
                 <svg
@@ -101,14 +155,9 @@ export function Footer({ lang }: { lang: LanguageType }) {
                     clipRule="evenodd"
                   />
                 </svg>
-                <span className="sr-only">GitHub</span>
+                GitHub
               </a>
-              <a
-                href={`mailto:${siteConfig.contactEmail}`}
-                className="text-sm text-primary hover:text-primary/80 transition-colors duration-200"
-              >
-                {siteConfig.contactEmail}
-              </a>
+              <div className="mt-2">{productHuntBadge}</div>
             </div>
           </div>
 
