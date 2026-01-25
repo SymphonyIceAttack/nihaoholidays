@@ -89,6 +89,24 @@ const toolPages = [
   "cold-food",
   "ghost-festival",
   "spring-prep",
+  "business-blessings",
+  "wealth-expressions",
+  "wealth-god",
+];
+
+const quizPages = [
+  "spring",
+  "lantern",
+  "qingming",
+  "human-day",
+  "dragon-boat",
+  "qixi",
+  "mid-autumn",
+  "chongyang",
+  "winter-solstice",
+  "laba",
+  "shangsi",
+  "ghost",
 ];
 
 const culturePages = [
@@ -183,6 +201,37 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         },
       });
     }
+
+    for (const quiz of quizPages) {
+      sitemapEntries.push({
+        url: `${baseUrl}/${lang}/quiz/${quiz}`,
+        lastModified: lastMod,
+        changeFrequency: "monthly",
+        priority: 0.5,
+        alternates: {
+          languages: Object.fromEntries(
+            supportedLocales.map((l) => [
+              l,
+              `${baseUrl}/${l}/quiz/${quiz}`,
+            ]),
+          ),
+        },
+      });
+    }
+  }
+
+  for (const lang of supportedLocales) {
+    sitemapEntries.push({
+      url: `${baseUrl}/${lang}/posts`,
+      lastModified: lastMod,
+      changeFrequency: "weekly",
+      priority: 0.7,
+      alternates: {
+        languages: Object.fromEntries(
+          supportedLocales.map((l) => [l, `${baseUrl}/${l}/posts`]),
+        ),
+      },
+    });
   }
 
   const posts = await getBlogPostsForSitemap();
