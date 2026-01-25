@@ -15,6 +15,7 @@ const staticPages = [
   "/food",
   "/learn",
   "/subscribe",
+  "/tool",
 ];
 
 const festivalPages = [
