@@ -1,3 +1,6 @@
+"use client";
+
+import { mermaid } from "@streamdown/mermaid";
 import { Streamdown } from "streamdown";
 
 interface MarkdownRendererProps {
@@ -11,7 +14,9 @@ export function MarkdownRenderer({
 }: MarkdownRendererProps) {
   return (
     <div className={className}>
-      <Streamdown mode="static">{content}</Streamdown>
+      <Streamdown mode="static" plugins={{ mermaid }}>
+        {content}
+      </Streamdown>
     </div>
   );
 }
