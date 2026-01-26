@@ -1,5 +1,6 @@
 # NihaoHolidays
 
+
 <div align="center">
   <img src="public/base-logo.png" alt="NihaoHolidays Logo" width="120" height="120" />
 
