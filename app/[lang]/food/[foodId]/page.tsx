@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { FoodDetailContent } from "@/components/food";
 import { BreadcrumbStructuredData } from "@/components/structured-data/breadcrumb";
+import { ogImageConfig, twitterImageConfig } from "@/lib/og-config";
 import { siteConfig } from "@/lib/config";
 import { foodDataList } from "@/lib/food";
 import { getFoodDetailBreadcrumb } from "@/lib/structured-data";
@@ -44,10 +45,10 @@ export async function generateMetadata({
       url: `${siteConfig.siteUrl}/${lang}/food/${foodId}`,
       images: [
         {
-          url: `${siteConfig.siteUrl}/base-logo.webp`,
-          width: 1024,
-          height: 1024,
-          alt: siteConfig.siteName,
+          url: ogImageConfig.url,
+          width: ogImageConfig.width,
+          height: ogImageConfig.height,
+          alt: ogImageConfig.alt,
         },
       ],
     },
@@ -55,7 +56,14 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: `${food.name} (${food.english}) - ${food.festival}`,
       description: food.description,
-      images: [`${siteConfig.siteUrl}/base-logo.webp`],
+      images: [
+        {
+          url: twitterImageConfig.url,
+          width: twitterImageConfig.width,
+          height: twitterImageConfig.height,
+          alt: twitterImageConfig.alt,
+        },
+      ],
     },
     alternates: {
       canonical: `${siteConfig.siteUrl}/${lang}/food/${foodId}`,

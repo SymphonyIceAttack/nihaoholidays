@@ -31,7 +31,7 @@ export function HomePageContent({ lang }: HomePageContentProps) {
 
   return (
     <>
-      <HeroSection />
+      <HeroSection lang={lang} />
       <UpcomingFestivals lang={lang} />
       <div className="container mx-auto px-4 py-12">
         <FestivalFilters
@@ -44,7 +44,7 @@ export function HomePageContent({ lang }: HomePageContentProps) {
       </div>
       <FeaturedTools lang={lang} />
       <FoodPreview lang={lang} />
-      <QuickStart />
+      <QuickStart lang={lang} />
       <ValueProposition />
     </>
   );

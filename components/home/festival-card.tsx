@@ -41,7 +41,7 @@ const toolHref: Record<string, string> = {
   "Mid-Autumn Blessing Templates": "/tool/mid-autumn-blessings",
   "Double Ninth Blessings": "/tool/chongyang-blessings",
   "Elder Respect Etiquette": "/tool/chongyang-etiquette",
-  "Chrysanthemum Tea Guide": "/tool/chrysanthemum-tea",
+
   "North-South Food Differences": "/tool/winter-solstice-food",
   "Winter Solstice Blessings": "/tool/winter-solstice-blessings",
   "Dumpling vs Tangyuan Guide": "/tool/dumpling-tangyuan",
@@ -51,19 +51,19 @@ const toolHref: Record<string, string> = {
   "Haircut Guide": "/tool/haircut",
   "Dragon Foods Guide": "/tool/dragon-foods",
   "Spring Pancake Recipe": "/tool/spring-pancake",
-  "Spring Outing Planner": "/tool/spring-outing",
-  "Kite Flying Guide": "/tool/kite-flying",
+
+
   "Chrysanthemum Recipe Collection": "/tool/chrysanthemum-recipes",
   "Reunion Dinner Menu": "/tool/menu",
   "New Year Greetings": "/tool/greetings",
   "Taboo Guide": "/tool/taboo",
-  "Cold Food Guide": "/tool/cold-food",
-  "Qingtuan Recipe": "/tool/qingtuan",
+
+
   "Ghost Festival Guide": "/tool/ghost-festival",
   "Offering Etiquette": "/tool/offering-etiquette",
-  "Human Day Guide": "/tool/human-day",
-  "Seven-Vegetable Porridge Recipe": "/tool/seven-vegetable-porridge",
-  "Poetry Templates": "/tool/poetry-templates",
+
+
+
 };
 
 interface FestivalCardProps {

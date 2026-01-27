@@ -3,6 +3,7 @@
 import { ChevronDown, Globe, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import type { LanguageType } from "@/lib/translations/config";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -13,7 +14,7 @@ const navItems = [
   { label: "关于我们", href: "#about" },
 ];
 
-export function Header() {
+export function Header({ lang }: { lang: LanguageType }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -61,7 +62,7 @@ export function Header() {
               asChild
               className="bg-rose-600 hover:bg-rose-700 text-white shadow-lg shadow-rose-600/20 hover:shadow-rose-600/30 hover-glow transition-all duration-300"
             >
-              <Link href="/en/learn">Start Learning</Link>
+              <Link href={`/${lang}/learn`}>Start Learning</Link>
             </Button>
             <button
               type="button"

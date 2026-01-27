@@ -187,9 +187,9 @@ export function ChongyangBlessingsPage({
 
           <div className="mt-6 flex justify-center">
             <Button variant="outline" asChild>
-              <Link href={`/${lang}/tool/chrysanthemum-tea`}>
+              <Link href={`/${lang}/tool/chrysanthemum-recipes`}>
                 <ArrowLeft className="h-4 w-4 mr-2" />
-                Explore Chrysanthemum Tea
+                Explore Chrysanthemum Recipes
               </Link>
             </Button>
           </div>

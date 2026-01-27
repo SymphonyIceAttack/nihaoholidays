@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { HomePageContent } from "@/components/home";
 import { WebPageStructuredData } from "@/components/structured-data/web-page";
+import { ogImageConfig, twitterImageConfig } from "@/lib/og-config";
 import { siteConfig } from "@/lib/config";
 import type { LanguageType } from "@/lib/translations/config";
 import { supportedLocales } from "@/lib/translations/config";
@@ -46,10 +47,10 @@ export async function generateMetadata({
       url: `${siteConfig.siteUrl}/${lang}`,
       images: [
         {
-          url: `${siteConfig.siteUrl}/base-logo.webp`,
-          width: 1024,
-          height: 1024,
-          alt: siteConfig.siteName,
+          url: ogImageConfig.url,
+          width: ogImageConfig.width,
+          height: ogImageConfig.height,
+          alt: ogImageConfig.alt,
         },
       ],
     },
@@ -57,7 +58,14 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: langData.ogTitle,
       description: langData.ogDescription,
-      images: [`${siteConfig.siteUrl}/base-logo.webp`],
+      images: [
+        {
+          url: twitterImageConfig.url,
+          width: twitterImageConfig.width,
+          height: twitterImageConfig.height,
+          alt: twitterImageConfig.alt,
+        },
+      ],
     },
     alternates: {
       canonical: `${siteConfig.siteUrl}/${lang}`,

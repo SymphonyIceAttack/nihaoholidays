@@ -1,8 +1,9 @@
 import { ArrowRight, Gift, MessageSquare, Utensils } from "lucide-react";
 import Link from "next/link";
+import type { LanguageType } from "@/lib/translations/config";
 import { Button } from "@/components/ui/button";
 
-export function HeroSection() {
+export function HeroSection({ lang }: { lang: LanguageType }) {
   return (
     <section className="relative overflow-hidden aurora-bg">
       {/* Decorative aurora effects */}
@@ -82,7 +83,7 @@ export function HeroSection() {
             asChild
             className="bg-rose-600 hover:bg-rose-700 text-white shadow-lg shadow-rose-600/20 gap-2 px-8 hover-glow transition-all duration-300"
           >
-            <Link href="/en/learn">
+            <Link href={`/${lang}/learn`}>
               Start Learning
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>

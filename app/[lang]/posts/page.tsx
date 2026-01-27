@@ -1,5 +1,6 @@
 import { BookOpen, Calendar, Clock } from "lucide-react";
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { BreadcrumbStructuredData } from "@/components/structured-data/breadcrumb";
@@ -28,6 +29,11 @@ export default async function BlogPage({
   params: Promise<{ lang: LanguageType }>;
 }) {
   const { lang } = await params;
+
+  if (lang !== "en") {
+    notFound();
+  }
+
   const blogPosts = await getBlogPosts();
 
   return (
@@ -203,10 +209,10 @@ export default async function BlogPage({
                   asChild
                   className="bg-rose-600 hover:bg-rose-700"
                 >
-                  <Link href="/en/learn">Start Learning</Link>
+                  <Link href={`/${lang}/learn`}>Start Learning</Link>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
-                  <Link href="/en/tool">Explore Tools</Link>
+                  <Link href={`/${lang}/tool`}>Explore Tools</Link>
                 </Button>
               </div>
             </div>

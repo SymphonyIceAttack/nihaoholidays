@@ -11,6 +11,7 @@ import { BlogPostStructuredData } from "@/components/structured-data/blog-post";
 import { BreadcrumbStructuredData } from "@/components/structured-data/breadcrumb";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { getAllBlogSlugs, getBlogPost, getRecentPosts } from "@/lib/blog";
+import { twitterImageConfig } from "@/lib/og-config";
 import { siteConfig } from "@/lib/config";
 import { getBlogPostBreadcrumb } from "@/lib/structured-data";
 
@@ -22,6 +23,10 @@ export default async function PostPage({
   params: Promise<{ lang: LanguageType; slug: string }>;
 }) {
   const { lang, slug } = await params;
+
+  if (lang !== "en") {
+    notFound();
+  }
 
   const post = await getBlogPost(slug);
 
@@ -98,7 +103,7 @@ export default async function PostPage({
                 <KeyInsights points={keyPoints} />
               )}
 
-              <PostCTA />
+              <PostCTA lang={lang} />
 
               <RecentPosts posts={recentPosts} />
             </article>
@@ -153,6 +158,23 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: post.title,
       description: post.description,
+      images: post.imageUrl
+        ? [
+            {
+              url: post.imageUrl,
+              width: 1200,
+              height: 630,
+              alt: post.title,
+            },
+          ]
+        : [
+            {
+              url: twitterImageConfig.url,
+              width: twitterImageConfig.width,
+              height: twitterImageConfig.height,
+              alt: twitterImageConfig.alt,
+            },
+          ],
     },
     robots: {
       index: true,

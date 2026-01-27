@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { FestivalDetailContent } from "@/components/festival/festival-detail-content";
 import { BreadcrumbStructuredData } from "@/components/structured-data/breadcrumb";
+import { ogImageConfig, twitterImageConfig } from "@/lib/og-config";
 import { siteConfig } from "@/lib/config";
 import { getAllFestivalIds } from "@/lib/festivals";
 import { getFestivalBreadcrumb } from "@/lib/structured-data";
@@ -48,10 +49,10 @@ export async function generateMetadata({
       url: `${siteConfig.siteUrl}/${lang}/festival/${festivalId}`,
       images: [
         {
-          url: `${siteConfig.siteUrl}/base-logo.webp`,
-          width: 1024,
-          height: 1024,
-          alt: siteConfig.siteName,
+          url: ogImageConfig.url,
+          width: ogImageConfig.width,
+          height: ogImageConfig.height,
+          alt: ogImageConfig.alt,
         },
       ],
     },
@@ -59,7 +60,14 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: langData.ogTitle,
       description: langData.ogDescription,
-      images: [`${siteConfig.siteUrl}/base-logo.webp`],
+      images: [
+        {
+          url: twitterImageConfig.url,
+          width: twitterImageConfig.width,
+          height: twitterImageConfig.height,
+          alt: twitterImageConfig.alt,
+        },
+      ],
     },
     alternates: {
       canonical: `${siteConfig.siteUrl}/${lang}/festival/${festivalId}`,

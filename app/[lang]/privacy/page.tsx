@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PrivacyContent } from "@/components/privacy/privacy-content";
 import { BreadcrumbStructuredData } from "@/components/structured-data/breadcrumb";
+import { ogImageConfig, twitterImageConfig } from "@/lib/og-config";
 import { siteConfig } from "@/lib/config";
 import { getPrivacyBreadcrumb } from "@/lib/structured-data";
 import type { LanguageType } from "@/lib/translations/config";
@@ -48,11 +49,27 @@ export async function generateMetadata({
       description: langData.description,
       siteName: siteConfig.siteName,
       url: `${siteConfig.siteUrl}/${lang}/privacy`,
+      images: [
+        {
+          url: ogImageConfig.url,
+          width: ogImageConfig.width,
+          height: ogImageConfig.height,
+          alt: ogImageConfig.alt,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: langData.title,
       description: langData.description,
+      images: [
+        {
+          url: twitterImageConfig.url,
+          width: twitterImageConfig.width,
+          height: twitterImageConfig.height,
+          alt: twitterImageConfig.alt,
+        },
+      ],
     },
   };
 }

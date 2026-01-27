@@ -1,4 +1,5 @@
 import { Globe, Mail, MessageCircle } from "lucide-react";
+import type { LanguageType } from "@/lib/translations/config";
 import { Button } from "@/components/ui/button";
 
 const footerLinks = {
@@ -31,7 +32,7 @@ const footerLinks = {
   },
 };
 
-export function Footer() {
+export function Footer({ lang }: { lang: LanguageType }) {
   return (
     <footer className="bg-foreground text-background py-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-t from-rose-600/5 to-transparent pointer-events-none" />
@@ -103,13 +104,13 @@ export function Footer() {
           <p>&copy; 2026 节日文化通. All rights reserved.</p>
           <div className="flex gap-6">
             <a
-              href="/en/privacy"
+              href={`/${lang}/privacy`}
               className="hover:text-background transition-colors"
             >
               隐私政策
             </a>
             <a
-              href="/en/terms"
+              href={`/${lang}/terms`}
               className="hover:text-background transition-colors"
             >
               使用条款

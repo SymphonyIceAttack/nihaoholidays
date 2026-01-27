@@ -130,15 +130,9 @@ function getToolHref(
   if (
     name.includes("chrysanthemum") ||
     name.includes("菊花") ||
-    name.includes("tea")
+    name.includes("recipe")
   )
-    return `/${lang}/tool/chrysanthemum-tea`;
-  if (
-    name.includes("elder") ||
-    name.includes("respect") ||
-    name.includes("tradition")
-  )
-    return `/${lang}/tool/elder-respect-traditions`;
+    return `/${lang}/tool/chrysanthemum-recipes`;
 
   // Winter Solstice tools
   if (

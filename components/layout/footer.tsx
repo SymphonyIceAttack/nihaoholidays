@@ -20,49 +20,50 @@ const footerTranslations: Record<LanguageType, string> = {
   en: "© 2025 nihaoholidays. All rights reserved.",
 };
 
-const footerColumns: Record<LanguageType, FooterColumn[]> = {
-  en: [
+function getFooterColumns(lang: LanguageType): FooterColumn[] {
+  const base = `/${lang}`;
+  return [
     {
       title: "Explore",
       links: [
-        { label: "Home", href: "/en" },
-        { label: "Blog", href: "/en/posts" },
-        { label: "Learn Chinese", href: "/en/learn" },
-        { label: "Festivals", href: "/en/festival/chinese-new-year" },
-        { label: "Chinese Culture", href: "/en/culture/chinese-new-year" },
+        { label: "Home", href: base },
+        { label: "Blog", href: `${base}/posts` },
+        { label: "Learn Chinese", href: `${base}/learn` },
+        { label: "Festivals", href: `${base}/festival/chinese-new-year` },
+        { label: "Chinese Culture", href: `${base}/culture/chinese-new-year` },
       ],
     },
     {
       title: "Tools",
       links: [
-        { label: "All Tools", href: "/en/tool" },
-        { label: "Greeting Cards", href: "/en/tool/greetings" },
-        { label: "Red Envelopes", href: "/en/tool/red-envelope" },
-        { label: "AI Assistant", href: "/en/tool/menu" },
+        { label: "All Tools", href: `${base}/tool` },
+        { label: "Greeting Cards", href: `${base}/tool/greetings` },
+        { label: "Red Envelopes", href: `${base}/tool/red-envelope` },
+        { label: "AI Assistant", href: `${base}/tool/menu` },
       ],
     },
     {
       title: "About",
       links: [
-        { label: "About Us", href: "/en/about" },
-        { label: "Contact", href: "/en/contact" },
-        { label: "Subscribe", href: "/en/subscribe" },
+        { label: "About Us", href: `${base}/about` },
+        { label: "Contact", href: `${base}/contact` },
+        { label: "Subscribe", href: `${base}/subscribe` },
       ],
     },
     {
       title: "Legal",
       links: [
-        { label: "Privacy Policy", href: "/en/privacy" },
-        { label: "Terms of Service", href: "/en/terms" },
-        { label: "Disclaimer", href: "/en/disclaimer" },
+        { label: "Privacy Policy", href: `${base}/privacy` },
+        { label: "Terms of Service", href: `${base}/terms` },
+        { label: "Disclaimer", href: `${base}/disclaimer` },
       ],
     },
-  ],
-};
+  ];
+}
 
 export function Footer({ lang }: { lang: LanguageType }) {
   const t = footerTranslations[lang];
-  const columns = footerColumns[lang];
+  const columns = getFooterColumns(lang);
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -307,13 +308,13 @@ export function Footer({ lang }: { lang: LanguageType }) {
             <p className="text-sm text-muted-foreground">{t}</p>
             <div className="flex items-center gap-6">
               <Link
-                href="/en/privacy"
+                href={`/${lang}/privacy`}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
               >
                 Privacy
               </Link>
               <Link
-                href="/en/terms"
+                href={`/${lang}/terms`}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
               >
                 Terms

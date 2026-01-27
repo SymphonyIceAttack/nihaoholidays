@@ -1,5 +1,6 @@
 import { ArrowRight, Clock } from "lucide-react";
 import Link from "next/link";
+import type { LanguageType } from "@/lib/translations/config";
 import { Button } from "@/components/ui/button";
 
 const quickStartItems = [
@@ -25,7 +26,7 @@ const quickStartItems = [
   },
 ];
 
-export function QuickStart() {
+export function QuickStart({ lang }: { lang: LanguageType }) {
   return (
     <section className="py-16 bg-gradient-to-b from-background via-rose-50/20 to-background">
       <div className="container mx-auto px-4">
@@ -78,7 +79,7 @@ export function QuickStart() {
             asChild
             className="bg-rose-600 hover:bg-rose-700 text-white shadow-lg shadow-rose-600/20 gap-2 px-8 hover:shadow-xl hover:shadow-rose-600/30 transition-all duration-300 active:scale-[0.98]"
           >
-            <Link href="/en/learn">
+            <Link href={`/${lang}/learn`}>
               Start now
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
