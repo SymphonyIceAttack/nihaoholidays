@@ -200,6 +200,23 @@ export function Footer({ lang }: { lang: LanguageType }) {
     )
   ) : null;
 
+  const ufindBadge = (
+    <a
+      href="https://ufind.best/products/nihaoholidays?utm_source=ufind.best"
+      target="_blank"
+      rel="noopener"
+      aria-label="Featured on ufind.best"
+      className="inline-block"
+    >
+      <img
+        src="https://ufind.best/badges/ufind-best-badge-light.svg"
+        alt="Featured on ufind.best"
+        width="150"
+        className="rounded-lg"
+      />
+    </a>
+  );
+
   return (
     <footer className="bg-muted/30 border-t">
       <div className="container mx-auto px-4 py-12">
@@ -259,6 +276,7 @@ export function Footer({ lang }: { lang: LanguageType }) {
               <div className="mt-2">{twelveToolsBadge}</div>
               <div className="mt-2">{turbo0Badge}</div>
               <div className="mt-2">{fazierBadge}</div>
+              <div className="mt-2">{ufindBadge}</div>
             </div>
           </div>
 
