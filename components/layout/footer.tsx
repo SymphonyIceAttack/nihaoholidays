@@ -103,6 +103,103 @@ export function Footer({ lang }: { lang: LanguageType }) {
       </a>
     );
 
+  const nextGenToolsBadge = (
+    <a
+      href="https://www.nxgntools.com/tools/nihaoholidays?utm_source=nihaoholidays"
+      target="_blank"
+      rel="noopener"
+      aria-label="NihaoHolidays on NextGen Tools"
+      className="inline-block"
+    >
+      <img
+        src="https://www.nxgntools.com/api/embed/nihaoholidays?type=FEATURED_ON"
+        alt="NextGen Tools Badge - The #1 AI Tools Directory & Launch Platform"
+        className="h-12 w-auto rounded-lg dark:filter dark:invert dark:hue-rotate-180"
+      />
+    </a>
+  );
+
+  const twelveToolsBadge = mounted ? (
+    theme === "dark" ? (
+      <a
+        href="https://twelve.tools"
+        target="_blank"
+        rel="noopener"
+        aria-label="Featured on Twelve Tools"
+      >
+        <img
+          src="https://twelve.tools/badge0-dark.svg"
+          alt="Featured on Twelve Tools"
+          width="200"
+          height="54"
+          className="rounded-lg"
+        />
+      </a>
+    ) : (
+      <a
+        href="https://twelve.tools"
+        target="_blank"
+        rel="noopener"
+        aria-label="Featured on Twelve Tools"
+      >
+        <img
+          src="https://twelve.tools/badge0.svg"
+          alt="Featured on Twelve Tools"
+          width="200"
+          height="54"
+          className="rounded-lg"
+        />
+      </a>
+    )
+  ) : null;
+
+  const turbo0Badge = (
+    <a
+      href="https://turbo0.com/item/nihaoholidays"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Listed on Turbo0"
+    >
+      <img
+        src="https://img.turbo0.com/badge-listed-light.svg"
+        alt="Listed on Turbo0"
+        className="h-[54px] w-auto rounded-lg dark:filter dark:invert"
+      />
+    </a>
+  );
+
+  const fazierBadge = mounted ? (
+    theme === "dark" ? (
+      <a
+        href="https://fazier.com/launches/nihaoholidays.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Fazier Featured Launch"
+      >
+        <img
+          src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=featured&theme=dark"
+          alt="Fazier badge"
+          width="250"
+          className="rounded-lg"
+        />
+      </a>
+    ) : (
+      <a
+        href="https://fazier.com/launches/nihaoholidays.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Fazier Featured Launch"
+      >
+        <img
+          src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=featured&theme=light"
+          alt="Fazier badge"
+          width="250"
+          className="rounded-lg"
+        />
+      </a>
+    )
+  ) : null;
+
   return (
     <footer className="bg-muted/30 border-t">
       <div className="container mx-auto px-4 py-12">
@@ -158,6 +255,10 @@ export function Footer({ lang }: { lang: LanguageType }) {
                 GitHub
               </a>
               <div className="mt-2">{productHuntBadge}</div>
+              <div className="mt-2">{nextGenToolsBadge}</div>
+              <div className="mt-2">{twelveToolsBadge}</div>
+              <div className="mt-2">{turbo0Badge}</div>
+              <div className="mt-2">{fazierBadge}</div>
             </div>
           </div>
 
