@@ -5,6 +5,7 @@ import { ThemeProvider } from "next-themes";
 import type React from "react";
 
 import "../globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { LanguageProvider } from "@/context/language-context";
@@ -89,6 +90,7 @@ export default async function RootLayout({
             </UserTypeProvider>
           </LanguageProvider>
         </ThemeProvider>
+        <GoogleAnalytics gaId="G-B60W0241L0" />
       </body>
     </html>
   );
