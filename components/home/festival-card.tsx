@@ -27,7 +27,7 @@ const toolHref: Record<string, string> = {
   "New Year Greeting Generator": "/tool/greetings",
   "Red Envelope Guide": "/tool/red-envelope",
   "Lantern Riddles Game": "/tool/riddles",
-  "Tangyuan Filling Guide": "/tool/tangyuan",
+  "Tangyuan Filling Guide": "/tool/dumpling-tangyuan",
   "Qingming Traditions Guide": "/tool/qingming",
   "Ceremonial Expressions & Taboos": "/tool/qingming-etiquette",
   "Zongzi Flavor Guide": "/tool/zongzi",
@@ -52,18 +52,17 @@ const toolHref: Record<string, string> = {
   "Dragon Foods Guide": "/tool/dragon-foods",
   "Spring Pancake Recipe": "/tool/spring-pancake",
 
-
   "Chrysanthemum Recipe Collection": "/tool/chrysanthemum-recipes",
   "Reunion Dinner Menu": "/tool/menu",
   "New Year Greetings": "/tool/greetings",
   "Taboo Guide": "/tool/taboo",
 
-
   "Ghost Festival Guide": "/tool/ghost-festival",
   "Offering Etiquette": "/tool/offering-etiquette",
 
-
-
+  "Wealth God Guide": "/tool/wealth-god",
+  "Business Blessings": "/tool/business-blessings",
+  "Wealth Expressions": "/tool/wealth-expressions",
 };
 
 interface FestivalCardProps {

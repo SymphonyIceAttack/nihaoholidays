@@ -51,7 +51,6 @@ const toolPages = [
   "greetings",
   "red-envelope",
   "riddles",
-  "tangyuan",
   "qingming",
   "qingming-etiquette",
   "zongzi",

@@ -50,12 +50,13 @@ const tools = [
     color: "from-yellow-500 to-amber-500",
   },
   {
-    id: "tangyuan",
-    title: "Tangyuan Guide",
-    description: "Sweet rice balls and their significance during festivals.",
+    id: "dumpling-tangyuan",
+    title: "Dumpling vs Tangyuan",
+    description:
+      "Winter Solstice traditions: dumplings in the north, tangyuan in the south.",
     icon: Utensils,
-    href: "/tool/tangyuan",
-    color: "from-pink-500 to-rose-500",
+    href: "/tool/dumpling-tangyuan",
+    color: "from-cyan-400 to-sky-500",
   },
   {
     id: "qingming",
@@ -182,15 +183,6 @@ const tools = [
     icon: MessageCircleHeart,
     href: "/tool/winter-solstice-blessings",
     color: "from-blue-400 to-cyan-500",
-  },
-  {
-    id: "dumpling-tangyuan",
-    title: "Dumpling vs Tangyuan",
-    description:
-      "Winter Solstice traditions: dumplings in the north, tangyuan in the south.",
-    icon: Utensils,
-    href: "/tool/dumpling-tangyuan",
-    color: "from-cyan-400 to-sky-500",
   },
   {
     id: "laba-blessings",
