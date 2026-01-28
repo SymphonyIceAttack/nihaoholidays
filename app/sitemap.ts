@@ -3,6 +3,7 @@ import { getBlogPostsForSitemap } from "@/lib/blog";
 import { siteConfig } from "@/lib/config";
 import { supportedLocales } from "@/lib/translations/config";
 
+export const revalidate = 84600;
 const baseUrl = siteConfig.siteUrl;
 
 const staticPages = [
