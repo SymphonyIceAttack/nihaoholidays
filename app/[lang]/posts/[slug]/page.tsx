@@ -86,7 +86,7 @@ export default async function PostPage({
                   <ArticleMeta
                     publishedAt={publishedAt}
                     readTime={readTime || undefined}
-                    author="SymphonyIceAttack"
+                    author="nihaoholidays Teams"
                   />
                   {description && (
                     <p className="text-muted-foreground text-lg mt-3 border-l-4 border-primary/30 pl-4 italic">
