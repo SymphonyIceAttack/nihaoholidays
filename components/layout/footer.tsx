@@ -172,29 +172,29 @@ export function Footer({ lang }: { lang: LanguageType }) {
   const fazierBadge = mounted ? (
     theme === "dark" ? (
       <a
-        href="https://fazier.com/launches/nihaoholidays.com"
+        href="https://fazier.com/launches/nihaoholidays"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Fazier Featured Launch"
+        aria-label="Fazier Daily Featured"
       >
         <img
-          src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=featured&theme=dark"
+          src="https://fazier.com/api/v1/public/badges/embed_image.svg?launch_id=6896&badge_type=daily&theme=dark"
           alt="Fazier badge"
-          width="250"
+          width="270"
           className="rounded-lg"
         />
       </a>
     ) : (
       <a
-        href="https://fazier.com/launches/nihaoholidays.com"
+        href="https://fazier.com/launches/nihaoholidays"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Fazier Featured Launch"
+        aria-label="Fazier Daily Featured"
       >
         <img
-          src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=featured&theme=light"
+          src="https://fazier.com/api/v1/public/badges/embed_image.svg?launch_id=6896&badge_type=daily&theme=light"
           alt="Fazier badge"
-          width="250"
+          width="270"
           className="rounded-lg"
         />
       </a>
