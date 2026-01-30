@@ -11,8 +11,8 @@ import { BlogPostStructuredData } from "@/components/structured-data/blog-post";
 import { BreadcrumbStructuredData } from "@/components/structured-data/breadcrumb";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { getAllBlogSlugs, getBlogPost, getRecentPosts } from "@/lib/blog";
-import { twitterImageConfig } from "@/lib/og-config";
 import { siteConfig } from "@/lib/config";
+import { twitterImageConfig } from "@/lib/og-config";
 import { getBlogPostBreadcrumb } from "@/lib/structured-data";
 
 import type { LanguageType } from "@/lib/translations/config";
@@ -86,6 +86,7 @@ export default async function PostPage({
                   <ArticleMeta
                     publishedAt={publishedAt}
                     readTime={readTime || undefined}
+                    author="symphoneice"
                   />
                   {description && (
                     <p className="text-muted-foreground text-lg mt-3 border-l-4 border-primary/30 pl-4 italic">
@@ -141,7 +142,7 @@ export async function generateMetadata({
       type: "article",
       title: post.title,
       description: post.description,
-      siteName: "Cybermoji",
+      siteName: "nihaoholidays",
       url: `${siteConfig.siteUrl}/${lang}/posts/${slug}`,
       images: post.imageUrl
         ? [

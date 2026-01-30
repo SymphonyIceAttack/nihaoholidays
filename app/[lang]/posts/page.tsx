@@ -1,8 +1,8 @@
 import { BookOpen, Calendar, Clock } from "lucide-react";
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { BreadcrumbStructuredData } from "@/components/structured-data/breadcrumb";
 import { CollectionPageStructuredData } from "@/components/structured-data/collection-page";
 import { Badge } from "@/components/ui/badge";
