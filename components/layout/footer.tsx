@@ -120,40 +120,6 @@ export function Footer({ lang }: { lang: LanguageType }) {
     </a>
   );
 
-  const twelveToolsBadge = mounted ? (
-    theme === "dark" ? (
-      <a
-        href="https://twelve.tools"
-        target="_blank"
-        rel="noopener"
-        aria-label="Featured on Twelve Tools"
-      >
-        <img
-          src="https://twelve.tools/badge0-dark.svg"
-          alt="Featured on Twelve Tools"
-          width="200"
-          height="54"
-          className="rounded-lg"
-        />
-      </a>
-    ) : (
-      <a
-        href="https://twelve.tools"
-        target="_blank"
-        rel="noopener"
-        aria-label="Featured on Twelve Tools"
-      >
-        <img
-          src="https://twelve.tools/badge0.svg"
-          alt="Featured on Twelve Tools"
-          width="200"
-          height="54"
-          className="rounded-lg"
-        />
-      </a>
-    )
-  ) : null;
-
   const turbo0Badge = (
     <a
       href="https://turbo0.com/item/nihaoholidays"
@@ -274,7 +240,6 @@ export function Footer({ lang }: { lang: LanguageType }) {
               </a>
               <div className="mt-2">{productHuntBadge}</div>
               <div className="mt-2">{nextGenToolsBadge}</div>
-              <div className="mt-2">{twelveToolsBadge}</div>
               <div className="mt-2">{turbo0Badge}</div>
               <div className="mt-2">{fazierBadge}</div>
               <div className="mt-2">{ufindBadge}</div>
