@@ -184,6 +184,29 @@ export function Footer({ lang }: { lang: LanguageType }) {
     </a>
   );
 
+  const launchingNestsBadge = (
+    <a
+      href="https://launchingnests.com/product/nihaoholidays/mh7bhq94jfh7sabkbj8httwg6n820rk4"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="NihaoHolidays on LaunchingNests"
+      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-gradient-to-br from-blue-50 to-sky-100 border border-sky-200 dark:from-sky-900/50 dark:to-blue-900/30 dark:border-sky-700"
+      style={{ textDecoration: "none" }}
+    >
+      <img
+        src="https://image.launchingnests.com/base-logo.png"
+        alt="LaunchingNests"
+        className="w-5 h-5"
+      />
+      <span className="text-xs font-semibold text-sky-700 dark:text-sky-300">
+        nihaoholidays
+      </span>
+      <span className="text-[10px] px-1.5 py-0.5 bg-slate-400 text-white rounded">
+        VERIFY
+      </span>
+    </a>
+  );
+
   return (
     <footer className="bg-muted/30 border-t">
       <div className="container mx-auto px-4 py-12">
@@ -243,6 +266,7 @@ export function Footer({ lang }: { lang: LanguageType }) {
               <div className="mt-2">{turbo0Badge}</div>
               <div className="mt-2">{fazierBadge}</div>
               <div className="mt-2">{ufindBadge}</div>
+              <div className="mt-2">{launchingNestsBadge}</div>
             </div>
           </div>
 
